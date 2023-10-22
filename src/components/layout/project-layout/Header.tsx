@@ -133,9 +133,130 @@ const DesktopNavBar: React.FC<Pick< HeaderProps,     | "onLinkClick"
     setIsClick(false);
   });
   return (
-    <div>
-      
-    </div>
+    <ul className="flex">
+    {navigationLinks.map((link, i) => {
+        return (
+          <li key={link.name}>
+            {!link.dropdown ? (
+              <Link
+                href={link.href}
+                className={clsx(
+                  currentActiveLocation?.includes(link.href)
+                    ? activeLinkClassName
+                    : linkClassName,
+                  textClassName,
+                  "text-center lg:text-left",
+                  "flex flex-col"
+                )}
+                onClick={() => setIsClick(true)}
+                onMouseLeave={() => {
+                  setIsHover(false);
+                }}
+              >
+                <span className={clsx(hoverClassName)}>{link.name}</span>
+              </Link>
+            ) : (
+              <Popover className="h-full">
+                {({ close, open }: { close: () => void; open: boolean }) => (
+                  <>
+                    <div
+                      className="relative h-full transition-all duration-300 ease-in-out"
+                      ref={ref}
+                      onMouseEnter={() => {
+                        if (link.dropdown) {
+                          setIsHover(true);
+                          setDropdownVariant(link.name);
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        setIsHover(false);
+                      }}
+                      onClick={() => setIsClick(true)}
+                    >
+                      <Popover.Button
+                        className={clsx(textClassName, linkClassName)}
+                      >
+                        <Link className={hoverClassName} href={link.href}>
+                          {link.name}
+
+                          {link.dropdown && (
+                            <ChevronUpIcon
+                              className={clsx(
+                                "ml-2 -mr-1 h-5 w-5 mt-1",
+                                arrowColor,
+                                isHover && dropdownVariant === link.name
+                                  ? "rotate-0"
+                                  : "rotate-180"
+                              )}
+                              aria-hidden="true"
+                            />
+                          )}
+                        </Link>
+                      </Popover.Button>
+                    </div>
+                    <Transition
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                      show={
+                        link.name !== dropdownVariant ?? isClick
+                          ? open
+                          : isShowing
+                      }
+                      as={Fragment}
+                    >
+                      <Popover.Panel
+                        className={clsx(
+                          "absolute top-[4.75rem] mt-2 w-64 origin-top-right rounded-md bg-white shadow-md shadow-teal-800 ring-1 ring-black ring-opacity-5 focus:outline-none",
+                          dropdownBgColor
+                        )}
+                        ref={ref}
+                        onMouseEnter={() => {
+                          if (link.dropdown) {
+                            setIsHover(true);
+                            setDropdownVariant(link.name);
+                          }
+                        }}
+                        onMouseLeave={() => {
+                          setIsHover(false);
+                          setDropdownVariant("");
+                        }}
+                        onClick={() => setIsClick(true)}
+                      >
+                        <div className="px-10 py-2">
+                          <ul>
+                            <>
+                              {link.dropdown?.map((droplink) => (
+                                <li
+                                  key={droplink.name}
+                                  className="first:mb-2 last:pb-0 border-b-2 border-zinc-100 last:border-none"
+                                >
+                                  <Link
+                                    href={droplink.href}
+                                    className={textClassName}
+                                  >
+                                    <span className={hoverClassName}>
+                                      {droplink.name}
+                                    </span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </>
+                          </ul>
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </>
+                )}
+              </Popover>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   )
 }
 
