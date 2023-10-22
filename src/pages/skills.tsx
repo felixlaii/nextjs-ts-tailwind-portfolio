@@ -5,6 +5,10 @@ import Image from "next/image";
 const Skills = () => {
         // Calculate the midpoint of the SkillsData array
         const midpoint = Math.ceil(SkillsData.length / 2);
+
+         // Split the SkillsData array into two separate arrays
+    const firstRowSkills = SkillsData.slice(0, midpoint);
+    const secondRowSkills = SkillsData.slice(midpoint);
     return (
         <div>
             <ul className="flex">
