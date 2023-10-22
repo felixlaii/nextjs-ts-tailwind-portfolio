@@ -2,11 +2,13 @@ import { PropsWithChildren } from "react";
 import { Content } from "./project-layout/Content";
 import Footer from "./project-layout/Footer";
 import { Header } from "./project-layout/Header";
+
 import { Wrapper } from "./project-layout/Wrapper";
 import { useRouter } from "next/router";
 import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
 import logo from "../../../public/images/blue-logo-1.png"
+import { HeaderProps } from "@/types/component-types";
 
 
 

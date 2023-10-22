@@ -104,6 +104,40 @@ const MenuLinks: React.FC<Pick<HeaderProps, | "navigationLinks"
   )
 }
 
+const DesktopNavBar: React.FC<Pick< HeaderProps,     | "onLinkClick"
+| "navigationLinks"
+| "linkClassName"
+| "hoverClassName"
+| "arrowColor"
+| "dropdownBgColor"
+| "activeLinkClassName"
+| "currentActiveLocation"
+| "textClassName"
+>
+> = ({
+  navigationLinks,
+  currentActiveLocation,
+  activeLinkClassName,
+  textClassName,
+  hoverClassName,
+  arrowColor,
+  dropdownBgColor,
+  linkClassName,
+}) => {
+  const [isHover, setIsHover] = useState<boolean>(false);
+  const [isClick, setIsClick] = useState<boolean>(false);
+  const [dropdownVariant, setDropdownVariant] = useState<string>("");
+  const ref = useRef(null);
+  const isShowing = isClick || isHover;
+  useOnClickOutside(ref, () => {
+    setIsClick(false);
+  });
+  return (
+    <div>
+      
+    </div>
+  )
+}
 
 export const Header: React.FC = () => {
   return <div></div>;
