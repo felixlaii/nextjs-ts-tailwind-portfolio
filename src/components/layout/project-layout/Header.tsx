@@ -80,7 +80,26 @@ const MenuLinks: React.FC<Pick<HeaderProps, | "navigationLinks"
 
   return (
     <div>
-      
+      <ul>
+        {navigationLinks.map((link) => (
+          <li key={link.name}>
+            <Link
+            href={link.href}
+            className={clsx(
+              currentActiveLocation?.includes(link.href)
+                ? activeLinkClassName
+                : linkClassName,
+              hoverClassName,
+              textClassName,
+              "text-center lg:text-left border-b-[1px] font-light py-[0.75rem]",
+              "flex flex-col"
+            )}
+            onClick={onLinkClick} >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
