@@ -37,7 +37,20 @@ const LogoLink: React.FC<Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
 }
 > = ({ onLinkClick, logoClassName }) => {
   return (
-    <div></div>
+    <div>
+            <Link
+        href="/"
+        className={clsx(
+          "flex lg:inline-block w- relative",
+          "focus:outline-none focus-visible:ring focus-visible:ring-black/20 focus-visible:border-transparent",
+
+          logoClassName
+        )}
+        onClick={onLinkClick}
+      >
+        <Logo />
+      </Link>
+    </div>
   )
 }
 
