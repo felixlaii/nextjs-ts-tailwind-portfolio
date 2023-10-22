@@ -54,6 +54,37 @@ const LogoLink: React.FC<Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
   )
 }
 
+/**
+ * Header navigation links rendered as React `NavLink` siblings encapsulated within a fragment.
+ *
+ * Each individual link (anchor tag) has the given `linkClassName` applied as its className and the
+ * optional `onLinkClick` set as its `onClick` handler.
+ */
+const MenuLinks: React.FC<Pick<HeaderProps, | "navigationLinks"
+| "currentActiveLocation"
+| "activeLinkClassName"
+| "linkClassName"
+| "hoverClassName"
+| "onLinkClick"
+| "textClassName"
+> & { onLinkClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void } > = ({
+  navigationLinks,
+  currentActiveLocation,
+  activeLinkClassName,
+  textClassName,
+  hoverClassName,
+  linkClassName,
+  onLinkClick,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
 
 export const Header: React.FC = () => {
   return <div></div>;

@@ -21,7 +21,7 @@ export interface NavigationLink {
     textClassName?: string;
     companyName?: string;
     companyNameClassName?: string;
-    logo?: string | undefined;
+    logo: string;
     logoClassName?: string;
     alt?: string;
     onLinkClick?: () => void;
