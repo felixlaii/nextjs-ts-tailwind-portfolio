@@ -27,4 +27,11 @@ export interface NavigationLink {
     onLinkClick?: () => void;
   }
 
+  export interface ButtonProps {
+    id?: string;
+    type: "button" | "submit";
+    extraClassName?: string;
+    onSubmit?: (event: React.FormEvent<HTMLButtonElement>) => void;
+  }
+  
   export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
