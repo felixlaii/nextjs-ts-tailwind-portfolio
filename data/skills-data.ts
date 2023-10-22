@@ -65,5 +65,6 @@ export const SkillsData: { image: string, description: string, }[] = [
     {
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
         description: "Tailwindcss"
-    }
+    },
+    {image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg", description: "MaterialUI"}
 ]
