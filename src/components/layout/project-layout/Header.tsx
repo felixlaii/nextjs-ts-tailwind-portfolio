@@ -4,6 +4,10 @@ import clsx from "clsx";
 import Link from "next/link";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Button from "@/components/ui/inputs/Button";
+import Logo from "../../Logo";
+import { Popover, Transition } from "@headlessui/react";
+import { ChevronUpIcon } from "@heroicons/react/24/outline";
+
 
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
@@ -26,6 +30,17 @@ export function useOnClickOutside<T extends HTMLDivElement>(
     };
   }, [ref, handler]);
 }
+
+const LogoLink: React.FC<Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
+  logoClassName? :string;
+  showSidePanel?: boolean;
+}
+> = ({ onLinkClick, logoClassName }) => {
+  return (
+    <div></div>
+  )
+}
+
 
 export const Header: React.FC = () => {
   return <div></div>;
