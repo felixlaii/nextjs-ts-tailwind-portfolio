@@ -35,10 +35,11 @@ export interface NavigationLink {
   }
   
 export interface ProjectCardProps {
-  href: string;
-  icon: JSX.Element;
-  hoverIcon: JSX.Element;
+  url: string;
+  // icon: JSX.Element;
+  // hoverIcon: JSX.Element;
   name: string;
-  information: string;
+  description: string;
+  image: string;
 }
   export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
