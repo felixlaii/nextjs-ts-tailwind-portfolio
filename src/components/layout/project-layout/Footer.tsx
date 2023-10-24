@@ -8,7 +8,6 @@ import {
   PiFacebookLogo,
   PiInstagramLogoLight,
 } from "react-icons/pi";
-
 const Footer: React.FC = () => {
   return <div className="w-screen"></div>;
 };
