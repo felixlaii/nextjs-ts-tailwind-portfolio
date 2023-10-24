@@ -17,20 +17,20 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "richmond west dental",
     url: "https://richmondwestdental.com",
-    description: "",
+    description: "Downtown Toronto dental office.",
   },
   {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174744/mix6ix2022_blk_ivehqs.png",
     name: "mix6ix bartending & co",
     url: "https://mix6ixtoronto.com",
-    description: "",
+    description: "Bartending service for private events",
   },
   {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
     name: "St Patrick Secondary School",
     url: "",
-    description: "",
+    description: "Secondary School based in Vancouver.",
   },
 ];
