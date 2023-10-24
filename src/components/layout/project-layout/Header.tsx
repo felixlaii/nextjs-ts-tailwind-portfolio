@@ -8,7 +8,6 @@ import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
 
-
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -31,14 +30,15 @@ export function useOnClickOutside<T extends HTMLDivElement>(
   }, [ref, handler]);
 }
 
-const LogoLink: React.FC<Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
-  logoClassName? :string;
-  showSidePanel?: boolean;
-}
+const LogoLink: React.FC<
+  Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
+    logoClassName?: string;
+    showSidePanel?: boolean;
+  }
 > = ({ onLinkClick, logoClassName }) => {
   return (
     <div>
-            <Link
+      <Link
         href="/"
         className={clsx(
           "flex lg:inline-block w- relative",
@@ -51,8 +51,8 @@ const LogoLink: React.FC<Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
         <Logo />
       </Link>
     </div>
-  )
-}
+  );
+};
 
 /**
  * Header navigation links rendered as React `NavLink` siblings encapsulated within a fragment.
@@ -60,14 +60,18 @@ const LogoLink: React.FC<Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
  * Each individual link (anchor tag) has the given `linkClassName` applied as its className and the
  * optional `onLinkClick` set as its `onClick` handler.
  */
-const MenuLinks: React.FC<Pick<HeaderProps, | "navigationLinks"
-| "currentActiveLocation"
-| "activeLinkClassName"
-| "linkClassName"
-| "hoverClassName"
-| "onLinkClick"
-| "textClassName"
-> & { onLinkClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void } > = ({
+const MenuLinks: React.FC<
+  Pick<
+    HeaderProps,
+    | "navigationLinks"
+    | "currentActiveLocation"
+    | "activeLinkClassName"
+    | "linkClassName"
+    | "hoverClassName"
+    | "onLinkClick"
+    | "textClassName"
+  > & { onLinkClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void }
+> = ({
   navigationLinks,
   currentActiveLocation,
   activeLinkClassName,
@@ -84,36 +88,40 @@ const MenuLinks: React.FC<Pick<HeaderProps, | "navigationLinks"
         {navigationLinks.map((link) => (
           <li key={link.name}>
             <Link
-            href={link.href}
-            className={clsx(
-              currentActiveLocation?.includes(link.href)
-                ? activeLinkClassName
-                : linkClassName,
-              hoverClassName,
-              textClassName,
-              "text-center lg:text-left border-b-[1px] font-light py-[0.75rem]",
-              "flex flex-col"
-            )}
-            onClick={onLinkClick} >
+              href={link.href}
+              className={clsx(
+                currentActiveLocation?.includes(link.href)
+                  ? activeLinkClassName
+                  : linkClassName,
+                hoverClassName,
+                textClassName,
+                "text-center lg:text-left border-b-[1px] font-light py-[0.75rem]",
+                "flex flex-col"
+              )}
+              onClick={onLinkClick}
+            >
               {link.name}
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-const DesktopNavBar: React.FC<Pick< HeaderProps,     | "onLinkClick"
-| "navigationLinks"
-| "linkClassName"
-| "hoverClassName"
-| "arrowColor"
-| "dropdownBgColor"
-| "activeLinkClassName"
-| "currentActiveLocation"
-| "textClassName"
->
+const DesktopNavBar: React.FC<
+  Pick<
+    HeaderProps,
+    | "onLinkClick"
+    | "navigationLinks"
+    | "linkClassName"
+    | "hoverClassName"
+    | "arrowColor"
+    | "dropdownBgColor"
+    | "activeLinkClassName"
+    | "currentActiveLocation"
+    | "textClassName"
+  >
 > = ({
   navigationLinks,
   currentActiveLocation,
@@ -134,7 +142,7 @@ const DesktopNavBar: React.FC<Pick< HeaderProps,     | "onLinkClick"
   });
   return (
     <ul className="flex">
-    {navigationLinks.map((link, i) => {
+      {navigationLinks.map((link, i) => {
         return (
           <li key={link.name}>
             {!link.dropdown ? (
@@ -210,7 +218,7 @@ const DesktopNavBar: React.FC<Pick< HeaderProps,     | "onLinkClick"
                     >
                       <Popover.Panel
                         className={clsx(
-                          "absolute top-[4.75rem] mt-2 w-64 origin-top-right rounded-md bg-white shadow-md shadow-teal-800 ring-1 ring-black ring-opacity-5 focus:outline-none",
+                          "absolute top-[4.75rem] mt-2 w-64 origin-top-right rounded-md bg-brand-lightest shadow-md shadow-teal-800 ring-1 ring-black ring-opacity-5 focus:outline-none",
                           dropdownBgColor
                         )}
                         ref={ref}
@@ -257,8 +265,8 @@ const DesktopNavBar: React.FC<Pick< HeaderProps,     | "onLinkClick"
         );
       })}
     </ul>
-  )
-}
+  );
+};
 
 const Header: React.FC<HeaderProps> = ({
   navigationLinks,
@@ -282,7 +290,7 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-black z-40 pb-2 md:pb-2 md:pl-4">
+    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-light z-40 pb-2 md:pb-2 md:pl-4">
       <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
@@ -293,7 +301,7 @@ const Header: React.FC<HeaderProps> = ({
         )}
       </div>
       <div className="flex">
-        <div className="sm:flex lg:hidden mt-1">
+        {/* <div className="sm:flex lg:hidden mt-1">
           <Button
             extraClassName={clsx(
               "bg-brand-base px-8 text-sm h-10 mt-1 text-white hover:text-brand-base hover:shadow-[inset_15rem_0_0_0] hover:shadow-white duration-[400ms] transition-[color,box-shadow] rounded-lg border-2 border-brand-base"
@@ -304,7 +312,7 @@ const Header: React.FC<HeaderProps> = ({
               BOOK NOW
             </Link>
           </Button>
-        </div>
+        </div> */}
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (
             <>
