@@ -19,12 +19,12 @@ import { HeaderProps } from "@/types/component-types";
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }, props ) => {
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
-    { name: "ABOUT", href: "/about" },
+    { name: "ABOUT", href: "#about" },
     {
       name: "PROJECTS",
-      href: "/projects",
+      href: "#projects",
     },
-    { name: "SKILLS", href: "/skills" },
+    { name: "SKILLS", href: "#skills" },
     // { name: "GALLERY", href: "#", dropdown: GALLERY_DROPDOWN },
     // { name: "CONTACT US", href: "/contact-us" },
   ];
