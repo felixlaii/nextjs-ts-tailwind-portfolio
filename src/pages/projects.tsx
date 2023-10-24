@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
   const bottomProject = ProjectsData[3]; // The fourth project
 
   return (
-    <div className="flex flex-col items-center mt-12 lg:mt-24">
+    <div className="flex flex-col items-center bg-brand-light">
       <div>
         <h2 className="text-[4.5rem] pb-5">Projects</h2>
       </div>
