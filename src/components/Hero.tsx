@@ -5,10 +5,11 @@ const Hero: React.FC = () => {
       <div className="flex flex-row items-center">
         <div>
           <Image
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             src="/images/hero-image.png"
             alt="Hero Image"
+            className="w-full"
           />
         </div>
         <div >
