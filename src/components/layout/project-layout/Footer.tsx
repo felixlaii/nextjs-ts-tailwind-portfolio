@@ -29,23 +29,42 @@ const PortfolioSocials = () => {
     <div>
        <div className="flex flex-row mb-1">
         <div>
-          <a href="https://www.instagram.com/mix.6ix/" target="_blank">
+          <a href="https://instagram.com/felixlaii?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank">
             {" "}
             <PiInstagramLogoLight className={socialIconClassName} />
           </a>
         </div>
         <div>
-          <a
-            href="https://www.tiktok.com/@mix.6ix?_t=8dTWCTllNv4&_r=1"
-            target="_blank"
-          >
-            <PiTiktokLogoLight className={socialIconClassName} />
-          </a>
-        </div>
-        <div>
-          <a href="https://www.facebook.com/MIXX6IX" target="_blank">
+          <a href="https://www.tiktok.com/@felixlaii?_t=8gmTSGiRDUc&_r=1" target="_blank">
             {" "}
             <PiFacebookLogo className={socialIconClassName} />
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const PortfolioContact = () => {
+  return (
+    <div>
+      <div className="pb-1">
+        <div className={divClassName}>
+          <AiOutlinePhone className={iconClassName} />
+          <a
+            className="hover:underline font-primary text-[.7em] text-zinc-300 tracking-widest"
+            href={`tel:${FELIX_DETAILS.phone}`}
+          >
+            {FELIX_DETAILS.phone}
+          </a>
+        </div>
+        <div className={divClassName}>
+          <AiOutlineMail className={iconClassName} />
+          <a
+            className="font-primary text-[.7em] hover:underline tracking-[.3em] text-zinc-300"
+            href={`mailto:${FELIX_DETAILS.email}`}
+          >
+            {FELIX_DETAILS.email}
           </a>
         </div>
       </div>
