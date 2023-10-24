@@ -7,6 +7,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import Skills from './skills';
+import About from './about';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,9 +27,10 @@ const Home: React.FC = () => {
   const controls = useAnimation()
 
   return (
-    <div>
+    <div className="relative">
       <section id="about">
         <h2>About</h2>
+        <About/>
       </section>
       <section id="skills">
         <h2>Skills</h2>
