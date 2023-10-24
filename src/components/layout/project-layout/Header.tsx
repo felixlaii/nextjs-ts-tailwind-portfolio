@@ -32,7 +32,6 @@ export function useOnClickOutside<T extends HTMLDivElement>(
 
 
 
-
 const LogoLink: React.FC<
   Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
     logoClassName?: string;
@@ -293,7 +292,7 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-light z-40 pb-2 md:pb-2 md:pl-4 scroll-p-10">
+    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-light z-40 pb-2 md:pb-2 md:pl-4">
       <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />

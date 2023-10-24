@@ -19,19 +19,21 @@ const Home: React.FC = () => {
     <div className="relative">
       <Hero />
       <div>
-        <section id="about">
-          <About />
-        </section>
-      </div>
-      <div>
-        <section id="skills">
-          <Skills />
-        </section>
-      </div>
-      <div>
-        <section id="projects">
-          <Projects />
-        </section>
+        <div>
+          <section id="about">
+            <About />
+          </section>
+        </div>
+        <div>
+          <section id="skills">
+            <Skills />
+          </section>
+        </div>
+        <div>
+          <section id="projects">
+            <Projects />
+          </section>
+        </div>
       </div>
     </div>
   );
