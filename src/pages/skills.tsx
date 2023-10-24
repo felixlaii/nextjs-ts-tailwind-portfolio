@@ -9,7 +9,7 @@ const Skills = () => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <div>
+    <div className="bg-brand-dark">
       {/* <div className="relative pt-10 sm:pt-0 h-[14rem] md:h-[18rem]">
         <PageHeading title="Skills & Tools" />
       </div> */}
