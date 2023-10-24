@@ -72,7 +72,28 @@ const PortfolioContact = () => {
   )
 }
 const Footer: React.FC = () => {
-  return <div className="w-screen"></div>;
+  return  <div className="h-full mt-48">
+  <div className="flex flex-col items-center justify-center">
+    <div className="hidden md:inline-block">
+      <LogoFooter />
+    </div>
+    {/* <div className="flex flex-col justify-center w-1/2">
+      <p className="font-primary text-xs text-white">
+        Passionate hospitality professionals specializing in crafting
+        memorable cocktail experiences. We offer exclusive, personalized
+        services, embodying a culture of craftsmanship. From intimate
+        gatherings to grand celebrations, we are the trusted bartending
+        company in the Greater Toronto Area.
+      </p>
+    </div> */}
+    <div>
+      <PortfolioContact />
+    </div>
+    <div>
+      <PortfolioSocials />
+    </div>
+  </div>
+</div>
 };
 
 export default Footer;
