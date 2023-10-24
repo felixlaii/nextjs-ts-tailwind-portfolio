@@ -9,7 +9,7 @@ const Skills = () => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <div className="bg-brand-dark pb-20">
+    <div className="bg-brand-lightest pb-20">
       <div>
         <h2>Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>

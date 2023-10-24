@@ -81,7 +81,7 @@ const PortfolioContact = () => {
 };
 const Footer: React.FC = () => {
   return (
-    <div className="h-full mt-18 bg-brand-dark">
+    <div className="h-full mt-18 bg-brand-lightest">
       <div className="flex flex-col items-center justify-center">
         <div className="hidden md:inline-block">
           <LogoFooter />
