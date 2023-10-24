@@ -34,7 +34,7 @@ export interface NavigationLink {
     onSubmit?: (event: React.FormEvent<HTMLButtonElement>) => void;
   }
   
-export interface LinkCardProps {
+export interface ProjectCardProps {
   href: string;
   icon: JSX.Element;
   hoverIcon: JSX.Element;
