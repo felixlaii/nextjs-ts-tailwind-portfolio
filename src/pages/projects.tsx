@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
         {topProjects.map((project, index) => (
           <div
             key={project.name}
-            className="h-[26rem] border-b-[1px] hover:border-none border-zinc-300 last:border-none mx-10 pt-4"
+            className="h-[26rem] hover:border-none  last:border-none mx-10 pt-4"
           >
             <ProjectCard
               name={project.name}
@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="h-[26rem] border-b-[1px] hover:border-none border-zinc-300 last:border-none mx-10 pt-4">
+      <div className="h-[26rem] hover:border-none last:border-none mx-10 pt-4">
         <ProjectCard
           name={bottomProject.name}
           url={bottomProject.url}
