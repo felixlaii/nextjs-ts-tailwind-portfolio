@@ -28,6 +28,7 @@ const Projects: React.FC = () => {
         ))}
       </div>
       <div className="h-[26rem] hover:border-none last:border-none mx-10 pt-4">
+        <h2>Coming Soon ...</h2>
         <ProjectCard
           name={bottomProject.name}
           url={bottomProject.url}
