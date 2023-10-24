@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import Skills from './skills';
 import About from './about';
 import Projects from './projects';
-
+import Hero from '@/components/Hero';
 const inter = Inter({ subsets: ['latin'] })
 
 export const fadeIn = {
@@ -29,6 +29,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="relative">
+      <Hero />
       <section id="about">
         {/* <h2>About</h2> */}
         <About/>
