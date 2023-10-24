@@ -28,9 +28,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       </div>
 
-      <h2 className="text-xl lg:text-2xl font-normal">{name}</h2>
+      <h2 className="text-xl lg:text-2xl text-white font-normal">{name}</h2>
 
-      <p className="text-md lg:text-l text-zinc-400 font-extralight">
+      <p className="text-md lg:text-l text-white font-extralight">
         {description}
       </p>
     </Link>

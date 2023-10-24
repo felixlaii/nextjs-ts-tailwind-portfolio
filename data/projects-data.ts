@@ -17,14 +17,14 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "richmond west dental",
     url: "https://richmondwestdental.com",
-    description: "Downtown Toronto dental office.",
+    description: "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
   },
   {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698182572/MIX6IX2022_fb6fpb.png",
     name: "mix6ix bartending & co",
     url: "https://mix6ixtoronto.com",
-    description: "Bartending service for private events",
+    description: "Bartending service for private events. Custom code injections through Square Space.",
   },
   {
     image:
