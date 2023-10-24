@@ -10,9 +10,9 @@ const Skills = () => {
 
   return (
     <div>
-      <div className="relative pt-10 sm:pt-0 h-[14rem] md:h-[18rem]">
+      {/* <div className="relative pt-10 sm:pt-0 h-[14rem] md:h-[18rem]">
         <PageHeading title="Skills & Tools" />
-      </div>
+      </div> */}
       {/* Top Row */}
       <div>
         <ul className="flex justify-between ml-10 mr-10">

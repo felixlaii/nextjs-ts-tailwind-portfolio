@@ -6,6 +6,7 @@ import { MdCamera, MdOutlineCamera } from "react-icons/md";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import Skills from './skills';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,13 @@ const Home: React.FC = () => {
 
   return (
     <div>
-
+      <section id="about">
+        <h2>About</h2>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <Skills/>
+      </section>
     </div>
   )
 }
