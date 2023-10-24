@@ -24,12 +24,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {iconType === "icon" ? icon : hoverIcon}
         </div> */}
         <div>
-            <Image width={200} height={200} src={image} alt="project logo"/>
+            <Image width={250} height={250} src={image} alt="project logo"/>
         </div>
   
         <h2 className="text-xl lg:text-2xl font-normal">{name}</h2>
   
-        <p className="text-lg lg:text-xl text-zinc-400 font-extralight">
+        <p className="text-md lg:text-l text-zinc-400 font-extralight">
           {description}
         </p>
       </Link>
