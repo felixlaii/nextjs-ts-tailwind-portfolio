@@ -34,4 +34,12 @@ export interface NavigationLink {
     onSubmit?: (event: React.FormEvent<HTMLButtonElement>) => void;
   }
   
+export interface ProjectCardProps {
+  url: string;
+  // icon: JSX.Element;
+  // hoverIcon: JSX.Element;
+  name: string;
+  description: string;
+  image: string;
+}
   export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
