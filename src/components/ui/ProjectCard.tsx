@@ -23,8 +23,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {/* <div className="mx-auto pt-4 transition">
           {iconType === "icon" ? icon : hoverIcon}
         </div> */}
-        <div>
-            <Image width={250} height={250} src={image} alt="project logo"/>
+        <div className="w-30">
+            <Image className="rounded-lg object-contain" width={200} height={200} src={image} alt="project logo"/>
         </div>
   
         <h2 className="text-xl lg:text-2xl font-normal">{name}</h2>
