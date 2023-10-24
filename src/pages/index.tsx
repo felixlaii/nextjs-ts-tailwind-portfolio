@@ -30,11 +30,11 @@ const Home: React.FC = () => {
   return (
     <div className="relative">
       <section id="about">
-        <h2>About</h2>
+        {/* <h2>About</h2> */}
         <About/>
       </section>
       <section id="skills">
-        <h2>Skills</h2>
+        {/* <h2>Skills</h2> */}
         <Skills/>
       </section>
       <section id="projects">
