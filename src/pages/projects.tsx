@@ -9,6 +9,9 @@ const Projects: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center mt-12 lg:mt-24">
+      <div>
+        <h2 className="text-[4.5rem] pb-5">Projects</h2>
+      </div>
       <div className="flex flex-wrap justify-center gap-8">
         {topProjects.map((project, index) => (
           <div

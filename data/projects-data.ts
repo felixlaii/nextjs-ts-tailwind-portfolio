@@ -21,7 +21,7 @@ export const ProjectsData: {
   },
   {
     image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174744/mix6ix2022_blk_ivehqs.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698182572/MIX6IX2022_fb6fpb.png",
     name: "mix6ix bartending & co",
     url: "https://mix6ixtoronto.com",
     description: "Bartending service for private events",
