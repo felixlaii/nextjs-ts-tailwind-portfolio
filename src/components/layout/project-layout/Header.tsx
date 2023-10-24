@@ -218,7 +218,7 @@ const DesktopNavBar: React.FC<
                     >
                       <Popover.Panel
                         className={clsx(
-                          "absolute top-[4.75rem] mt-2 w-64 origin-top-right rounded-md bg-brand-darkest shadow-md shadow-teal-800 ring-1 ring-black ring-opacity-5 focus:outline-none",
+                          "absolute top-[4.75rem] mt-2 w-64 origin-top-right rounded-md bg-brand-lightest shadow-md shadow-teal-800 ring-1 ring-black ring-opacity-5 focus:outline-none",
                           dropdownBgColor
                         )}
                         ref={ref}
@@ -290,7 +290,7 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-darkest z-40 pb-2 md:pb-2 md:pl-4">
+    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-light z-40 pb-2 md:pb-2 md:pl-4">
       <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
