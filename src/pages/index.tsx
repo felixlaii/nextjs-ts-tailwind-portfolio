@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import Skills from './skills';
 import About from './about';
+import Projects from './projects';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,6 +36,9 @@ const Home: React.FC = () => {
       <section id="skills">
         <h2>Skills</h2>
         <Skills/>
+      </section>
+      <section id="projects">
+        <Projects />
       </section>
     </div>
   )
