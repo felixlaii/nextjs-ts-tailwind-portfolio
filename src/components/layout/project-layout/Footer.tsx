@@ -6,7 +6,6 @@ import { snakeCaseToTitleCase } from "@/lib/functions";
 import { FELIX_DETAILS } from "../../../../data/portfolio-info";
 import {
   PiTiktokLogoLight,
-  PiFacebookLogo,
   PiInstagramLogoLight,
 } from "react-icons/pi";
 
@@ -18,7 +17,8 @@ const LogoFooter = () => {
   return (
     <div>
          <div className="relative">
-        <Image className="h-[6.5rem]" src="/images/blue-logo-1.png" alt="logo" />
+        <Image className="h-[6.5rem]"       width={150}
+            height={150} src="/images/blue-logo-1.png" alt="logo" />
       </div>
     </div>
   )
@@ -37,7 +37,7 @@ const PortfolioSocials = () => {
         <div>
           <a href="https://www.tiktok.com/@felixlaii?_t=8gmTSGiRDUc&_r=1" target="_blank">
             {" "}
-            <PiFacebookLogo className={socialIconClassName} />
+            <  PiTiktokLogoLight className={socialIconClassName} />
           </a>
         </div>
       </div>
