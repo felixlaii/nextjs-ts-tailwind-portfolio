@@ -1,13 +1,10 @@
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { FooterProps } from "@/types/component-types";
 import { snakeCaseToTitleCase } from "@/lib/functions";
 import { FELIX_DETAILS } from "../../../../data/portfolio-info";
-import {
-  PiTiktokLogoLight,
-  PiInstagramLogoLight,
-} from "react-icons/pi";
+import { PiTiktokLogoLight, PiInstagramLogoLight } from "react-icons/pi";
 
 const iconClassName = "mr-2 w-4 h-4 text-white";
 const divClassName = " flex flex-row justify-center mt-2 mb-1";
@@ -16,34 +13,45 @@ const socialIconClassName = "mt-3 mb-3 mr-4 w-7 h-7 text-brand-gold";
 const LogoFooter = () => {
   return (
     <div>
-         <div className="relative">
-        <Image className="h-[6.5rem]"       width={150}
-            height={150} src="/images/blue-logo-1.png" alt="logo" />
+      <div className="relative">
+        <Image
+          className="h-[6.5rem]"
+          width={150}
+          height={150}
+          src="/images/blue-logo-1.png"
+          alt="logo"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
 const PortfolioSocials = () => {
   return (
     <div>
-       <div className="flex flex-row mb-1">
+      <div className="flex flex-row mb-1">
         <div>
-          <a href="https://instagram.com/felixlaii?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank">
+          <a
+            href="https://instagram.com/felixlaii?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
+            target="_blank"
+          >
             {" "}
             <PiInstagramLogoLight className={socialIconClassName} />
           </a>
         </div>
         <div>
-          <a href="https://www.tiktok.com/@felixlaii?_t=8gmTSGiRDUc&_r=1" target="_blank">
+          <a
+            href="https://www.tiktok.com/@felixlaii?_t=8gmTSGiRDUc&_r=1"
+            target="_blank"
+          >
             {" "}
-            <  PiTiktokLogoLight className={socialIconClassName} />
+            <PiTiktokLogoLight className={socialIconClassName} />
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const PortfolioContact = () => {
   return (
@@ -69,31 +77,25 @@ const PortfolioContact = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 const Footer: React.FC = () => {
-  return  <div className="h-full mt-48">
-  <div className="flex flex-col items-center justify-center">
-    <div className="hidden md:inline-block">
-      <LogoFooter />
+  return (
+    <div className="h-full mt-18 bg-brand-dark">
+      <div className="flex flex-col items-center justify-center">
+        <div className="hidden md:inline-block">
+          <LogoFooter />
+        </div>
+
+        <div>
+          <PortfolioContact />
+        </div>
+        <div>
+          <PortfolioSocials />
+        </div>
+      </div>
     </div>
-    {/* <div className="flex flex-col justify-center w-1/2">
-      <p className="font-primary text-xs text-white">
-        Passionate hospitality professionals specializing in crafting
-        memorable cocktail experiences. We offer exclusive, personalized
-        services, embodying a culture of craftsmanship. From intimate
-        gatherings to grand celebrations, we are the trusted bartending
-        company in the Greater Toronto Area.
-      </p>
-    </div> */}
-    <div>
-      <PortfolioContact />
-    </div>
-    <div>
-      <PortfolioSocials />
-    </div>
-  </div>
-</div>
+  );
 };
 
 export default Footer;
