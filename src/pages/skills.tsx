@@ -13,44 +13,58 @@ const Skills = () => {
       <div>
         <h2>Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>
-        <p>The skills, tools and technologies I use to bring your vision to life</p>
+        <p>
+          The skills, tools and technologies I use to bring your vision to life
+        </p>
       </div>
       {/* Top Row */}
       <div>
-        <ul className="flex justify-between ml-16 mr-16">
-          {topRowSkills.map((skill, index) => (
-            <li className="flex-row mt-28 text-white" key={skill.image}>
-              <div className="flex-col">
-                <div>
+        <div>
+          <ul className="flex justify-between ml-16 mr-16">
+            {topRowSkills.map((skill, index) => (
+              <li className="flex-row mt-28 text-white" key={skill.image}>
+                <div className="flex-col">
                   <div>
-                <Image width={70} height={70} src={skill.image} alt="skills" />
+                    <div>
+                      <Image
+                        width={70}
+                        height={70}
+                        src={skill.image}
+                        alt="skills"
+                      />
+                    </div>
+                    <div className="flex justify-center">
+                      <p>{skill.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-center">
-                <p>{skill.description}</p>
-                </div>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      {/* Bottom Row */}
-      <div>
-        <ul className="flex justify-between mt-20 ml-10 mr-10">
-          {bottomRowSkills.map((skill, index) => (
-            <li className="flex-row text-white" key={skill.image}>
-              <div className="flex-col">
-                <div>
-                <Image width={70} height={70} src={skill.image} alt="skills" />
+        {/* Bottom Row */}
+        <div>
+          <ul className="flex justify-between mt-20 ml-10 mr-10">
+            {bottomRowSkills.map((skill, index) => (
+              <li className="flex-row text-white" key={skill.image}>
+                <div className="flex-col">
+                  <div>
+                    <Image
+                      width={70}
+                      height={70}
+                      src={skill.image}
+                      alt="skills"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <p>{skill.description}</p>
+                  </div>
                 </div>
-                <div className="flex justify-center">
-                <p>{skill.description}</p>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
