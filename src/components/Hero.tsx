@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Hero: React.FC = () => {
   return (
-    <div className="bg-brand-darkest max-h-full mt-16">
+    <div className="bg-brand-lightest max-h-full mt-16">
       <div className="flex flex-row items-center">
         <div>
           <Image

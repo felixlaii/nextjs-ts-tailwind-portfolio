@@ -30,6 +30,8 @@ export function useOnClickOutside<T extends HTMLDivElement>(
   }, [ref, handler]);
 }
 
+
+
 const LogoLink: React.FC<
   Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
     logoClassName?: string;
@@ -154,7 +156,7 @@ const DesktopNavBar: React.FC<
                     : linkClassName,
                   textClassName,
                   "text-center lg:text-left",
-                  "flex flex-col"
+                  "flex flex-col",
                 )}
                 onClick={() => setIsClick(true)}
                 onMouseLeave={() => {
@@ -301,18 +303,6 @@ const Header: React.FC<HeaderProps> = ({
         )}
       </div>
       <div className="flex">
-        {/* <div className="sm:flex lg:hidden mt-1">
-          <Button
-            extraClassName={clsx(
-              "bg-brand-base px-8 text-sm h-10 mt-1 text-white hover:text-brand-base hover:shadow-[inset_15rem_0_0_0] hover:shadow-white duration-[400ms] transition-[color,box-shadow] rounded-lg border-2 border-brand-base"
-            )}
-            type="button"
-          >
-            <Link href="/book-appointment" className="font-medium">
-              BOOK NOW
-            </Link>
-          </Button>
-        </div> */}
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (
             <>

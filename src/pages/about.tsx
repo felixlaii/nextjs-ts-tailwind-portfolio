@@ -1,6 +1,6 @@
 const About: React.FC = () => {
     return (
-        <div>
+        <div className="bg-brand-light">
             <h1>
                 About Felix
             </h1>
