@@ -49,8 +49,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {isHovered ? null : (
         <>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            take a look
+          <a className="border" href={url} target="_blank" rel="noopener noreferrer">
+            view
           </a>
         </>
       )}
