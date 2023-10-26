@@ -1,19 +1,46 @@
-import Link from "next/link";
-import Image from "next/image";
+import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 const Projects: React.FC = () => {
-  const topProjects = ProjectsData.slice(0, 3); // First three projects
-  const bottomProject = ProjectsData[3]; // The fourth project
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredProjects =
+    selectedCategory === "all"
+      ? ProjectsData
+      : ProjectsData.filter((project) => project.category === selectedCategory);
 
   return (
     <div className="flex flex-col items-center bg-brand-light pb-10">
       <div>
         <h2 className="text-[4.5rem] pb-5">Projects</h2>
+        <div className="flex justify-center mb-4">
+          <button
+            className={`mr-4 ${
+              selectedCategory === "all" ? "font-bold" : ""
+            }`}
+            onClick={() => setSelectedCategory("all")}
+          >
+            All Projects
+          </button>
+          <button
+            className={`mr-4 ${
+              selectedCategory === "school" ? "font-bold" : ""
+            }`}
+            onClick={() => setSelectedCategory("school")}
+          >
+            School Projects
+          </button>
+          <button
+            className={`${selectedCategory === "professional" ? "font-bold" : ""}`}
+            onClick={() => setSelectedCategory("professional")}
+          >
+            Professional Projects
+          </button>
+        </div>
       </div>
       <div className="flex flex-wrap justify-center gap-8">
-        {topProjects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div
             key={project.name}
             className="h-[26rem] hover:border-none  last:border-none mx-10 pt-4"
@@ -26,15 +53,6 @@ const Projects: React.FC = () => {
             />
           </div>
         ))}
-      </div>
-      <div className="h-[26rem] hover:border-none last:border-none mx-10 pt-4">
-        <h2>Coming Soon ...</h2>
-        <ProjectCard
-          name={bottomProject.name}
-          url={bottomProject.url}
-          description={bottomProject.description}
-          image={bottomProject.image}
-        />
       </div>
     </div>
   );

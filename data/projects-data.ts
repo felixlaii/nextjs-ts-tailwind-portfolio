@@ -38,6 +38,42 @@ export const ProjectsData: {
     url: "",
     description: "Secondary School based in Vancouver.",
     category: "professional"
-
   },
+  {
+    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698361877/Screenshot_2023-10-26_at_7.10.58_PM_osmw74.png",
+    name: "travelsite",
+    url: "https://github.com/felixlaii/travelsite",
+    description: "",
+    category: "school"
+  },
+  {
+    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362028/Screenshot_2023-10-26_at_7.13.35_PM_dofzuc.png",
+    name: "bandsite",
+    url: "https://github.com/felixlaii/bandsite",
+    description: "",
+    category: "school"
+  },
+  {
+    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362108/BrainFlix-logo_bhkddt.svg",
+    name: "brainflix",
+    url: "https://github.com/felixlaii/felix-lai-brainflix",
+    description: "",
+    category: "school"
+  },
+  {
+    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
+    name: "instock",
+    url: "https://github.com/felixlaii/instock",
+    description: "",
+    category: "school"
+  },
+  {
+    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362235/pokemon-logo-black-transparent_xdmglm.png",
+    name: "pokemon memory game",
+    url: "https://github.com/felixlaii/pokemon-memory-game",
+    description: "",
+    category: "school"
+  },
+
+
 ];
