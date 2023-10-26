@@ -12,8 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [iconType, setIconType] = useState<string>();
 
   return (
-    <Link
-      href={url}
+    <div
       className="flex flex-col justify-center items-center md:max-w-52 lg:w-80 md:px-3 lg:px-8 pt-4 md:pt-0 h-full rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 hover:shadow-xl hover:scale-105 hover:transition hover:duration-300"
       onMouseEnter={() => setIconType("hoverIcon")}
       onMouseLeave={() => setIconType("icon")}
@@ -38,7 +37,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
         {url}
       </button> */}
-    </Link>
+      <a href={url} target="_blank" rel="noopener noreferrer" >take a look</a>
+    </div>
   );
 };
 
