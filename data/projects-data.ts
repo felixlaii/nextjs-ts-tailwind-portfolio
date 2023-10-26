@@ -32,7 +32,7 @@ export const ProjectsData: {
     url: "https://mix6ixtoronto.com",
     description: "Bartending service for private events. Custom code injections through Square Space.",
     category: "professional",
-    technology: [""]
+    technology: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"]
 
   },
   {
@@ -90,7 +90,7 @@ export const ProjectsData: {
     url: "https://blushnletters.com/",
     description: "",
     category: "professional",
-    technology: [""]
+    technology: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"]
   }
 
 
