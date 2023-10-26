@@ -23,7 +23,7 @@ export const ProjectsData: {
     url: "https://richmondwestdental.com",
     description: "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
     category: "professional",
-    technology: [""]
+    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",   ]
   },
   {
     image:
