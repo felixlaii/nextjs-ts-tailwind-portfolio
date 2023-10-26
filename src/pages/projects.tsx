@@ -50,6 +50,7 @@ const Projects: React.FC = () => {
               url={project.url}
               description={project.description}
               image={project.image}
+              technology={project.technology}
             />
           </div>
         ))}

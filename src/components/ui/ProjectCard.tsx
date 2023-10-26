@@ -1,6 +1,5 @@
+import React, { useState } from "react";
 import { ProjectCardProps } from "@/types/component-types";
-import Link from "next/link";
-import { useState } from "react";
 import Image from "next/image";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -8,14 +7,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
   description,
   image,
+  technology,
 }) => {
-  const [iconType, setIconType] = useState<string>();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
       className="flex flex-col justify-center items-center md:max-w-52 lg:w-80 md:px-3 lg:px-8 pt-4 md:pt-0 h-full rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 hover:shadow-xl hover:scale-105 hover:transition hover:duration-300"
-      onMouseEnter={() => setIconType("hoverIcon")}
-      onMouseLeave={() => setIconType("icon")}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="w-200 h-90">
         <Image
@@ -27,17 +27,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       </div>
 
-      <h2 className="text-xl lg:text-2xl text-white font-normal">{name}</h2>
+      {isHovered && (
+        <div className="text-white font-light mb-2">
+          Technology:
+          {technology.map((iconUrl, index) => (
+            <img
+              key={index}
+              src={iconUrl}
+              alt={`tech-icon-${index}`}
+              className="w-6 h-6 inline-block mx-1"
+            />
+          ))}
+        </div>
+      )}
 
-      <p className="text-md lg:text-lg text-white font-extralight">
-        {description}
-      </p>
-
-      {/* Add your button here */}
-      {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-        {url}
-      </button> */}
-      <a href={url} target="_blank" rel="noopener noreferrer" >take a look</a>
+      {isHovered ? null : (
+        <>
+          <h2 className="text-xl lg:text-2xl text-white font-normal">{name}</h2>
+          <p className="text-md lg:text-lg text-white font-extralight">
+            {description}
+          </p>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            take a look
+          </a>
+        </>
+      )}
     </div>
   );
 };

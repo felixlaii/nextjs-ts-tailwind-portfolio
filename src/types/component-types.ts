@@ -41,5 +41,6 @@ export interface ProjectCardProps {
   name: string;
   description: string;
   image: string;
+  technology: string[];
 }
   export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
