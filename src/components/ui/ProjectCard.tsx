@@ -31,7 +31,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="text-white font-light mb-2">
           Technology:
           {technology.map((iconUrl, index) => (
-            <img
+            <Image
+            height={40}
+            width={40}
               key={index}
               src={iconUrl}
               alt={`tech-icon-${index}`}
