@@ -23,7 +23,7 @@ export const ProjectsData: {
     url: "https://richmondwestdental.com",
     description: "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
     category: "professional",
-    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",   ]
+    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",   ]
   },
   {
     image:
@@ -66,7 +66,7 @@ export const ProjectsData: {
     url: "https://github.com/felixlaii/felix-lai-brainflix",
     description: "",
     category: "school",
-    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"]
+    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"]
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
@@ -74,7 +74,7 @@ export const ProjectsData: {
     url: "https://github.com/felixlaii/instock",
     description: "",
     category: "school",
-    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"]
+    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"]
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362235/pokemon-logo-black-transparent_xdmglm.png",
