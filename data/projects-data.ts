@@ -42,7 +42,7 @@ export const ProjectsData: {
     url: "",
     description: "Secondary School based in Vancouver.",
     category: "professional",
-    technology: [""]
+    technology: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"]
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698361877/Screenshot_2023-10-26_at_7.10.58_PM_osmw74.png",
