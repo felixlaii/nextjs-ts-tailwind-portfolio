@@ -13,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div
-      className="flex flex-col justify-center items-center md:max-w-45 lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0 h-full rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 hover:shadow-xl hover:scale-105 hover:transition hover:duration-300"
+      className="flex flex-col justify-center items-center md:max-w-45 lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0 h-70 rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 hover:shadow-xl hover:scale-105 hover:transition hover:duration-300"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ minHeight: "280px" }} // Adjust the minimum height as needed
