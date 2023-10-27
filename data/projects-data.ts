@@ -9,7 +9,7 @@ export const ProjectsData: {
   {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
-    name: "pawfinder",
+    name: "PawFinder",
     url: "https://github.com/felixlaii/pawfinder",
     description:
       "An application that compiles all adoption agency information into one convenient location. Login and save your pet preferences. Adopt and save a pet today! Ability to sign up and save adoption preferences such as breed and age.",
@@ -18,7 +18,7 @@ export const ProjectsData: {
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
-    name: "instock",
+    name: "inStock",
     url: "https://github.com/felixlaii/instock",
     description: "A stock inventory management website. A hackathon hosted by BrainStation. 5 Software Engineers working together to deliver final product.",
     category: "school",
@@ -26,7 +26,7 @@ export const ProjectsData: {
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362108/BrainFlix-logo_bhkddt.svg",
-    name: "brainflix",
+    name: "BrainFlix",
     url: "https://github.com/felixlaii/felix-lai-brainflix",
     description: "A Youtube/Netflix Clone. Ability to upload using back-end.",
     category: "school",
@@ -34,7 +34,7 @@ export const ProjectsData: {
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365085/Screenshot_2023-10-26_at_8.04.40_PM_k1owj4.png",
-    name: "bandsite",
+    name: "Bandsite",
     url: "https://github.com/felixlaii/bandsite",
     description: "A website for Bees Knees with functioning comments with backend.",
     category: "school",
@@ -42,7 +42,7 @@ export const ProjectsData: {
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365068/Screenshot_2023-10-26_at_8.04.22_PM_tcwjjy.png",
-    name: "travelsite",
+    name: "Travelsite",
     url: "https://github.com/felixlaii/travelsite",
     description: "A static webpage. One of the first projects ever done in BrainStation",
     category: "school",
@@ -50,7 +50,7 @@ export const ProjectsData: {
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362235/pokemon-logo-black-transparent_xdmglm.png",
-    name: "pokemon memory game",
+    name: "Pokemon Memory Game",
     url: "https://github.com/felixlaii/pokemon-memory-game",
     description: "A memory game created during our first Hackathon with 2 other software engineers using the Pokemon API.",
     category: "school",
@@ -60,7 +60,7 @@ export const ProjectsData: {
   {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
-    name: "richmond west dental",
+    name: "Richmond West Dental",
     url: "https://richmondwestdental.com",
     description: "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
     category: "professional",
@@ -69,7 +69,7 @@ export const ProjectsData: {
   {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
-    name: "mix6ix bartending & co",
+    name: "MIX6IX Bartending & Co",
     url: "https://mix6ixtoronto.com",
     description: "Bartending service for private events. Custom code injections through Square Space.",
     category: "professional",
@@ -89,7 +89,7 @@ export const ProjectsData: {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362504/Screenshot_2023-10-26_at_7.21.40_PM_kewmlp.png",
     name: "Blush & Letters Co",
     url: "https://blushnletters.com/",
-    description: "",
+    description: "Modern Calligraphy and design. A website done through Square Space with custom code injections to bring client's vision to life.",
     category: "professional",
     technology: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"]
   }

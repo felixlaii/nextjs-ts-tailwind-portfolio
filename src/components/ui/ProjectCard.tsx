@@ -17,19 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="w-200 h-90">
-        <h2 className="text-lg lg:text-xl text-white font-normal">{name}</h2>
-
-        <Image
-          className="rounded-lg object-contain h-29"
-          width={200}
-          height={90}
-          src={image}
-          alt="project logo"
-        />
-      </div>
-
-      {isHovered && (
+      {isHovered ? (
         <div className="text-white font-light mb-2">
           {technology.map((iconUrl, index) => (
             <Image
@@ -41,18 +29,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               className="w-6 h-6 inline-block mx-1"
             />
           ))}
-          <p className="text-sm lg:text-md text-white font-extralight">
+          <p className="text-sm lg:text-md text-white font-extralight mt-10 mb-5">
             {description}
           </p>
-        </div>
-      )}
-
-      {isHovered ? null : (
-        <>
-          <a className="border" href={url} target="_blank" rel="noopener noreferrer">
+          <a className="border px-7 rounded-md text-xs" href={url} target="_blank" rel="noopener noreferrer">
             view
           </a>
-        </>
+        </div>
+      ) : (
+        <div className="w-200 h-90" >
+          <h2 className="text-lg lg:text-xl text-white font-normal">{name}</h2>
+          <Image
+            className="rounded-lg object-center"
+            width={150}
+            height={90}
+            src={image}
+            alt="project logo"
+          />
+        </div>
       )}
     </div>
   );
