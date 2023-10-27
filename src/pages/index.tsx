@@ -19,11 +19,11 @@ const Home: React.FC = () => {
     <div className="relative">
       <Hero />
       <div>
-        <div>
+        {/* <div>
           <section id="about">
             <About />
           </section>
-        </div>
+        </div> */}
         <div>
           <section id="skills">
             <Skills />

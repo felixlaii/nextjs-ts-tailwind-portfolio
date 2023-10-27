@@ -9,9 +9,9 @@ const Skills = () => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <div className="bg-brand-lightest pb-20">
-      <div>
-        <h2>Skills & Tools</h2>
+    <div className=" bg-brand-light pb-20">
+      <div className="flex flex-col items-center">
+        <h2 className="text-[4.5rem] pb-5">Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>
         <p>
           The skills, tools and technologies I use to bring your vision to life
