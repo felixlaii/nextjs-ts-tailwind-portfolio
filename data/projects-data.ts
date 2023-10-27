@@ -50,7 +50,7 @@ export const ProjectsData: {
   },
   {
     image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362235/pokemon-logo-black-transparent_xdmglm.png",
-    name: "Pokemon Memory Game",
+    name: "Memory Game",
     url: "https://github.com/felixlaii/pokemon-memory-game",
     description: "A memory game created during our first Hackathon with 2 other software engineers using the Pokemon API.",
     category: "school",
