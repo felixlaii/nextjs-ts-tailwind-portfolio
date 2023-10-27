@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
   return (
     <div className="flex flex-col items-center bg-brand-light pb-10">
       <div>
-        <h2 className="text-[4.5rem] pb-5">Projects</h2>
+        <h2 className="text-[4.5rem] pb-5">Explore My Work ...</h2>
         <div className="flex justify-center mb-4">
           <button
             className={`mr-4 ${
@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
             }`}
             onClick={() => setSelectedCategory("all")}
           >
-            All Projects
+            All
           </button>
           <button
             className={`mr-4 ${
@@ -29,13 +29,13 @@ const Projects: React.FC = () => {
             }`}
             onClick={() => setSelectedCategory("school")}
           >
-            School Projects
+            School
           </button>
           <button
             className={`${selectedCategory === "professional" ? "font-bold" : ""}`}
             onClick={() => setSelectedCategory("professional")}
           >
-            Professional Projects
+            Professional
           </button>
         </div>
       </div>
