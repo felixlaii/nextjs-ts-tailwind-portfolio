@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
       : ProjectsData.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="flex flex-col items-center bg-brand-light pb-10">
+    <div className="flex flex-col items-center bg-brand-base pb-10">
       <div>
         <h2 className="text-[4.5rem] pb-5">Explore My Work ...</h2>
         <div className="flex justify-center mb-4">

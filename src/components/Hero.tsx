@@ -1,20 +1,19 @@
 import Image from "next/image";
 const Hero: React.FC = () => {
   return (
-    <div className="bg-brand-lightest max-h-full mt-16">
+    <div className="bg-brand-base max-h-full mt-13">
       <div className="flex flex-row items-center">
         <div>
           <Image
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             src="/images/hero-image.png"
             alt="Hero Image"
-            className="w-full"
           />
         </div>
         <div >
-          <p>software developer</p>
-          <p>& dog lover</p>
+          <p className="text-[5rem]">software developer</p>
+          <p className="text-[3rem]">& dog lover</p>
         </div>
       </div>
     </div>
