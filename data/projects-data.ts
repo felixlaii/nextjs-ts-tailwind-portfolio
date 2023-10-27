@@ -68,7 +68,7 @@ export const ProjectsData: {
   },
   {
     image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698182572/MIX6IX2022_fb6fpb.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
     name: "mix6ix bartending & co",
     url: "https://mix6ixtoronto.com",
     description: "Bartending service for private events. Custom code injections through Square Space.",
