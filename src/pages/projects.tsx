@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.name}
-            className="h-[26rem] hover:border-none  last:border-none mx-10 pt-4"
+            className="h-[20rem] hover:border-none  last:border-none mx-10 pt-4"
           >
             <ProjectCard
               name={project.name}
