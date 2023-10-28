@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center w-full h-full">
-          <h2 className="text-md lg:text-lg tracking-widest text-white font-light mb-4">{name}</h2>
+          <h2 className="text-sm lg:text-md tracking-widest text-white font-light mb-4">{name}</h2>
           <div className="w-150 h-90">
             <Image
               className="rounded-lg object-center"
