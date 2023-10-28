@@ -25,12 +25,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="flex items-center space-x-2 mt-10">
             {technology.map((iconUrl, index) => (
               <Image
-                height={50}
-                width={50}
+                height={60}
+                width={60}
                 key={index}
                 src={iconUrl}
                 alt={`tech-icon-${index}`}
-                className="w-4 h-4"
+                className="w-5 h-5"
               />
             ))}
           </div>

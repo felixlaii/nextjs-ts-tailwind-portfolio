@@ -10,7 +10,7 @@ export const ProjectsData: {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "Richmond West Dental",
-    url: "https://richmondwestdental.com",
+    url: "https://github.com/felixlaii/richmond-dental-nextjs",
     description:
       "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
     category: "professional",
@@ -84,7 +84,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
   },
   {
