@@ -25,17 +25,17 @@ const Projects: React.FC = () => {
           </button>
           <button
             className={`mr-4 ${
-              selectedCategory === "school" ? "font-bold" : ""
+              selectedCategory === "professional" ? "font-bold" : ""
             }`}
-            onClick={() => setSelectedCategory("school")}
-          >
-            School
-          </button>
-          <button
-            className={`${selectedCategory === "professional" ? "font-bold" : ""}`}
             onClick={() => setSelectedCategory("professional")}
           >
             Professional
+          </button>
+          <button
+            className={`${selectedCategory === "professional" ? "font-bold" : ""}`}
+            onClick={() => setSelectedCategory("school")}
+          >
+            School
           </button>
         </div>
       </div>
