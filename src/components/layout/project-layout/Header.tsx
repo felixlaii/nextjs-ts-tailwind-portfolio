@@ -7,7 +7,7 @@ import Button from "@/components/ui/inputs/Button";
 import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
-
+import DarkModeToggle from "@/components/ui/inputs/DarkModeToggle";
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -290,10 +290,19 @@ const Header: React.FC<HeaderProps> = ({
   useOnClickOutside(ref, () => {
     setIsClick(false);
   });
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+    // Save the dark mode state to local storage or a state management solution if needed
+  };
+  
 
   return (
-    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-light z-40 pb-2 md:pb-2 md:pl-4">
-      <div className="m-0">
+<header className={clsx(
+  "font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 pb-2 md:pb-2 md:pl-4",
+  isDarkMode ? "bg-dark text-dark" : "bg-brand-light text-black"
+)}>      <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
         ) : (
@@ -303,6 +312,11 @@ const Header: React.FC<HeaderProps> = ({
         )}
       </div>
       <div className="flex">
+      <button onClick={toggleDarkMode}>
+  Toggle Dark Mode
+</button>
+
+        
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (
             <>

@@ -10,6 +10,7 @@ import Skills from "./skills";
 import About from "./about";
 import Projects from "./projects";
 import Hero from "@/components/Hero";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const Home: React.FC = () => {

@@ -1,15 +1,15 @@
 import React from 'react';
 import { useDarkMode } from '@/contexts/DarkModeContext';
 
-const DarkModeToggle: React.FC = () => {
+const MyComponent = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <label className="switch">
-      <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />
-      <span className="slider round"></span>
-    </label>
+    <div className={isDarkMode ? 'dark' : 'light'}>
+      <h1>Hello World</h1>
+      <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+    </div>
   );
 };
 
-export default DarkModeToggle;
+export default MyComponent;

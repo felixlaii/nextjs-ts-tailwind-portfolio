@@ -9,7 +9,7 @@ import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
 import logo from "../../../public/images/blue-logo-1.png"
 import { HeaderProps } from "@/types/component-types";
-
+import { DarkModeProvider } from "@/contexts/DarkModeContext";
 
 
 /**
@@ -30,8 +30,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }, props )
     // { name: "CONTACT US", href: "/contact-us" },
   ];
   return (
+  <DarkModeProvider>
     <Wrapper>
       <Header 
+      
         logo={logo.src}
         navigationLinks={navigationLinks}
         currentActiveLocation={location.pathname}
@@ -45,5 +47,6 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }, props )
       <Content>{children}</Content>
       <Footer />
     </Wrapper>
+    </DarkModeProvider>
   );
 };
