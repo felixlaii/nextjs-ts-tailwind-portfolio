@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+  // other prop types if any
+}
+
+const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const filteredProjects =
@@ -11,7 +17,7 @@ const Projects: React.FC = () => {
       : ProjectsData.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="flex flex-col items-center bg-brand-base pb-10">
+<div className={`flex flex-col items-center ${isDarkMode ?  "bg-dark text-black" : "bg-brand-base text-white"} pb-10`}>
       <div>
         <h2 className="text-[4.5rem] pb-5">Explore My Work ...</h2>
         <div className="flex justify-center mb-4">

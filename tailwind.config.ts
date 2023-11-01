@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'dark': '#1F2933', // Dark mode background color
+        'dark': '#1F2933' , // Dark mode background color
       },
       textColor: {
         'dark': '#F3F4F6', // Dark mode text color
@@ -19,10 +19,6 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      backgroundColor: ['dark'], // Apply dark mode background color variant
-      textColor: ['dark'], // Apply dark mode text color variant
-    },
   },
   plugins: [],
 };

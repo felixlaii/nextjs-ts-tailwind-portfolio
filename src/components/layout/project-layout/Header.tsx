@@ -30,8 +30,6 @@ export function useOnClickOutside<T extends HTMLDivElement>(
   }, [ref, handler]);
 }
 
-
-
 const LogoLink: React.FC<
   Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
     logoClassName?: string;
@@ -156,7 +154,7 @@ const DesktopNavBar: React.FC<
                     : linkClassName,
                   textClassName,
                   "text-center lg:text-left",
-                  "flex flex-col",
+                  "flex flex-col"
                 )}
                 onClick={() => setIsClick(true)}
                 onMouseLeave={() => {
@@ -283,26 +281,21 @@ const Header: React.FC<HeaderProps> = ({
   textClassName,
   logo,
   logoClassName,
-  alt,
+  alt, 
+  isDarkMode, 
+  toggleDarkMode
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
   useOnClickOutside(ref, () => {
     setIsClick(false);
   });
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-    // Save the dark mode state to local storage or a state management solution if needed
-  };
-  
 
   return (
-<header className={clsx(
-  "font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 pb-2 md:pb-2 md:pl-4",
-  isDarkMode ? "bg-dark text-dark" : "bg-brand-light text-black"
-)}>      <div className="m-0">
+    <header className=" bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 pb-2 md:pb-2 md:pl-4">
+      {" "}
+      <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
         ) : (
@@ -311,12 +304,10 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
         )}
       </div>
-      <div className="flex">
       <button onClick={toggleDarkMode}>
-  Toggle Dark Mode
-</button>
-
-        
+        {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      </button>
+      <div className="flex">
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (
             <>

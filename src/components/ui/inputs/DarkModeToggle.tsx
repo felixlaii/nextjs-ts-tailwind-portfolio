@@ -5,10 +5,9 @@ const MyComponent = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <div className={isDarkMode ? 'dark' : 'light'}>
-      <h1>Hello World</h1>
-      <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
-    </div>
+    <button onClick={toggleDarkMode}>
+      {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+    </button>
   );
 };
 

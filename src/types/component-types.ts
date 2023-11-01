@@ -27,6 +27,8 @@ export interface HeaderProps {
   logoClassName?: string;
   alt?: string;
   onLinkClick?: () => void;
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
 }
 
 export interface ButtonProps {
@@ -48,8 +50,10 @@ export interface DarkModeContextProps {
   children: ReactNode;
 }
 
-export interface DarkModeContextType {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
+
+export interface ContentProps {
+  children: ReactNode;
+  className?: string;
 }
+
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;

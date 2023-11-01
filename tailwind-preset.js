@@ -25,7 +25,9 @@ module.exports = {
                     base: "#88aebf",
                     dark: "#1d2d35",
                     darkest: "#1d2d35",
-                    lightish: "#84a0b0"
+                    lightish: "#84a0b0",
+                    bgdark: "#1F2933",
+                    textDark: "#F3F4F6"
                 },
                 ui: {
                     error: red[700],

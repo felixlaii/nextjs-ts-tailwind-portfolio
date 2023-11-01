@@ -1,27 +1,29 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { DarkModeContextProps } from '@/types/component-types';
-import { DarkModeContextType } from '@/types/component-types';
 
-const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
+export interface DarkModeContextType {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
-export const DarkModeProvider: React.FC<DarkModeContextProps> = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-  
-    const toggleDarkMode = () => {
-      setIsDarkMode(!isDarkMode);
-    };
-  
-    return (
-      <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
-        {children}
-      </DarkModeContext.Provider>
-    );
+export interface DarkModeProviderProps {
+  children: ReactNode;
+  initialIsDarkMode: boolean; // Rename isDarkMode to initialIsDarkMode to avoid conflicts
+  toggleDarkMode: () => void;
+}
+
+export const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
+
+export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ initialIsDarkMode, toggleDarkMode, children }) => {
+  const [isDarkMode, setIsDarkMode] = useState(initialIsDarkMode); // Initialize state with initialIsDarkMode
+
+  const handleToggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
   };
-  
-  export const useDarkMode = (): DarkModeContextType => {
-    const context = useContext(DarkModeContext);
-    if (context === undefined) {
-      throw new Error('useDarkMode must be used within a DarkModeProvider');
-    }
-    return context;
+
+  const contextValue: DarkModeContextType = {
+    isDarkMode,
+    toggleDarkMode: handleToggleDarkMode, // Use handleToggleDarkMode as the toggleDarkMode function
   };
+
+  return <DarkModeContext.Provider value={contextValue}>{children}</DarkModeContext.Provider>;
+};
