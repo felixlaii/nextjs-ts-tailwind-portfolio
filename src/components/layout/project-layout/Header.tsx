@@ -8,6 +8,7 @@ import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
 import DarkModeToggle from "@/components/ui/inputs/DarkModeToggle";
+import { DarkModeProviderProps } from "@/contexts/DarkModeContext";
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -293,22 +294,43 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-    className={`bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
-      isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
-    }`}
-  >{" "}
-      <div className="m-0">
-        {logo ? (
-          <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
-        ) : (
-          <Link href="/">
-            <div className={clsx(companyNameClassName, "")}>{companyName}</div>
-          </Link>
-        )}
+      className={`bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+        isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
+      }`}
+    >
+      {" "}
+      <div className="flex items-center justify-between">
+        <div className="m-0">
+          {logo ? (
+            <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
+          ) : (
+            <Link href="/">
+              <div className={clsx(companyNameClassName, "")}>
+                {companyName}
+              </div>
+            </Link>
+          )}
+        </div>
+        <div className="flex items-center">
+          <label className="flex items-center cursor-pointer">
+            <div className="relative">
+              <input
+                type="checkbox"
+                className="hidden"
+                checked={isDarkMode}
+                onChange={toggleDarkMode}
+              />
+              <div className="toggle-track w-8 h-4 bg-gray-400 rounded-full shadow-inner relative">
+                <div
+                  className={`toggle-thumb absolute w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
+                    isDarkMode ? "translate-x-full" : "translate-x-0"
+                  }`}
+                ></div>
+              </div>
+            </div>
+          </label>
+        </div>
       </div>
-      <button onClick={toggleDarkMode}>
-        {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-      </button>
       <div className="flex">
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (
