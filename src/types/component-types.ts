@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react"
+import React, { ReactNode } from "react";
 
 export interface NavigationLink {
   name: string;
@@ -49,7 +49,6 @@ export interface ProjectCardProps {
 export interface DarkModeContextProps {
   children: ReactNode;
 }
-
 
 export interface ContentProps {
   children: ReactNode;

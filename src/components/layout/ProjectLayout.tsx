@@ -60,7 +60,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
             activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
           />
           <Content >{children}</Content>
-          <Footer />
+          {/* <Footer 
+                 isDarkMode={isDarkMode}
+                 toggleDarkMode={toggleDarkMode}
+             /> */}
         </Wrapper>
       </div>
     // </DarkModeProvider>

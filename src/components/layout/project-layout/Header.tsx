@@ -281,9 +281,9 @@ const Header: React.FC<HeaderProps> = ({
   textClassName,
   logo,
   logoClassName,
-  alt, 
-  isDarkMode, 
-  toggleDarkMode
+  alt,
+  isDarkMode,
+  toggleDarkMode,
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
@@ -291,10 +291,12 @@ const Header: React.FC<HeaderProps> = ({
     setIsClick(false);
   });
 
-
   return (
-    <header className=" bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 pb-2 md:pb-2 md:pl-4">
-      {" "}
+    <header
+    className={`bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+      isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
+    }`}
+  >{" "}
       <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />

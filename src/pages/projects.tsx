@@ -5,7 +5,6 @@ import ProjectCard from "@/components/ui/ProjectCard";
 interface ProjectsProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
-  // other prop types if any
 }
 
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
@@ -17,14 +16,16 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       : ProjectsData.filter((project) => project.category === selectedCategory);
 
   return (
-<div className={`flex flex-col items-center ${isDarkMode ?  "bg-dark text-black" : "bg-brand-base text-white"} pb-10`}>
+    <main
+      className={`flex flex-col items-center ${
+        isDarkMode ? "bg-brand-light text-white " : "bg-brand-base text-black"
+      } pb-10`}
+    >
       <div>
         <h2 className="text-[4.5rem] pb-5">Explore My Work ...</h2>
         <div className="flex justify-center mb-4">
           <button
-            className={`mr-4 ${
-              selectedCategory === "all" ? "font-bold" : ""
-            }`}
+            className={`mr-4 ${selectedCategory === "all" ? "font-bold" : ""}`}
             onClick={() => setSelectedCategory("all")}
           >
             All
@@ -38,7 +39,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             Professional
           </button>
           <button
-            className={`${selectedCategory === "professional" ? "font-bold" : ""}`}
+            className={`${
+              selectedCategory === "professional" ? "font-bold" : ""
+            }`}
             onClick={() => setSelectedCategory("school")}
           >
             School
@@ -61,7 +64,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 
