@@ -7,7 +7,18 @@ module.exports = {
  
   ],
   presets: [require("./tailwind-preset")],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'dark': '#1F2933' , // Dark mode background color
+      },
+      textColor: {
+        'dark': '#F3F4F6', // Dark mode text color
+      },
+    },
   },
+  variants: {
+  },
+  plugins: [],
 };

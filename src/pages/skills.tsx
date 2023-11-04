@@ -1,15 +1,20 @@
 import React from "react";
 import { SkillsData } from "../../data/skills-data";
 import Image from "next/image";
-import PageHeading from "@/components/ui/PageHeading";
 
-const Skills = () => {
+interface SkillsProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
+  
   // Split SkillsData array into two parts: 8 items for the top row, and 8 items for the bottom row
   const topRowSkills = SkillsData.slice(0, 8);
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <div className=" bg-brand-light pb-20">
+    <section className={isDarkMode ? "bg-dark text-white" : "bg-light text-black"}>
+      {" "}
       <div className="flex flex-col items-center">
         <h2 className="text-[4.5rem] pb-5">Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>
@@ -66,7 +71,7 @@ const Skills = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,9 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { FooterProps } from "@/types/component-types";
-import { snakeCaseToTitleCase } from "@/lib/functions";
 import { FELIX_DETAILS } from "../../../../data/portfolio-info";
-import { PiTiktokLogoLight, PiInstagramLogoLight } from "react-icons/pi";
+
+interface FooterDarkProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
 const iconClassName = "mr-2 w-4 h-4 text-white";
 const divClassName = " flex flex-row justify-center mt-2 mb-1";
@@ -86,9 +89,13 @@ const PortfolioContact = () => {
     </div>
   );
 };
-const Footer: React.FC = () => {
+const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
   return (
-    <div className="h-full mt-18 bg-brand-light">
+<footer
+  className={`h-full mt-10 ${
+    isDarkMode ? "bg-dark text-white" : "bg-light text-black"
+  }`}
+>
       <div className="flex flex-col items-center justify-center">
         <div className="hidden md:inline-block">
           <LogoFooter />
@@ -101,7 +108,7 @@ const Footer: React.FC = () => {
           <PortfolioSocials />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

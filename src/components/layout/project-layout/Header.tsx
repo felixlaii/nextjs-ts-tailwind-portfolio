@@ -7,7 +7,7 @@ import Button from "@/components/ui/inputs/Button";
 import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
-
+import DarkModeToggle from "@/components/ui/inputs/DarkModeToggle";
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -29,8 +29,6 @@ export function useOnClickOutside<T extends HTMLDivElement>(
     };
   }, [ref, handler]);
 }
-
-
 
 const LogoLink: React.FC<
   Pick<HeaderProps, "onLinkClick" | "logo" | "alt"> & {
@@ -156,7 +154,7 @@ const DesktopNavBar: React.FC<
                     : linkClassName,
                   textClassName,
                   "text-center lg:text-left",
-                  "flex flex-col",
+                  "flex flex-col"
                 )}
                 onClick={() => setIsClick(true)}
                 onMouseLeave={() => {
@@ -284,6 +282,8 @@ const Header: React.FC<HeaderProps> = ({
   logo,
   logoClassName,
   alt,
+  isDarkMode,
+  toggleDarkMode,
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
@@ -292,7 +292,11 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <header className="font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center bg-brand-light z-40 pb-2 md:pb-2 md:pl-4">
+    <header
+    className={`bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+      isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
+    }`}
+  >{" "}
       <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
@@ -302,6 +306,9 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
         )}
       </div>
+      <button onClick={toggleDarkMode}>
+        {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      </button>
       <div className="flex">
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (

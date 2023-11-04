@@ -1,7 +1,17 @@
 import Image from "next/image";
-const Hero: React.FC = () => {
+
+interface HeroDarkProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Hero: React.FC<HeroDarkProps> = ({ isDarkMode }) => {
   return (
-    <div className="bg-brand-base max-h-full mt-13">
+    <div
+      className={`max-h-full mt-13 ${
+        isDarkMode ? "bg-brand-light text-white" : "bg-brand-base text-black"
+      }`}
+    >
       <div className="flex flex-row items-center">
         <div>
           <Image
@@ -11,11 +21,12 @@ const Hero: React.FC = () => {
             alt="Hero Image"
           />
         </div>
-        <div >
+        <div>
           <p className="text-[5rem]">software developer</p>
           <p className="text-[3rem]">& dog lover</p>
         </div>
       </div>
+      {/* //  </div> */}
     </div>
   );
 };
