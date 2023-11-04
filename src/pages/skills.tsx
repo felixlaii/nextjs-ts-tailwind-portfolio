@@ -7,6 +7,7 @@ interface SkillsProps {
   toggleDarkMode: () => void;
 }
 const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
+  
   // Split SkillsData array into two parts: 8 items for the top row, and 8 items for the bottom row
   const topRowSkills = SkillsData.slice(0, 8);
   const bottomRowSkills = SkillsData.slice(8, 16);

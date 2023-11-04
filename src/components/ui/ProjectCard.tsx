@@ -37,13 +37,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <p className="text-sm lg:text-md text-white font-extralight mt-10 mb-5">
             {description}
           </p>
-          <a className="border px-7 rounded-md text-xs" href={url} target="_blank" rel="noopener noreferrer">
+          <a
+            className="border px-7 rounded-md text-xs"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             view
           </a>
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center w-full h-full">
-          <h2 className="text-sm lg:text-md tracking-widest text-brand-light font-semibold mb-4">{name}</h2>
+          <h2 className="text-sm lg:text-md tracking-widest text-brand-light font-semibold mb-4">
+            {name}
+          </h2>
           <div className="w-150 h-90">
             <Image
               className="rounded-lg object-center"
