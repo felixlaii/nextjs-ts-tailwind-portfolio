@@ -8,6 +8,8 @@ import Header from "@/components/layout/project-layout/Header";// Import the Hea
 import logo from "../../public/images/blue-logo-1.png"
 import clsx from "clsx";
 import { NavigationLink } from "@/types/component-types";
+import { useRouter } from "next/router";
+
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -15,6 +17,7 @@ const Home: React.FC = () => {
     setIsDarkMode((prevMode) => !prevMode);
     // Save the dark mode state to local storage or a state management solution if needed
   };
+  const location = useRouter();
 
   const navigationLinks: Array<NavigationLink> = [
     // { name: "ABOUT", href: "#about" },
