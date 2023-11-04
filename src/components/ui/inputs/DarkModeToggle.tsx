@@ -1,14 +1,12 @@
 import React from 'react';
-import { useDarkMode } from '@/contexts/DarkModeContext';
+import { DarkModeProviderProps } from '@/contexts/DarkModeContext';
 
-const MyComponent = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
-
+const DarkModeToggle: React.FC<DarkModeProviderProps> = ({ initialIsDarkMode, toggleDarkMode }) => {
   return (
     <button onClick={toggleDarkMode}>
-      {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      {initialIsDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
     </button>
   );
 };
 
-export default MyComponent;
+export default DarkModeToggle;
