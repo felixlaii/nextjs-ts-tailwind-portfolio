@@ -1,6 +1,11 @@
-@font-face {
+/* @font-face {
     font-family: "bebasNeue";
-    src: url("/public/typography/BebasNeue-Regular.ttf") format('ttf');
+    src: url("public/typography/BebasNeue-Regular.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
+
+body {
+    font-family: 'CustomFont', sans-serif;
+  } */

@@ -21,12 +21,12 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode }) => {
             alt="Hero Image"
           />
         </div>
-        <div>
+        <div className="font-custom">
           <p className="text-[5rem]">software developer</p>
           <p className="text-[3rem]">& dog lover</p>
         </div>
       </div>
-      {/* //  </div> */}
+  
     </div>
   );
 };
