@@ -16,6 +16,9 @@ module.exports = {
       textColor: {
         'dark': '#F3F4F6', // Dark mode text color
       },
+      fontFamily: {
+        custom: ["bebasNeue", 'sans-serif'],
+      }
     },
   },
   variants: {
