@@ -299,7 +299,8 @@ const Header: React.FC<HeaderProps> = ({
       }`}
     >
       {" "}
-      <div className="m-0">
+      <div className="flex items-center justify-between">
+        <div className="m-0">
         {logo ? (
           <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
         ) : (
@@ -307,24 +308,28 @@ const Header: React.FC<HeaderProps> = ({
             <div className={clsx(companyNameClassName, "")}>{companyName}</div>
           </Link>
         )}
-      </div>
-      <label className="flex items-center cursor-pointer">
-        <div className="relative">
-          <input
-            type="checkbox"
-            className="hidden"
-            checked={isDarkMode}
-            onChange={toggleDarkMode}
-          />
-          <div className="toggle-track w-8 h-4 bg-gray-400 rounded-full shadow-inner relative">
-            <div
-              className={`toggle-thumb absolute w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-                isDarkMode ? "translate-x-full" : "translate-x-0"
-              }`}
-            ></div>
+       </div>
+       <div className="flex items-center">
+        <label className="flex items-center cursor-pointer">
+          <div className="relative">
+            <input
+              type="checkbox"
+              className="hidden"
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+            />
+            <div className="toggle-track w-8 h-4 bg-gray-400 rounded-full shadow-inner relative">
+              <div
+                className={`toggle-thumb absolute w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
+                  isDarkMode ? "translate-x-full" : "translate-x-0"
+                }`}
+              ></div>
+            </div>
           </div>
+        </label>
         </div>
-      </label>
+        
+      </div>
       <div className="flex">
         <Popover className="lg:hidden">
           {({ open, close }: { close: () => void; open: boolean }) => (
