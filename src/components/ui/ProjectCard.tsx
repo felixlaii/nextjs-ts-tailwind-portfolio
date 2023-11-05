@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       style={{ minHeight: "280px" }} // Adjust the minimum height as needed
     >
 
-       <div className="flex flex-col sm:justify-center sm:align-middle sm:items-center sm:w-[30rem] md:flex-row w-1/2 h-1/2">
+       <div className="flex flex-col sm:justify-center sm:align-middle sm:items-center sm:w-[38rem] md:flex-row w-1/2 h-1/2">
         <div className="w-full sm:w-20 sm:h-20 md:w-48 lg:w-40 xl:w-48">
           <Image
             className="lg:h-[30rem] lg:w-[30rem] rounded-lg object-center"
@@ -36,10 +36,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           />
         </div>
         <div className="w-full md:w-1/2 lg:w-56 xl:w-1/2 p-4">
-          <h2 className="text-sm lg:text-md tracking-widest text-brand-light font-semibold mb-4">
+          <h2 className="text-sm sm:text-[1.3rem] lg:text-md tracking-widest text-brand-light font-semibold mb-4">
             {name}
           </h2>
-          <div className="flex items-center space-x-2 mt-2">
+          <div className="flex justify-center items-center space-x-2 mt-2">
             {technology.map((iconUrl, index) => (
               <Image
                 height={40}
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               />
             ))}
           </div>
-          <p className="text-sm lg:text-md text-white font-extralight mt-4 mb-6">
+          <p className="text-sm sm:text-[1rem] lg:text-md text-white font-extralight mt-4 mb-6">
             {description}
           </p>
           <a
