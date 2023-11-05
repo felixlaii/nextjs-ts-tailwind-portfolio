@@ -23,7 +23,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
         </p>
       </div>
       {/* Top Row */}
-      <div>
+      <div className="mb-10">
         <div>
           <ul className="flex justify-between ml-16 mr-16">
             {topRowSkills.map((skill, index) => (
@@ -39,7 +39,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
                       />
                     </div>
                     <div className="flex justify-center">
-                      <p>{skill.description}</p>
+                      <p className="text-sm pt-2">{skill.description}</p>
                     </div>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
                     />
                   </div>
                   <div className="flex justify-center">
-                    <p>{skill.description}</p>
+                    <p className="text-sm pt-2">{skill.description}</p>
                   </div>
                 </div>
               </li>
