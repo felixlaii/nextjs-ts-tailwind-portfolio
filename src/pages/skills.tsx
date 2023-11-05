@@ -16,7 +16,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
     <section className={`font-custom ${isDarkMode ? "bg-dark text-white" : "bg-light text-black"}`}>
       {" "}
       <div className="flex flex-col items-center font-custom">
-        <h2 className="text-[4.5rem] pb-5">Skills & Tools</h2>
+        <h2 className="sm:text-[3.5rem] lg:text-[4.5rem] pb-5">Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>
         <p>
           The skills, tools and technologies I use to bring your vision to life
@@ -36,6 +36,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
                         height={70}
                         src={skill.image}
                         alt="skills"
+                        className="sm:w-[3rem] sm:h-[3rem] lg:h-70 lg:w-70"
                       />
                     </div>
                     <div className="flex justify-center">
