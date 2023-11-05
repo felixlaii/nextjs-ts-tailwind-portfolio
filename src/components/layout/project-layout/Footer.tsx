@@ -92,7 +92,7 @@ const PortfolioContact = () => {
 const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
   return (
 <footer
-  className={`h-full mt-10 ${
+  className={`h-full mt-10 font-custom ${
     isDarkMode ? "bg-dark text-white" : "bg-light text-black"
   }`}
 >

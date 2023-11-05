@@ -13,9 +13,9 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <section className={isDarkMode ? "bg-dark text-white" : "bg-light text-black"}>
+    <section className={`font-custom ${isDarkMode ? "bg-dark text-white" : "bg-light text-black"}`}>
       {" "}
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center font-custom">
         <h2 className="text-[4.5rem] pb-5">Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>
         <p>

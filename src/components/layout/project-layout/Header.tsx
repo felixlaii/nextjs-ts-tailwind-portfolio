@@ -3,7 +3,6 @@ import { HeaderProps } from "@/types/component-types";
 import clsx from "clsx";
 import Link from "next/link";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
-import Button from "@/components/ui/inputs/Button";
 import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
@@ -294,7 +293,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+      className={`font-custom bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
         isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
       }`}
     >
