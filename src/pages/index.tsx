@@ -53,7 +53,9 @@ const Home: React.FC = () => {
           )}
           activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
         />
+        <div>
         <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        </div>
         <div>
           <section id="skills">
             <Skills isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
