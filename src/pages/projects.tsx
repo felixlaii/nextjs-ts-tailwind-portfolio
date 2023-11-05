@@ -17,7 +17,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
 
   return (
     <main
-      className={`flex flex-col items-center ${
+      className={`flex flex-col items-center font-custom ${
         isDarkMode ? "bg-brand-light text-white " : "bg-brand-base text-black"
       } pb-10`}
     >

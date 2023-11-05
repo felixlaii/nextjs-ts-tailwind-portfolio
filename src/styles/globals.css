@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&display=swap');
+
+@font-face {
+    font-family: "bebas";
+    src: url("/typography/BebasNeue-Regular.ttf");
+}
