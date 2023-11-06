@@ -13,11 +13,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div
-      className={`flex flex-col justify-center items-center md:max-w-45 lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0 h-70 rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
+      className={`flex flex-col justify-center items-center md:w-[50rem] lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0 h-70 rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
         isHovered ? "shadow-xl bg-brand-light scale-105" : ""
       } ${
         // Apply hover styles only for screens larger than or equal to 'sm' (small) size
-        'sm:hidden md:flex lg:flex xl:flex'
+        'sm:flex md:hidden lg:flex xl:flex'
       }`}
 
       onMouseEnter={() => setIsHovered(true)}
@@ -26,9 +26,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     >
 
        <div className="flex flex-col sm:justify-center sm:align-middle sm:items-center sm:w-[38rem] md:flex-row w-1/2 h-1/2">
-        <div className="w-full sm:w-20 sm:h-20 md:w-48 lg:w-40 xl:w-48">
+        <div className="w-full sm:w-20 sm:h-20 lg:w-40 xl:w-48">
           <Image
-            className="lg:h-[30rem] lg:w-[30rem] rounded-lg object-center"
+            className=" rounded-lg object-center"
             width={270}
             height={170}
             src={image}
@@ -69,3 +69,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 };
 
 export default ProjectCard;
+
