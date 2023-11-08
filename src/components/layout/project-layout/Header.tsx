@@ -293,7 +293,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`font-custom bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-evenly w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+      className={`font-custom bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-between w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
         isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
       }`}
     >
