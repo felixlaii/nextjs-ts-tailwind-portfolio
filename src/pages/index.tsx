@@ -39,6 +39,7 @@ const Home: React.FC = () => {
           isDarkMode ? "bg-dark text-white" : "bg-light text-black"
         }`}
       >
+        <div>
         <Header
           isDarkMode={isDarkMode}
           toggleDarkMode={toggleDarkMode}
@@ -53,6 +54,7 @@ const Home: React.FC = () => {
           )}
           activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
         />
+        </div>
         <div>
         <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
