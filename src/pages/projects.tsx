@@ -22,8 +22,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       } pb-10`}
     >
       <div>
-        <h2 className="text-[4.5rem] pb-5">Explore My Work ...</h2>
-        <div className="flex justify-center mb-4">
+        <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">Explore My Work ...</h2>
+        <div className="flex justify-center items-center align-middle mb-4">
           <button
             className={`mr-4 ${selectedCategory === "all" ? "font-bold" : ""}`}
             onClick={() => setSelectedCategory("all")}
@@ -52,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.name}
-            className="h-[20rem] hover:border-none  last:border-none mx-10 pt-4"
+            className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
             <ProjectCard
               name={project.name}
