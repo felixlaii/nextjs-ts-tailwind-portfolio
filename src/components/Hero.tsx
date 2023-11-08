@@ -12,7 +12,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode }) => {
         isDarkMode ? "bg-brand-light text-white" : "bg-brand-base text-black"
       }`}
     >
-      <div className="flex flex-row align-middle items-center">
+      <div className="flex flex-row justify-around align-middle items-center">
         <div className="mr-4">
           {/* Adjust margin-right to reduce space between image and text */}
           <Image
