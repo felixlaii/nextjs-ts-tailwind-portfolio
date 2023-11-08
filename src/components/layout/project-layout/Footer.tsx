@@ -18,7 +18,7 @@ const LogoFooter = () => {
     <div>
       <div className="relative">
         <Image
-          className="w-[12rem] h-[3rem]"
+          className="sm:w-[8rem] sm:h-[2.5rem] md:w-[9rem] md:h-[3rem] lg:w-[12rem] lg:h-[3rem]"
           width={100}
           height={40}
           src="/images/blue-logo-1.png"
@@ -97,7 +97,7 @@ const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
   }`}
 >
       <div className="flex flex-col items-center justify-center">
-        <div className="hidden md:inline-block">
+        <div className=" md:inline-block">
           <LogoFooter />
         </div>
 
