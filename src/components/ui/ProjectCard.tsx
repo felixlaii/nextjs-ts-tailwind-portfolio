@@ -13,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div
-      className={`flex flex-col justify-center items-center md:w-[50rem] lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0 h-70 rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
+      className={`flex flex-col justify-center items-center md:w-[50rem] lg:h-[25rem] lg:w-[25rem] md:px-3 lg:px-8 pt-4 md:pt-0 h-70 rounded-lg md:justify-evenly lg:justify-center text-center lg:mx-[1rem] lg:mr-[1rem] md:gap-y-4 transition duration-300 shadow-xl transform ${
         isHovered ? "shadow-xl bg-brand-light scale-105" : ""
       } ${
         // Apply hover styles only for screens larger than or equal to 'sm' (small) size
@@ -25,10 +25,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       style={{ minHeight: "280px" }} // Adjust the minimum height as needed
     >
 
-       <div className="flex flex-col sm:justify-center sm:align-middle sm:items-center sm:w-[38rem] md:flex-row w-1/2 h-1/2">
-        <div className="w-full md:mr-[5rem] md:w-[10rem] md:h-[10rem] sm:w-[9rem] sm:h-[7.5rem]  lg:w-40 xl:w-48">
+       <div className="flex lg:flex-col sm:justify-center sm:align-middle sm:items-center sm:w-[38rem] lg:items-center lg:justify-center md:flex-row w-1/2 h-1/2">
+        <div className="lg:flex lg:flex-col lg:align-middle lg:items-center lg:mt-4 lg:w-[9rem] lg:h-[9rem] w-full md:w-[10rem] md:h-[10rem] sm:w-[9rem] sm:h-[7.5rem] xl:w-48">
           <Image
-            className="rounded-lg object-center"
+            className="rounded-lg"
             width={270}
             height={170}
             src={image}
@@ -36,10 +36,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           />
         </div>
         <div className="w-full md:w-1/2 lg:w-56 xl:w-1/2 p-4">
-          <h2 className="text-sm sm:text-[1.3rem] lg:text-md tracking-widest text-brand-light font-semibold mb-4">
+          <h2 className="text-sm sm:text-[1.3rem] lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
             {name}
           </h2>
-          <div className="flex justify-center items-center space-x-2 mt-2">
+          <div className="flex lg:justify-center lg:items-center lg:space-x-2 mt-2">
             {technology.map((iconUrl, index) => (
               <Image
                 height={40}
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               />
             ))}
           </div>
-          <p className="text-sm sm:text-[1rem] lg:text-md text-white font-extralight mt-4 mb-6">
+          <p className="text-sm sm:text-[1rem] lg:text-sm text-white font-extralight mt-4 mb-6">
             {description}
           </p>
           <a
