@@ -22,7 +22,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       } pb-10`}
     >
       <div>
-        <h2 className="sm:text-[3.5rem] lg:text-[4.5rem] pb-5">Explore My Work ...</h2>
+        <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">Explore My Work ...</h2>
         <div className="flex justify-center items-center align-middle mb-4">
           <button
             className={`mr-4 ${selectedCategory === "all" ? "font-bold" : ""}`}
