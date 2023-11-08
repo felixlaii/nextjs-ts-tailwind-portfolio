@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <h2 className="text-sm sm:text-[1.3rem] lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
             {name}
           </h2>
-          <div className="flex lg:justify-center lg:items-center lg:space-x-2 mt-2">
+          <div className="flex lg:justify-center lg:items-center md:justify-between md:items-center lg:space-x-2 mt-2">
             {technology.map((iconUrl, index) => (
               <Image
                 height={40}
