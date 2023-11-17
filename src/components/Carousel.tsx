@@ -5,9 +5,10 @@ import { IoIosArrowBack } from "react-icons/io";
 import { CarouselProps } from "@/types/component-types";
 
 export default function Carousel({ width, height, items }: CarouselProps) {
+    const [activeIndex, onSetActiveIndex] = useState<number>(0)
     return (
         <div>
-            
+
         </div>
     )
 }
