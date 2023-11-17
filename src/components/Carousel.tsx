@@ -19,8 +19,40 @@ export default function Carousel({ width, height, items }: CarouselProps) {
         });
       }
     return (
-        <div>
+<div className="carousel-container">
+      {activeIndex > 0 && (
+        <button
+          className="carousel-btn-switch-card-left carousel-btn-switch-card"
+          onClick={handlePrevItemBtn}
+        >
+          <IoIosArrowBack />
+        </button>
+      )}
+      {items?.map((item, index) => (
+        <CarouselItem key={index} index={index} activeIndex={activeIndex}>
+          {item}
+        </CarouselItem>
+      ))}
+      {activeIndex < items.length - 1 && (
+        <button
+          className="carousel-btn-switch-card-right carousel-btn-switch-card"
+          onClick={handleNextItemBtn}
+        >
+          <IoIosArrowBack
+            style={{
+              transform: "rotate(180deg)",
+            }}
+          />
+        </button>
+      )}
 
-        </div>
+      <CarouselIndicator
+        activeIndex={activeIndex}
+        length={items.length}
+        onSetActiveIndex={(activeIndex) => {
+          setActiveIndex(activeIndex);
+        }}
+      />
+    </div>
     )
 }
