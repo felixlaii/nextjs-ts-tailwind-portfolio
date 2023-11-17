@@ -3,8 +3,9 @@ import CarouselIndicator from "./CarouselIndicator";
 import CarouselItem from "./CarouselItem";
 import { IoIosArrowBack } from "react-icons/io";
 import { CarouselProps } from "@/types/component-types";
+import Image from "next/image";
 
-export default function Carousel({ width, height, items }: CarouselProps) {
+const Carousel: React.FC<CarouselProps> = ({ width, height, items }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0)
 
     function handleNextItemBtn() {
@@ -29,9 +30,13 @@ export default function Carousel({ width, height, items }: CarouselProps) {
         </button>
       )}
       {items?.map((item, index) => (
-        <CarouselItem key={index} index={index} activeIndex={activeIndex}>
-          {item}
-        </CarouselItem>
+        <CarouselItem
+        key={index}
+        index={index}
+        activeIndex={activeIndex}
+      >        
+        <Image src={item.image} width={100} height={100} alt="project"/>
+      </CarouselItem>
       ))}
       {activeIndex < items.length - 1 && (
         <button
@@ -56,3 +61,5 @@ export default function Carousel({ width, height, items }: CarouselProps) {
     </div>
     )
 }
+
+export default Carousel;

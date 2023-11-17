@@ -35,7 +35,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
       href: "#projects",
     },
 
-    // { name: "GALLERY", href: "#", dropdown: GALLERY_DROPDOWN },
+    { name: "Project", href: "/project",},
     // { name: "CONTACT US", href: "/contact-us" },
   ];
   return (

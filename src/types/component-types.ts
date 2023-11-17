@@ -68,10 +68,19 @@ export interface CarouselIndicatorProps {
   onSetActiveIndex: (index: number) => void;
 }
 
+
+
 export interface CarouselProps {
+  items: {
+      image: string;
+      name: string;
+      url: string;
+      description: string;
+      category: "school" | "professional";
+      technology: string[];
+  }[];
   width?: number;
   height?: number;
-  items: React.ReactNode[];
-}
+};
 
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;

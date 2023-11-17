@@ -6,7 +6,7 @@ export default function CarouselItem({
   activeIndex,
   children,
 }: CarouselItemProps) {
-  const [scaled, setScaled] = useState<Boolean>(false);
+  const [scaled, setScaled] = useState<boolean>(false);
 
   const offset = (index - activeIndex) / 4;
   const direction = Math.sign(index - activeIndex);
