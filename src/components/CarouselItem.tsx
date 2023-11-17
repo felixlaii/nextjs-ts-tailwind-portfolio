@@ -6,5 +6,7 @@ export default function CarouselItem({
   activeIndex,
   children,
 }: CarouselItemProps) {
+  const [scaled, setScaled] = useState<Boolean>(false);
+
   return <div></div>;
 }
