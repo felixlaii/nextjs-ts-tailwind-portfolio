@@ -88,10 +88,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         ) : (
           // Content for lg and xl screens when not hovered
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <h2 className="text-sm lg:text-md tracking-widest text-brand-light font-semibold mb-4">
-              {name}
-            </h2>
+          <div className="flex flex-col items-center justify-around  w-full h-full">
+            <div className="">
+              <h2 className="text-sm lg:text-xl tracking-widest text-brand-light font-semibold mb-4">
+                {name}
+              </h2>
+            </div>
             <div className="w-150 h-90">
               <Image
                 className="rounded-lg object-center"
