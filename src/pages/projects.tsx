@@ -61,6 +61,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
               description={project.description}
               image={project.image}
               technology={project.technology}
+              href={project.href}
             />
           </div>
         ))}

@@ -5,6 +5,7 @@ export const ProjectsData: {
   description: string;
   category: "school" | "professional";
   technology: string[];
+  href: string;
 }[] = [
   {
     image:
@@ -24,6 +25,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
     ],
+    href: "/richmond-west-dental"
   },
   {
     image:
@@ -39,6 +41,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
+    href: "/mix6ix"
   },
 
   {
@@ -55,6 +58,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
+    href: "/blushnletters"
   },
   {
     image:
@@ -67,6 +71,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
+    href: "/st-patrick"
   },
   {
     image:
@@ -86,6 +91,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
+    href: "/pawfinder"
   },
   {
     image:
@@ -103,6 +109,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
+    href:"/instock"
   },
   // {
   //   image:
@@ -176,6 +183,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
+    href: "/weather-app"
   },
   {
     image:
@@ -194,6 +202,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
     ],
+    href:"/pokemon-search"
   },
   {
     image:
@@ -210,5 +219,6 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
     ],
+    href:"/connect-four"
   },
 ];
