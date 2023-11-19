@@ -13,9 +13,10 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <section className={`font-custom ${isDarkMode ? "bg-dark text-white" : "bg-light text-black"}`}>
+    <section className={`flex flex-col font-custom ${isDarkMode ? "bg-dark text-white" : "bg-light text-black"}`}>
       {" "}
-      <div className="flex flex-col items-center font-custom">
+      <div className="mx-auto">
+      <div className="flex justify-center flex-col items-center font-custom">
         <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">Skills & Tools</h2>
         <p>My Toolbox & Things I can do</p>
         <p>
@@ -23,11 +24,11 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
         </p>
       </div>
       {/* Top Row */}
-      <div className="mb-10">
+      <div className="flex flex-col mb-10 border-2 mt-10">
         <div>
-          <ul className="flex justify-between ml-16 mr-16">
+          <ul className="flex justify-between ml-16 mr-16 mt-0">
             {topRowSkills.map((skill, index) => (
-              <li className="flex-row mt-28 text-white" key={skill.image}>
+              <li className="flex-row mt-28 text-white px-4" key={skill.image}>
                 <div className="flex-col">
                   <div>
                     <div>
@@ -51,7 +52,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
 
         {/* Bottom Row */}
         <div>
-          <ul className="flex justify-between mt-20 ml-10 mr-10">
+          <ul className="flex justify-between mt-20 ml-10 mr-10 mb-28">
             {bottomRowSkills.map((skill, index) => (
               <li className="flex-row text-white" key={skill.image}>
                 <div className="flex-col">
@@ -73,6 +74,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
             ))}
           </ul>
         </div>
+      </div>
       </div>
     </section>
   );
