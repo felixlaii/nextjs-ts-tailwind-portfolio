@@ -24,6 +24,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       <div>
         <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">Explore My Work ...</h2>
         <div className="flex justify-center items-center align-middle mb-4">
+          <p className="pr-4">Filter:</p>
           <button
             className={`mr-4 ${selectedCategory === "all" ? "font-bold" : ""}`}
             onClick={() => setSelectedCategory("all")}
