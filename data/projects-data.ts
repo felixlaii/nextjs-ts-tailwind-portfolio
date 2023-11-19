@@ -104,49 +104,49 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
   },
-  {
-    image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362108/BrainFlix-logo_bhkddt.svg",
-    name: "BrainFlix",
-    url: "https://github.com/felixlaii/felix-lai-brainflix",
-    description: "A Youtube/Netflix Clone. Ability to upload using back-end.",
-    category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365085/Screenshot_2023-10-26_at_8.04.40_PM_k1owj4.png",
-    name: "Bandsite",
-    url: "https://github.com/felixlaii/bandsite",
-    description:
-      "A website for Bees Knees with functioning comments with backend.",
-    category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365068/Screenshot_2023-10-26_at_8.04.22_PM_tcwjjy.png",
-    name: "Travelsite",
-    url: "https://github.com/felixlaii/travelsite",
-    description:
-      "A static webpage. One of the first projects ever done in BrainStation",
-    category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-    ],
-  },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362108/BrainFlix-logo_bhkddt.svg",
+  //   name: "BrainFlix",
+  //   url: "https://github.com/felixlaii/felix-lai-brainflix",
+  //   description: "A Youtube/Netflix Clone. Ability to upload using back-end.",
+  //   category: "school",
+  //   technology: [
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  //   ],
+  // },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365085/Screenshot_2023-10-26_at_8.04.40_PM_k1owj4.png",
+  //   name: "Bandsite",
+  //   url: "https://github.com/felixlaii/bandsite",
+  //   description:
+  //     "A website for Bees Knees with functioning comments with backend.",
+  //   category: "school",
+  //   technology: [
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+  //   ],
+  // },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365068/Screenshot_2023-10-26_at_8.04.22_PM_tcwjjy.png",
+  //   name: "Travelsite",
+  //   url: "https://github.com/felixlaii/travelsite",
+  //   description:
+  //     "A static webpage. One of the first projects ever done in BrainStation",
+  //   category: "school",
+  //   technology: [
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+  //   ],
+  // },
   // {
   //   image:
   //     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362235/pokemon-logo-black-transparent_xdmglm.png",
