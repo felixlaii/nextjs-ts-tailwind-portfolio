@@ -312,7 +312,7 @@ const Header: React.FC<HeaderProps> = ({
         </div>
         <div className="flex items-center">
           <label className="flex items-center cursor-pointer">
-            <div className="relative">
+            <div className="relative pl-4">
               <input
                 type="checkbox"
                 className="hidden"
@@ -371,7 +371,7 @@ const Header: React.FC<HeaderProps> = ({
           )}
         </Popover>
       </div>
-      <div className="hidden lg:inline-flex mt-3">
+      <div className="hidden lg:inline-flex mt-3 justify-center">
         <DesktopNavBar
           navigationLinks={navigationLinks}
           textClassName={textClassName}

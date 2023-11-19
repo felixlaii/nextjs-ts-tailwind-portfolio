@@ -21,12 +21,15 @@ const Home: React.FC = () => {
   const location = useRouter();
 
   const navigationLinks: Array<NavigationLink> = [
-    // { name: "ABOUT", href: "#about" },
-    { name: "SKILLS", href: "#skills" },
+    { name: "HOME", href: "#home" },
+
+    { name: "EXPERTISE", href: "#expertise" },
     {
-      name: "PROJECTS",
-      href: "#projects",
+      name: "WORK",
+      href: "#work",
     },
+    { name: "CONTACT", href: "#contact" },
+
   ];
 
   return (
@@ -59,12 +62,12 @@ const Home: React.FC = () => {
         <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
         <div>
-          <section id="skills">
+          <section id="expertise">
             <Skills isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           </section>
         </div>
         <div>
-          <section id="projects">
+          <section id="work">
             <Projects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           </section>
         </div>

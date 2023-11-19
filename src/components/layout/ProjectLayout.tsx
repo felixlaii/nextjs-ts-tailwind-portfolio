@@ -29,10 +29,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
     // { name: "ABOUT", href: "#about" },
-    { name: "SKILLS", href: "#skills" },
+    { name: "EXPERTISE", href: "#expertise" },
     {
-      name: "PROJECTS",
-      href: "#projects",
+      name: "WORK",
+      href: "#work",
     },
 
     // { name: "GALLERY", href: "#", dropdown: GALLERY_DROPDOWN },
