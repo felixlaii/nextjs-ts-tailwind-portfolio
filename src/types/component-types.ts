@@ -45,6 +45,7 @@ export interface ProjectCardProps {
   image: string;
   technology: string[];
   href: string;
+  id: string;
 }
 
 export interface DarkModeContextProps {

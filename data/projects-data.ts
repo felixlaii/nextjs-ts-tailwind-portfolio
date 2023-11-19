@@ -6,8 +6,10 @@ export const ProjectsData: {
   category: "school" | "professional";
   technology: string[];
   href: string;
+  id: string;
 }[] = [
   {
+    id: "richmond-west-dental",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "Richmond West Dental",
@@ -28,6 +30,7 @@ export const ProjectsData: {
     href: "/richmond-west-dental"
   },
   {
+    id: "mixbix",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
     name: "MIX6IX Bartending & Co",
@@ -45,6 +48,7 @@ export const ProjectsData: {
   },
 
   {
+    id: "blushnletters",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362504/Screenshot_2023-10-26_at_7.21.40_PM_kewmlp.png",
     name: "Blush & Letters Co",
@@ -61,6 +65,7 @@ export const ProjectsData: {
     href: "/blushnletters"
   },
   {
+    id: "st-patrick",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
     name: "St Patrick S.S",
@@ -74,6 +79,7 @@ export const ProjectsData: {
     href: "/st-patrick"
   },
   {
+    id: "pawfinder",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
     name: "PawFinder",
@@ -94,6 +100,7 @@ export const ProjectsData: {
     href: "/pawfinder"
   },
   {
+    id: "instock",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
     name: "inStock",
@@ -171,6 +178,7 @@ export const ProjectsData: {
   //   ],
   // },
   {
+    id:"weather-app",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698531550/weather-static_mjvjn6.png",
     name: "Weather App",
@@ -186,6 +194,7 @@ export const ProjectsData: {
     href: "/weather-app"
   },
   {
+    id:"pokemon-search",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532305/pokemon-static_agigqy.png",
     name: "Pokemon Search",
@@ -205,6 +214,7 @@ export const ProjectsData: {
     href:"/pokemon-search"
   },
   {
+    id: "connect-four",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532351/connect-four-static_xiozcc.png",
     name: "Connect Four",

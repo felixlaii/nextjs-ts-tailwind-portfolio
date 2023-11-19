@@ -6,10 +6,11 @@ const RichmondWestDental: React.FC<ProjectCardProps> = ({  url,
     image,
     technology,}) => {
     return (
-        <div>
+        <div className="mt-[20rem]">
             <h2>
                 {name}
             </h2>
+            <p>hello world</p>
         </div>
     )
 }

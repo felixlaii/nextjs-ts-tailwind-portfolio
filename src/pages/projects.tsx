@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
+import Link from "next/link";
 
 interface ProjectsProps {
   isDarkMode: boolean;
@@ -55,6 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             key={project.name}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
+            <Link key={project.id} href={project.href}>
             <ProjectCard
               name={project.name}
               url={project.url}
@@ -62,7 +64,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
               image={project.image}
               technology={project.technology}
               href={project.href}
+              id={project.id}
             />
+            </Link>
           </div>
         ))}
       </div>

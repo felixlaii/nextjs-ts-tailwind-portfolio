@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import Link from "next/link";
+import { ProjectsData } from "../../../data/projects-data";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   url,
@@ -9,7 +10,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   technology,
-  href
+  href,
+  id,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -44,7 +46,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <Link href={href} passHref>
+    // {ProjectsData.map((project) => (
+      <Link key={id} href={href}>
       <span>
         <div
           className={`flex flex-col justify-center items-center ${
@@ -153,7 +156,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </div>
       </span>
-    </Link>
+      </Link>
+    // ))}
   );
 };
 
