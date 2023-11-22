@@ -12,6 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technology,
   href,
   id,
+  onClick
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -47,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     // {ProjectsData.map((project) => (
-      <Link key={id} href={href}>
+      // <Link key={id} href={href} onClick={onClick}>
       <span>
         <div
           className={`flex flex-col justify-center items-center ${
@@ -156,7 +157,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </div>
       </span>
-      </Link>
+      // </Link>
     // ))}
   );
 };

@@ -46,6 +46,8 @@ export interface ProjectCardProps {
   technology: string[];
   href: string;
   id: string;
+  onClick: () => void;
+  
 }
 
 export interface DarkModeContextProps {

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 import Link from "next/link";
-
+import WorkPage from "./work-page";
+import { useRouter } from "next/router";
 interface ProjectsProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
@@ -10,11 +11,25 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedProject, setSelectedProject] = useState(null);
+  const router = useRouter();
 
   const filteredProjects =
     selectedCategory === "all"
       ? ProjectsData
       : ProjectsData.filter((project) => project.category === selectedCategory);
+
+      const handleProjectClick = (projectId: string) => {
+        // Handle the click logic using the project ID
+        console.log(`Clicked project with ID: ${projectId}`);
+        
+        // Use router.push to navigate to the WorkPage with the selected project ID
+        router.push({
+          pathname: "/work-page",
+          query: { projectId: projectId },
+        });
+      };
+      
 
   return (
     <main
@@ -51,24 +66,28 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-8">
-        {filteredProjects.map((project, index) => (
+      {filteredProjects.map((project, index) => (
+        <React.Fragment key={project.id}>
           <div
-            key={project.name}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
-            <Link key={project.id} href={project.href}>
-            <ProjectCard
-              name={project.name}
-              url={project.url}
-              description={project.description}
-              image={project.image}
-              technology={project.technology}
-              href={project.href}
-              id={project.id}
-            />
+            <Link href={`/work-page?projectId=${project.id}`}>
+<span>
+                <ProjectCard
+                  name={project.name}
+                  url={project.url}
+                  description={project.description}
+                  image={project.image}
+                  technology={project.technology}
+                  href={project.href}
+                  id={project.id}
+                  onClick={() => handleProjectClick(project.id)}
+                />
+             </span>
             </Link>
           </div>
-        ))}
+        </React.Fragment>
+      ))}
       </div>
     </main>
   );
