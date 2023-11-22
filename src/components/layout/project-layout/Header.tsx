@@ -6,8 +6,7 @@ import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
-import DarkModeToggle from "@/components/ui/inputs/DarkModeToggle";
-import { DarkModeProviderProps } from "@/contexts/DarkModeContext";
+
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -340,7 +339,6 @@ const Header: React.FC<HeaderProps> = ({
                   "focus:outline-none focus:ring-1 focus-ring-inset focus:ring-black-100"
                 )}
               >
-                {/* <span className="sr-only">'open-navigation-menu'</span> */}
                 <HamburgerIcon />
               </Popover.Button>
               <Transition

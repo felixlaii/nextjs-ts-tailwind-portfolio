@@ -3,6 +3,7 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectsData } from "../../../data/projects-data";
+import WorkPage from "@/pages/work-page";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   url,
@@ -12,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technology,
   href,
   id,
-  onClick
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -22,18 +23,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       setIsLargeScreen(window.innerWidth >= 1024);
     };
 
-    // Add event listener to update window size when it changes
     window.addEventListener("resize", updateWindowSize);
 
-    // Call updateWindowSize once when the component mounts
     updateWindowSize();
 
-    // Remove event listener when the component is unmounted
     return () => {
       window.removeEventListener("resize", updateWindowSize);
     };
-  }, []); // Empty dependency array ensures this effect runs only once after the initial render
-
+  }, []);
   const handleMouseEnter = () => {
     if (isLargeScreen) {
       setIsHovered(true);
@@ -47,8 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    // {ProjectsData.map((project) => (
-      // <Link key={id} href={href} onClick={onClick}>
+    <Link key={id} href={href} onClick={onClick}>
       <span>
         <div
           className={`flex flex-col justify-center items-center ${
@@ -157,8 +153,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </div>
       </span>
-      // </Link>
-    // ))}
+    </Link>
   );
 };
 

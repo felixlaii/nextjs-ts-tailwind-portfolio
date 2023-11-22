@@ -71,8 +71,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
           <div
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
-            <Link href={`/work-page?projectId=${project.id}`}>
-<span>
+            {/* <Link href={`/work-page?projectId=${project.id}`}>
+<span> */}
                 <ProjectCard
                   name={project.name}
                   url={project.url}
@@ -83,8 +83,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
                   id={project.id}
                   onClick={() => handleProjectClick(project.id)}
                 />
-             </span>
-            </Link>
+             {/* </span>
+            </Link> */}
           </div>
         </React.Fragment>
       ))}
