@@ -92,8 +92,8 @@ const PortfolioContact = () => {
 const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
   return (
 <footer
-  className={`h-full mt-10 font-custom ${
-    isDarkMode ? "bg-dark text-white" : "bg-light text-black"
+  className={`h-full font-custom ${
+    isDarkMode ? "bg-light text-white" : "bg-dark text-black"
   }`}
 >
       <div className="flex flex-col items-center justify-center">

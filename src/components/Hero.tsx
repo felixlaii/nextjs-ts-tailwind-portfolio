@@ -9,7 +9,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode }) => {
   return (
     <div
       className={`flex justify-center max-h-full pt-[10rem] pb-[5rem] ${
-        isDarkMode ? "bg-brand-light text-white" : "bg-brand-base text-black"
+        isDarkMode ? "bg-brand-base text-white" : "bg-brand-light text-black"
       }`}
     >
       <div className="flex-column justify-around align-middle items-center">

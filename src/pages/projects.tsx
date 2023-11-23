@@ -33,7 +33,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <main
       className={`flex flex-col items-center font-custom ${
-        isDarkMode ? "bg-brand-light text-white " : "bg-brand-base text-black"
+        isDarkMode ? "bg-brand-base text-white " : "bg-brand-light text-black"
       } pb-10`}
     >
       <div>
@@ -71,7 +71,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
     <Link href={`/expertise`} as={`/expertise/${project.id}`}>
-{/* <span> */}
+<span>
                 <ProjectCard
                   name={project.name}
                   url={project.url}
@@ -82,7 +82,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
                   id={project.id}
                   onClick={() => handleProjectClick(project.id)}
                 />
-             {/* </span> */}
+             </span>
             </Link>
           </div>
         // </React.Fragment>
