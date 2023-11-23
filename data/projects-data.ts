@@ -27,7 +27,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
     ],
-    href: "/expertise#richmond-west-dental",
+    href: "/expertise/richmond-west-dental",
   },
   {
     id: "mix6ix",
@@ -175,7 +175,7 @@ export const ProjectsData: {
 ];
 
 export const PROJECTS_PAGE = [
-  { name: "Richmond West Dental", href: "/expertise#richmond-west-dental" },
+  { name: "Richmond West Dental", href: "/expertise/richmond-west-dental" },
   { name: "MIX6IX Bartending Co.", href: "/expertise#mix6ix" },
   { name: "Blush N Letters", href: "/expertise#blush-n-letters" },
   { name: "Saint Patrick Secondary School", href: "/expertise#st-patrick" },

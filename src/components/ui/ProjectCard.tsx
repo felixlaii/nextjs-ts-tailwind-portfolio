@@ -3,7 +3,7 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectsData } from "../../../data/projects-data";
-import WorkPage from "@/pages/work-page";
+import WorkPage from "@/pages/expertise";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   url,
@@ -13,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technology,
   href,
   id,
-  onClick,
+  // onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -44,8 +44,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <Link key={id} href={href} onClick={onClick}>
-      <span>
+    // // <Link key={id} href="src/pages/work-page/[id]" as={`src/pages/work-page/${project.id}`} onClick={onClick}>
+    //   <span>
         <div
           className={`flex flex-col justify-center items-center ${
             isLargeScreen
@@ -152,8 +152,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           )}
         </div>
-      </span>
-    </Link>
+    //   </span>
+    // </Link>
   );
 };
 

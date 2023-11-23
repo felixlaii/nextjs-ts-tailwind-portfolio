@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 import Link from "next/link";
-import WorkPage from "./work-page";
+import Expertise from "./expertise";
 import { useRouter } from "next/router";
+
 interface ProjectsProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
@@ -20,10 +21,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       : ProjectsData.filter((project) => project.category === selectedCategory);
 
       const handleProjectClick = (projectId: string) => {
-        // Handle the click logic using the project ID
         console.log(`Clicked project with ID: ${projectId}`);
         
-        // Use router.push to navigate to the WorkPage with the selected project ID
         router.push({
           pathname: "/work-page",
           query: { projectId: projectId },
@@ -67,12 +66,12 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       </div>
       <div className="flex flex-wrap justify-center gap-8">
       {filteredProjects.map((project, index) => (
-        <React.Fragment key={project.id}>
-          <div
+        // <React.Fragment key={project.id}>
+          <div key={project.id}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
-            {/* <Link href={`/work-page?projectId=${project.id}`}>
-<span> */}
+    <Link href={`/expertise`} as={`/expertise/${project.id}`}>
+{/* <span> */}
                 <ProjectCard
                   name={project.name}
                   url={project.url}
@@ -83,10 +82,10 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
                   id={project.id}
                   onClick={() => handleProjectClick(project.id)}
                 />
-             {/* </span>
-            </Link> */}
+             {/* </span> */}
+            </Link>
           </div>
-        </React.Fragment>
+        // </React.Fragment>
       ))}
       </div>
     </main>
