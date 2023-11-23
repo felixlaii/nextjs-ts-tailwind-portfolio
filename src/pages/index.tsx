@@ -17,19 +17,6 @@ const Home: React.FC = () => {
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
-  // const location = useRouter();
-
-  // const navigationLinks: Array<NavigationLink> = [
-  //   { name: "HOME", href: "#home" },
-
-  //   { name: "EXPERTISE", href: "#expertise" },
-  //   {
-  //     name: "WORK",
-  //     href: "#work",
-  //   },
-  //   { name: "CONTACT", href: "#contact" },
-
-  // ];
 
   return (
     <DarkModeProvider
@@ -38,30 +25,11 @@ const Home: React.FC = () => {
     >
       <div
         className={`relative 
-        ${
-          isDarkMode ? "bg-light text-white" : "bg-dark text-black"
-        }
-        `
-      }
+        ${isDarkMode ? "bg-light text-white" : "bg-dark text-black"}
+        `}
       >
-        {/* <div> */}
-        {/* <Header
-          isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}
-          logo={logo.src}
-          navigationLinks={navigationLinks}
-          currentActiveLocation={location.pathname}
-          textClassName="group text-md transition-all duration-300 ease-in-out text-black font-light mx-8 text-white"
-          linkClassName="flex bg-left-bottom lg:text-xl tracking-widest"
-          logoClassName="sm:w-3/5 sm:ml-8 md:w-3/4 ml-2 mt-2 mr-1"
-          hoverClassName={clsx(
-            "flex bg-left-bottom hover:text-brand-lightest bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-          )}
-          activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
-        /> */}
-        {/* </div> */}
         <div>
-        <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+          <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
         <div>
           <section id="expertise">
@@ -73,9 +41,7 @@ const Home: React.FC = () => {
             <Projects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           </section>
         </div>
-        <div>
-          {/* <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} /> */}
-        </div>
+        <div></div>
       </div>
     </DarkModeProvider>
   );
