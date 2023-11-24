@@ -7,7 +7,7 @@ export interface DarkModeContextType {
 
 export interface DarkModeProviderProps {
   children: ReactNode;
-  initialIsDarkMode: boolean; // Rename isDarkMode to initialIsDarkMode to avoid conflicts
+  initialIsDarkMode: boolean;
   toggleDarkMode: () => void;
 }
 
@@ -20,7 +20,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   toggleDarkMode,
   children,
 }) => {
-  const [isDarkMode, setIsDarkMode] = useState(initialIsDarkMode); // Initialize state with initialIsDarkMode
+  const [isDarkMode, setIsDarkMode] = useState(initialIsDarkMode);
 
   const handleToggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
@@ -28,7 +28,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
 
   const contextValue: DarkModeContextType = {
     isDarkMode,
-    toggleDarkMode: handleToggleDarkMode, // Use handleToggleDarkMode as the toggleDarkMode function
+    toggleDarkMode: handleToggleDarkMode,
   };
 
   return (
