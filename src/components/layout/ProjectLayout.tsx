@@ -35,26 +35,18 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
       name: "WORK",
       href: "#work",
     },
-
-    // { name: "GALLERY", href: "#", dropdown: GALLERY_DROPDOWN },
     { name: "CONTACT", href: "#contact" },
   ];
   return (
     <DarkModeProvider
       initialIsDarkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
-    >           
-    <div
-    // className={`relative ${
-    //   isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
-    // }`}
-  >
-
-        <Wrapper     isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}>
+    >
+      <div>
+        <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
           <Header
-          isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
             logo={logo.src}
             navigationLinks={navigationLinks}
             currentActiveLocation={location.pathname}
@@ -66,9 +58,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
             )}
             activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
           />
-          <Content isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>{children}</Content>
+          <Content isDarkMode={isDarkMode}>
+            {children}
+          </Content>
           <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-
         </Wrapper>
       </div>
     </DarkModeProvider>

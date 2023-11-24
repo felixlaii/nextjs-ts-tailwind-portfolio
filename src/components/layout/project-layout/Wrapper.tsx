@@ -7,22 +7,26 @@ export interface WrapperDarkProps {
   toggleDarkMode: () => void;
 }
 
-
 /**
  * Wrapper component for children of ProjectLayout that resets z-index and defines the base flex column layout.
  */
-export const Wrapper: React.FC<PropsWithChildren<WrapperDarkProps>> = ({ children, isDarkMode, toggleDarkMode }) => {
-
+export const Wrapper: React.FC<PropsWithChildren<WrapperDarkProps>> = ({
+  children,
+  isDarkMode,
+  toggleDarkMode,
+}) => {
   return (
     <DarkModeProvider
-    initialIsDarkMode={isDarkMode}
-    toggleDarkMode={toggleDarkMode}
-  >   
-    <div className={`min-h-screen overflow-hidden overflow-x-hidden ${isDarkMode ? "dark-mode" : ""}`}>
-
-
-      {children}
-    </div>
+      initialIsDarkMode={isDarkMode}
+      toggleDarkMode={toggleDarkMode}
+    >
+      <div
+        className={`min-h-screen overflow-hidden overflow-x-hidden ${
+          isDarkMode ? "dark-mode" : ""
+        }`}
+      >
+        {children}
+      </div>
     </DarkModeProvider>
   );
 };
