@@ -3,7 +3,7 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectsData } from "../../../data/projects-data";
-import WorkPage from "@/pages/expertise";
+import WorkPage from "@/pages/experience";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   url,

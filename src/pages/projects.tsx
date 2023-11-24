@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 import Link from "next/link";
-import Expertise from "./expertise";
+import Expertise from "./experience";
 import { useRouter } from "next/router";
 
 interface ProjectsProps {
@@ -22,12 +22,18 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
 
       const handleProjectClick = (projectId: string) => {
         console.log(`Clicked project with ID: ${projectId}`);
-        
+      
+        // Find the selected project by ID
+        const selectedProject = ProjectsData.find((project) => project.id === projectId);
+      
+        // Navigate to the Experience page with the selected project details as query parameters
         router.push({
-          pathname: "/work-page",
-          query: { projectId: projectId },
+          pathname: "/experience",
+          query: { id: projectId, ...selectedProject }, // Pass other project details as query parameters
         });
       };
+      
+      
       
 
   return (
@@ -70,8 +76,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
           <div key={project.id}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
-    <Link href={`/expertise`} as={`/expertise/${project.id}`}>
-<span>
+    <Link href={`/experience`} as={`/experience/${project.id}`}>
+    <div key={project.id} className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4">
+    <span onClick={() => handleProjectClick(project.id)}>
                 <ProjectCard
                   name={project.name}
                   url={project.url}
@@ -80,9 +87,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
                   technology={project.technology}
                   href={project.href}
                   id={project.id}
-                  onClick={() => handleProjectClick(project.id)}
                 />
              </span>
+             </div>
             </Link>
           </div>
         // </React.Fragment>

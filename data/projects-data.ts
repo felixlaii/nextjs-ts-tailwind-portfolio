@@ -27,7 +27,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
     ],
-    href: "/expertise/richmond-west-dental",
+    href: "/experience/richmond-west-dental",
   },
   {
     id: "mix6ix",
@@ -44,7 +44,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
-    href: "/expertise#mix6ix",
+    href: "/experience#mix6ix",
   },
 
   {
@@ -62,7 +62,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
-    href: "/expertise#blush-n-letters",
+    href: "/experience#blush-n-letters",
   },
   {
     id: "st-patrick",
@@ -76,7 +76,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
-    href: "/expertise#st-patrick",
+    href: "/experience#st-patrick",
   },
   {
     id: "pawfinder",
@@ -97,7 +97,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
-    href: "/expertise#pawfinder",
+    href: "/experience#pawfinder",
   },
   {
     id: "instock",
@@ -116,7 +116,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
-    href: "/expertise#instock",
+    href: "/experience#instock",
   },
   {
     id: "weather-app",
@@ -132,7 +132,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
-    href: "/expertise#weather-app",
+    href: "/experience#weather-app",
   },
   {
     id: "pokemon-search",
@@ -152,7 +152,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
     ],
-    href: "/expertise#pokemon-search",
+    href: "/experience#pokemon-search",
   },
   {
     id: "connect-four",
@@ -170,20 +170,20 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
     ],
-    href: "/expertise#connect-four",
+    href: "/experience#connect-four",
   },
 ];
 
 export const PROJECTS_PAGE = [
-  { name: "Richmond West Dental", href: "/expertise/richmond-west-dental" },
-  { name: "MIX6IX Bartending Co.", href: "/expertise#mix6ix" },
-  { name: "Blush N Letters", href: "/expertise#blush-n-letters" },
-  { name: "Saint Patrick Secondary School", href: "/expertise#st-patrick" },
-  { name: "PawFinder", href: "/expertise#pawfinder" },
-  { name: "inStock", href: "/expertise#instock" },
-  { name: "Weather App", href: "/expertise#weather-app" },
-  { name: "Pokemon Search", href: "/expertise#pokemon-search" },
-  { name: "Connect Four", href: "/expertise#connect-four" },
+  { name: "Richmond West Dental", href: "/experience/richmond-west-dental" },
+  { name: "MIX6IX Bartending Co.", href: "/experience#mix6ix" },
+  { name: "Blush N Letters", href: "/experience#blush-n-letters" },
+  { name: "Saint Patrick Secondary School", href: "/experience#st-patrick" },
+  { name: "PawFinder", href: "/experience#pawfinder" },
+  { name: "inStock", href: "/experience#instock" },
+  { name: "Weather App", href: "/experience#weather-app" },
+  { name: "Pokemon Search", href: "/experience#pokemon-search" },
+  { name: "Connect Four", href: "/experience#connect-four" },
 ];
 
 // {
