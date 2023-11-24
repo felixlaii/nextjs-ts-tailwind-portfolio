@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     >
       <div
         className={`relative 
-        ${isDarkMode ? "bg-light text-white" : "bg-dark text-black"}
+        ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
         `}
       >
         <div>
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
             <Projects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           </section>
         </div>
-        <div></div>
+        {/* <div></div> */}
       </div>
     </DarkModeProvider>
   );

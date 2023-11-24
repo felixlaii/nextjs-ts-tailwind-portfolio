@@ -21,8 +21,8 @@ export const Content: React.FC<PropsWithChildren<ContentProps>> = ({
   return (
 <main
   className={clsx(`flex-1 w-screen ${
-    isDarkMode ? "bg-brand-base text-white " : "bg-brand-light text-black"
-  } pb-10`, extraClassName)}
+    isDarkMode ? "bg-brand-light text-white " : "bg-brand-base text-black"
+  } `, extraClassName)}
 >
    
       {children}

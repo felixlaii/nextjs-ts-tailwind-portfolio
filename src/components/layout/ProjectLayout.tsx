@@ -30,7 +30,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
     { name: "HOME", href: "/" },
-    { name: "EXPERTISE", href: "#", dropdown: PROJECTS_PAGE },
+    { name: "EXPERTISE", href: "#expertise" },
     {
       name: "WORK",
       href: "#work",
@@ -45,11 +45,13 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
       toggleDarkMode={toggleDarkMode}
     >           
     <div
-    className={`relative ${
-      isDarkMode ? "bg-dark text-white" : "bg-light text-black"
-    }`}
+    // className={`relative ${
+    //   isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
+    // }`}
   >
-        <Wrapper>
+
+        <Wrapper     isDarkMode={isDarkMode}
+          toggleDarkMode={toggleDarkMode}>
           <Header
           isDarkMode={isDarkMode}
           toggleDarkMode={toggleDarkMode}
