@@ -47,9 +47,7 @@ export const ProjectsData: {
 
   {
     id: "blushnletters",
-    image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362504/Screenshot_2023-10-26_at_7.21.40_PM_kewmlp.png",
-    name: "Blush & Letters Co",
+    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1700947081/Screenshot_2023-11-25_at_4.17.29_PM_z9qhlk.png",    name: "Blush & Letters Co",
     description:
       "Modern Calligraphy and design. A website done through Square Space with custom code injections to bring client's vision to life.",
     category: "professional",

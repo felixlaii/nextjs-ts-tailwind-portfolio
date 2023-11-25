@@ -26,11 +26,11 @@ const Experience: React.FC<ProjectCardProps> = () => {
         Back
       </button>
       <div className="text-center">
-        <h2 className="text-[5rem] tracking-widest font-custom">{name}</h2>
+        <h2 className="text-[5rem] tracking-widest font-custom text-brand-dark">{name}</h2>
         {image && (
           <div className="mt-4">
             <Image
-              className="w-[25rem] h-[15rem] mx-auto rounded-md"
+              className="w-[25rem] h-[20rem] mx-auto rounded-md"
               src={image}
               height={400}
               width={400}
@@ -65,7 +65,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col">
             <div className="text-center mt-6 mb-2">
-              <p className="font-custom">Related Links</p>
+              <p className="font-custom">View My Work</p>
             </div>
             <div className="flex flex-row">
               {githubUrl && (
