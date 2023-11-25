@@ -35,7 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             description: selectedProject.description,
             image: selectedProject.image,
             technology: selectedProject.technology,
-
+            longDescription: selectedProject.longDescription,
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
           },
@@ -93,6 +93,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
                 githubUrl={project.githubUrl}
                 deployedUrl={project.deployedUrl}
                 description={project.description}
+                longDescription={project.longDescription}
                 image={project.image}
                 technology={project.technology}
                 id={project.id}

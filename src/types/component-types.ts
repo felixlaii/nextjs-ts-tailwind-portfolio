@@ -44,6 +44,7 @@ export interface ProjectCardProps {
   githubUrl?: string;
   deployedUrl?: string;
   id: string;
+  longDescription: string;
   onClick: () => void;
 }
 

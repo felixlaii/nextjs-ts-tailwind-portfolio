@@ -11,7 +11,6 @@ import logo from "../../../public/images/blue-logo-1.png";
 import { HeaderProps } from "@/types/component-types";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState } from "react";
-import { PROJECTS_PAGE } from "../../../data/projects-data";
 
 /**
  * Responsive web UI layout for RheumInfo.

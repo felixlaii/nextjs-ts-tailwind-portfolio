@@ -3,13 +3,10 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  githubUrl,
-  deployedUrl,
   name,
   description,
   image,
   technology,
-  id,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);

@@ -7,6 +7,7 @@ export const ProjectsData: {
   githubUrl?: string;
   deployedUrl?: string;
   id: string;
+  longDescription: string;
 }[] = [
   {
     id: "richmond-west-dental",
@@ -15,7 +16,8 @@ export const ProjectsData: {
     name: "Richmond West Dental",
     description:
       "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
-    category: "professional",
+    longDescription: "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid.",
+      category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
@@ -43,6 +45,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://mix6ixtoronto.com",
+    longDescription: ""
   },
 
   {
@@ -58,6 +61,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://blushnletters.com/",
+    longDescription: ""
   },
   {
     id: "st-patrick",
@@ -70,6 +74,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
+    longDescription: ""
   },
   {
     id: "pawfinder",
@@ -90,6 +95,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
+    longDescription: ""
   },
   {
     id: "instock",
@@ -108,6 +114,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
     githubUrl: "https://github.com/felixlaii/instock",
+    longDescription: ""
   },
   {
     id: "weather-app",
@@ -126,6 +133,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
+    longDescription: ""
   },
   {
     id: "pokemon-search",
@@ -146,6 +154,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
+    longDescription: ""
   },
   {
     id: "connect-four",
@@ -164,6 +173,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/connect-four.github.io",
     deployedUrl: "https://felixlaii.github.io/connect-four.github.io/",
+    longDescription: ""
   },
 ];
 
