@@ -5,9 +5,7 @@ import Link from "next/link";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Logo from "../../Logo";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/24/outline";
-import DarkModeToggle from "@/components/ui/inputs/DarkModeToggle";
-import { DarkModeProviderProps } from "@/contexts/DarkModeContext";
+
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -80,8 +78,6 @@ const MenuLinks: React.FC<
   linkClassName,
   onLinkClick,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div>
       <ul>
@@ -116,8 +112,6 @@ const DesktopNavBar: React.FC<
     | "navigationLinks"
     | "linkClassName"
     | "hoverClassName"
-    | "arrowColor"
-    | "dropdownBgColor"
     | "activeLinkClassName"
     | "currentActiveLocation"
     | "textClassName"
@@ -128,15 +122,11 @@ const DesktopNavBar: React.FC<
   activeLinkClassName,
   textClassName,
   hoverClassName,
-  arrowColor,
-  dropdownBgColor,
   linkClassName,
 }) => {
   const [isHover, setIsHover] = useState<boolean>(false);
   const [isClick, setIsClick] = useState<boolean>(false);
-  const [dropdownVariant, setDropdownVariant] = useState<string>("");
   const ref = useRef(null);
-  const isShowing = isClick || isHover;
   useOnClickOutside(ref, () => {
     setIsClick(false);
   });
@@ -145,122 +135,23 @@ const DesktopNavBar: React.FC<
       {navigationLinks.map((link, i) => {
         return (
           <li key={link.name}>
-            {!link.dropdown ? (
-              <Link
-                href={link.href}
-                className={clsx(
-                  currentActiveLocation?.includes(link.href)
-                    ? activeLinkClassName
-                    : linkClassName,
-                  textClassName,
-                  "text-center lg:text-left",
-                  "flex flex-col"
-                )}
-                onClick={() => setIsClick(true)}
-                onMouseLeave={() => {
-                  setIsHover(false);
-                }}
-              >
-                <span className={clsx(hoverClassName)}>{link.name}</span>
-              </Link>
-            ) : (
-              <Popover className="h-full">
-                {({ close, open }: { close: () => void; open: boolean }) => (
-                  <>
-                    <div
-                      className="relative h-full transition-all duration-300 ease-in-out"
-                      ref={ref}
-                      onMouseEnter={() => {
-                        if (link.dropdown) {
-                          setIsHover(true);
-                          setDropdownVariant(link.name);
-                        }
-                      }}
-                      onMouseLeave={() => {
-                        setIsHover(false);
-                      }}
-                      onClick={() => setIsClick(true)}
-                    >
-                      <Popover.Button
-                        className={clsx(textClassName, linkClassName)}
-                      >
-                        <Link className={hoverClassName} href={link.href}>
-                          {link.name}
-
-                          {link.dropdown && (
-                            <ChevronUpIcon
-                              className={clsx(
-                                "ml-2 -mr-1 h-5 w-5 mt-1",
-                                arrowColor,
-                                isHover && dropdownVariant === link.name
-                                  ? "rotate-0"
-                                  : "rotate-180"
-                              )}
-                              aria-hidden="true"
-                            />
-                          )}
-                        </Link>
-                      </Popover.Button>
-                    </div>
-                    <Transition
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                      show={
-                        link.name !== dropdownVariant ?? isClick
-                          ? open
-                          : isShowing
-                      }
-                      as={Fragment}
-                    >
-                      <Popover.Panel
-                        className={clsx(
-                          "absolute top-[4.75rem] mt-2 w-64 origin-top-right rounded-md bg-brand-lightest shadow-md shadow-teal-800 ring-1 ring-black ring-opacity-5 focus:outline-none",
-                          dropdownBgColor
-                        )}
-                        ref={ref}
-                        onMouseEnter={() => {
-                          if (link.dropdown) {
-                            setIsHover(true);
-                            setDropdownVariant(link.name);
-                          }
-                        }}
-                        onMouseLeave={() => {
-                          setIsHover(false);
-                          setDropdownVariant("");
-                        }}
-                        onClick={() => setIsClick(true)}
-                      >
-                        <div className="px-10 py-2">
-                          <ul>
-                            <>
-                              {link.dropdown?.map((droplink) => (
-                                <li
-                                  key={droplink.name}
-                                  className="first:mb-2 last:pb-0 border-b-2 border-zinc-100 last:border-none"
-                                >
-                                  <Link
-                                    href={droplink.href}
-                                    className={textClassName}
-                                  >
-                                    <span className={hoverClassName}>
-                                      {droplink.name}
-                                    </span>
-                                  </Link>
-                                </li>
-                              ))}
-                            </>
-                          </ul>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
-            )}
+            <Link
+              href={link.href}
+              className={clsx(
+                currentActiveLocation?.includes(link.href)
+                  ? activeLinkClassName
+                  : linkClassName,
+                textClassName,
+                "text-center lg:text-left",
+                "flex flex-col"
+              )}
+              onClick={() => setIsClick(true)}
+              onMouseLeave={() => {
+                setIsHover(false);
+              }}
+            >
+              <span className={clsx(hoverClassName)}>{link.name}</span>
+            </Link>
           </li>
         );
       })}
@@ -276,14 +167,11 @@ const Header: React.FC<HeaderProps> = ({
   hoverClassName,
   activeLinkClassName,
   currentActiveLocation,
-  dropdownBgColor,
-  arrowColor,
   textClassName,
   logo,
   logoClassName,
   alt,
   isDarkMode,
-  toggleDarkMode,
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
@@ -293,8 +181,8 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`font-custom bg-brand-light font-primary font-extralight fixed flex justify-between xl:justify-between w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
-        isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"
+      className={`font-custom font-primary font-extralight fixed flex justify-between xl:justify-between w-screen items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+        isDarkMode ? "bg-dark text-white" : "bg-dark text-black"
       }`}
     >
       {" "}
@@ -310,73 +198,11 @@ const Header: React.FC<HeaderProps> = ({
             </Link>
           )}
         </div>
-        <div className="flex items-center">
-          <label className="flex items-center cursor-pointer">
-            <div className="relative pl-4">
-              <input
-                type="checkbox"
-                className="hidden"
-                checked={isDarkMode}
-                onChange={toggleDarkMode}
-              />
-              <div className="toggle-track w-8 h-4 bg-gray-400 rounded-full shadow-inner relative">
-                <div
-                  className={`toggle-thumb absolute w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-                    isDarkMode ? "translate-x-full" : "translate-x-0"
-                  }`}
-                ></div>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div className="flex">
-        <Popover className="lg:hidden">
-          {({ open, close }: { close: () => void; open: boolean }) => (
-            <>
-              <Popover.Button
-                className={clsx(
-                  "flex px-6 mt-2",
-                  "focus:outline-none focus:ring-1 focus-ring-inset focus:ring-black-100"
-                )}
-              >
-                {/* <span className="sr-only">'open-navigation-menu'</span> */}
-                <HamburgerIcon />
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-screen -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl bg-black border-y-[2px] shadow-xl">
-                  {({ close }: { close: () => void; open: boolean }) => (
-                    <div>
-                      <MenuLinks
-                        navigationLinks={navigationLinks}
-                        linkClassName={linkClassName}
-                        hoverClassName={hoverClassName}
-                        activeLinkClassName={activeLinkClassName}
-                        currentActiveLocation={currentActiveLocation}
-                        onLinkClick={() => close()}
-                      />
-                    </div>
-                  )}
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
       </div>
       <div className="hidden lg:inline-flex mt-3 justify-center">
         <DesktopNavBar
           navigationLinks={navigationLinks}
           textClassName={textClassName}
-          dropdownBgColor={dropdownBgColor}
-          arrowColor={arrowColor}
           linkClassName={linkClassName}
           hoverClassName={hoverClassName}
           activeLinkClassName={activeLinkClassName}

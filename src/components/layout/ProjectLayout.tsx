@@ -2,13 +2,11 @@ import { PropsWithChildren } from "react";
 import { Content } from "./project-layout/Content";
 import Footer from "./project-layout/Footer";
 import Header from "./project-layout/Header";
-
 import { Wrapper } from "./project-layout/Wrapper";
 import { useRouter } from "next/router";
 import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
 import logo from "../../../public/images/blue-logo-1.png";
-import { HeaderProps } from "@/types/component-types";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState } from "react";
 
@@ -24,30 +22,28 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
-    // Save the dark mode state to local storage or a state management solution if needed
   };
+
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
-    // { name: "ABOUT", href: "#about" },
+    { name: "HOME", href: "/" },
     { name: "EXPERTISE", href: "#expertise" },
     {
       name: "WORK",
       href: "#work",
     },
-
-    // { name: "GALLERY", href: "#", dropdown: GALLERY_DROPDOWN },
-    // { name: "CONTACT US", href: "/contact-us" },
+    { name: "CONTACT", href: "#contact" },
   ];
   return (
-    // <DarkModeProvider>
-      <div
-        className=
-          "relative"
-      >
-        <Wrapper>
+    <DarkModeProvider
+      initialIsDarkMode={isDarkMode}
+      toggleDarkMode={toggleDarkMode}
+    >
+      <div>
+        <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
           <Header
-          isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
             logo={logo.src}
             navigationLinks={navigationLinks}
             currentActiveLocation={location.pathname}
@@ -59,13 +55,12 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
             )}
             activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
           />
-          <Content >{children}</Content>
-          {/* <Footer 
-                 isDarkMode={isDarkMode}
-                 toggleDarkMode={toggleDarkMode}
-             /> */}
+          <Content isDarkMode={isDarkMode}>
+            {children}
+          </Content>
+          <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </Wrapper>
       </div>
-    // </DarkModeProvider>
+    </DarkModeProvider>
   );
 };

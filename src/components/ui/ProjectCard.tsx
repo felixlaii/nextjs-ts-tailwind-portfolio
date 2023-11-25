@@ -3,7 +3,6 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  url,
   name,
   description,
   image,
@@ -17,18 +16,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       setIsLargeScreen(window.innerWidth >= 1024);
     };
 
-    // Add event listener to update window size when it changes
     window.addEventListener("resize", updateWindowSize);
 
-    // Call updateWindowSize once when the component mounts
     updateWindowSize();
 
-    // Remove event listener when the component is unmounted
     return () => {
       window.removeEventListener("resize", updateWindowSize);
     };
-  }, []); // Empty dependency array ensures this effect runs only once after the initial render
-
+  }, []);
   const handleMouseEnter = () => {
     if (isLargeScreen) {
       setIsHovered(true);
@@ -61,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {isLargeScreen ? (
         isHovered ? (
           // Content for lg and xl screens when hovered
-          <div className="flex flex-col items-center justify-center text-white font-light mb-2">
+          <div className="flex flex-col items-center justify-center  text-white font-light mb-2">
             <div className="flex items-center space-x-2 mt-10">
               {technology.map((iconUrl, index) => (
                 <Image
@@ -77,21 +72,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p className="text-sm lg:text-md text-white font-extralight mt-10 mb-5">
               {description}
             </p>
-            <a
-              className="border px-7 rounded-md text-xs"
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              view
-            </a>
           </div>
         ) : (
           // Content for lg and xl screens when not hovered
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <h2 className="text-sm lg:text-md tracking-widest text-brand-light font-semibold mb-4">
-              {name}
-            </h2>
+          <div className="flex flex-col items-center justify-around  w-full h-full">
+            <div className="">
+              <h2 className="text-sm lg:text-xl tracking-widest text-brand-light font-semibold mb-4">
+                {name}
+              </h2>
+            </div>
             <div className="w-150 h-90">
               <Image
                 className="rounded-lg object-center"
@@ -134,14 +123,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p className="text-sm sm:text-[1rem] lg:text-sm text-white font-extralight mt-4 mb-6">
               {description}
             </p>
-            <a
-              className="border px-7 rounded-md text-xs"
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              view
-            </a>
           </div>
         </div>
       )}
