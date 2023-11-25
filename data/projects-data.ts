@@ -45,7 +45,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://mix6ixtoronto.com",
-    longDescription: ""
+    longDescription: "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service."
   },
 
   {
@@ -61,7 +61,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://blushnletters.com/",
-    longDescription: ""
+    longDescription: "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide."
   },
   {
     id: "st-patrick",
@@ -95,7 +95,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
-    longDescription: ""
+    longDescription: "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation."
   },
   {
     id: "instock",
@@ -103,7 +103,7 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
     name: "inStock",
     description:
-      "A stock inventory management website. A hackathon hosted by BrainStation. 5 Software Engineers working together to deliver final product.",
+      "A stock inventory management website. A group project by BrainStation. 5 Software Engineers working together to deliver final product.",
     category: "school",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -114,7 +114,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
     githubUrl: "https://github.com/felixlaii/instock",
-    longDescription: ""
+    longDescription: "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime."
   },
   {
     id: "weather-app",
@@ -133,7 +133,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
-    longDescription: ""
+    longDescription: "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information."
   },
   {
     id: "pokemon-search",
@@ -154,7 +154,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
-    longDescription: ""
+    longDescription: "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon."
   },
   {
     id: "connect-four",
@@ -173,7 +173,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/connect-four.github.io",
     deployedUrl: "https://felixlaii.github.io/connect-four.github.io/",
-    longDescription: ""
+    longDescription: "Connect Four game created with React, and TypeScript. I created this application while I was trying to learn TypeScript, and its a great way to re-energize yourself with strategy game."
   },
 ];
 

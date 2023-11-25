@@ -19,7 +19,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   return (
-    <div className="min-h-screen mb-2 flex flex-col items-center justify-start pt-[10rem]">
+    <div className="min-h-screen pb-2 flex flex-col items-center justify-start pt-[10rem]">
       <div className="flex justify-start w-full mb-4 pl-8">
         <button
           className="border border-brand-dark px-4 py-2 rounded-md text-md font-custom tracking-wide"
@@ -65,7 +65,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
           </div>
         )}
       </div>
-      <div>
+      <div className="pb-8">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col">
             <div className="text-center mt-6 mb-2">
