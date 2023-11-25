@@ -15,13 +15,17 @@ const Experience: React.FC<ProjectCardProps> = () => {
   return (
     <div className="pt-[10rem]">
       <div>
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <h2 className="text-[3rem] font-custom">{name}</h2>
+        <span>
+        <Image className="w-[30rem] h-[20rem]"src={image} height={200} width={200} alt="Project Image" />
+      </span>
+        <p className="font-custom">{description}</p>
       </div>
       <div>
         {/* Render technology icons if available */}
         {technology && Array.isArray(technology) && (
           <div>
+            <p className="font-custom">Technology used</p>
             {technology.map((iconUrl: string, index: number) => (
               <Image
                 key={index}
@@ -35,9 +39,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
           </div>
         )}
       </div>
-      <span>
-        <Image src={image} height={40} width={40} alt="Project Image" />
-      </span>
+
     </div>
   );
 };
