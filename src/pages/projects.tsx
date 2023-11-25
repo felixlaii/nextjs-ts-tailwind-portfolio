@@ -17,6 +17,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
     selectedCategory === "all"
       ? ProjectsData
       : ProjectsData.filter((project) => project.category === selectedCategory);
+
   const handleProjectClick = (projectId: string) => {
     console.log(`Clicked project with ID: ${projectId}`);
 
@@ -25,19 +26,23 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
     );
 
     if (selectedProject) {
-      router.push({
-        pathname: "/experience",
-        query: {
-          id: projectId,
-          name: selectedProject.name,
-          description: selectedProject.description,
-          image: selectedProject.image,
-          technology: selectedProject.technology,
-          href: selectedProject.href,
+      router.push(
+        {
+          pathname: "/experience",
+          query: {
+            id: projectId,
+            name: selectedProject.name,
+            description: selectedProject.description,
+            image: selectedProject.image,
+            technology: selectedProject.technology,
+            href: selectedProject.href,
+          },
         },
-      });
+        `/experience#${selectedProject.id}`, // Specify the URL displayed in the address bar
+      );
     }
   };
+
 
   return (
     <main
@@ -77,6 +82,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       </div>
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (
+          
           <div
             key={project.id}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
@@ -84,11 +90,11 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectCard
                 name={project.name}
-                url={project.url}
+                href={project.href}
                 description={project.description}
                 image={project.image}
                 technology={project.technology}
-                href={project.href}
+                // href={project.href}
                 id={project.id}
                 onClick={() => handleProjectClick(project.id)}
               />

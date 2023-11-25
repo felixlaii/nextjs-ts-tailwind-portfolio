@@ -37,12 +37,12 @@ export interface ButtonProps {
 }
 
 export interface ProjectCardProps {
-  url: string;
+  // visit: string;
   name: string;
   description: string;
   image: string;
   technology: string[];
-  href: string;
+  href: string[];
   id: string;
   onClick: () => void;
 }

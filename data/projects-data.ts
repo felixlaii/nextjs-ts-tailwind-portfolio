@@ -1,11 +1,11 @@
 export const ProjectsData: {
   image: string;
   name: string;
-  url: string;
+  // href: string;
   description: string;
   category: "school" | "professional";
   technology: string[];
-  href: string;
+  href: string[];
   id: string;
 }[] = [
   {
@@ -13,7 +13,7 @@ export const ProjectsData: {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "Richmond West Dental",
-    url: "https://github.com/felixlaii/richmond-dental-nextjs",
+    href: ["https://github.com/felixlaii/richmond-dental-nextjs", "https://richmondwestdental.com"],
     description:
       "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
     category: "professional",
@@ -24,17 +24,16 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
     ],
-    href: "/experience",
+    // href: "/experience",
   },
   {
     id: "mix6ix",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
     name: "MIX6IX Bartending & Co",
-    url: "https://mix6ixtoronto.com",
+    href: ["https://mix6ixtoronto.com"],
     description:
       "Bartending service for private events. Custom code injections through Square Space.",
     category: "professional",
@@ -44,7 +43,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
-    href: "/experience/#mix6ix",
+    // href: "/experience/#mix6ix",
   },
 
   {
@@ -52,7 +51,7 @@ export const ProjectsData: {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362504/Screenshot_2023-10-26_at_7.21.40_PM_kewmlp.png",
     name: "Blush & Letters Co",
-    url: "https://blushnletters.com/",
+    href: ["https://blushnletters.com/"],
     description:
       "Modern Calligraphy and design. A website done through Square Space with custom code injections to bring client's vision to life.",
     category: "professional",
@@ -62,28 +61,28 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
-    href: "/experience#blush-n-letters",
+    // href: "/experience#blush-n-letters",
   },
   {
     id: "st-patrick",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
     name: "St Patrick S.S",
-    url: "",
+    href: [""],
     description: "Secondary School based in Vancouver.",
     category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
-    href: "/experience#st-patrick",
+    // href: "/experience#st-patrick",
   },
   {
     id: "pawfinder",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
     name: "PawFinder",
-    url: "https://github.com/felixlaii/pawfinder",
+    href: ["https://github.com/felixlaii/pawfinder"],
     description:
       "An application that compiles all adoption agency information into one convenient location. Ability to sign up and save adoption preferences such as breed and age.",
     category: "school",
@@ -97,14 +96,14 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
-    href: "/experience#pawfinder",
+    // href: "/experience#pawfinder",
   },
   {
     id: "instock",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
     name: "inStock",
-    url: "https://github.com/felixlaii/instock",
+    href: ["https://github.com/felixlaii/instock"],
     description:
       "A stock inventory management website. A hackathon hosted by BrainStation. 5 Software Engineers working together to deliver final product.",
     category: "school",
@@ -116,30 +115,32 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
-    href: "/experience#instock",
+    // href: "/experience#instock",
   },
   {
     id: "weather-app",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698531550/weather-static_mjvjn6.png",
     name: "Weather App",
-    url: "https://github.com/felixlaii/weather-app.github.io",
+    href: ["https://nextjs-weather-sandy.vercel.app/", "https://github.com/felixlaii/nextjs-weather"],
     description: "Weather application with search. Data pulled from API.",
     category: "school",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     ],
-    href: "/experience#weather-app",
+    // href: "/experience#weather-app",
   },
   {
     id: "pokemon-search",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532305/pokemon-static_agigqy.png",
     name: "Pokemon Search",
-    url: "https://github.com/felixlaii/pokemon-search-app.github.io",
+    href: ["https://github.com/felixlaii/pokemon-search-app.github.io", "https://github.com/felixlaii/pokemon-search-app.github.io" ],
     description:
       "Are you feeling nostalgic? Search through the list of pokemon and get their images, attacks and stats. Search up to 1000 different Pokemon. All information compiled through PokeAPI!",
     category: "school",
@@ -152,14 +153,14 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
     ],
-    href: "/experience#pokemon-search",
+    // href: "/experience#pokemon-search",
   },
   {
     id: "connect-four",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532351/connect-four-static_xiozcc.png",
     name: "Connect Four",
-    url: "https://github.com/felixlaii/connect-four.github.io",
+    href: ["https://github.com/felixlaii/connect-four.github.io", "https://github.com/felixlaii/connect-four.github.io"],
     description:
       "Play connect four with a friend when you need a quick break! A great way to re-energize with a strategy game. ",
     category: "school",
@@ -170,21 +171,21 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
     ],
-    href: "/experience#connect-four",
+    // href: "/experience#connect-four",
   },
 ];
 
-export const PROJECTS_PAGE = [
-  { name: "Richmond West Dental", href: "/experience/richmond-west-dental" },
-  { name: "MIX6IX Bartending Co.", href: "/experience#mix6ix" },
-  { name: "Blush N Letters", href: "/experience#blush-n-letters" },
-  { name: "Saint Patrick Secondary School", href: "/experience#st-patrick" },
-  { name: "PawFinder", href: "/experience#pawfinder" },
-  { name: "inStock", href: "/experience#instock" },
-  { name: "Weather App", href: "/experience#weather-app" },
-  { name: "Pokemon Search", href: "/experience#pokemon-search" },
-  { name: "Connect Four", href: "/experience#connect-four" },
-];
+// export const PROJECTS_PAGE = [
+//   { name: "Richmond West Dental", href: "/experience/richmond-west-dental" },
+//   { name: "MIX6IX Bartending Co.", href: "/experience#mix6ix" },
+//   { name: "Blush N Letters", href: "/experience#blush-n-letters" },
+//   { name: "Saint Patrick Secondary School", href: "/experience#st-patrick" },
+//   { name: "PawFinder", href: "/experience#pawfinder" },
+//   { name: "inStock", href: "/experience#instock" },
+//   { name: "Weather App", href: "/experience#weather-app" },
+//   { name: "Pokemon Search", href: "/experience#pokemon-search" },
+//   { name: "Connect Four", href: "/experience#connect-four" },
+// ];
 
 // {
 //   image:

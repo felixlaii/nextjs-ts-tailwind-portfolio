@@ -3,12 +3,12 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  url,
+  href,
   name,
   description,
   image,
   technology,
-  href,
+  // href,
   id,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
