@@ -13,7 +13,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   return (
-    <section className={`flex flex-col font-custom ${isDarkMode ? "bg-brand-light text-white" : "bg-dark text-black"}`}>
+    <section className={`flex flex-col font-custom ${isDarkMode ? "bg-dark text-white" : "bg-light text-black"}`}>
       {" "}
       <div className="mx-auto">
       <div className="flex justify-center flex-col items-center font-custom">
