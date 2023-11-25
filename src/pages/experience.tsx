@@ -13,8 +13,18 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const githubUrl = router.query.githubUrl as string;
   const deployedUrl = router.query.deployedUrl as string;
 
+  const goBack = () => {
+    router.back();
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-start pt-[10rem]">
+           <button
+        className="border border-brand-dark px-4 py-2 rounded-md text-md font-custom tracking-wide mb-4"
+        onClick={goBack}
+      >
+        Back
+      </button>
       <div className="text-center">
         <h2 className="text-[5rem] tracking-widest font-custom">{name}</h2>
         {image && (
