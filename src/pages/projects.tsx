@@ -35,14 +35,15 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             description: selectedProject.description,
             image: selectedProject.image,
             technology: selectedProject.technology,
-            href: selectedProject.href,
+
+            deployedUrl: selectedProject.deployedUrl,
+            githubUrl: selectedProject.githubUrl,
           },
         },
-        `/experience#${selectedProject.id}`, // Specify the URL displayed in the address bar
+        `/experience#${selectedProject.id}`
       );
     }
   };
-
 
   return (
     <main
@@ -82,7 +83,6 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       </div>
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (
-          
           <div
             key={project.id}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
@@ -90,11 +90,11 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectCard
                 name={project.name}
-                href={project.href}
+                githubUrl={project.githubUrl}
+                deployedUrl={project.deployedUrl}
                 description={project.description}
                 image={project.image}
                 technology={project.technology}
-                // href={project.href}
                 id={project.id}
                 onClick={() => handleProjectClick(project.id)}
               />

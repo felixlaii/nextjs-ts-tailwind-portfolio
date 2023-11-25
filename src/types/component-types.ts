@@ -37,12 +37,12 @@ export interface ButtonProps {
 }
 
 export interface ProjectCardProps {
-  // visit: string;
   name: string;
   description: string;
   image: string;
   technology: string[];
-  href: string[];
+  githubUrl?: string;
+  deployedUrl?: string;
   id: string;
   onClick: () => void;
 }

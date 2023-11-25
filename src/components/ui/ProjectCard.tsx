@@ -3,12 +3,12 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  href,
+  githubUrl,
+  deployedUrl,
   name,
   description,
   image,
   technology,
-  // href,
   id,
 }) => {
   const [isHovered, setIsHovered] = useState(false);

@@ -9,12 +9,12 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const name = router.query.name as string;
   const description = router.query.description as string;
   const image = router.query.image as string;
-  const technology = router.query.technology as string[] | undefined; // Adjust type accordingly
-  // const href = router.query.href as string;
-  const href = router.query.href as string[] | undefined;
+  const technology = router.query.technology as string[] | undefined;
+  const githubUrl = router.query.githubUrl as string;
+  const deployedUrl = router.query.deployedUrl as string;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-start pt-[10rem]">
       <div className="text-center">
         <h2 className="text-[5rem] tracking-widest font-custom">{name}</h2>
         {image && (
@@ -31,11 +31,10 @@ const Experience: React.FC<ProjectCardProps> = () => {
         <p className="mt-4 font-custom">{description}</p>
       </div>
       <div className="mt-4">
-        {/* Render technology icons if available */}
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col">
-            <div className="text-center">
-              <p className="font-custom">Technology used</p>
+            <div className="text-center mb-2">
+              <p className="font-custom text-brand-dark tracking-wide">Technology used</p>
             </div>
             <div className="flex flex-row">
               {technology.map((iconUrl: string, index: number) => (
@@ -53,23 +52,32 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
       <div>
-      {href && Array.isArray(href) && (
+        {(githubUrl || deployedUrl) && (
           <div className="flex flex-col">
-            <div className="text-center">
+            <div className="text-center mt-6 mb-2">
               <p className="font-custom">Related Links</p>
             </div>
             <div className="flex flex-row">
-              {href.map((projectUrl: string, index: number) => (
+              {githubUrl && (
                 <a
-                  key={index}
-                  className="border px-7 rounded-md text-xs"
-                  href={projectUrl}
+                  className="border border-brand-dark px-10 mx-4 rounded-md text-md font-custom tracking-wide"
+                  href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View
+                  GitHub
                 </a>
-              ))}
+              )}
+              {deployedUrl && (
+                <a
+                  className="border border-brand-dark  px-10 mx-4 rounded-md text-md font-custom tracking-wide"
+                  href={deployedUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Deployed
+                </a>
+              )}
             </div>
           </div>
         )}
