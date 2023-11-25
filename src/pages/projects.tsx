@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
-import Link from "next/link";
-import Expertise from "./experience";
 import { useRouter } from "next/router";
 
 interface ProjectsProps {
@@ -19,22 +17,27 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
     selectedCategory === "all"
       ? ProjectsData
       : ProjectsData.filter((project) => project.category === selectedCategory);
+  const handleProjectClick = (projectId: string) => {
+    console.log(`Clicked project with ID: ${projectId}`);
 
-      const handleProjectClick = (projectId: string) => {
-        console.log(`Clicked project with ID: ${projectId}`);
-      
-        // Find the selected project by ID
-        const selectedProject = ProjectsData.find((project) => project.id === projectId);
-      
-        // Navigate to the Experience page with the selected project details as query parameters
-        router.push({
-          pathname: "/experience",
-          query: { id: projectId, ...selectedProject }, // Pass other project details as query parameters
-        });
-      };
-      
-      
-      
+    const selectedProject = ProjectsData.find(
+      (project) => project.id === projectId
+    );
+
+    if (selectedProject) {
+      router.push({
+        pathname: "/experience",
+        query: {
+          id: projectId,
+          name: selectedProject.name,
+          description: selectedProject.description,
+          image: selectedProject.image,
+          technology: selectedProject.technology,
+          href: selectedProject.href,
+        },
+      });
+    }
+  };
 
   return (
     <main
@@ -43,7 +46,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
       } pb-10`}
     >
       <div>
-        <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">Explore My Work ...</h2>
+        <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
+          Explore My Work ...
+        </h2>
         <div className="flex justify-center items-center align-middle mb-4">
           <p className="pr-4">Filter:</p>
           <button
@@ -71,29 +76,25 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-8">
-      {filteredProjects.map((project, index) => (
-        // <React.Fragment key={project.id}>
-          <div key={project.id}
+        {filteredProjects.map((project, index) => (
+          <div
+            key={project.id}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
           >
-    <Link href={`/experience`} as={`/experience/${project.id}`}>
-    <div key={project.id} className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4">
-    <span onClick={() => handleProjectClick(project.id)}>
-                <ProjectCard
-                  name={project.name}
-                  url={project.url}
-                  description={project.description}
-                  image={project.image}
-                  technology={project.technology}
-                  href={project.href}
-                  id={project.id}
-                />
-             </span>
-             </div>
-            </Link>
+            <span onClick={() => handleProjectClick(project.id)}>
+              <ProjectCard
+                name={project.name}
+                url={project.url}
+                description={project.description}
+                image={project.image}
+                technology={project.technology}
+                href={project.href}
+                id={project.id}
+                onClick={() => handleProjectClick(project.id)}
+              />
+            </span>
           </div>
-        // </React.Fragment>
-      ))}
+        ))}
       </div>
     </main>
   );

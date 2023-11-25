@@ -17,7 +17,6 @@ export interface HeaderProps {
   hoverClassName: string;
   activeLinkClassName: string;
   currentActiveLocation?: string;
-
   dropdownBorderColor?: string;
   textClassName?: string;
   companyName?: string;
@@ -45,7 +44,7 @@ export interface ProjectCardProps {
   technology: string[];
   href: string;
   id: string;
-  // onClick: () => void;
+  onClick: () => void;
 }
 
 export interface DarkModeContextProps {

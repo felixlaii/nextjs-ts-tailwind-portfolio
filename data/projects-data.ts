@@ -27,7 +27,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
     ],
-    href: "/experience/richmond-west-dental",
+    href: "/experience",
   },
   {
     id: "mix6ix",
@@ -44,7 +44,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
-    href: "/experience#mix6ix",
+    href: "/experience/#mix6ix",
   },
 
   {
