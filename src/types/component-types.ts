@@ -57,4 +57,23 @@ export interface ContentProps {
   className?: string;
 }
 
+export interface FormData {
+  fullName: string;
+  email: string;
+  mobileNumber: string;
+  message: string;
+}
+
+export interface ContactFormProps {
+  firstLastName: string;
+  email: string;
+  message: string; 
+  phone: string;
+  [key: string]: string;
+}
+
+export interface ContactState {
+  [key: string]: string;
+}
+
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
