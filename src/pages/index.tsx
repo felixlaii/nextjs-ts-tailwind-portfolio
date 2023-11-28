@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Skills from "./skills";
 import Projects from "./projects";
 import Hero from "@/components/Hero";
+import Contact from "./contact";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 
 const Home: React.FC = () => {
@@ -17,7 +18,7 @@ const Home: React.FC = () => {
       toggleDarkMode={toggleDarkMode}
     >
       <div
-        className={`relative 
+        className={`absolute 
         ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
         `}
       >
@@ -32,6 +33,12 @@ const Home: React.FC = () => {
         <div>
           <section id="work">
             <Projects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+          </section>
+        </div>
+        <div >
+          <section className="mb-[10rem]" id="contact">
+            {/* <Contact onSubmit={handleSubmit(onSubmit)}/> */}
+<Contact isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           </section>
         </div>
       </div>

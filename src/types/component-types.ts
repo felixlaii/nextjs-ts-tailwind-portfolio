@@ -57,4 +57,5 @@ export interface ContentProps {
   className?: string;
 }
 
+
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
