@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MdOutlineError } from "react-icons/md";
 
 interface ContactDarkProps {
   isDarkMode: boolean;
