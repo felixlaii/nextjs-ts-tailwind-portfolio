@@ -1,11 +1,12 @@
-import React from "react";
-require("dotenv").config();
+import React, { useState } from "react";
 
 interface ContactDarkProps {
   isDarkMode: boolean;
 }
 
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -24,8 +25,11 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
       body: json,
     });
     const result = await response.json();
+
     if (result.success) {
-      console.log(result);
+      setSuccessMessage("Form submitted successfully!");
+    } else {
+      console.error("Error submitting form:", result);
     }
   }
 
@@ -38,26 +42,30 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
       <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
         Lets Talk ...
       </h2>
-      <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          className="px-2 rounded-lg mb-8 pt-1 pb-1"
-          type="text"
-          name="name"
-        />
-        <label>Email:</label>
-        <input
-          className="px-2 rounded-lg mb-8 pt-1 pb-1"
-          type="email"
-          name="email"
-        />
-        <label>Message:</label>
-        <textarea
-          className="px-2 rounded-lg mb-8 pt-6 pb-6"
-          name="message"
-        ></textarea>
-        <button type="submit">Submit Form</button>
-      </form>
+
+      {!successMessage && (
+        <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
+          <label>Name:</label>
+          <input
+            className="px-2 rounded-lg mb-8 pt-1 pb-1"
+            type="text"
+            name="name"
+          />
+          <label>Email:</label>
+          <input
+            className="px-2 rounded-lg mb-8 pt-1 pb-1"
+            type="email"
+            name="email"
+          />
+          <label>Message:</label>
+          <textarea
+            className="px-2 rounded-lg mb-8 pt-6 pb-6"
+            name="message"
+          ></textarea>
+          <button type="submit">Submit Form</button>
+        </form>
+      )}
+      {successMessage && <div className="text-green-600">{successMessage}</div>}
     </div>
   );
 };
