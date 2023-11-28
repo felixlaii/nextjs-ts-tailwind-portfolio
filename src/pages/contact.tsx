@@ -33,7 +33,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode, toggleDarkMode }) => 
         },
         body: JSON.stringify(data),
       });
-
+  
       if (response.ok) {
         console.log('Email sent successfully');
       } else {
@@ -43,6 +43,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode, toggleDarkMode }) => 
       console.error('Error sending email:', error);
     }
   };
+  
 
   return (
     <div
