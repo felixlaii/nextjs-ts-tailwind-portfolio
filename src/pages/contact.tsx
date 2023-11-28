@@ -3,13 +3,9 @@ require("dotenv").config();
 
 interface ContactDarkProps {
   isDarkMode: boolean;
-  toggleDarkMode: () => void;
 }
 
-const Contact: React.FC<ContactDarkProps> = ({
-  isDarkMode,
-  toggleDarkMode,
-}) => {
+const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -39,6 +35,9 @@ const Contact: React.FC<ContactDarkProps> = ({
         isDarkMode ? "bg-dark text-white" : "bg-light text-black"
       } `}
     >
+      <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
+        Lets Talk ...
+      </h2>
       <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
         <label>Name:</label>
         <input
