@@ -38,7 +38,7 @@ const Home: React.FC = () => {
         <div >
           <section className="mb-[10rem]" id="contact">
             {/* <Contact onSubmit={handleSubmit(onSubmit)}/> */}
-<Contact isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+<Contact isDarkMode={isDarkMode}  />
           </section>
         </div>
       </div>
