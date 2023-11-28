@@ -68,7 +68,7 @@ export interface ContactFormProps {
   firstLastName: string;
   email: string;
   message: string; 
-  phone: string;
+  // phone: string;
   [key: string]: string;
 }
 

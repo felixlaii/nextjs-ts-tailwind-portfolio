@@ -57,7 +57,6 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode, toggleDarkMode }) => 
           className='px-2 rounded-lg mb-8 pt-1 pb-1'
           placeholder='Name'
           type='text'
-        //   onChange={handleChange}
           {...register('firstLastName', { required: true, maxLength: 80 })}
           aria-invalid={errors.firstLastName ? 'true' : 'false'}
         />
@@ -71,9 +70,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode, toggleDarkMode }) => 
         <input
           className='px-2 rounded-lg mb-8 pt-1 pb-1'
           placeholder='Email'
-          type='email'
-        //   name='email'
-        //   onChange={handleChange}
+          type='text'
           {...register('email', { required: true, maxLength: 80 })}
           aria-invalid={errors.email ? 'true' : 'false'}
         />{errors.email?.type === 'required' && (
@@ -82,21 +79,21 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode, toggleDarkMode }) => 
             </div>
           )}
 
-        <label>Message:</label>
-        <textarea
-          className='px-2 rounded-lg mb-8 pt-6 pb-6'
-          placeholder='Type your message'
-        //   name='message'
-          value={formData.message}
-        //   onChange={handleChange}
-        {...register('message', { required: false, maxLength: 80 })}
-        aria-invalid={errors.message ? 'true' : 'false'}
-        />
-        {errors.message?.type === 'required' && (
-            <div className='text-red-700 pb-2 pl-4 flex gap-2' role='alert'>
-              <MdOutlineError className='mt-1' /> Email is required
-            </div>
-          )}
+<label>Message:</label>
+<textarea
+  className='px-2 rounded-lg mb-8 pt-6 pb-6'
+  placeholder='Type your message'
+  name='message'
+  value={formData.message}
+  onChange={handleChange}  
+  aria-invalid={errors.message ? 'true' : 'false'}
+/>
+{errors.message?.type === 'required' && (
+  <div className='text-red-700 pb-2 pl-4 flex gap-2' role='alert'>
+    <MdOutlineError className='mt-1' /> Message is required
+  </div>
+)}
+
 
         <button type='submit'>Submit</button>
       </form>
