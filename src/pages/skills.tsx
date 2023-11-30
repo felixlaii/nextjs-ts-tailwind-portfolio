@@ -23,7 +23,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           </h2>
         </div>
         {/* Top Row */}
-        <div className="flex flex-col mb-10 border-2 mt-10 sm:mx-4 ">
+        <div className="flex flex-col mb-10 border-2 mt-10 sm:mx-9 ">
           <div>
             <ul className="flex justify-between ml-16 mr-16 mt-0 ">
               {topRowSkills.map((skill, index) => (
