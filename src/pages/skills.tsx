@@ -4,9 +4,8 @@ import Image from "next/image";
 
 interface SkillsProps {
   isDarkMode: boolean;
-  toggleDarkMode: () => void;
 }
-const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
+const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const topRowSkills = SkillsData.slice(0, 8);
   const bottomRowSkills = SkillsData.slice(8, 16);
 
