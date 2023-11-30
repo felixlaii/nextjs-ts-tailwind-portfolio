@@ -19,12 +19,12 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode, toggleDarkMode }) => {
       {" "}
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
-          <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+          <h2 className="mt-9 sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
             My Expertise
           </h2>
         </div>
         {/* Top Row */}
-        <div className="flex flex-col mb-10 border-2 mt-10 ">
+        <div className="flex flex-col mb-10 border-2 mt-10 sm:mx-4 ">
           <div>
             <ul className="flex justify-between ml-16 mr-16 mt-0 ">
               {topRowSkills.map((skill, index) => (
