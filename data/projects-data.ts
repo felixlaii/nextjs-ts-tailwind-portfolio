@@ -156,25 +156,25 @@ export const ProjectsData: {
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
     longDescription: "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon."
   },
-  {
-    id: "connect-four",
-    image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532351/connect-four-static_xiozcc.png",
-    name: "Connect Four",
-    description:
-      "Play connect four with a friend when you need a quick break! A great way to re-energize with a strategy game. ",
-    category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
-    ],
-    githubUrl: "https://github.com/felixlaii/connect-four.github.io",
-    deployedUrl: "https://felixlaii.github.io/connect-four.github.io/",
-    longDescription: "Connect Four game created with React, and TypeScript. I created this application while I was trying to learn TypeScript, and its a great way to re-energize yourself with strategy game."
-  },
+  // {
+  //   id: "connect-four",
+  //   image:
+  //     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532351/connect-four-static_xiozcc.png",
+  //   name: "Connect Four",
+  //   description:
+  //     "Play connect four with a friend when you need a quick break! A great way to re-energize with a strategy game. ",
+  //   category: "school",
+  //   technology: [
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
+  //   ],
+  //   githubUrl: "https://github.com/felixlaii/connect-four.github.io",
+  //   deployedUrl: "https://felixlaii.github.io/connect-four.github.io/",
+  //   longDescription: "Connect Four game created with React, and TypeScript. I created this application while I was trying to learn TypeScript, and its a great way to re-energize yourself with strategy game."
+  // },
 ];
 
 // export const PROJECTS_PAGE = [
