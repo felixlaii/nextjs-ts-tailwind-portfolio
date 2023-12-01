@@ -19,7 +19,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   return (
-    <div className="min-h-screen pb-2 flex flex-col items-center justify-start pt-[10rem] mb-[4rem]">
+    <div className="min-h-screen  flex flex-col items-center pt-[8rem] ">
       <div className="flex justify-start w-full mb-4 pl-8">
         <button
           className="border border-brand-dark px-4 py-2 rounded-md text-md font-custom tracking-wide"
@@ -28,7 +28,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
           Back
         </button>
       </div>
-      <h2 className="text-[5rem] tracking-widest font-custom text-brand-dark">{name}</h2>
+      <h2 className="text-[5rem] ml-4 tracking-widest font-custom text-brand-dark">{name}</h2>
 
       <div className="bg-brand-light w-full text-center">
         {image && (
@@ -47,7 +47,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
       <div className="mt-4">
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col">
-            <div className="text-center mb-2">
+            <div className="text-center">
               <p className="font-custom text-lg mt-4 text-brand-dark tracking-wide">Technology used</p>
             </div>
             <div className="flex flex-row">
@@ -65,10 +65,10 @@ const Experience: React.FC<ProjectCardProps> = () => {
           </div>
         )}
       </div>
-      <div className="pb-8">
+      <div className="mb-[10rem]">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col">
-            <div className="text-center mt-6 mb-2">
+            <div className="text-center mt-6">
               <p className="font-custom text-lg text-brand-dark tracking-wide">View My Work</p>
             </div>
             <div className="flex flex-row">

@@ -78,8 +78,8 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           </button>
         </form>
       )}
-      {successMessage && <div className="text-green-600">{successMessage}</div>}
-      {errorMessage && <div>{errorMessage}</div>}
+      {successMessage && <div className="text-white mb-4">{successMessage}</div>}
+      {errorMessage && <div className="text-red mb-4">{errorMessage}</div>}
     </div>
   );
 };
