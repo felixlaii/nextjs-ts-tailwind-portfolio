@@ -27,7 +27,7 @@ const Home: React.FC = () => {
         </div>
         <div>
           <section id="expertise">
-            <Skills isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            <Skills isDarkMode={isDarkMode}  />
           </section>
         </div>
         <div>
