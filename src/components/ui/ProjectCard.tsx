@@ -47,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       } ${
         isLargeScreen
           ? "flex md:flex lg:flex xl:flex"
-          : "align-middle items-center w-[30rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2"
+          : "align-middle items-center w-[30rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2"
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
