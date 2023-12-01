@@ -1,7 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import { FooterProps } from "@/types/component-types";
 import { FELIX_DETAILS } from "../../../../data/portfolio-info";
 
 interface FooterDarkProps {
@@ -92,12 +90,12 @@ const PortfolioContact = () => {
 const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
   return (
     <footer
-      className={`fixed bottom-0 w-full h-auto font-custom ${
+      className={`fixed bottom-0 w-full font-custom ${
         isDarkMode ? "bg-light text-white" : "bg-dark text-black"
       }`}
     >
-      <div className="flex flex-col items-center justify-center h-full">
-        <div className="md:inline-block">
+      <div className="flex flex-col items-center justify-center">
+        <div>
           <LogoFooter />
         </div>
 
@@ -113,4 +111,3 @@ const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
 };
 
 export default Footer;
-
