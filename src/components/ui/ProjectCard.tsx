@@ -120,9 +120,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 />
               ))}
             </div>
-            {/* <p className="text-sm text-[1rem] lg:text-sm text-white font-extralight mt-4 mb-6">
-              {description}
-            </p> */}
           </div>
         </div>
       )}
