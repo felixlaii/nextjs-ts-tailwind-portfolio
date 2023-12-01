@@ -46,8 +46,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         isHovered ? "shadow-xl bg-brand-light scale-105" : ""
       } ${
         isLargeScreen
-          ? "sm:flex md:flex lg:flex xl:flex"
-          : "sm:align-middle sm:items-center sm:w-[38rem] lg:items-center lg:justify-center md:flex-row md:justify-between sm:justify-between w-1/2 h-1/2"
+          ? "flex md:flex lg:flex xl:flex"
+          : "align-middle items-center w-[30rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2"
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
