@@ -94,8 +94,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )
       ) : (
         // Content for sm and md screens
-        <div className="flex lg:flex-col sm:align-middle sm:items-center sm:w-[38rem] lg:items-center lg:justify-center md:flex-row md:justify-between sm:justify-between w-1/2 h-1/2">
-          <div className="lg:flex lg:flex-col lg:align-middle lg:items-center lg:mt-4 lg:w-[9rem] lg:h-[9rem] w-full md:w-[10rem] md:h-[10rem] sm:w-[9rem] sm:h-[7.5rem] xl:w-48">
+        <div className="flex lg:flex-col align-middle items-center w-[29rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2">
+          <div className="lg:flex lg:flex-col lg:align-middle lg:items-center lg:mt-4 lg:w-[9rem] lg:h-[9rem] md:w-[10rem] md:h-[10rem] w-[9rem] h-[7.5rem] xl:w-48">
             <Image
               className="rounded-lg ml-[1rem]"
               width={270}
@@ -104,11 +104,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               alt="project logo"
             />
           </div>
-          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-56 xl:w-1/2 p-4">
-            <h2 className="text-sm sm:text-[1.3rem] lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
+          <div className="w-1/2 md:w-1/2 lg:w-56 xl:w-1/2 p-4">
+            <h2 className="text-sm text-[1.3rem] lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
               {name}
             </h2>
-            <div className="flex lg:justify-center lg:items-center sm:justify-center md:justify-around md:items-center lg:space-x-2 mt-2">
+            <div className="flex lg:justify-center lg:items-center justify-center md:justify-around md:items-center lg:space-x-2 mt-2">
               {technology.map((iconUrl, index) => (
                 <Image
                   height={40}
@@ -120,7 +120,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 />
               ))}
             </div>
-            <p className="text-sm sm:text-[1rem] lg:text-sm text-white font-extralight mt-4 mb-6">
+            <p className="text-sm text-[1rem] lg:text-sm text-white font-extralight mt-4 mb-6">
               {description}
             </p>
           </div>
