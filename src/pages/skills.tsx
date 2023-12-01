@@ -33,7 +33,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
                     height={50}
                     src={skill.image}
                     alt="skills"
-                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-4"
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-24 lg:h-24 mx-4"
                   />
                   <p className="text-[0.6rem] font-extralight mt-2 text-center">{skill.description}</p>
                 </li>
@@ -51,7 +51,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
                     height={50}
                     src={skill.image}
                     alt="skills"
-                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-4"
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-24 lg:h-24 mx-4"
                   />
                   <p className="text-[0.6rem] font-extralight mt-2 text-center">{skill.description}</p>
                 </li>
