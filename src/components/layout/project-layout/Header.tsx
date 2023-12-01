@@ -181,13 +181,13 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`flex font-custom font-primary font-extralight fixed justify-evenly lg:justify-between xl:justify-evenly w-full items-center z-40 md:pl-4 pb-2 md:pb-10 ${
+      className={`flex font-custom font-primary font-extralight fixed justify-between md:justify-between lg:justify-between xl:justify-evenly w-full items-center z-40 md:pl-4 pb-2 md:pb-10 ${
         isDarkMode ? "bg-dark text-white" : "bg-dark text-black"
       }`}
     >
       {" "}
-      <div className="flex lg:justify-between sm:justify-evenly">
-        <div className="m-0 ">
+      <div className="flex lg:justify-between  md:justify-around sm:justify-between">
+        <div className="m-0 md:justify-between">
           {logo ? (
             <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
           ) : (
@@ -198,7 +198,7 @@ const Header: React.FC<HeaderProps> = ({
             </Link>
           )}
           </div>
-          <div>
+          <div className="sm:flex sm:justify-between">
                 <Popover className="lg:hidden">
           {({ open, close }) => (
             <>

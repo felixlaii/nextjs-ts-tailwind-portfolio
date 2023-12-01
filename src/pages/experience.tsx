@@ -42,7 +42,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
             />
           </div>
         )}
-        <p className="mt-4 mx-9 max-w-[800px] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">{longDescription}</p>
+        <p className="mt-4 max-w-[800px] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">{longDescription}</p>
       </div>
       <div className="mt-4">
         {technology && Array.isArray(technology) && (
