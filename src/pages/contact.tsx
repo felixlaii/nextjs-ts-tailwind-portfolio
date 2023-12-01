@@ -57,19 +57,22 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
             className="px-2 rounded-sm mb-8 pt-1 pb-1"
             type="text"
             name="name"
+            placeholder="John/Jane Doe"
             required
           />
 
           <label>Email:</label>
           <input
             className="px-2 rounded-sm mb-8 pt-1 pb-1"
+            placeholder="email@email.com"
             type="email"
             name="email"
             required
           />
           <label>Message:</label>
           <textarea
-            className="px-2 rounded-sm mb-8 pt-6 pb-6"
+            className="px-2 rounded-sm mb-8 pt-1 pb-12"
+            placeholder="what should we do?"
             name="message"
             required
           ></textarea>
