@@ -8,7 +8,7 @@ interface HeroDarkProps {
 const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <div
-      className={`flex justify-center max-h-full pt-[2rem] pb-[5rem] ${
+      className={`flex justify-center max-h-full pt-[3rem] pb-[5rem] ${
         isDarkMode ? "bg-brand-light text-black" : "bg-brand-base text-white"
       }`}
     >
