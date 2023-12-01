@@ -54,7 +54,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
           <label>Name:</label>
           <input
-            className="px-2 rounded-lg mb-8 pt-1 pb-1"
+            className="px-2 rounded-sm mb-8 pt-1 pb-1"
             type="text"
             name="name"
             required
@@ -62,19 +62,19 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
 
           <label>Email:</label>
           <input
-            className="px-2 rounded-lg mb-8 pt-1 pb-1"
+            className="px-2 rounded-sm mb-8 pt-1 pb-1"
             type="email"
             name="email"
             required
           />
           <label>Message:</label>
           <textarea
-            className="px-2 rounded-lg mb-8 pt-6 pb-6"
+            className="px-2 rounded-sm mb-8 pt-6 pb-6"
             name="message"
             required
           ></textarea>
-          <button className="mb-4" type="submit">
-            Submit Form
+          <button className="mb-4 border border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" type="submit">
+            Submit
           </button>
         </form>
       )}
