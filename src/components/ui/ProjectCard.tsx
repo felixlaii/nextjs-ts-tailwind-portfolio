@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         isLargeScreen
           ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:px-8 pt-4 md:pt-0"
           : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"
-      } h-70 rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
+      } h-70 rounded-sm md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
         isHovered ? "shadow-xl bg-brand-light scale-105" : ""
       } ${
         isLargeScreen
