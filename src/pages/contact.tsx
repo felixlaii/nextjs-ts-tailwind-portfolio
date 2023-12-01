@@ -73,7 +73,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
             name="message"
             required
           ></textarea>
-          <button className="mb-4 border border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" type="submit">
+          <button className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" type="submit">
             Submit
           </button>
         </form>
