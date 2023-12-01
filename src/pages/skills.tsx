@@ -18,7 +18,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
     >
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
-          <h2 className="mt-9 sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+          <h2 className="mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
             My Expertise
           </h2>
         </div>
