@@ -46,7 +46,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         isDarkMode ? "bg-dark text-white" : "bg-light text-black"
       } `}
     >
-      <h2 className="sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
+      <h2 className="text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
         Lets Talk ...
       </h2>
 
