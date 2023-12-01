@@ -34,7 +34,7 @@ export const ProjectsData: {
     id: "mix6ix",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
-    name: "MIX6IX Bartending & Co",
+    name: "MIX6IX Bartending Co",
     description:
       "Bartending service for private events. Custom code injections through Square Space.",
     category: "professional",
