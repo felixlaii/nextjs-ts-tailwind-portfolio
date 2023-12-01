@@ -23,7 +23,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           </h2>
         </div>
         {/* Top Row */}
-        <div className="flex flex-col mb-10 border-2 mt-10 sm:mx-9">
+        <div className="flex flex-col mb-10 border-2 mt-10 sm:mx-9 pt-7 pb-7">
           <div>
             <ul className="flex justify-between items-center mx-4 sm:mx-auto">
               {topRowSkills.map((skill, index) => (
@@ -33,9 +33,9 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
                     height={50}
                     src={skill.image}
                     alt="skills"
-                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                    className="w-8 h-8 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-4"
                   />
-                  <p className="text-sm mt-2 text-center">{skill.description}</p>
+                  <p className="text-[0.6rem] font-extralight mt-2 text-center">{skill.description}</p>
                 </li>
               ))}
             </ul>
@@ -51,9 +51,9 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
                     height={50}
                     src={skill.image}
                     alt="skills"
-                    className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                    className="w-8 h-8 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-4"
                   />
-                  <p className="text-sm mt-2 text-center">{skill.description}</p>
+                  <p className="text-[0.6rem] font-extralight mt-2 text-center">{skill.description}</p>
                 </li>
               ))}
             </ul>
