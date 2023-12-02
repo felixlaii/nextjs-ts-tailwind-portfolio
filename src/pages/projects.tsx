@@ -84,7 +84,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-5 pt-4"
+            className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-3 pt-4"
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectCard
