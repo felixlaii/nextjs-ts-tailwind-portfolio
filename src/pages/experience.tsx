@@ -65,7 +65,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
           </div>
         )}
       </div>
-      <div className="mb-[10rem]">
+      <div>
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col">
             <div className="text-center mt-6">
