@@ -60,7 +60,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
           <label>Name:</label>
           <input
-            className="px-2 rounded-sm mb-8 pt-1 pb-1"
+            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
             type="text"
             name="name"
             placeholder="John/Jane Doe"
@@ -69,7 +69,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
 
           <label>Email:</label>
           <input
-            className="px-2 rounded-sm mb-8 pt-1 pb-1"
+            className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
             placeholder="email@email.com"
             type="email"
             name="email"
@@ -77,7 +77,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           />
           <label>Message:</label>
           <textarea
-            className="px-2 rounded-sm mb-8 pt-1 pb-12"
+            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-12"
             placeholder="what should we do?"
             name="message"
             required
