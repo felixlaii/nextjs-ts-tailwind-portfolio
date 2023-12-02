@@ -1,4 +1,6 @@
-import type { PropsWithChildren } from "react";
+// Content.tsx
+import React from "react";
+import { PropsWithChildren } from "react";
 import clsx from "clsx";
 
 export interface ContentProps {
@@ -17,14 +19,14 @@ export const Content: React.FC<PropsWithChildren<ContentProps>> = ({
   isDarkMode,
 }) => {
   return (
-<main
-  className={clsx(
-    "flex-1 min-h-full mx-auto",
-    isDarkMode ? "bg-brand-light text-white" : "bg-brand-base text-black",
-    extraClassName
-  )}
->
-  {children}
-</main>
+    <main
+      className={clsx(
+        "flex-1 min-h-full mx-auto",
+        isDarkMode ? "bg-brand-light text-white" : "bg-brand-base text-black",
+        extraClassName
+      )}
+    >
+      {children}
+    </main>
   );
 };

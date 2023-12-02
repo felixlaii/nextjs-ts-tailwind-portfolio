@@ -172,6 +172,7 @@ const Header: React.FC<HeaderProps> = ({
   logoClassName,
   alt,
   isDarkMode,
+  toggleDarkMode
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
@@ -180,9 +181,9 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <header
-      className={`flex font-custom font-primary font-extralight fixed justify-between w-full items-center z-40 pb-2 ${
-        isDarkMode ? "bg-dark text-white" : "bg-dark text-black"
+    <div
+      className={`flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2 ${
+        isDarkMode ? "bg-brand-base text-white" : "bg-dark text-black"
       }`}
     >
       <div className="flex items-center">
@@ -197,6 +198,7 @@ const Header: React.FC<HeaderProps> = ({
             </Link>
           )}
         </div>
+  
       </div>
       <div className="flex items-center">
         <Popover className="lg:hidden">
@@ -249,7 +251,7 @@ const Header: React.FC<HeaderProps> = ({
           currentActiveLocation={currentActiveLocation}
         />
       </div>
-    </header>
+    </div>
   );
 };
 

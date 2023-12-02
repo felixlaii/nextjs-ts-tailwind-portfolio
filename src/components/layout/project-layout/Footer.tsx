@@ -8,8 +8,6 @@ interface FooterDarkProps {
 }
 
 const iconClassName = "mr-2 w-4 h-4 text-white";
-const divClassName = " flex flex-row justify-center mt-2 mb-1";
-const socialIconClassName = "mt-3 mb-3 mr-4 w-7 h-7 text-brand-gold";
 
 const LogoFooter = () => {
   return (
@@ -65,8 +63,8 @@ const PortfolioContact = () => {
   return (
     <div>
       <div className="pb-1">
-        <div className={divClassName}>
-          <AiOutlinePhone className={iconClassName} />
+        <div className=" flex flex-row justify-center mt-2 mb-1">
+          <AiOutlinePhone className="mr-2 w-4 h-4 text-white" />
           <a
             className="hover:underline font-primary text-[.8em] text-zinc-300 tracking-widest"
             href={`tel:${FELIX_DETAILS.phone}`}
@@ -74,8 +72,8 @@ const PortfolioContact = () => {
             {FELIX_DETAILS.phone}
           </a>
         </div>
-        <div className={divClassName}>
-          <AiOutlineMail className={iconClassName} />
+        <div className=" flex flex-row justify-center mt-2 mb-1">
+          <AiOutlineMail className="mr-2 w-4 h-4 text-white" />
           <a
             className="font-primary text-[.8em] hover:underline tracking-[.3em] text-zinc-300"
             href={`mailto:${FELIX_DETAILS.email}`}
