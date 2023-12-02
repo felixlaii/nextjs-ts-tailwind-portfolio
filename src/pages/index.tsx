@@ -28,8 +28,7 @@ const Home: React.FC = () => {
         </div>
         <div>
           <section id="about">
-
-          <About />
+            <About isDarkMode={isDarkMode} />
           </section>
         </div>
         <div>
