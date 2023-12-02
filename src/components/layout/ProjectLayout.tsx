@@ -9,7 +9,7 @@ import clsx from "clsx";
 import logo from "../../../public/images/blue-logo-1.png";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState } from "react";
-
+import ScrollToTopButton from "../ui/ScrollToTop";
 /**
  * Responsive web UI layout for RheumInfo.
  * Includes a header with responsive navigation menu and a footer.
@@ -54,6 +54,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
             activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
           />
           <Content isDarkMode={isDarkMode}>{children}</Content>
+        <ScrollToTopButton />
           <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </Wrapper>
       </div>
