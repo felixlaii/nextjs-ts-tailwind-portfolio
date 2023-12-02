@@ -31,11 +31,11 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
               isDarkMode ? "text-brand-light" : "text-brand-base"
             }`}
           >
-            Im Felix
+            What About Me
           </h1>
         </div>
         <div className="flex mx-10">
-          <p className="text-sm">
+          <p className="text-sm tracking-widest">
             Born in Hong Kong. Raised in the GTA. I attended the University of
             Toronto for a Bachelor of Arts Honours program. <br />
             I have over 10 years of luxury retail management experience from

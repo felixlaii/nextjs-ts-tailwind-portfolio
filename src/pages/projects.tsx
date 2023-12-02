@@ -9,7 +9,7 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedProject, setSelectedProject] = useState(null);
+  
   const router = useRouter();
 
   const filteredProjects =
