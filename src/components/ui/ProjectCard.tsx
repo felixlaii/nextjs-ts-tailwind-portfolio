@@ -7,7 +7,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   technology,
-  isDarkMode
+  isDarkMode,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -76,7 +76,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         ) : (
           // Content for lg and xl screens when not hovered
-          <div className={`flex flex-col shadow-2xl h-full items-center justify-around w-full ${ isDarkMode ? "bg-brand-light bg-cover"  : "bg-brand-darkest bg-cover"} box-border`}>
+          <div
+            className={`flex flex-col shadow-2xl h-full items-center justify-around w-full ${
+              isDarkMode
+                ? "bg-brand-light bg-cover"
+                : "bg-brand-darkest bg-cover"
+            } box-border`}
+          >
             <div>
               <h2 className="text-sm lg:text-2xl lg:mb-14 tracking-widest text-brand-base font-semibold mb-4">
                 {name}
@@ -95,7 +101,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )
       ) : (
         // Content for sm and md screens
-        <div className={`flex lg:flex-col h-full sm:align-middle sm:h-[15rem] sm:w-full md:align-middle md:h-[16rem] align-middle items-center w-[29rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between ${isDarkMode ? "bg-brand-light bg-cover"  : "bg-brand-darkest bg-cover"} box-border}`}>
+        <div
+          className={`flex lg:flex-col h-full sm:align-middle sm:h-[15rem] sm:w-full md:align-middle md:h-[16rem] align-middle items-center w-[29rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between ${
+            isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-darkest bg-cover"
+          } box-border}`}
+        >
           <div className="lg:flex lg:flex-col lg:align-middle lg:items-center lg:mt-4 lg:w-[9rem] lg:h-[9rem] md:w-[10rem] md:h-[10rem] w-[9rem] h-[7.5rem] xl:w-48">
             <Image
               className="rounded-lg ml-[1rem]"
