@@ -186,7 +186,7 @@ const Header: React.FC<HeaderProps> = ({
       }`}
     >
       <div className="flex items-center">
-        <div className="m-0">
+        <div className="m-1">
           {logo ? (
             <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
           ) : (

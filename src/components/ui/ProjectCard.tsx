@@ -42,12 +42,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         isLargeScreen
           ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:px-8 pt-4 md:pt-0"
           : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"
-      } h-70 rounded-lg md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
+      } h-70 rounded-sm md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
         isHovered ? "shadow-xl bg-brand-light scale-105" : ""
       } ${
         isLargeScreen
           ? "flex md:flex lg:flex xl:flex"
-          : "align-middle items-center w-[30rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2"
+          : "align-middle items-center w-[30rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2"
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -77,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           // Content for lg and xl screens when not hovered
           <div className="flex flex-col items-center justify-around w-full">
             <div>
-              <h2 className="text-sm lg:text-xl tracking-widest text-brand-light font-semibold mb-4">
+              <h2 className="text-sm lg:text-2xl lg:mb-14 tracking-widest text-brand-light font-semibold mb-4">
                 {name}
               </h2>
             </div>
@@ -94,7 +94,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )
       ) : (
         // Content for sm and md screens
-        <div className="flex lg:flex-col align-middle items-center w-[29rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between ">
+        <div className="flex lg:flex-col sm:align-middle sm:h-[15rem] sm:w-full md:align-middle md:h-[16rem] align-middle items-center w-[29rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between ">
           <div className="lg:flex lg:flex-col lg:align-middle lg:items-center lg:mt-4 lg:w-[9rem] lg:h-[9rem] md:w-[10rem] md:h-[10rem] w-[9rem] h-[7.5rem] xl:w-48">
             <Image
               className="rounded-lg ml-[1rem]"
@@ -104,11 +104,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               alt="project logo"
             />
           </div>
-          <div className="w-1/2 md:w-1/2 lg:w-56 xl:w-1/2 p-4">
-            <h2 className="text-sm text-[1.3rem] lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
+          <div className="w-1/2 md:w-[15rem] lg:w-56 xl:w-1/2 p-4">
+            <h2 className="text-sm text-[1.3rem] md:text-lg lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
               {name}
             </h2>
-            <div className="flex lg:justify-center lg:items-center justify-center md:justify-around md:items-center lg:space-x-2 mt-2">
+            <div className="flex sm:w-[10rem] lg:justify-center lg:items-center justify-center md:justify-around md:items-center lg:space-x-2 mt-2">
               {technology.map((iconUrl, index) => (
                 <Image
                   height={40}
@@ -120,9 +120,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 />
               ))}
             </div>
-            <p className="text-sm text-[1rem] lg:text-sm text-white font-extralight mt-4 mb-6">
-              {description}
-            </p>
           </div>
         </div>
       )}

@@ -5,10 +5,9 @@ import { useRouter } from "next/router";
 
 interface ProjectsProps {
   isDarkMode: boolean;
-  toggleDarkMode: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
+const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const router = useRouter();
@@ -47,8 +46,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
 
   return (
     <main
-      className={`flex flex-col items-center font-custom min-h-screen pb-10 ${
-        isDarkMode ? "bg-brand-light text-black " : "bg-brand-base text-black"
+      className={`flex flex-col items-center font-custom min-h-screen pb-16 ${
+        isDarkMode ? "bg-brand-light text-white " : "bg-brand-base text-brand-dark"
       } `}
     >
       <div>

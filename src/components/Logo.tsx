@@ -19,7 +19,7 @@ const Logo = () => {
           enterTo="opacity-100 translate-x-0"
         >
           <Image
-            src="/images/simple-logo.png"
+            src="/images/logo-no-background.png"
             alt="logo"
             width={50}
             height={50}

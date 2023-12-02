@@ -23,19 +23,24 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           </h2>
         </div>
         {/* Top Row */}
-        <div className="flex flex-col mb-10 border-2 mt-10 mx-9 pt-7 pb-7">
+        <div className="flex flex-col mb-14 border-2 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem]">
           <div>
             <ul className="flex justify-between items-center mx-4 sm:mx-auto">
               {topRowSkills.map((skill, index) => (
-                <li className="flex flex-col items-center text-white" key={skill.image}>
+                <li
+                  className="flex flex-col items-center text-white"
+                  key={skill.image}
+                >
                   <Image
                     width={50}
                     height={50}
                     src={skill.image}
                     alt="skills"
-                    className="w-8 h-8 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-4"
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[3rem] lg:h-[3rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] mx-4"
                   />
-                  <p className="text-[0.6rem] font-extralight mt-2 text-center">{skill.description}</p>
+                  <p className="text-[0.6rem] font-extralight mt-2 text-center">
+                    {skill.description}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -45,15 +50,20 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           <div>
             <ul className="flex justify-between mx-4 sm:mx-auto mt-4">
               {bottomRowSkills.map((skill, index) => (
-                <li className="flex flex-col items-center text-white" key={skill.image}>
+                <li
+                  className="flex flex-col items-center text-white"
+                  key={skill.image}
+                >
                   <Image
                     width={50}
                     height={50}
                     src={skill.image}
                     alt="skills"
-                    className="w-8 h-8 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-4"
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[3rem] lg:h-[3rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] mx-4"
                   />
-                  <p className="text-[0.6rem] font-extralight mt-2 text-center">{skill.description}</p>
+                  <p className="text-[0.6rem] font-extralight mt-2 text-center xl:mb-[2rem]">
+                    {skill.description}
+                  </p>
                 </li>
               ))}
             </ul>
