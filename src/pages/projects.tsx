@@ -5,10 +5,9 @@ import { useRouter } from "next/router";
 
 interface ProjectsProps {
   isDarkMode: boolean;
-  toggleDarkMode: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ isDarkMode, toggleDarkMode }) => {
+const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const router = useRouter();

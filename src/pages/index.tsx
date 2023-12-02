@@ -27,18 +27,17 @@ const Home: React.FC = () => {
         </div>
         <div>
           <section id="expertise">
-            <Skills isDarkMode={isDarkMode}  />
+            <Skills isDarkMode={isDarkMode} />
           </section>
         </div>
         <div>
           <section id="work">
-            <Projects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            <Projects isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div >
+        <div>
           <section className="mb-[10rem]" id="contact">
-            {/* <Contact onSubmit={handleSubmit(onSubmit)}/> */}
-<Contact isDarkMode={isDarkMode}  />
+            <Contact isDarkMode={isDarkMode} />
           </section>
         </div>
       </div>
