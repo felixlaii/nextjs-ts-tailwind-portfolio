@@ -1,9 +1,16 @@
-const About: React.FC = () => {
+
+interface AboutDarkProps {
+  isDarkMode: boolean;
+}
+const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
+
   return (
-    <div className="flex bg-brand-light">
-      <div className="flex-col">
+    <div       className={`flex flex-col font-custom ${
+      isDarkMode ? "bg-dark text-white" : "bg-light text-black"
+    }`}>
+      <div className="flex justify-center flex-col items-center font-custom">
         <div className="justify-center">
-          <h1>About Felix</h1>
+          <h1 className="mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">About Felix</h1>
         </div>
         <div>
           <p>
