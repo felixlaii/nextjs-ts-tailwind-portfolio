@@ -27,11 +27,9 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
     { name: "HOME", href: "/" },
+    { name: "ABOUT", href: "#about" },
     { name: "EXPERTISE", href: "#expertise" },
-    {
-      name: "WORK",
-      href: "#work",
-    },
+    { name: "WORK", href: "#work", },
     { name: "CONTACT", href: "#contact" },
   ];
   return (
@@ -55,9 +53,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = (
             )}
             activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
           />
-          <Content isDarkMode={isDarkMode}>
-            {children}
-          </Content>
+          <Content isDarkMode={isDarkMode}>{children}</Content>
           <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </Wrapper>
       </div>
