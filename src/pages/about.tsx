@@ -34,7 +34,7 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
             What About Me
           </h1>
         </div>
-        <div className="flex mx-10">
+        <div className="flex text-center mx-10">
           <p className="text-sm tracking-widest">
             Born in Hong Kong. Raised in the GTA. I attended the University of
             Toronto for a Bachelor of Arts Honours program. <br />
@@ -45,7 +45,7 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
           </p>
         </div>
         <button
-          className="mb-7 mt-4 text-brand-base font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+          className="mb-7 mt-4 text-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
           onClick={onButtonClick}
         >
           Download Resume
