@@ -16,10 +16,10 @@ const LogoFooter = () => {
     <div>
       <div className="relative">
         <Image
-          className="sm:w-[8rem] sm:h-[2.5rem] md:w-[9rem] md:h-[3rem] lg:w-[12rem] lg:h-[3rem]"
+          className="sm:w-[8rem] sm:h-[2.5rem] md:w-[9rem] md:h-[3rem] lg:w-[12rem] lg:h-[3rem] pt-4"
           width={100}
           height={40}
-          src="/images/blue-logo-1.png"
+          src="/images/felixlaii-white.svg"
           alt="logo"
         />
       </div>
