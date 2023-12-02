@@ -77,7 +77,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           // Content for lg and xl screens when not hovered
           <div className="flex flex-col items-center justify-around w-full">
             <div>
-              <h2 className="text-sm lg:text-2xl lg:mb-14 tracking-widest text-brand-light font-semibold mb-4">
+              <h2 className="text-sm lg:text-2xl lg:mb-14 tracking-widest text-brand-base font-semibold mb-4">
                 {name}
               </h2>
             </div>
