@@ -31,6 +31,7 @@ const Home: React.FC = () => {
             <About isDarkMode={isDarkMode} />
           </section>
         </div>
+
         <div>
           <section id="expertise">
             <Skills isDarkMode={isDarkMode} />

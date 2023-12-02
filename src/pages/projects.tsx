@@ -9,7 +9,7 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  
+
   const router = useRouter();
 
   const filteredProjects =
@@ -51,7 +51,11 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       } `}
     >
       <div>
-        <h2 className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9 ${isDarkMode ? "text-brand-light" : "text-brand-base"}`}>
+        <h2
+          className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9 ${
+            isDarkMode ? "text-brand-light" : "text-brand-base"
+          }`}
+        >
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">

@@ -6,6 +6,13 @@ interface HeroDarkProps {
 }
 
 const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
+
+  const getImagePath = () => {
+    return isDarkMode
+      ? "/images/felixlaii-white.svg"
+      : "/images/felixlaii-black.svg";
+  };
+
   return (
     <div
       className={`flex justify-center max-h-full pt-[3rem] pb-[5rem] md:pt-[1rem] lg:pt-[4rem] ${
@@ -14,10 +21,10 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
     >
       <div className="flex-column justify-around align-middle items-center">
         <div className="mr-4">
-          <Image
+        <Image
             width={90}
             height={90}
-            src="/images/felixlaii-logo.svg"
+            src={getImagePath()}
             alt="Hero Image"
             className="h-[15rem] w-[17rem] md:w-[23rem] md:h-[18rem] lg:h-[15rem] lg:w-[30rem]"
           />
@@ -38,16 +45,30 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
                   }`}
                 ></div>
               </div>
-              <p className="font-custom tracking-widest ml-2">dark mode</p>
+              <p
+                className={`font-custom tracking-widest ml-2 ${
+                  isDarkMode ? "text-brand-lightest" : "text-brand-light"
+                }`}
+              >
+                dark mode
+              </p>
             </div>
           </label>
         </div>
 
         <div className="font-custom">
-          <p className="text-[2.3rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1">
+          <p
+            className={`text-[2.3rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1 ${
+              isDarkMode ? "text-brand-lightest" : "text-brand-light"
+            }`}
+          >
             front-end software developer
           </p>
-          <p className="text-[1.5rem] md:text-[2.5rem] lg:text-[3rem] tracking-widest mb-2">
+          <p
+            className={`text-[1.5rem] md:text-[2.5rem] lg:text-[3rem] tracking-widest mb-2 ${
+              isDarkMode ? "text-brand-lightest" : "text-brand-light"
+            }`}
+          >
             & dog lover
           </p>
         </div>

@@ -43,10 +43,16 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   return (
     <div
       className={`flex flex-col items-center font-custom mt-10 ${
-        isDarkMode ? "bg-brand-light text-black" : "bg-brand-base text-brand-light"
+        isDarkMode
+          ? "bg-brand-light text-black"
+          : "bg-brand-base text-brand-light"
       } `}
     >
-      <h2 className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${isDarkMode ? "text-brand-lightest" : "text-brand-light"}`}>
+      <h2
+        className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${
+          isDarkMode ? "text-brand-lightest" : "text-brand-light"
+        }`}
+      >
         Lets Talk ...
       </h2>
 
@@ -54,7 +60,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
           <label>Name:</label>
           <input
-            className="px-2 rounded-sm mb-8 pt-1 pb-1"
+            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
             type="text"
             name="name"
             placeholder="John/Jane Doe"
@@ -63,7 +69,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
 
           <label>Email:</label>
           <input
-            className="px-2 rounded-sm mb-8 pt-1 pb-1"
+            className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
             placeholder="email@email.com"
             type="email"
             name="email"
@@ -71,17 +77,22 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           />
           <label>Message:</label>
           <textarea
-            className="px-2 rounded-sm mb-8 pt-1 pb-12"
+            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-12"
             placeholder="what should we do?"
             name="message"
             required
           ></textarea>
-          <button className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" type="submit">
+          <button
+            className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-darkest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+            type="submit"
+          >
             Submit
           </button>
         </form>
       )}
-      {successMessage && <div className="text-white mb-4">{successMessage}</div>}
+      {successMessage && (
+        <div className="text-white mb-4">{successMessage}</div>
+      )}
       {errorMessage && <div className="text-red mb-4">{errorMessage}</div>}
     </div>
   );
