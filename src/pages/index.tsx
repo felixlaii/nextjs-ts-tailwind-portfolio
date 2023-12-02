@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import Contact from "./contact";
 import About from "./about";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
-import ScrollToTopButton from "@/components/ui/ScrollToTop";
+
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -31,7 +31,6 @@ const Home: React.FC = () => {
             <About isDarkMode={isDarkMode} />
           </section>
         </div>
-        <ScrollToTopButton />
 
         <div>
           <section id="expertise">
@@ -48,7 +47,6 @@ const Home: React.FC = () => {
             <Contact isDarkMode={isDarkMode} />
           </section>
         </div>
-        
       </div>
     </DarkModeProvider>
   );
