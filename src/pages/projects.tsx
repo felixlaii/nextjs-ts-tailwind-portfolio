@@ -96,6 +96,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                 image={project.image}
                 technology={project.technology}
                 id={project.id}
+                isDarkMode={isDarkMode}
                 onClick={() => handleProjectClick(project.id)}
               />
             </span>

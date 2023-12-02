@@ -7,6 +7,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   technology,
+  isDarkMode
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -40,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div
       className={`flex flex-col justify-center items-center ${
         isLargeScreen
-          ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:px-8 pt-4 md:pt-0"
+          ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:mx-8 pt-4 md:pt-0"
           : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"
       } h-70 rounded-sm md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
         isHovered ? "shadow-xl bg-brand-light scale-105" : ""
@@ -56,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {isLargeScreen ? (
         isHovered ? (
           // Content for lg and xl screens when hovered
-          <div className="flex flex-col items-center justify-center  text-white font-light mb-2">
+          <div className="flex flex-col items-center justify-center text-white font-light mb-2">
             <div className="flex items-center space-x-2 mt-10">
               {technology.map((iconUrl, index) => (
                 <Image
@@ -75,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         ) : (
           // Content for lg and xl screens when not hovered
-          <div className="flex flex-col items-center justify-around w-full">
+          <div className={`flex flex-col shadow-2xl h-full items-center justify-around w-full ${ isDarkMode ? "bg-brand-light bg-cover"  : "bg-brand-darkest bg-cover"} box-border`}>
             <div>
               <h2 className="text-sm lg:text-2xl lg:mb-14 tracking-widest text-brand-base font-semibold mb-4">
                 {name}
