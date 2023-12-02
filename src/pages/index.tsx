@@ -3,6 +3,7 @@ import Skills from "./skills";
 import Projects from "./projects";
 import Hero from "@/components/Hero";
 import Contact from "./contact";
+import About from "./about";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 
 const Home: React.FC = () => {
@@ -18,12 +19,17 @@ const Home: React.FC = () => {
       toggleDarkMode={toggleDarkMode}
     >
       <div
-        className={`absolute 
+        className={`absolute
         ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
         `}
       >
         <div>
           <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        </div>
+        <div>
+          <section id="about">
+            <About isDarkMode={isDarkMode} />
+          </section>
         </div>
         <div>
           <section id="expertise">

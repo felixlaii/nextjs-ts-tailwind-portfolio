@@ -43,10 +43,10 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   return (
     <div
       className={`flex flex-col items-center font-custom mt-10 ${
-        isDarkMode ? "bg-dark text-white" : "bg-light text-black"
+        isDarkMode ? "bg-brand-light text-black" : "bg-brand-base text-brand-light"
       } `}
     >
-      <h2 className="text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
+      <h2 className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${isDarkMode ? "text-brand-lightest" : "text-brand-light"}`}>
         Lets Talk ...
       </h2>
 

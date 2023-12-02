@@ -45,6 +45,7 @@ export interface ProjectCardProps {
   deployedUrl?: string;
   id: string;
   longDescription: string;
+  isDarkMode: boolean;
   onClick: () => void;
 }
 

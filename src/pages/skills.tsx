@@ -13,12 +13,12 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   return (
     <section
       className={`flex flex-col font-custom ${
-        isDarkMode ? "bg-dark text-white" : "bg-light text-black"
+        isDarkMode ? "bg-brand-light text-black" : "bg-brand-base text-brand-light"
       }`}
     >
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
-          <h2 className="mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+          <h2 className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${isDarkMode ? "text-brand-lightest" : "text-brand-light"}`}>
             My Expertise
           </h2>
         </div>
