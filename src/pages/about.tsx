@@ -45,11 +45,15 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
           </p>
         </div>
         <button
-          className="mb-7 mt-4 text-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+          className=        {`mb-7 mt-4 text-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${
+            isDarkMode ? "text-brand-base" : "text-brand-dark"
+          }`}
           onClick={onButtonClick}
         >
           Download Resume
         </button>{" "}
+
+
       </div>
     </div>
   );
