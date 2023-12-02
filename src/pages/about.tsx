@@ -7,7 +7,7 @@ const About: React.FC = () => {
         </div>
         <div>
           <p>
-          Born in Hong Kong. Raised in the GTA. I attended University of Toronto for a Bachelor of Arts Honours program. I have 
+          Born in Hong Kong. Raised in the GTA. I attended University of Toronto for a Bachelor of Arts Honours program. I have over 10 years of luxury retail management experience from Links of London to Burberry to Gucci. Transitioned into tech and absolutely love it! 
           </p>
         </div>
       </div>
