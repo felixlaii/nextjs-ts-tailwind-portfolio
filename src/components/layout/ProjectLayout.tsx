@@ -6,7 +6,7 @@ import { Wrapper } from "./project-layout/Wrapper";
 import { useRouter } from "next/router";
 import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
-import logo from "../../../public/images/blue-logo-1.png";
+import logo from "../../../public/images/felixlaii-logo.svg";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
@@ -28,7 +28,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   ];
 
   return (
-    <DarkModeProvider initialIsDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+    <DarkModeProvider
+      initialIsDarkMode={isDarkMode}
+      toggleDarkMode={toggleDarkMode}
+    >
       <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
         <Header
           isDarkMode={isDarkMode}
@@ -45,7 +48,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
           activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
         />
         <Content isDarkMode={isDarkMode}>{children}</Content>
-        <ScrollToTopButton />
+        <ScrollToTopButton isDarkMode={isDarkMode} />
         <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       </Wrapper>
     </DarkModeProvider>
