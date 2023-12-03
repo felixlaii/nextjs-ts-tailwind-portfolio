@@ -5,18 +5,21 @@ const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+    const handleScroll = () => {
+      var rootElement = document.documentElement;
+      var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+
+      if (rootElement.scrollTop / scrollTotal > 0.8) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    document.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -32,7 +35,7 @@ const ScrollToTopButton: React.FC = () => {
       onClick={scrollToTop}
       className={`${
         isVisible ? "opacity-100" : "opacity-0"
-      } fixed bottom-1/2 right-4 transform -translate-y-1/2 transition-opacity duration-300 ease-in-out cursor-pointer bg-brand-dark p-2 rounded-full`}
+      } fixed float-right bottom-1/2 right-4 transform -translate-y-6 transition-opacity duration-300 ease-in-out cursor-pointer bg-brand-dark p-2 rounded-full`}
     >
       <FaArrowUp className="text-brand-base w-6 h-6" />
     </div>

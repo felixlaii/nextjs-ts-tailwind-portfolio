@@ -28,7 +28,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   ];
 
   return (
-    <DarkModeProvider initialIsDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+    <DarkModeProvider
+      initialIsDarkMode={isDarkMode}
+      toggleDarkMode={toggleDarkMode}
+    >
       <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
         <Header
           isDarkMode={isDarkMode}
