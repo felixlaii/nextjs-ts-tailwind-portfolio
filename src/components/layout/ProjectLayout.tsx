@@ -6,7 +6,7 @@ import { Wrapper } from "./project-layout/Wrapper";
 import { useRouter } from "next/router";
 import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
-import logo from "../../../public/images/blue-logo-1.png";
+import logo from "../../../public/images/felixlaii-logo.svg";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
