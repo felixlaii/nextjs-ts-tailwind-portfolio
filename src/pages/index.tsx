@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       toggleDarkMode={toggleDarkMode}
     >
       <div
-        className={`absolute
+        className={`absolute w-full
         ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
         `}
       >

@@ -20,7 +20,7 @@ export const Wrapper: React.FC<PropsWithChildren<WrapperDarkProps>> = ({
       initialIsDarkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
     >
-      <div className={`min-h-screen overflow-hidden overflow-x-hidden${isDarkMode ? "dark-mode" : ""}`}>
+      <div className={`min-h-screen   overflow-x-hidden ${isDarkMode ? "dark-mode" : ""}`}>
         {children}
       </div>
     </DarkModeProvider>
