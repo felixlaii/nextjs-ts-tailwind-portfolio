@@ -48,7 +48,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
           activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
         />
         <Content isDarkMode={isDarkMode}>{children}</Content>
-        <ScrollToTopButton />
+        <ScrollToTopButton isDarkMode={isDarkMode} />
         <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       </Wrapper>
     </DarkModeProvider>
