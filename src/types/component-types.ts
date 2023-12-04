@@ -70,4 +70,10 @@ export interface ContentProps {
   children?: React.ReactNode;
  }
 
+ export interface CarouselProps {
+  width?: number;
+  height?: number;
+  items: React.ReactNode[];
+}
+
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
