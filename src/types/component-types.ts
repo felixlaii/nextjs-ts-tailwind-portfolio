@@ -57,6 +57,11 @@ export interface ContentProps {
   children: ReactNode;
   className?: string;
 }
-
+ export interface CarouselIndicatorProps {
+  activeIndex: number;
+  length: number;
+  maxIndicatorVisible?: number;
+  onSetActiveIndex: (index: number) => void;
+ }
 
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
