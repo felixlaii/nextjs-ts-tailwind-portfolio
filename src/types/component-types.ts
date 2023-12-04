@@ -64,4 +64,10 @@ export interface ContentProps {
   onSetActiveIndex: (index: number) => void;
  }
 
+ export interface CarouselCardProps {
+  index: number;
+  activeIndex: number;
+  children?: React.ReactNode;
+ }
+
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
