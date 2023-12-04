@@ -22,4 +22,21 @@ export function CarouselItem({ index, activeIndex, children}: CarouselCardProps)
   const cssDisplay = `
         ${Math.abs(index - activeIndex) >= 3 ? 'none' : 'block'},
   `;
+
+  return (
+    <div
+    className="carousel-item"
+    style={{
+      transform: cssTransformProperties,
+      opacity: cssOpacity,
+      display: cssDisplay,
+      zIndex: `${scaled ? 100 : 1}`,
+    }}
+    onClick={() => {
+      setScaled(!scaled);
+    }}
+  >
+    {children}
+  </div>
+  )
 }
