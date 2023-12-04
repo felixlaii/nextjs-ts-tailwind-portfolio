@@ -1,9 +1,7 @@
 import { useRouter } from "next/router";
 import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
-import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
@@ -24,14 +22,12 @@ const Experience: React.FC<ProjectCardProps> = () => {
   return (
     <div className="h-full flex flex-col items-center pt-[4rem]">
       <div className="flex flex-row items-center h-[3rem]">
-      <div className="align-middle">
-        <FaArrowLeft
-          className="h-10 w-5"
-          onClick={goBack}
-        
-        />
-      </div>
-      <h2 className="text-[1.5rem] ml-4 tracking-widest font-custom text-brand-dark">{name}</h2>
+        <div className="align-middle">
+          <FaArrowLeft className="h-10 w-5" onClick={goBack} />
+        </div>
+        <h2 className="text-[1.5rem] ml-4 tracking-widest font-custom text-brand-dark">
+          {name}
+        </h2>
       </div>
       <div className="bg-brand-light w-full text-center">
         {image && (
@@ -45,13 +41,17 @@ const Experience: React.FC<ProjectCardProps> = () => {
             />
           </div>
         )}
-        <p className="mt-4 max-w-[800px] text-zinc-200 tracking-widest mx-10 text-center font-custom pb-4">{longDescription}</p>
+        <p className="mt-4 max-w-[800px] text-zinc-200 tracking-widest mx-10 text-center font-custom pb-4">
+          {longDescription}
+        </p>
       </div>
       <div className="mt-4">
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col">
             <div className="text-center">
-              <p className="font-custom text-lg mt-4 mb-5 text-brand-dark tracking-wide">Technology used</p>
+              <p className="font-custom text-lg mt-4 mb-5 text-brand-dark tracking-wide">
+                Technology used
+              </p>
             </div>
             <div className="flex flex-row">
               {technology.map((iconUrl: string, index: number) => (
@@ -72,7 +72,9 @@ const Experience: React.FC<ProjectCardProps> = () => {
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col items-center">
             <div className="text-center mt-6">
-              <p className="font-custom text-lg mb-5 text-brand-dark tracking-wide">View My Work</p>
+              <p className="font-custom text-lg mb-5 text-brand-dark tracking-wide">
+                View My Work
+              </p>
             </div>
             <div className="flex flex-row mb-9">
               {githubUrl && (
