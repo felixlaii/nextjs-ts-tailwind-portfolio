@@ -39,7 +39,7 @@ const LogoLink: React.FC<
       <Link
         href="/"
         className={clsx(
-          "flex lg:inline-block w- relative",
+          "flex lg:inline-block w-full relative",
           "focus:outline-none focus-visible:ring focus-visible:ring-black/20 focus-visible:border-transparent",
 
           logoClassName
@@ -181,12 +181,13 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <div
-      className={`flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2 ${
-        isDarkMode ? "bg-brand-base text-white" : "bg-dark text-black"
-      }`}
-    >
-      <div className="flex items-center">
+    // <header
+    //   className={`flex font-custom font-primary font-extralight justify-between min-w-full items-center z-40 pb-2 ${
+    //     isDarkMode ? "bg-brand-base text-white" : "bg-dark text-black"
+    //   }`}
+    // >
+      <header className="bg-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
+      <div className="flex items-center ">
         <div className="m-1">
           {logo ? (
             <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
@@ -200,8 +201,8 @@ const Header: React.FC<HeaderProps> = ({
         </div>
   
       </div>
-      <div className="flex items-center">
-        <Popover className="lg:hidden">
+      <div className="flex items-center ">
+        <Popover className=" lg:hidden">
           {({ open, close }) => (
             <>
               <Popover.Button
@@ -222,7 +223,7 @@ const Header: React.FC<HeaderProps> = ({
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-screen -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl bg-white border-y-[2px] shadow-xl">
+                <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-full -translate-x-1/2 transform px-0 sm:px-0 lg:max-w-3xl bg-white border-y-[2px] shadow-xl">
                   {({ close }) => (
                     <div>
                       <MenuLinks
@@ -251,7 +252,7 @@ const Header: React.FC<HeaderProps> = ({
           currentActiveLocation={currentActiveLocation}
         />
       </div>
-    </div>
+    </header>
   );
 };
 

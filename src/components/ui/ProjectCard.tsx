@@ -48,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       } ${
         isLargeScreen
           ? "flex md:flex lg:flex xl:flex"
-          : "align-middle items-center w-[30rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2"
+          : "align-middle items-center w-[25rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2 "
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -102,24 +102,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       ) : (
         // Content for sm and md screens
         <div
-          className={`flex lg:flex-col h-full sm:align-middle sm:h-[15rem] sm:w-full md:align-middle md:h-[16rem] align-middle items-center w-[29rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between ${
-            isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-darkest bg-cover"
+          className={`flex lg:flex-col h-full w-full px-10 sm:align-middle sm:h-[15rem] sm:w-full md:align-middle md:h-[16rem] align-middle items-center lg:items-center lg:justify-center md:flex-row md:justify-between justify-between ${
+            isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-base bg-cover"
           } box-border}`}
         >
           <div className="lg:flex lg:flex-col lg:align-middle lg:items-center lg:mt-4 lg:w-[9rem] lg:h-[9rem] md:w-[10rem] md:h-[10rem] w-[9rem] h-[7.5rem] xl:w-48">
             <Image
-              className="rounded-lg ml-[1rem]"
+              className="w-23 sm:w-40 md:w-60 lg:w-70 xl:w-80 rounded-lg ml-[1rem]"
               width={270}
               height={170}
               src={image}
               alt="project logo"
             />
           </div>
-          <div className="w-1/2 md:w-[15rem] lg:w-56 xl:w-1/2 p-4">
-            <h2 className="text-md text-[1.3rem] md:text-lg lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
+          <div className="flex flex-col items-center w-1/2 md:w-[15rem] lg:w-56 xl:w-1/2 p-1">
+            <h2 className="text-sm text-[1.3rem] md:text-lg lg:text-sm tracking-widest text-brand-light font-semibold mb-4">
               {name}
             </h2>
-            <div className="flex sm:w-[10rem] w-[10rem] lg:justify-center lg:items-center justify-center md:justify-around md:items-center lg:space-x-2 mt-2">
+            <div className="flex sm:w-[10rem] w-1/3 lg:justify-center lg:items-center justify-center md:justify-around md:items-center lg:space-x-2 mt-2">
               {technology.map((iconUrl, index) => (
                 <Image
                   height={40}
@@ -127,7 +127,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   key={index}
                   src={iconUrl}
                   alt={`tech-icon-${index}`}
-                  className="w-5 h-5 mx-2"
+                  className="w-3 h-4 mx-1"
                 />
               ))}
             </div>
