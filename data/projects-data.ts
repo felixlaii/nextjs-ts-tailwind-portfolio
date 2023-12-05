@@ -8,6 +8,7 @@ export const ProjectsData: {
   deployedUrl?: string;
   id: string;
   longDescription: string;
+  carousel?: string[];
 }[] = [
   {
     id: "richmond-west-dental",
@@ -29,6 +30,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/richmond-dental-nextjs",
     deployedUrl: "https://richmondwestdental.com",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
   },
   {
     id: "mix6ix",
@@ -45,7 +47,9 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://mix6ixtoronto.com",
-    longDescription: "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service."
+    longDescription: "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service.",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
+
   },
 
   {
@@ -61,7 +65,9 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://blushnletters.com/",
-    longDescription: "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide."
+    longDescription: "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide.",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
+
   },
   {
     id: "st-patrick",
@@ -74,7 +80,9 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
-    longDescription: ""
+    longDescription: "",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
+
   },
   {
     id: "pawfinder",
@@ -95,7 +103,8 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
-    longDescription: "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation."
+    longDescription: "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation.",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
   },
   {
     id: "instock",
