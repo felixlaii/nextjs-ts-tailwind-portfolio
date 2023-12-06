@@ -3,6 +3,8 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import ExperienceCarousel from "@/components/ExperienceCarousel";
+import ImageSlider from "@/components/ui/ImageSlider";
+
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
 
@@ -14,7 +16,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const githubUrl = router.query.githubUrl as string;
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
-const carousel = router.query.carousel as string[];
+  const carousel = router.query.carousel as string[];
   const goBack = () => {
     router.back();
   };
@@ -30,7 +32,7 @@ const carousel = router.query.carousel as string[];
         </h2>
       </div>
       <div className=" items-center bg-brand-light w-full text-center">
-        {image && (
+        {/* {image && (
           <div className="mt-4">
             <Image
               className="w-[20rem] h-[20rem] mx-auto rounded-md"
@@ -40,17 +42,15 @@ const carousel = router.query.carousel as string[];
               alt="project-image"
             />
           </div>
-        )}
-
-        {/* <div className="flex flex-col"> */}
-          <p className="mt-4 max-w-[800px] text-zinc-200 tracking-widest mx-10 text-center font-custom pb-4">
-            {longDescription}
-          </p>
-       {/* <ExperienceCarousel /> */}
-      {/* </div> */}
+        )} */}
+            {/* <div className="mt-4"> */}
+          <ImageSlider carousel={carousel} />
+        {/* </div> */}
+        <p className="mt-4 max-w-[800px] text-zinc-200 tracking-widest mx-10 text-center font-custom pb-4">
+          {longDescription}
+        </p>
+    
       </div>
-
-
 
       <div className="mt-4">
         {technology && Array.isArray(technology) && (

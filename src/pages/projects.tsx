@@ -37,6 +37,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
             longDescription: selectedProject.longDescription,
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
+            carousel: selectedProject.carousel,
           },
         },
         `/experience#${selectedProject.id}`
