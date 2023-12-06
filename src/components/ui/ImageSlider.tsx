@@ -19,6 +19,14 @@ const ImageSlider: React.FC<ProjectCardProps> = ({ carousel = [] }) => {
     );
   };
 
+  useEffect(() => {
+    const sliderCurrent = sliderRef.current;
+
+    if (!sliderCurrent) {
+        return;
+    }
+})
+
   return <div></div>;
 };
 
