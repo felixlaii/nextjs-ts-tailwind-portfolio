@@ -10,7 +10,6 @@ const Carousel: React.FC<ProjectCardProps> = ({ carousel = [] }) => {
     return acc;
   }, {});
 
-
   const scrollToImage = (i: number) => {
     // Set the index of the image we want to see next
     setCurrentImage(i);
@@ -22,6 +21,24 @@ const Carousel: React.FC<ProjectCardProps> = ({ carousel = [] }) => {
       //      Defines horizontal alignment.
       inline: "start",
     });
+  };
+
+  const totalImages = carousel.length;
+
+  const nextImage = () => {
+    if (currentImage >= totalImages - 1) {
+      scrollToImage(0);
+    } else {
+      scrollToImage(currentImage + 1);
+    }
+  };
+
+  const previousImage = () => {
+    if (currentImage === 0) {
+      scrollToImage(totalImages - 1);
+    } else {
+      scrollToImage(currentImage - 1);
+    }
   };
   return <div></div>;
 };
