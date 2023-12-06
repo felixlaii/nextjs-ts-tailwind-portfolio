@@ -1,4 +1,5 @@
 import React from "react";
+import { IoMdDownload } from "react-icons/io";
 
 interface AboutDarkProps {
   isDarkMode: boolean;
@@ -45,15 +46,13 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
           </p>
         </div>
         <button
-          className=        {`mb-7 mt-4 text-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${
-            isDarkMode ? "text-brand-base" : "text-brand-dark"
+          className={`flex flex-row border-2 items-center px-5 py-2.5 text-center me-2 mb-2 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${
+            isDarkMode ? "text-brand-lightest" : "text-brand-dark"
           }`}
           onClick={onButtonClick}
         >
-          Download Resume
+          Download Resume <IoMdDownload />
         </button>{" "}
-
-
       </div>
     </div>
   );
