@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { useRouter } from "next/router";
+import Carousel from "@/components/ui/Carousel";
 
 interface ProjectsProps {
   isDarkMode: boolean;
@@ -103,6 +104,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                 id={project.id}
                 isDarkMode={isDarkMode}
                 onClick={() => handleProjectClick(project.id)}
+                carousel={project.carousel}
               />
             </span>
           </div>

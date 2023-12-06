@@ -3,7 +3,7 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import ExperienceCarousel from "@/components/ExperienceCarousel";
-import ImageSlider from "@/components/ui/ImageSlider";
+import Carousel from "@/components/ui/Carousel";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
@@ -22,44 +22,32 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   return (
-    <div className="h-full flex flex-col items-center pt-[4rem]">
-      <div className="flex flex-row items-center h-[3rem]">
+    <div className="h-auto flex flex-col items-center justify-center mb-[10rem] pt-[5rem]">
+      <div className="flex flex-row items-center mx-auto">
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5" onClick={goBack} />
         </div>
-        <h2 className="text-[1.5rem] ml-4 tracking-widest font-custom text-brand-dark">
+        <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-dark">
           {name}
         </h2>
       </div>
-      <div className=" items-center bg-brand-light w-full text-center">
-        {/* {image && (
-          <div className="mt-4">
-            <Image
-              className="w-[20rem] h-[20rem] mx-auto rounded-md"
-              src={image}
-              height={400}
-              width={400}
-              alt="project-image"
-            />
-          </div>
-        )} */}
-            {/* <div className="mt-4"> */}
-          <ImageSlider carousel={carousel} />
-        {/* </div> */}
-        <p className="mt-4 max-w-[800px] text-zinc-200 tracking-widest mx-10 text-center font-custom pb-4">
-          {longDescription}
-        </p>
-    
+      <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
+        <div className="mt-4 mx-auto">
+          <Carousel carousel={carousel} />
+        </div>
+        <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+          <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">
+            {longDescription}
+          </p>
+        </div>
       </div>
 
-      <div className="mt-4">
+      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-7 pb-7">
         {technology && Array.isArray(technology) && (
-          <div className="flex flex-col">
-            <div className="text-center">
-              <p className="font-custom text-lg mt-4 mb-5 text-brand-dark tracking-wide">
-                Technology used
-              </p>
-            </div>
+          <div className="flex flex-col items-center text-center mx-auto">
+            <p className="font-custom text-lg mt-4 mb-5 text-brand-dark tracking-wide">
+              Technology used
+            </p>
             <div className="flex flex-row">
               {technology.map((iconUrl: string, index: number) => (
                 <Image
@@ -76,14 +64,12 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
 
-      <div className="bg-brand-light w-full mt-9 flex flex-col">
+      <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-9">
         {(githubUrl || deployedUrl) && (
-          <div className="flex flex-col items-center">
-            <div className="text-center mt-6">
-              <p className="font-custom text-lg mb-5 text-brand-dark tracking-wide">
-                View My Work
-              </p>
-            </div>
+          <div className="flex flex-col items-center text-center mx-auto">
+            <p className="font-custom text-lg mb-5 text-brand-dark tracking-wide">
+              View My Work
+            </p>
             <div className="flex flex-row mb-9">
               {githubUrl && (
                 <a

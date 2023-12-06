@@ -30,7 +30,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/richmond-dental-nextjs",
     deployedUrl: "https://richmondwestdental.com",
-    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.29.34_PM_qv7fly.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.29.46_PM_cca8ik.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826258/Screenshot_2023-12-05_at_8.29.58_PM_i0w7lk.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.30.38_PM_g94jza.png"  ]
   },
   {
     id: "mix6ix",
