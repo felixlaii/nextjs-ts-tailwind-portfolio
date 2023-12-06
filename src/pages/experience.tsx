@@ -3,9 +3,11 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
+import { useScrollRestoration } from "@/utils/useScrollRestoration";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
+  useScrollRestoration(router);
 
   const id = router.query.id as string;
   const name = router.query.name as string;
@@ -18,22 +20,9 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const carousel = router.query.carousel as string[];
 
   const goBack = () => {
-    // Save the current scroll position
-    const scrollY = window.scrollY;
-  
-    // Use the router.back() function to navigate back
     router.back();
-  
-    // After navigation is complete, restore the scroll position
-    const handleRouteChangeComplete = () => {
-      window.scrollTo(0, scrollY);
-      router.events.off('routeChangeComplete', handleRouteChangeComplete);
-    };
-  
-    router.events.on('routeChangeComplete', handleRouteChangeComplete);
   };
-  
-  
+
   return (
     <div className="h-auto flex flex-col items-center justify-center mb-[10rem] pt-[5rem]">
       <div className="flex flex-row items-center mx-auto">
