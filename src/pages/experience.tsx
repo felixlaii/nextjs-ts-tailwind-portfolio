@@ -16,10 +16,24 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
-  const goBack = () => {
-    router.back();
-  };
 
+  const goBack = () => {
+    // Save the current scroll position
+    const scrollY = window.scrollY;
+  
+    // Use the router.back() function to navigate back
+    router.back();
+  
+    // After navigation is complete, restore the scroll position
+    const handleRouteChangeComplete = () => {
+      window.scrollTo(0, scrollY);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+    };
+  
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+  };
+  
+  
   return (
     <div className="h-auto flex flex-col items-center justify-center mb-[10rem] pt-[5rem]">
       <div className="flex flex-row items-center mx-auto">
@@ -31,51 +45,45 @@ const Experience: React.FC<ProjectCardProps> = () => {
         </h2>
       </div>
 
-
       {carousel && carousel.length > 0 ? (
-   
-   <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
-   <div className="mt-4 mx-auto">
-     <Carousel carousel={carousel} />
-   </div>
-   <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-     <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">
-       {longDescription}
-     </p>
-   </div>
- </div>
-        
-        
+        <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
+          <div className="mt-4 mx-auto">
+            <Carousel carousel={carousel} />
+          </div>
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
       ) : (
         // Render the single image
         image && (
           <div className="bg-brand-light w-full pt-9">
-          <div className="mt-4 pb-9">
-            <Image
-              className="object-fit mx-auto rounded-md"
-              src={image}
-              height={400}
-              width={400}
-              alt="project-image"
-            />
+            <div className="mt-4 pb-9">
+              <Image
+                className="object-fit mx-auto rounded-md"
+                src={image}
+                height={400}
+                width={400}
+                alt="project-image"
+              />
+            </div>
+            <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+              <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[2.3rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+                {longDescription}
+              </p>
+            </div>
           </div>
-             <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">
-               {longDescription}
-             </p>
-           </div>
-           </div>
         )
       )}
-      
-
 
       <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-7 pb-7">
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col items-center text-center mx-auto">
-            <p className="font-custom text-lg mt-4 mb-5 text-brand-dark tracking-wide">
+            <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.9rem] mt-4 mb-5 text-brand-dark tracking-wide">
               Technology used
-            </p>
+            </h3>
             <div className="flex flex-row">
               {technology.map((iconUrl: string, index: number) => (
                 <Image
@@ -95,9 +103,9 @@ const Experience: React.FC<ProjectCardProps> = () => {
       <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-9">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col items-center text-center mx-auto">
-            <p className="font-custom text-lg mb-5 text-brand-dark tracking-wide">
+            <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.9rem] mb-5 text-brand-dark tracking-wide">
               View My Work
-            </p>
+            </h3>
             <div className="flex flex-row mb-9">
               {githubUrl && (
                 <a
