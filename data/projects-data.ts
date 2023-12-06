@@ -141,7 +141,8 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
-    longDescription: "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information."
+    longDescription: "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information.",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png"]
   },
   {
     id: "pokemon-search",
@@ -162,7 +163,8 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
-    longDescription: "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon."
+    longDescription: "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon.",
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png" ]
   },
   // {
   //   id: "connect-four",
