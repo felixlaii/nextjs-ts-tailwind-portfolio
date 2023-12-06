@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
-import ExperienceCarousel from "@/components/ExperienceCarousel";
 import Carousel from "@/components/ui/Carousel";
 
 const Experience: React.FC<ProjectCardProps> = () => {
@@ -25,22 +24,51 @@ const Experience: React.FC<ProjectCardProps> = () => {
     <div className="h-auto flex flex-col items-center justify-center mb-[10rem] pt-[5rem]">
       <div className="flex flex-row items-center mx-auto">
         <div className="align-middle">
-          <FaArrowLeft className="h-10 w-5" onClick={goBack} />
+          <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />
         </div>
         <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-dark">
           {name}
         </h2>
       </div>
-      <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
-        <div className="mt-4 mx-auto">
-          <Carousel carousel={carousel} />
-        </div>
-        <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-          <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">
-            {longDescription}
-          </p>
-        </div>
-      </div>
+
+
+      {carousel && carousel.length > 0 ? (
+   
+   <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
+   <div className="mt-4 mx-auto">
+     <Carousel carousel={carousel} />
+   </div>
+   <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+     <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">
+       {longDescription}
+     </p>
+   </div>
+ </div>
+        
+        
+      ) : (
+        // Render the single image
+        image && (
+          <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            <Image
+              className="object-fit mx-auto rounded-md"
+              src={image}
+              height={400}
+              width={400}
+              alt="project-image"
+            />
+          </div>
+             <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-zinc-200 tracking-widest mx-auto text-center font-custom pb-4">
+               {longDescription}
+             </p>
+           </div>
+           </div>
+        )
+      )}
+      
+
 
       <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-7 pb-7">
         {technology && Array.isArray(technology) && (

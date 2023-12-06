@@ -66,7 +66,7 @@ export const ProjectsData: {
     ],
     deployedUrl: "https://blushnletters.com/",
     longDescription: "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide.",
-    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
+    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.37.56_PM_pzoxcu.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.38.06_PM_duua0b.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826718/Screenshot_2023-12-05_at_8.38.13_PM_x6s0ii.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.38.06_PM_duua0b.png" ]
 
   },
   {
@@ -104,7 +104,6 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
     longDescription: "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation.",
-    carousel: ["https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png", "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png" ]
   },
   {
     id: "instock",
