@@ -46,6 +46,7 @@ export interface ProjectCardProps {
   id: string;
   longDescription: string;
   isDarkMode: boolean;
+  carousel?: string[];
   onClick: () => void;
 }
 

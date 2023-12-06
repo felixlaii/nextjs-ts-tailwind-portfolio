@@ -14,7 +14,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const githubUrl = router.query.githubUrl as string;
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
-
+const carousel = router.query.carousel as string[];
   const goBack = () => {
     router.back();
   };
