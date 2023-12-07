@@ -16,14 +16,10 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
   }, {});
 
   const scrollToImage = (i: number) => {
-    // Set the index of the image we want to see next
     setCurrentImage(i);
     refs[i].current.scrollIntoView({
-      //     Defines the transition animation.
       behavior: "smooth",
-      //      Defines vertical alignment.
       block: "nearest",
-      //      Defines horizontal alignment.
       inline: "start",
     });
   };

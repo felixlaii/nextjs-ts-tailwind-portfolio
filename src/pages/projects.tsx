@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { useRouter } from "next/router";
-import Carousel from "@/components/ui/Carousel";
 
 interface ProjectsProps {
   isDarkMode: boolean;
@@ -61,31 +60,39 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
-  <p className="font-custom pr-4">Filter:</p>
-  <button
-    className={`mr-4 ${selectedCategory === "all" ? "font-bold text-brand-lightest text-[1rem] tracking-widest" : ""}`}
-    onClick={() => setSelectedCategory("all")}
-  >
-    All
-  </button>
-  <button
-    className={`mr-4 ${
-      selectedCategory === "professional" ? "font-bold text-brand-lightest text-[1rem] tracking-widest" : ""
-    }`}
-    onClick={() => setSelectedCategory("professional")}
-  >
-    Professional
-  </button>
+          <p className="font-custom pr-4">Filter:</p>
+          <button
+            className={`mr-4 ${
+              selectedCategory === "all"
+                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                : ""
+            }`}
+            onClick={() => setSelectedCategory("all")}
+          >
+            All
+          </button>
+          <button
+            className={`mr-4 ${
+              selectedCategory === "professional"
+                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                : ""
+            }`}
+            onClick={() => setSelectedCategory("professional")}
+          >
+            Professional
+          </button>
 
-  <button
-    className={`${
-      selectedCategory === "school" ? "font-bold text-brand-lightest text-[1rem] tracking-widest" : ""
-    }`}
-    onClick={() => setSelectedCategory("school")}
-  >
-    School
-  </button>
-</div>
+          <button
+            className={`${
+              selectedCategory === "school"
+                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                : ""
+            }`}
+            onClick={() => setSelectedCategory("school")}
+          >
+            School
+          </button>
+        </div>
       </div>
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (

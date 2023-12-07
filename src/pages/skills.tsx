@@ -13,17 +13,27 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   return (
     <section
       className={`flex flex-col font-custom ${
-        isDarkMode ? "bg-brand-light text-black" : "bg-brand-base text-brand-light"
+        isDarkMode
+          ? "bg-brand-light text-black"
+          : "bg-brand-base text-brand-light"
       }`}
     >
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
-          <h2 className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${isDarkMode ? "text-brand-lightest" : "text-brand-light"}`}>
+          <h2
+            className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
+              isDarkMode ? "text-brand-lightest" : "text-brand-light"
+            }`}
+          >
             My Expertise
           </h2>
         </div>
         {/* Top Row */}
-        <div className={`flex flex-col mb-14 border-4 border-brand-light mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem] ${isDarkMode ? "border-brand-base" : "border-brand-dark" }`}>
+        <div
+          className={`flex flex-col mb-14 border-4 border-brand-light mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem] ${
+            isDarkMode ? "border-brand-base" : "border-brand-dark"
+          }`}
+        >
           <div>
             <ul className="flex justify-between items-center mx-4 sm:mx-auto">
               {topRowSkills.map((skill, index) => (
