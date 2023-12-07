@@ -8,6 +8,7 @@ export const ProjectsData: {
   deployedUrl?: string;
   id: string;
   longDescription: string;
+  carousel?: string[];
 }[] = [
   {
     id: "richmond-west-dental",
@@ -16,8 +17,9 @@ export const ProjectsData: {
     name: "Richmond West Dental",
     description:
       "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
-    longDescription: "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid.",
-      category: "professional",
+    longDescription:
+      "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid.",
+    category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
@@ -29,6 +31,12 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/richmond-dental-nextjs",
     deployedUrl: "https://richmondwestdental.com",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.29.34_PM_qv7fly.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.29.46_PM_cca8ik.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826258/Screenshot_2023-12-05_at_8.29.58_PM_i0w7lk.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.30.38_PM_g94jza.png",
+    ],
   },
   {
     id: "mix6ix",
@@ -45,12 +53,20 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://mix6ixtoronto.com",
-    longDescription: "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service."
+    longDescription:
+      "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service.",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png",
+    ],
   },
 
   {
     id: "blushnletters",
-    image: "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1700947081/Screenshot_2023-11-25_at_4.17.29_PM_z9qhlk.png",    name: "Blush & Letters Co",
+    image:
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1700947081/Screenshot_2023-11-25_at_4.17.29_PM_z9qhlk.png",
+    name: "Blush & Letters Co",
     description:
       "Modern Calligraphy and design. A website done through Square Space with custom code injections to bring client's vision to life.",
     category: "professional",
@@ -61,7 +77,14 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://blushnletters.com/",
-    longDescription: "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide."
+    longDescription:
+      "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide.",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.37.56_PM_pzoxcu.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.38.06_PM_duua0b.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826718/Screenshot_2023-12-05_at_8.38.13_PM_x6s0ii.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.38.06_PM_duua0b.png",
+    ],
   },
   {
     id: "st-patrick",
@@ -74,7 +97,12 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
-    longDescription: ""
+    longDescription: "",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png",
+    ],
   },
   {
     id: "pawfinder",
@@ -95,7 +123,8 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
-    longDescription: "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation."
+    longDescription:
+      "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation.",
   },
   {
     id: "instock",
@@ -114,7 +143,8 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
     githubUrl: "https://github.com/felixlaii/instock",
-    longDescription: "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime."
+    longDescription:
+      "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime.",
   },
   {
     id: "weather-app",
@@ -133,7 +163,13 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
-    longDescription: "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information."
+    longDescription:
+      "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information.",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
+    ],
   },
   {
     id: "pokemon-search",
@@ -154,7 +190,12 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
-    longDescription: "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon."
+    longDescription:
+      "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon.",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
+    ],
   },
   // {
   //   id: "connect-four",

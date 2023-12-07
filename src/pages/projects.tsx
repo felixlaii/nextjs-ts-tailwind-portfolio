@@ -37,6 +37,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
             longDescription: selectedProject.longDescription,
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
+            carousel: selectedProject.carousel,
           },
         },
         `/experience#${selectedProject.id}`
@@ -59,24 +60,33 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
-          <p className="pr-4">Filter:</p>
+          <p className="font-custom pr-4">Filter:</p>
           <button
-            className={`mr-4 ${selectedCategory === "all" ? "font-bold" : ""}`}
+            className={`mr-4 ${
+              selectedCategory === "all"
+                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                : ""
+            }`}
             onClick={() => setSelectedCategory("all")}
           >
             All
           </button>
           <button
             className={`mr-4 ${
-              selectedCategory === "professional" ? "font-bold" : ""
+              selectedCategory === "professional"
+                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                : ""
             }`}
             onClick={() => setSelectedCategory("professional")}
           >
             Professional
           </button>
+
           <button
             className={`${
-              selectedCategory === "professional" ? "font-bold" : ""
+              selectedCategory === "school"
+                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                : ""
             }`}
             onClick={() => setSelectedCategory("school")}
           >
@@ -102,6 +112,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                 id={project.id}
                 isDarkMode={isDarkMode}
                 onClick={() => handleProjectClick(project.id)}
+                carousel={project.carousel}
               />
             </span>
           </div>

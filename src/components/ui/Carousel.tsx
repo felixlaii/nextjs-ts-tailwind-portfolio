@@ -1,59 +1,104 @@
-import React, { useState } from "react";
-import { CarouselItem } from "./CarouselItem";
-import CarouselIndicator from "./CarouselIndicator";
-import { IoIosArrowBack } from "react-icons/io";
-import { CarouselProps } from "@/types/component-types";
+import ImageSlider from "./ImageSlider";
+import Image from "next/image";
+import clsx from "clsx";
+import { createRef, useState } from "react";
 
-export default function Carousel({ width, height, items }: CarouselProps) {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+interface CarouselProps {
+  carousel: string[];
+}
 
-  function handleNextItemBtn() {
-    setActiveIndex((prev) => {
-      return prev + 1 < items.length ? prev + 1 : prev;
+const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
+  const [currentImage, setCurrentImage] = useState<number>(0);
+
+  const refs = carousel.reduce((acc: any, val, i) => {
+    acc[i] = createRef();
+    return acc;
+  }, {});
+
+  const scrollToImage = (i: number) => {
+    setCurrentImage(i);
+    refs[i].current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
     });
-  }
+  };
 
-  function handlePrevItemBtn() {
-    setActiveIndex((prev) => {
-      return prev - 1 >= 0 ? prev - 1 : prev;
-    });
-  }
+  const totalImages = carousel.length;
 
+  const nextImage = () => {
+    if (currentImage >= totalImages - 1) {
+      scrollToImage(0);
+    } else {
+      scrollToImage(currentImage + 1);
+    }
+  };
+
+  const previousImage = () => {
+    if (currentImage === 0) {
+      scrollToImage(totalImages - 1);
+    } else {
+      scrollToImage(currentImage - 1);
+    }
+  };
+
+  const sliderControl = (isLeftButton?: boolean) => (
+    <button
+      type="button"
+      onClick={isLeftButton ? previousImage : nextImage}
+      className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center ${
+        isLeftButton ? "left-2" : "right-2"
+      }`}
+      style={{ top: "45%" }}
+    >
+      <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
+        {isLeftButton ? "◀" : "▶"}
+      </span>
+    </button>
+  );
   return (
-    <div className="carousel-container">
-      {activeIndex > 0 && (
-        <button
-          className="carousel-btn-switch-card-left carousel-btn-switch-card"
-          onClick={handlePrevItemBtn}
-        >
-          <IoIosArrowBack />
-        </button>
+    <div
+      className={clsx(
+        "flex flex-col justify-center items-center w-[calc(10% - 10px)] mx-5 lg:mx-auto pb-8"
       )}
-      {items?.map((item, index) => (
-        <CarouselItem key={index} index={index} activeIndex={activeIndex}>
-          {item}
-        </CarouselItem>
-      ))}
-      {activeIndex < items.length - 1 && (
-        <button
-          className="carousel-btn-switch-card-right carousel-btn-switch-card"
-          onClick={handleNextItemBtn}
+    >
+      <div
+        className={clsx(
+          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg"
+        )}
+      >
+        <div
+          className={clsx(
+            "flex overflow-x-hidden snap-mandatory snap-x h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg"
+          )}
         >
-          <IoIosArrowBack
-            style={{
-              transform: "rotate(180deg)",
-            }}
-          />
-        </button>
-      )}
-
-      <CarouselIndicator
-        activeIndex={activeIndex}
-        length={items.length}
-        onSetActiveIndex={(activeIndex) => {
-          setActiveIndex(activeIndex);
-        }}
-      />
+          {sliderControl(true)}
+          {carousel.map((img, i) => (
+            <div
+              className="w-full flex-shrink-0"
+              key={`${img} - ${i}`}
+              ref={refs[i]}
+              id={i.toString()}
+            >
+              <Image
+                width={500}
+                height={500}
+                src={img}
+                className={clsx(
+                  "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg"
+                )}
+                alt="project-carousel"
+              />
+            </div>
+          ))}
+          {sliderControl()}
+        </div>
+      </div>
+      <div className="mt-8 max-w-3xl">
+        <ImageSlider carousel={carousel} />
+      </div>
     </div>
   );
-}
+};
+
+export default Carousel;

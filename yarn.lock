@@ -5090,10 +5090,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@^10.16.4:
-  version "10.16.4"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.16.4.tgz#30279ef5499b8d85db3a298ee25c83429933e9f8"
-  integrity sha512-p9V9nGomS3m6/CALXqv6nFGMuFOxbWsmaOrdmhyQimMIlLl3LC7h7l86wge/Js/8cRu5ktutS/zlzgR7eBOtFA==
+framer-motion@^10.16.14:
+  version "10.16.14"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.16.14.tgz#77099f7e8d949dc68f9aea1497eda06f2454e6b2"
+  integrity sha512-poovsXtR7doXRfjqVjUai82Zl2z5yMUFKtYWHnQK+xsDVPhHVUJEU+Kr2kqEnUV4gry+LcRdrDzcMI7OdJlDMg==
   dependencies:
     tslib "^2.4.0"
   optionalDependencies:
@@ -8441,11 +8441,6 @@ react-icons@^4.11.0:
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.11.0.tgz#4b0e31c9bfc919608095cc429c4f1846f4d66c65"
   integrity sha512-V+4khzYcE5EBk/BvcuYRq6V/osf11ODUM2J8hg2FDSswRrGvqiYUYPRy4OdrWaQOBj4NcpJfmHZLNaD+VH0TyA==
-
-react-intersection-observer@^9.5.2:
-  version "9.5.2"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.5.2.tgz#f68363a1ff292323c0808201b58134307a1626d0"
-  integrity sha512-EmoV66/yvksJcGa1rdW0nDNc4I1RifDWkT50gXSFnPLYQ4xUptuDD4V7k+Rj1OgVAlww628KLGcxPXFlOkkU/Q==
 
 react-is@^16.13.1:
   version "16.13.1"

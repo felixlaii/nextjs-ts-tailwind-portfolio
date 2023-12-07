@@ -8,6 +8,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   technology,
   isDarkMode,
+  carousel,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
