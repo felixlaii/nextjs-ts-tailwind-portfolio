@@ -172,7 +172,7 @@ const Header: React.FC<HeaderProps> = ({
   logoClassName,
   alt,
   isDarkMode,
-  toggleDarkMode
+  toggleDarkMode,
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
@@ -181,12 +181,7 @@ const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    // <header
-    //   className={`flex font-custom font-primary font-extralight justify-between min-w-full items-center z-40 pb-2 ${
-    //     isDarkMode ? "bg-brand-base text-white" : "bg-dark text-black"
-    //   }`}
-    // >
-      <header className="bg-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
+    <header className="bg-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
       <div className="flex items-center ">
         <div className="m-1">
           {logo ? (
@@ -199,7 +194,6 @@ const Header: React.FC<HeaderProps> = ({
             </Link>
           )}
         </div>
-  
       </div>
       <div className="flex items-center ">
         <Popover className=" lg:hidden">
@@ -213,7 +207,6 @@ const Header: React.FC<HeaderProps> = ({
               >
                 <HamburgerIcon />
               </Popover.Button>
-
               <Transition
                 as={Fragment}
                 enter="transition ease-out duration-200"

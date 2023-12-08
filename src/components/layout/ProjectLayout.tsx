@@ -21,10 +21,10 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
     { name: "HOME", href: "/" },
-    { name: "ABOUT", href: "#about" },
-    { name: "EXPERTISE", href: "#expertise" },
-    { name: "WORK", href: "#work" },
-    { name: "CONTACT", href: "#contact" },
+    { name: "ABOUT", href: "/#about" },
+    { name: "EXPERTISE", href: "/#expertise" },
+    { name: "WORK", href: "/#work" },
+    { name: "CONTACT", href: "/#contact" },
   ];
 
   return (

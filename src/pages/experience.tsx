@@ -3,11 +3,11 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
-import { useScrollRestoration } from "@/utils/useScrollRestoration";
+// import { useScrollRestoration } from "@/utils/useScrollRestoration";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
-  useScrollRestoration(router);
+  // useScrollRestoration(router);
 
   const id = router.query.id as string;
   const name = router.query.name as string;
