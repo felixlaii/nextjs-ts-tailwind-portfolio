@@ -23,7 +23,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/#about" },
     { name: "EXPERTISE", href: "/#expertise" },
-    { name: "WORK", href: "/#work" },
+    { name: "EXPERIENCE", href: "/#experience" },
     { name: "CONTACT", href: "/#contact" },
   ];
 
