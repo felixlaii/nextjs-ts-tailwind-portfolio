@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Skills from "./skills";
+import Skills from "./expertise";
 import Projects from "./projects";
 import Hero from "@/components/Hero";
 import Contact from "./contact";
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
           </section>
         </div>
         <div>
-          <section id="work">
+          <section id="experience">
             <Projects isDarkMode={isDarkMode} />
           </section>
         </div>
