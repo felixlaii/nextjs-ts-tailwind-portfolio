@@ -123,6 +123,19 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     null,
   )
 
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  const animatedHoverX = useSpring(mouseX, {
+    damping: 20,
+    stiffness: 400,
+    mass: 0.1,
+  })
+  const animatedHoverY = useSpring(mouseY, {
+    damping: 20,
+    stiffness: 400,
+    mass: 0.1,
+  })
+
   return <div></div>;
 };
 
