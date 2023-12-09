@@ -9,14 +9,12 @@ interface HeroDarkProps {
 }
 
 const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
-
-
   useEffect(() => {
     AOS.init({
-         duration: 1500,
-         once: false,
-       })
- }, [])
+      duration: 1500,
+      once: false,
+    });
+  }, []);
   const getImagePath = () => {
     return isDarkMode
       ? "/images/felixlaii-logo-lightest.svg"
@@ -30,8 +28,8 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
       }`}
     >
       <div className="flex-column justify-around align-middle items-center">
-        <div data-aos='fade-left' className="mr-4">
-        <Image
+        <div data-aos="fade-left" className="mr-4">
+          <Image
             width={90}
             height={90}
             src={getImagePath()}
@@ -39,12 +37,10 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
             className="h-[15rem] w-[17rem] md:w-[23rem] md:h-[18rem] lg:h-[15rem] lg:w-[30rem]"
           />
         </div>
-        <div data-aos='fade-right' className="flex items-center">
+        <div data-aos="fade-right" className="flex items-center">
           <label className="flex items-center cursor-pointer">
-            <div  className="relative flex items-center">
-
+            <div className="relative flex items-center">
               <input
-              
                 type="checkbox"
                 className="hidden"
                 checked={isDarkMode}
@@ -57,7 +53,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
                   }`}
                 ></div>
               </div>
-              <p 
+              <p
                 className={`font-custom tracking-widest ml-2 ${
                   isDarkMode ? "text-brand-lightest" : "text-brand-light"
                 }`}
@@ -68,7 +64,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
           </label>
         </div>
 
-        <div data-aos='fade-up' className="font-custom">
+        <div data-aos="fade-up" className="font-custom">
           <p
             className={`text-[2.3rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1 ${
               isDarkMode ? "text-brand-lightest" : "text-brand-light"
