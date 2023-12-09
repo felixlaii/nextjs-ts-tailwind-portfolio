@@ -16,8 +16,11 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init({
+         duration: 2000,
+         once: false,
+       })
+ }, [])
 
   return (
     <DarkModeProvider
@@ -29,7 +32,7 @@ const Home: React.FC = () => {
         ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
         `}
       >
-        <div data-aos='fade-up'>
+        <div data-aos='fade-down'>
           <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
         <div data-aos='fade-left'>
