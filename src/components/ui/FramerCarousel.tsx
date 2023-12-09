@@ -136,6 +136,12 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     mass: 0.1,
   })
 
+  function navButtonHover({
+    currentTarget, clientX, clientY
+  }: ReactMouseEvent<HTMLButtonElement, MouseEvent>) {
+    
+  }
+
   return <div></div>;
 };
 
