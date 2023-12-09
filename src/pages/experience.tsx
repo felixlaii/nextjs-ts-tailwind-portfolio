@@ -3,7 +3,6 @@ import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
-// import { useScrollRestoration } from "@/utils/useScrollRestoration";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
@@ -38,6 +37,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
           <div className="mt-4 mx-auto">
             <Carousel carousel={carousel} />
+            {/* <FramerCarousel carousel={carousel}/> */}
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
