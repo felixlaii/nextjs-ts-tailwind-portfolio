@@ -142,6 +142,10 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     const parent = currentTarget.offsetParent
     if (!parent) return
     const { left: parentLeft, top: parentTop } = parent.getBoundingClientRect()
+
+    const { left, top, width, height } = currentTarget.getBoundingClientRect()
+    const centerX = left + width / 2
+    const centerY = top + height / 2
   }
 
   return <div></div>;
