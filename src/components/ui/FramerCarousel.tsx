@@ -39,6 +39,18 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
 
     //stop drag animation (rest velocity)
     animatedX.stop();
+
+    const currentOffset = offsetX.get()
+
+    //snap back if not dragged far enough or if at the start/end of the list
+    if (
+      Math.abs(dragOffset) < DRAG_THRESHOLD ||
+      (!canScrollPrev && dragOffset > 0) ||
+      (!canScrollNext && dragOffset < 0)
+    ) {
+      animatedX.set(currentOffset)
+      return
+    }
   }
 
   return <div></div>;
