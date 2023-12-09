@@ -93,6 +93,19 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     }
   }
 
+  function scrollPrev() {
+    //prevent scrolling past first item
+    if (!canScrollPrev) return
+
+    const nextWidth = itemsRef.current
+      .at(activeSlide - 1)
+      ?.getBoundingClientRect().width
+    if (nextWidth === undefined) return
+    offsetX.set(offsetX.get() + nextWidth)
+
+    setActiveSlide((prev) => prev - 1)
+  }
+
   return <div></div>;
 };
 
