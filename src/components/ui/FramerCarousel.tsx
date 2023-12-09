@@ -75,7 +75,10 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
             dragOffset < offsetWidth + -itemOffset && //dragged past item
             i < itemsRef.current.length - 2) //not the last/second to last item
           ) {
-            
+            dragOffset > 0
+            ? (offsetWidth += prevItemWidth)
+            : (offsetWidth -= nextItemWidth)
+          continue
           }
       }
   }
