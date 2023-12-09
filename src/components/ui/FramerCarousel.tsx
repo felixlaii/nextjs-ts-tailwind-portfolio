@@ -35,6 +35,7 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     ) {
         //reset drag state
         setIsDragging(false)
+        containerRef.current?.removeAttribute("data-dragging")
     }
 
     return (
