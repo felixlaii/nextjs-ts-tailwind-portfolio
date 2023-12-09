@@ -119,6 +119,10 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     setActiveSlide((prev) => prev + 1)
   }
 
+  const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
+    null,
+  )
+
   return <div></div>;
 };
 
