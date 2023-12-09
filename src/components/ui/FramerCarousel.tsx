@@ -51,6 +51,15 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
       animatedX.set(currentOffset)
       return
     }
+    let offsetWidth = 0
+
+    for (
+        let i = activeSlide;
+        dragOffset > 0 ? i >= 0 : i < itemsRef.current.length;
+        dragOffset > 0 ? i-- : i++
+      ) {
+        
+      }
   }
 
   return <div></div>;
