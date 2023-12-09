@@ -26,6 +26,8 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
       damping: 20,
       stiffness: 150,
     })
+
+    const [isDragging, setIsDragging] = useState(false)
     return (
         <div>
 
