@@ -149,6 +149,9 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
 
     const offsetFromCenterX = clientX - centerX
     const offsetFromCenterY = clientY - centerY
+
+    mouseX.set(left - parentLeft + offsetFromCenterX / 4)
+    mouseY.set(top - parentTop + offsetFromCenterY / 4)
   }
 
   return <div></div>;
