@@ -139,7 +139,9 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
   function navButtonHover({
     currentTarget, clientX, clientY
   }: ReactMouseEvent<HTMLButtonElement, MouseEvent>) {
-    
+    const parent = currentTarget.offsetParent
+    if (!parent) return
+    const { left: parentLeft, top: parentTop } = parent.getBoundingClientRect()
   }
 
   return <div></div>;
