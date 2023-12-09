@@ -95,73 +95,79 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
 
   function scrollPrev() {
     //prevent scrolling past first item
-    if (!canScrollPrev) return
+    if (!canScrollPrev) return;
 
     const nextWidth = itemsRef.current
       .at(activeSlide - 1)
-      ?.getBoundingClientRect().width
-    if (nextWidth === undefined) return
-    offsetX.set(offsetX.get() + nextWidth)
+      ?.getBoundingClientRect().width;
+    if (nextWidth === undefined) return;
+    offsetX.set(offsetX.get() + nextWidth);
 
-    setActiveSlide((prev) => prev - 1)
+    setActiveSlide((prev) => prev - 1);
   }
 
   function scrollNext() {
     // prevent scrolling past last item
-    if (!canScrollNext) return
+    if (!canScrollNext) return;
 
     const nextWidth = itemsRef.current
       .at(activeSlide + 1)
-      ?.getBoundingClientRect().width
-    if (nextWidth === undefined) return
-    offsetX.set(offsetX.get() - nextWidth)
+      ?.getBoundingClientRect().width;
+    if (nextWidth === undefined) return;
+    offsetX.set(offsetX.get() - nextWidth);
 
-    setActiveSlide((prev) => prev + 1)
+    setActiveSlide((prev) => prev + 1);
   }
 
   const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
-    null,
-  )
+    null
+  );
 
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
   const animatedHoverX = useSpring(mouseX, {
     damping: 20,
     stiffness: 400,
     mass: 0.1,
-  })
+  });
   const animatedHoverY = useSpring(mouseY, {
     damping: 20,
     stiffness: 400,
     mass: 0.1,
-  })
+  });
 
   function navButtonHover({
-    currentTarget, clientX, clientY
+    currentTarget,
+    clientX,
+    clientY,
   }: ReactMouseEvent<HTMLButtonElement, MouseEvent>) {
-    const parent = currentTarget.offsetParent
-    if (!parent) return
-    const { left: parentLeft, top: parentTop } = parent.getBoundingClientRect()
+    const parent = currentTarget.offsetParent;
+    if (!parent) return;
+    const { left: parentLeft, top: parentTop } = parent.getBoundingClientRect();
 
-    const { left, top, width, height } = currentTarget.getBoundingClientRect()
-    const centerX = left + width / 2
-    const centerY = top + height / 2
+    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const centerX = left + width / 2;
+    const centerY = top + height / 2;
 
-    const offsetFromCenterX = clientX - centerX
-    const offsetFromCenterY = clientY - centerY
+    const offsetFromCenterX = clientX - centerX;
+    const offsetFromCenterY = clientY - centerY;
 
-    mouseX.set(left - parentLeft + offsetFromCenterX / 4)
-    mouseY.set(top - parentTop + offsetFromCenterY / 4)
+    mouseX.set(left - parentLeft + offsetFromCenterX / 4);
+    mouseY.set(top - parentTop + offsetFromCenterY / 4);
   }
 
   function disableDragClick(e: ReactMouseEvent<HTMLAnchorElement>) {
     if (isDragging) {
-      e.preventDefault()
-      e.stopPropagation()
+      e.preventDefault();
+      e.stopPropagation();
     }
   }
 
-  return <div></div>;
+  return (
+    <>
+      <div></div>
+    </>
+  );
 };
 
 export default FramerCarousel;
