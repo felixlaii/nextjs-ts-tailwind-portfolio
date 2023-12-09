@@ -17,7 +17,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     AOS.init({
-         duration: 2000,
+         duration: 1500,
          once: false,
        })
  }, [])

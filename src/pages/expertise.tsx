@@ -13,8 +13,11 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const bottomRowSkills = SkillsData.slice(8, 16);
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init({
+         duration: 1500,
+         once: false,
+       })
+ }, [])
 
   return (
     <section
