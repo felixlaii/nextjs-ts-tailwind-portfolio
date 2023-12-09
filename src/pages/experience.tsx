@@ -6,7 +6,6 @@ import Carousel from "@/components/ui/Carousel";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
-  // useScrollRestoration(router);
 
   const id = router.query.id as string;
   const name = router.query.name as string;

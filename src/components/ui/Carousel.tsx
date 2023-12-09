@@ -32,7 +32,10 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
 
   const [isDragging, setIsDragging] = useState(false);
 
-  function handleDragSnap(_: MouseEvent, { offset: { x: dragOffset } }: PanInfo) {
+  function handleDragSnap(
+    _: MouseEvent,
+    { offset: { x: dragOffset } }: PanInfo
+  ) {
     setIsDragging(false);
     containerRef.current?.removeAttribute("data-dragging");
     animatedX.stop();
@@ -60,13 +63,13 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
       if (item === null) continue;
 
       const itemOffset = item.offsetWidth;
-      const prevItemWidth = itemsRef.current[i - 1]?.offsetWidth ?? FALLBACK_WIDTH;
-      const nextItemWidth = itemsRef.current[i + 1]?.offsetWidth ?? FALLBACK_WIDTH;
+      const prevItemWidth =
+        itemsRef.current[i - 1]?.offsetWidth ?? FALLBACK_WIDTH;
+      const nextItemWidth =
+        itemsRef.current[i + 1]?.offsetWidth ?? FALLBACK_WIDTH;
 
       if (
-        (dragOffset > 0 &&
-          dragOffset > offsetWidth + itemOffset &&
-          i > 1) ||
+        (dragOffset > 0 && dragOffset > offsetWidth + itemOffset && i > 1) ||
         (dragOffset < 0 &&
           dragOffset < offsetWidth + -itemOffset &&
           i < itemsRef.current.length - 2)
@@ -93,7 +96,8 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
   function scrollPrev() {
     if (!canScrollPrev) return;
 
-    const nextWidth = itemsRef.current[activeSlide - 1]?.getBoundingClientRect().width;
+    const nextWidth =
+      itemsRef.current[activeSlide - 1]?.getBoundingClientRect().width;
     if (nextWidth === undefined) return;
 
     offsetX.set(offsetX.get() + nextWidth);
@@ -103,14 +107,17 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
   function scrollNext() {
     if (!canScrollNext) return;
 
-    const nextWidth = itemsRef.current[activeSlide + 1]?.getBoundingClientRect().width;
+    const nextWidth =
+      itemsRef.current[activeSlide + 1]?.getBoundingClientRect().width;
     if (nextWidth === undefined) return;
 
     offsetX.set(offsetX.get() - nextWidth);
     setActiveSlide((prev) => prev + 1);
   }
 
-  const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(null);
+  const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
+    null
+  );
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -186,7 +193,8 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
               layout="position"
               className={cn(
                 "w-full select-none text-center font-medium uppercase text-gray-900",
-                (hoverType === "prev" || hoverType === "next") && "absolute inset-x-0 top-2",
+                (hoverType === "prev" || hoverType === "next") &&
+                  "absolute inset-x-0 top-2",
                 hoverType === "click" &&
                   "absolute top-full mt-0.5 w-auto text-sm font-bold text-lime-300"
               )}
@@ -204,7 +212,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             drag="x"
             dragConstraints={{
               left: -(FALLBACK_WIDTH * (carousel.length - 1)),
-              right: 0,  // Updated right constraint
+              right: 0, // Updated right constraint
             }}
             onDragStart={() => {
               containerRef.current?.setAttribute("data-dragging", "true");
