@@ -40,7 +40,7 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     //stop drag animation (rest velocity)
     animatedX.stop();
 
-    const currentOffset = offsetX.get()
+    const currentOffset = offsetX.get();
 
     //snap back if not dragged far enough or if at the start/end of the list
     if (
@@ -48,39 +48,49 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
       (!canScrollPrev && dragOffset > 0) ||
       (!canScrollNext && dragOffset < 0)
     ) {
-      animatedX.set(currentOffset)
-      return
+      animatedX.set(currentOffset);
+      return;
     }
-    let offsetWidth = 0
+    let offsetWidth = 0;
 
     for (
-        let i = activeSlide;
-        dragOffset > 0 ? i >= 0 : i < itemsRef.current.length;
-        dragOffset > 0 ? i-- : i++
-      ) {
-        const item = itemsRef.current[i]
-        if (item === null) continue
-        const itemOffset = item.offsetWidth
-  
-        const prevItemWidth =
-          itemsRef.current[i - 1]?.offsetWidth ?? FALLBACK_WIDTH
-        const nextItemWidth =
-          itemsRef.current[i + 1]?.offsetWidth ?? FALLBACK_WIDTH
+      let i = activeSlide;
+      dragOffset > 0 ? i >= 0 : i < itemsRef.current.length;
+      dragOffset > 0 ? i-- : i++
+    ) {
+      const item = itemsRef.current[i];
+      if (item === null) continue;
+      const itemOffset = item.offsetWidth;
 
-          if (
-            (dragOffset > 0 && //dragging left
-            dragOffset > offsetWidth + itemOffset && //dragged past item
-            i > 1) || //not the first/second item
-          (dragOffset < 0 && //dragging right
-            dragOffset < offsetWidth + -itemOffset && //dragged past item
-            i < itemsRef.current.length - 2) //not the last/second to last item
-          ) {
-            dragOffset > 0
-            ? (offsetWidth += prevItemWidth)
-            : (offsetWidth -= nextItemWidth)
-          continue
-          }
+      const prevItemWidth =
+        itemsRef.current[i - 1]?.offsetWidth ?? FALLBACK_WIDTH;
+      const nextItemWidth =
+        itemsRef.current[i + 1]?.offsetWidth ?? FALLBACK_WIDTH;
+
+      if (
+        (dragOffset > 0 && //dragging left
+          dragOffset > offsetWidth + itemOffset && //dragged past item
+          i > 1) || //not the first/second item
+        (dragOffset < 0 && //dragging right
+          dragOffset < offsetWidth + -itemOffset && //dragged past item
+          i < itemsRef.current.length - 2) //not the last/second to last item
+      ) {
+        dragOffset > 0
+          ? (offsetWidth += prevItemWidth)
+          : (offsetWidth -= nextItemWidth);
+        continue;
       }
+      if (dragOffset > 0) {
+        //prev
+        offsetX.set(currentOffset + offsetWidth + prevItemWidth);
+        setActiveSlide(i - 1);
+      } else {
+        //next
+        offsetX.set(currentOffset + offsetWidth - nextItemWidth);
+        setActiveSlide(i + 1);
+      }
+      break;
+    }
   }
 
   return <div></div>;
