@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Skills from "./expertise";
 import Projects from "./projects";
 import Hero from "@/components/Hero";
 import Contact from "./contact";
 import About from "./about";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -12,6 +14,13 @@ const Home: React.FC = () => {
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
+
+  useEffect(() => {
+    AOS.init({
+         duration: 1500,
+         once: false,
+       })
+ }, [])
 
   return (
     <DarkModeProvider
@@ -23,26 +32,26 @@ const Home: React.FC = () => {
         ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
         `}
       >
-        <div>
+        <div data-aos='fade-down'>
           <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
-        <div>
+        <div data-aos='fade-left'>
           <section id="about">
             <About isDarkMode={isDarkMode} />
           </section>
         </div>
 
-        <div>
+        <div data-aos='fade-right'>
           <section id="expertise">
             <Skills isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div>
+        <div data-aos='fade-down'>
           <section id="experience">
             <Projects isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div>
+        <div data-aos='fade-up'>
           <section className="mb-[10rem]" id="contact">
             <Contact isDarkMode={isDarkMode} />
           </section>
