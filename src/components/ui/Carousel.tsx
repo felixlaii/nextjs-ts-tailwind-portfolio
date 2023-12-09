@@ -4,8 +4,6 @@ import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// ... (imports)
-
 interface CarouselProps {
   carousel: string[];
 }
