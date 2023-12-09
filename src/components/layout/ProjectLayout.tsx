@@ -10,6 +10,8 @@ import logo from "../../../public/images/felixlaii-logo.svg";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,6 +30,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   ];
 
   return (
+
     <DarkModeProvider
       initialIsDarkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
@@ -52,5 +55,6 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       </Wrapper>
     </DarkModeProvider>
+
   );
 };
