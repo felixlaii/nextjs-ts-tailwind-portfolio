@@ -154,6 +154,13 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     mouseY.set(top - parentTop + offsetFromCenterY / 4)
   }
 
+  function disableDragClick(e: ReactMouseEvent<HTMLAnchorElement>) {
+    if (isDragging) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+  }
+
   return <div></div>;
 };
 
