@@ -15,10 +15,12 @@ interface FramerCarouselProps {
     carousel: string[];
   }
 
-export default function FramerCarousel() {
+const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     return (
         <div>
 
         </div>
     )
 }
+
+export default FramerCarousel;
