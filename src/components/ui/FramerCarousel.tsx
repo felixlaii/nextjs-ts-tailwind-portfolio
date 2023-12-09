@@ -11,6 +11,10 @@ const FALLBACK_WIDTH = 509
 
 const CURSOR_SIZE = 80
 
+interface FramerCarouselProps {
+    carousel: string[];
+  }
+
 export default function FramerCarousel() {
     return (
         <div>
