@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SkillsData } from "../../data/skills-data";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface SkillsProps {
   isDarkMode: boolean;
@@ -9,6 +11,10 @@ interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const topRowSkills = SkillsData.slice(0, 8);
   const bottomRowSkills = SkillsData.slice(8, 16);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <section
@@ -19,7 +25,8 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
       }`}
     >
       <div className="mx-auto">
-        <div className="flex justify-center flex-col items-center font-custom">
+        <div  className="flex justify-center flex-col items-center font-custom">
+          <div data-aos='fade-right'>
           <h2
             className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
               isDarkMode ? "text-brand-lightest" : "text-brand-light"
@@ -27,6 +34,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           >
             My Expertise
           </h2>
+          </div>
         </div>
         {/* Top Row */}
         <div
