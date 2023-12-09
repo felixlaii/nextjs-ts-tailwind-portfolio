@@ -168,7 +168,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -244,7 +244,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     height={500}
                     src={img}
                     className={cn(
-                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg"
+                      "object-contain w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
                     )}
                     alt={`project-carousel-${i}`}
                   />

@@ -32,10 +32,12 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/richmond-dental-nextjs",
     deployedUrl: "https://richmondwestdental.com",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.29.34_PM_qv7fly.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.29.46_PM_cca8ik.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826258/Screenshot_2023-12-05_at_8.29.58_PM_i0w7lk.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826259/Screenshot_2023-12-05_at_8.30.38_PM_g94jza.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.08_PM_vluz4h.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.27.20_PM_bohl41.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.29_PM_bpy7k7.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160917/Screenshot_2023-12-09_at_5.27.37_PM_twgcfx.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.44_PM_bjapxg.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.28.03_PM_cbeguq.png"
     ],
   },
   {
