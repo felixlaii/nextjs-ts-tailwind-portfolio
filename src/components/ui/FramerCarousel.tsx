@@ -28,6 +28,15 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     })
 
     const [isDragging, setIsDragging] = useState(false)
+
+    function handleDragSnap(
+        _: MouseEvent,
+        { offset: { x: dragOffset } }: PanInfo,
+    ) {
+        //reset drag state
+        setIsDragging(false)
+    }
+
     return (
         <div>
 
