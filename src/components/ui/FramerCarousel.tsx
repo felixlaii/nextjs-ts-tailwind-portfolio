@@ -16,6 +16,16 @@ interface FramerCarouselProps {
   }
 
 const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
+    const containerRef = useRef<HTMLUListElement>(null)
+    const itemsRef = useRef<(HTMLLIElement | null)[]>([])
+    const [activeSlide, setActiveSlide] = useState(START_INDEX)
+    const canScrollPrev = activeSlide > 0
+    const canScrollNext = activeSlide < carousel.length - 1
+    const offsetX = useMotionValue(0)
+    const animatedX = useSpring(offsetX, {
+      damping: 20,
+      stiffness: 150,
+    })
     return (
         <div>
 
