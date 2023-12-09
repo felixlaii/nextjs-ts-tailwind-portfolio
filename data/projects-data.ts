@@ -84,10 +84,11 @@ export const ProjectsData: {
     longDescription:
       "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide.",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.37.56_PM_pzoxcu.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.38.06_PM_duua0b.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826718/Screenshot_2023-12-05_at_8.38.13_PM_x6s0ii.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701826716/Screenshot_2023-12-05_at_8.38.06_PM_duua0b.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.12_PM_kiydck.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.26_PM_wgjpzj.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.19_PM_zehoqr.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.32_PM_gxhi8y.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.37_PM_gi9mxz.png"
     ],
   },
   {
