@@ -146,6 +146,9 @@ const FramerCarousel: React.FC<FramerCarouselProps> = ({ carousel = [] }) => {
     const { left, top, width, height } = currentTarget.getBoundingClientRect()
     const centerX = left + width / 2
     const centerY = top + height / 2
+
+    const offsetFromCenterX = clientX - centerX
+    const offsetFromCenterY = clientY - centerY
   }
 
   return <div></div>;
