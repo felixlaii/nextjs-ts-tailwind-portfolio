@@ -14,6 +14,7 @@ import ScrollToTopButton from "../ui/ScrollToTop";
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [loading, setLoading] = useState(false);
+  const location = useRouter();
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
@@ -26,11 +27,14 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
     const handleComplete = () => {
       setLoading(false);
     };
+    location.events.on('routeChangeStart', handleStart);
+    location.events.on('routeChangeComplete', handleComplete);
+    location.events.on('routeChangeError', handleComplete);
   }
     
   );
 
-  const location = useRouter();
+  
   const navigationLinks: Array<NavigationLink> = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/#about" },
