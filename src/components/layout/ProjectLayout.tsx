@@ -11,33 +11,33 @@ import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import { useState, useEffect } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
 
-import LoadingTransition from "../ui/LoadingTransition";
+// import LoadingTransition from "../ui/LoadingTransition";
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const location = useRouter();
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
-  useEffect(() => {
-    const handleStart = () => {
-      setLoading(true);
-    };
-    const handleComplete = () => {
-      setLoading(false);
-    };
-    location.events.on("routeChangeStart", handleStart);
-    location.events.on("routeChangeComplete", handleComplete);
-    location.events.on("routeChangeError", handleComplete);
+  // useEffect(() => {
+  //   const handleStart = () => {
+  //     setLoading(true);
+  //   };
+  //   const handleComplete = () => {
+  //     setLoading(false);
+  //   };
+  //   location.events.on("routeChangeStart", handleStart);
+  //   location.events.on("routeChangeComplete", handleComplete);
+  //   location.events.on("routeChangeError", handleComplete);
 
-    return () => {
-      location.events.off("routeChangeStart", handleStart);
-      location.events.off("routeChangeComplete", handleComplete);
-      location.events.off("routeChangeError", handleComplete);
-    };
-  }, [location]);
+  //   return () => {
+  //     location.events.off("routeChangeStart", handleStart);
+  //     location.events.off("routeChangeComplete", handleComplete);
+  //     location.events.off("routeChangeError", handleComplete);
+  //   };
+  // }, [location]);
 
   const navigationLinks: Array<NavigationLink> = [
     { name: "HOME", href: "/" },
@@ -52,7 +52,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
       initialIsDarkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
     >
-       {loading && <LoadingTransition />}
+       {/* {loading && <LoadingTransition />} */}
       <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
         <Header
           isDarkMode={isDarkMode}
