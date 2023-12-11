@@ -17,7 +17,11 @@ const PageTransition = ({ Component, pageProps }: AppProps) => {
         return () => {
             router.events.off("routeChangeComplete", handler);
         }
-    })
+    }, [router.events])
+
+    const Loading = () => <div className="container mx-auto">Loading...</div>;
+
+    const Screen = !transitioning ? Component : Loading;
 
   return (
   <div></div>
