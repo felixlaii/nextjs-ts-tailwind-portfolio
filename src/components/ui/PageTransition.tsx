@@ -3,12 +3,9 @@ import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 
 const PageTransition = ({ Component, pageProps }: AppProps) => {
-
-    return (
-        <div>
-
-        </div>
-    )
-}
+  const router = useRouter();
+  const [transitioning, setTransitioning] = useState(false);
+  return <div></div>;
+};
 
 export default PageTransition;
