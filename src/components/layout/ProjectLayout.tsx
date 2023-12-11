@@ -8,18 +8,27 @@ import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
 import logo from "../../../public/images/felixlaii-logo.svg";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
-import { motion, AnimatePresence } from "framer-motion";
-
 
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [loading, setLoading] = useState(false);
-  
+
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
+
+  useEffect(() => {
+    const handleStart = () => {
+      setLoading(true);
+    };
+    const handleComplete = () => {
+      setLoading(false);
+    };
+  }
+    
+  );
 
   const location = useRouter();
   const navigationLinks: Array<NavigationLink> = [
@@ -31,7 +40,6 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   ];
 
   return (
-
     <DarkModeProvider
       initialIsDarkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
@@ -56,6 +64,5 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       </Wrapper>
     </DarkModeProvider>
-
   );
 };
