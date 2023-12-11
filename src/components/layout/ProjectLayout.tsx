@@ -15,7 +15,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const [loading, setLoading] = useState(false);
+  
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
