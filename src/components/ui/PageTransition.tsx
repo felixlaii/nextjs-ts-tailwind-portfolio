@@ -14,6 +14,9 @@ const PageTransition = ({ Component, pageProps }: AppProps) => {
             }, 280);
         }
         router.events.on("routeChangeComplete", handler);
+        return () => {
+            router.events.off("routeChangeComplete", handler);
+        }
     })
 
   return (
