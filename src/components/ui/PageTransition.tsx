@@ -13,6 +13,7 @@ const PageTransition = ({ Component, pageProps }: AppProps) => {
                 setTransitioning(false);
             }, 280);
         }
+        router.events.on("routeChangeComplete", handler);
     })
 
   return (
