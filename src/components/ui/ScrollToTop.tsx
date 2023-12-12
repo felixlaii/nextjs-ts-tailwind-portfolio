@@ -41,11 +41,11 @@ const ScrollToTopButton: React.FC<ArrowDarkProps> = ({ isDarkMode }) => {
         isVisible ? "opacity-100" : "opacity-0"
       } fixed float-right bottom-1/2 right-4 transform -translate-y-6 transition-opacity duration-300 ease-in-out cursor-pointer bg-brand-dark p-2 rounded-full`}
     >
-      <FaArrowUp    className={` w-6 h-6 ${
-                  isDarkMode ? "text-brand-dark" : "text-brand-lightest"
-                }`} />
-    
- 
+      <FaArrowUp
+        className={` w-6 h-6 ${
+          isDarkMode ? "text-brand-dark" : "text-brand-lightest"
+        }`}
+      />
     </div>
   );
 };

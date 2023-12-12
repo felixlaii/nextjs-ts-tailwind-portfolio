@@ -7,12 +7,9 @@ import About from "./about";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { AppProps } from "next/app";
-import { useRouter } from "next/router";
 
-const Home: React.FC<AppProps> = ({ pageProps }) => {
+const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const router = useRouter();
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);

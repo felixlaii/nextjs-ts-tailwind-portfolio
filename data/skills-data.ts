@@ -86,5 +86,4 @@ export const SkillsData: { image: string; description: string }[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
     description: "Wordpress",
   },
- 
 ];

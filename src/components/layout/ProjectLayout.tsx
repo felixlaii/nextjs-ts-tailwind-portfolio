@@ -1,16 +1,16 @@
+import { useState } from "react";
 import { PropsWithChildren } from "react";
-import { Content } from "./project-layout/Content";
-import Footer from "./project-layout/Footer";
+import { useRouter } from "next/router";
+import { motion, AnimatePresence } from "framer-motion";
+import clsx from "clsx";
+import { NavigationLink } from "@/types/component-types";
+import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import Header from "./project-layout/Header";
 import { Wrapper } from "./project-layout/Wrapper";
-import { useRouter } from "next/router";
-import { NavigationLink } from "@/types/component-types";
-import clsx from "clsx";
+import { Content } from "./project-layout/Content";
+import Footer from "./project-layout/Footer";
 import logo from "../../../public/images/felixlaii-logo.svg";
-import { DarkModeProvider } from "@/contexts/DarkModeContext";
-import { useState } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
-import { motion, AnimatePresence } from "framer-motion";
 
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);

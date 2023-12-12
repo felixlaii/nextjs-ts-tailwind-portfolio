@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { HeaderProps } from "@/types/component-types";
-import clsx from "clsx";
 import Link from "next/link";
+import clsx from "clsx";
+import { Popover, Transition } from "@headlessui/react";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Logo from "../../Logo";
-import { Popover, Transition } from "@headlessui/react";
 
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
