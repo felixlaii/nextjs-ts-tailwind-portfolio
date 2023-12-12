@@ -36,7 +36,7 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
       }`}
     >
       <div className="flex justify-center flex-col items-center font-custom">
-        <div data-aos='fade-down' className="justify-center">
+        <div data-aos="fade-down" className="justify-center">
           <h1
             className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
               isDarkMode ? "text-brand-light" : "text-brand-base"
@@ -45,7 +45,7 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
             What About Me
           </h1>
         </div>
-        <div data-aos='fade-right' className="flex text-center mx-10">
+        <div data-aos="fade-right" className="flex text-center mx-10">
           <p className="text-sm tracking-widest">
             Born in Hong Kong. Raised in the GTA. I attended the University of
             Toronto for a Bachelor of Arts Honours program. <br />
@@ -55,7 +55,8 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
             a downloadable resume below if you want to connect
           </p>
         </div>
-        <button data-aos='fade-up'
+        <button
+          data-aos="fade-up"
           className={`flex flex-row border-2 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${
             isDarkMode
               ? "text-brand-lightest border-brand-dark"

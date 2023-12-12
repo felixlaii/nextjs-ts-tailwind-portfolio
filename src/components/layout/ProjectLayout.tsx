@@ -8,10 +8,10 @@ import { NavigationLink } from "@/types/component-types";
 import clsx from "clsx";
 import logo from "../../../public/images/felixlaii-logo.svg";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ScrollToTopButton from "../ui/ScrollToTop";
+import { motion, AnimatePresence } from "framer-motion";
 
-// import LoadingTransition from "../ui/LoadingTransition";
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   // const [loading, setLoading] = useState(false);
@@ -20,24 +20,6 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
-
-  // useEffect(() => {
-  //   const handleStart = () => {
-  //     setLoading(true);
-  //   };
-  //   const handleComplete = () => {
-  //     setLoading(false);
-  //   };
-  //   location.events.on("routeChangeStart", handleStart);
-  //   location.events.on("routeChangeComplete", handleComplete);
-  //   location.events.on("routeChangeError", handleComplete);
-
-  //   return () => {
-  //     location.events.off("routeChangeStart", handleStart);
-  //     location.events.off("routeChangeComplete", handleComplete);
-  //     location.events.off("routeChangeError", handleComplete);
-  //   };
-  // }, [location]);
 
   const navigationLinks: Array<NavigationLink> = [
     { name: "HOME", href: "/" },
@@ -52,26 +34,43 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
       initialIsDarkMode={isDarkMode}
       toggleDarkMode={toggleDarkMode}
     >
-       {/* {loading && <LoadingTransition />} */}
-      <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
-        <Header
-          isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}
-          logo={logo.src}
-          navigationLinks={navigationLinks}
-          currentActiveLocation={location.pathname}
-          textClassName="group text-md transition-all duration-300 ease-in-out text-black font-light mx-8 text-zinc-400"
-          linkClassName="flex bg-left-bottom lg:text-md"
-          logoClassName="w-full sm:w-3/5 md:w-3/4 ml-2 mt-2 mr-1"
-          hoverClassName={clsx(
-            "flex bg-left-bottom hover:text-brand-lightest bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-          )}
-          activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
-        />
-        <Content isDarkMode={isDarkMode}>{children}</Content>
-        <ScrollToTopButton isDarkMode={isDarkMode} />
-        <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      </Wrapper>
+      <AnimatePresence mode="wait">
+        <motion.div>
+          <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+            <Header
+              isDarkMode={isDarkMode}
+              toggleDarkMode={toggleDarkMode}
+              logo={logo.src}
+              navigationLinks={navigationLinks}
+              currentActiveLocation={location.pathname}
+              textClassName="group text-md transition-all duration-300 ease-in-out text-black font-light mx-8 text-zinc-400"
+              linkClassName="flex bg-left-bottom lg:text-md"
+              logoClassName="w-full sm:w-3/5 md:w-3/4 ml-2 mt-2 mr-1"
+              hoverClassName={clsx(
+                "flex bg-left-bottom hover:text-brand-lightest bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+              )}
+              activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
+            />
+            <Content isDarkMode={isDarkMode}>{children}</Content>
+            <ScrollToTopButton isDarkMode={isDarkMode} />
+            <Footer isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            <motion.div
+              className="absolute top-0 left-0 w-full h-screen transform bg-brand-base origin-bottom"
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 1 }}
+              transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+            ></motion.div>
+            <motion.div
+              className="absolute top-0 left-0 w-full h-screen transform bg-brand-base origin-top"
+              initial={{ scaleY: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 0 }}
+              transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+            ></motion.div>
+          </Wrapper>
+        </motion.div>
+      </AnimatePresence>
     </DarkModeProvider>
   );
 };
