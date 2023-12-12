@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoMdDownload } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 interface AboutDarkProps {
   isDarkMode: boolean;
