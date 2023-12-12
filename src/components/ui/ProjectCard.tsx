@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ProjectCardProps } from "@/types/component-types";
+import { useRouter } from "next/router";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,6 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const updateWindowSize = () => {
@@ -48,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div
-      className={`flex flex-col justify-center items-center cursor-pointer ${
+      className={`absolute flex flex-col justify-center items-center cursor-pointer ${
         isLargeScreen
           ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:mx-8 pt-4 md:pt-0"
           : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"

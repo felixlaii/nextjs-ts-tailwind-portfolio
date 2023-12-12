@@ -94,6 +94,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           </button>
         </div>
       </div>
+
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (
           <div
