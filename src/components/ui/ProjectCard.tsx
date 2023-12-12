@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ProjectCardProps } from "@/types/component-types";
+import { useRouter } from "next/router";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,10 +12,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   technology,
   isDarkMode,
-  carousel,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const updateWindowSize = () => {
@@ -42,14 +44,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   useEffect(() => {
     AOS.init({
-         duration: 1500,
-         once: false,
-       })
- }, [])
+      duration: 1500,
+      once: false,
+    });
+  }, []);
 
   return (
-    <div 
-      className={`flex flex-col justify-center items-center cursor-pointer ${
+    <div
+      className={`absolute flex flex-col justify-center items-center cursor-pointer ${
         isLargeScreen
           ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:mx-8 pt-4 md:pt-0"
           : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"
@@ -67,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {isLargeScreen ? (
         isHovered ? (
           // Content for lg and xl screens when hovered
-          <div  className="flex flex-col items-center justify-center text-white font-light mb-2">
+          <div className="flex flex-col items-center justify-center text-white font-light mb-2">
             <div className="flex items-center space-x-2 mt-10">
               {technology.map((iconUrl, index) => (
                 <Image
@@ -87,11 +89,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         ) : (
           // Content for lg and xl screens when not hovered
           <div
-          
             className={`flex flex-col shadow-2xl h-full items-center justify-around w-full ${
-              isDarkMode
-                ? "bg-brand-light bg-cover"
-                : "bg-brand-base bg-cover"
+              isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-base bg-cover"
             } box-border`}
           >
             <div>

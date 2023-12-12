@@ -17,10 +17,10 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     AOS.init({
-         duration: 1500,
-         once: false,
-       })
- }, [])
+      duration: 1500,
+      once: false,
+    });
+  }, []);
 
   return (
     <DarkModeProvider
@@ -28,30 +28,29 @@ const Home: React.FC = () => {
       toggleDarkMode={toggleDarkMode}
     >
       <div
-        className={`absolute w-full
-        ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
-        `}
+        className={` w-full z-1 
+          ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
+          `}
       >
-        <div data-aos='fade-down'>
+        <div data-aos="fade-down">
           <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
-        <div data-aos='fade-left'>
+        <div data-aos="fade-left">
           <section id="about">
             <About isDarkMode={isDarkMode} />
           </section>
         </div>
-
-        <div data-aos='fade-right'>
+        <div data-aos="fade-right">
           <section id="expertise">
             <Skills isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div data-aos='fade-down'>
+        <div data-aos="fade-down">
           <section id="experience">
             <Projects isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div data-aos='fade-up'>
+        <div data-aos="fade-up">
           <section className="mb-[10rem]" id="contact">
             <Contact isDarkMode={isDarkMode} />
           </section>

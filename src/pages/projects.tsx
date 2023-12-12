@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
-import { useRouter } from "next/router";
 
 interface ProjectsProps {
   isDarkMode: boolean;
@@ -94,6 +94,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           </button>
         </div>
       </div>
+
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (
           <div

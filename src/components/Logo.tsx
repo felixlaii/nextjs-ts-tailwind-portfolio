@@ -23,7 +23,6 @@ const Logo = () => {
             alt="logo"
             width={50}
             height={50}
-            // className={`animate__animated animate__tada opacity-1`}
           />
         </Transition>
       ) : null}

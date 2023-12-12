@@ -1,15 +1,13 @@
 import { useRouter } from "next/router";
-import { ProjectCardProps } from "@/types/component-types";
 import Image from "next/image";
+import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
 
-  const id = router.query.id as string;
   const name = router.query.name as string;
-  const description = router.query.description as string;
   const image = router.query.image as string;
   const technology = router.query.technology as string[] | undefined;
   const githubUrl = router.query.githubUrl as string;
