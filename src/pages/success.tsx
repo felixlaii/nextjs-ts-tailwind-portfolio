@@ -1,4 +1,12 @@
+import { useRouter } from "next/router";
+import { FaArrowLeft } from "react-icons/fa";
+
 export default function Success() {
+  const router = useRouter();
+
+  const goBack = () => {
+    router.back();
+  };
   return (
     <div className="min-h-screen flex pt-20 justify-center">
       <div className="text-center ml-5 mr-5">
