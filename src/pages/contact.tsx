@@ -7,38 +7,38 @@ interface ContactDarkProps {
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState(false);
-  async function handleSubmit(event: any) {
-    try {
-      event.preventDefault();
-      const formData = new FormData(event.target);
+  // async function handleSubmit(event: any) {
+  //   try {
+  //     event.preventDefault();
+  //     const formData = new FormData(event.target);
 
-      formData.append("access_key", "755d948f-86c6-4a71-a3a7-beb325a0b965");
+  //     formData.append("access_key", "755d948f-86c6-4a71-a3a7-beb325a0b965");
 
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
+  //     const object = Object.fromEntries(formData);
+  //     const json = JSON.stringify(object);
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      });
+  //     const response = await fetch("https://api.web3forms.com/submit", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json",
+  //       },
+  //       body: json,
+  //     });
 
-      const result = await response.json();
+  //     const result = await response.json();
 
-      if (result.success) {
-        setSuccessMessage("Form submitted successfully!");
-      } else {
-        setErrorMessage(true);
-        console.error("Error submitting form:", result);
-      }
-    } catch (error) {
-      console.error(error);
-      setErrorMessage(true);
-    }
-  }
+  //     if (result.success) {
+  //       setSuccessMessage("Form submitted successfully!");
+  //     } else {
+  //       setErrorMessage(true);
+  //       console.error("Error submitting form:", result);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     setErrorMessage(true);
+  //   }
+  // }
 
   return (
     <div
@@ -57,7 +57,12 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
       </h2>
 
       {!successMessage && !errorMessage && (
-        <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          className="flex flex-col w-1/2"
+        >
           <label>Name:</label>
           <input
             className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
@@ -90,10 +95,10 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           </button>
         </form>
       )}
-      {successMessage && (
+      {/* {successMessage && (
         <div className="text-white mb-4">{successMessage}</div>
       )}
-      {errorMessage && <div className="text-red mb-4">{errorMessage}</div>}
+      {errorMessage && <div className="text-red mb-4">{errorMessage}</div>} */}
     </div>
   );
 };
