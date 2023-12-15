@@ -7,38 +7,38 @@ interface ContactDarkProps {
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState(false);
-  async function handleSubmit(event: any) {
-    try {
-      event.preventDefault();
-      const formData = new FormData(event.target);
+  // async function handleSubmit(event: any) {
+  //   try {
+  //     event.preventDefault();
+  //     const formData = new FormData(event.target);
 
-      formData.append("access_key", "755d948f-86c6-4a71-a3a7-beb325a0b965");
+  //     formData.append("access_key", "755d948f-86c6-4a71-a3a7-beb325a0b965");
 
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
+  //     const object = Object.fromEntries(formData);
+  //     const json = JSON.stringify(object);
 
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      });
+  //     const response = await fetch("https://api.web3forms.com/submit", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json",
+  //       },
+  //       body: json,
+  //     });
 
-      const result = await response.json();
+  //     const result = await response.json();
 
-      if (result.success) {
-        setSuccessMessage("Form submitted successfully!");
-      } else {
-        setErrorMessage(true);
-        console.error("Error submitting form:", result);
-      }
-    } catch (error) {
-      console.error(error);
-      setErrorMessage(true);
-    }
-  }
+  //     if (result.success) {
+  //       setSuccessMessage("Form submitted successfully!");
+  //     } else {
+  //       setErrorMessage(true);
+  //       console.error("Error submitting form:", result);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     setErrorMessage(true);
+  //   }
+  // }
 
   return (
     <div
@@ -56,44 +56,51 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         Lets Talk ...
       </h2>
 
-      {!successMessage && !errorMessage && (
-        <form className="flex flex-col w-1/2" onSubmit={handleSubmit}>
-          <label>Name:</label>
-          <input
-            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
-            type="text"
-            name="name"
-            placeholder="John/Jane Doe"
-            required
-          />
+      {/* {!successMessage && !errorMessage && ( */}
+      <form
+        name="contact"
+        action="/success"
+        method="POST"
+        data-netlify="true"
+        className="flex flex-col w-1/2"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <label>Name:</label>
+        <input
+          className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
+          type="text"
+          name="name"
+          placeholder="John/Jane Doe"
+          required
+        />
 
-          <label>Email:</label>
-          <input
-            className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
-            placeholder="email@email.com"
-            type="email"
-            name="email"
-            required
-          />
-          <label>Message:</label>
-          <textarea
-            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-12"
-            placeholder="what should we do?"
-            name="message"
-            required
-          ></textarea>
-          <button
-            className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-darkest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      )}
-      {successMessage && (
+        <label>Email:</label>
+        <input
+          className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
+          placeholder="email@email.com"
+          type="email"
+          name="email"
+          required
+        />
+        <label>Message:</label>
+        <textarea
+          className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-12"
+          placeholder="what should we do?"
+          name="message"
+          required
+        ></textarea>
+        <button
+          className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-darkest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+      {/* )} */}
+      {/* {successMessage && (
         <div className="text-white mb-4">{successMessage}</div>
       )}
-      {errorMessage && <div className="text-red mb-4">{errorMessage}</div>}
+      {errorMessage && <div className="text-red mb-4">{errorMessage}</div>} */}
     </div>
   );
 };
