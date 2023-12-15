@@ -56,45 +56,46 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         Lets Talk ...
       </h2>
 
-      {!successMessage && !errorMessage && (
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          className="flex flex-col w-1/2"
-        >
-          <label>Name:</label>
-          <input
-            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
-            type="text"
-            name="name"
-            placeholder="John/Jane Doe"
-            required
-          />
+      {/* {!successMessage && !errorMessage && ( */}
+      <form
+        name="contact"
+        action="/success"
+        method="POST"
+        data-netlify="true"
+        className="flex flex-col w-1/2"
+      >
+        <label>Name:</label>
+        <input
+          className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
+          type="text"
+          name="name"
+          placeholder="John/Jane Doe"
+          required
+        />
 
-          <label>Email:</label>
-          <input
-            className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
-            placeholder="email@email.com"
-            type="email"
-            name="email"
-            required
-          />
-          <label>Message:</label>
-          <textarea
-            className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-12"
-            placeholder="what should we do?"
-            name="message"
-            required
-          ></textarea>
-          <button
-            className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-darkest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      )}
+        <label>Email:</label>
+        <input
+          className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
+          placeholder="email@email.com"
+          type="email"
+          name="email"
+          required
+        />
+        <label>Message:</label>
+        <textarea
+          className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-12"
+          placeholder="what should we do?"
+          name="message"
+          required
+        ></textarea>
+        <button
+          className="mb-4 border w-full border-brand-dark font-custom tracking-wider rounded-sm hover:text-brand-darkest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+      {/* )} */}
       {/* {successMessage && (
         <div className="text-white mb-4">{successMessage}</div>
       )}
