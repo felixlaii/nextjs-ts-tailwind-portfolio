@@ -64,6 +64,7 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         data-netlify="true"
         className="flex flex-col w-1/2"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <label>Name:</label>
         <input
           className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
