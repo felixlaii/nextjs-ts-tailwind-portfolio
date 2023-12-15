@@ -16,7 +16,7 @@ export default function Success() {
             onClick={goBack}
           />
         </div>
-        <h1 className="text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 font-custom text-brand-dark">
+        <h1 className="text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest font-custom text-brand-dark">
           Lets Talk...
         </h1>
       </div>
