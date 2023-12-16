@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { useTransform, useScroll, motion } from "framer-motion";
+import Lenis from "@studio-freight/lenis";
 
 interface ProjectsProps {
   isDarkMode: boolean;
@@ -10,8 +11,8 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
-
   const router = useRouter();
+  const { scrollY } = useScroll();
 
   const filteredProjects =
     selectedCategory === "all"
@@ -46,11 +47,13 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
     }
   };
 
+  const yRange = useTransform(scrollY, [0, 200], [0, -100]);
+
   return (
     <main
       className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen pb-16 ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
-      } `}
+      }`}
     >
       <div>
         <h2
@@ -61,46 +64,21 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
-          <p className="font-custom pr-4">Filter:</p>
-          <button
-            className={`mr-4 ${
-              selectedCategory === "all"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
-                : ""
-            }`}
-            onClick={() => setSelectedCategory("all")}
-          >
-            All
-          </button>
-          <button
-            className={`mr-4 ${
-              selectedCategory === "professional"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
-                : ""
-            }`}
-            onClick={() => setSelectedCategory("professional")}
-          >
-            Professional
-          </button>
-
-          <button
-            className={`${
-              selectedCategory === "school"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
-                : ""
-            }`}
-            onClick={() => setSelectedCategory("school")}
-          >
-            School
-          </button>
+          {/* Your filter buttons */}
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <motion.div
+        style={{ y: yRange }}
+        className="flex flex-wrap justify-center gap-8"
+      >
         {filteredProjects.map((project, index) => (
-          <div
+          <motion.div
             key={project.id}
             className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-3 pt-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectCard
@@ -117,9 +95,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                 carousel={project.carousel}
               />
             </span>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 };
