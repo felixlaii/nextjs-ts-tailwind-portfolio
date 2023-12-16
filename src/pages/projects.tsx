@@ -12,7 +12,15 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const router = useRouter();
-  const { scrollY } = useScroll();
+  const { scrollYProgress } = useScroll();
+  const gallery = useRef(null);
+  const [dimension, setDimension] = useState({ width: 0, height: 0 });
+
+  const { height } = dimension;
+  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -47,13 +55,24 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
     }
   };
 
-  const yRange = useTransform(scrollY, [0, 200], [0, -100]);
+  useEffect(() => {
+    const resize = () => {
+      setDimension({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
 
   return (
     <main
       className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen pb-16 ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
-      }`}
+      } `}
     >
       <div>
         <h2
@@ -69,7 +88,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       </div>
 
       <motion.div
-        style={{ y: yRange }}
+        ref={gallery}
+        style={{ y }}
         className="flex flex-wrap justify-center gap-8"
       >
         {filteredProjects.map((project, index) => (
