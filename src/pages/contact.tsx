@@ -1,45 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface ContactDarkProps {
   isDarkMode: boolean;
 }
 
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-  const [errorMessage, setErrorMessage] = useState(false);
-  // async function handleSubmit(event: any) {
-  //   try {
-  //     event.preventDefault();
-  //     const formData = new FormData(event.target);
-
-  //     formData.append("access_key", "755d948f-86c6-4a71-a3a7-beb325a0b965");
-
-  //     const object = Object.fromEntries(formData);
-  //     const json = JSON.stringify(object);
-
-  //     const response = await fetch("https://api.web3forms.com/submit", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //       },
-  //       body: json,
-  //     });
-
-  //     const result = await response.json();
-
-  //     if (result.success) {
-  //       setSuccessMessage("Form submitted successfully!");
-  //     } else {
-  //       setErrorMessage(true);
-  //       console.error("Error submitting form:", result);
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //     setErrorMessage(true);
-  //   }
-  // }
-
   return (
     <div
       className={`flex flex-col items-center font-custom mt-10 ${
@@ -55,8 +20,6 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
       >
         Lets Talk ...
       </h2>
-
-      {/* {!successMessage && !errorMessage && ( */}
       <form
         name="contact"
         action="/success"
@@ -67,16 +30,15 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
         <input type="hidden" name="form-name" value="contact" />
         <label>Name:</label>
         <input
-          className="shadow-xl px-2 rounded-sm mb-8 pt-1 pb-1"
+          className="shadow-none border-none border-b border-gray-500 focus:outline-none px-2 rounded-sm mb-8 pt-1 pb-1"
           type="text"
           name="name"
           placeholder="John/Jane Doe"
           required
         />
-
         <label>Email:</label>
         <input
-          className="px-2 rounded-sm mb-8 pt-1 pb-1 shadow-xl"
+          className="shadow-none border-none border-b border-gray-500 focus:outline-none px-2 rounded-sm mb-8 pt-1 pb-1"
           placeholder="email@email.com"
           type="email"
           name="email"
@@ -96,11 +58,6 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           Submit
         </button>
       </form>
-      {/* )} */}
-      {/* {successMessage && (
-        <div className="text-white mb-4">{successMessage}</div>
-      )}
-      {errorMessage && <div className="text-red mb-4">{errorMessage}</div>} */}
     </div>
   );
 };
