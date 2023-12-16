@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
+import { useTransform, useScroll, motion } from "framer-motion";
 
 interface ProjectsProps {
   isDarkMode: boolean;
