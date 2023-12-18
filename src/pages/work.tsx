@@ -85,15 +85,20 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
         style={{ y }}
       >
         {filteredProjects.map((project, index) => {
+          const topPosition = -45 + index * 20; // Adjust the multiplier as needed
           return (
             <motion.div
               key={project.id}
-              className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-3 pt-4"
+              className="lg:h-[25rem] lg:w-[23rem] relative h-full w-1/4 min-w-[250px] flex flex-col gap-2"
+              style={{ top: `${topPosition}%` }}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span onClick={() => handleProjectClick(project.id)}>
+              <span
+                className="h-full w-full relative rounded-lg overflow-hidden"
+                onClick={() => handleProjectClick(project.id)}
+              >
                 <ProjectCard
                   name={project.name}
                   githubUrl={project.githubUrl}
@@ -164,13 +169,13 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           </button>
         </div>
       </div>
-
+      <div className="h-full"></div>
       <div
         ref={gallery}
         className="h-screen bg-gray-900 relative flex gap-8 p-8 box-border overflow-hidden"
       >
         <Column
-          filteredProjects={ProjectsData.map((project) => ({
+          filteredProjects={ProjectsData.slice(0, 3).map((project) => ({
             name: project.name,
             description: project.description,
             image: project.image,
@@ -183,8 +188,50 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           }))}
           y={y}
         />
-      </div>
-
+        <Column
+          filteredProjects={ProjectsData.slice(3, 6).map((project) => ({
+            name: project.name,
+            description: project.description,
+            image: project.image,
+            technology: project.technology,
+            githubUrl: project.githubUrl,
+            deployedUrl: project.deployedUrl,
+            id: project.id,
+            longDescription: project.longDescription,
+            carousel: project.carousel,
+          }))}
+          y={y2}
+        />
+        <Column
+          filteredProjects={ProjectsData.slice(6, 9).map((project) => ({
+            name: project.name,
+            description: project.description,
+            image: project.image,
+            technology: project.technology,
+            githubUrl: project.githubUrl,
+            deployedUrl: project.deployedUrl,
+            id: project.id,
+            longDescription: project.longDescription,
+            carousel: project.carousel,
+          }))}
+          y={y3}
+        />
+        <Column
+          filteredProjects={ProjectsData.slice(9, 12).map((project) => ({
+            name: project.name,
+            description: project.description,
+            image: project.image,
+            technology: project.technology,
+            githubUrl: project.githubUrl,
+            deployedUrl: project.deployedUrl,
+            id: project.id,
+            longDescription: project.longDescription,
+            carousel: project.carousel,
+          }))}
+          y={y4}
+        />
+      </div>{" "}
+      <div className="h-full"></div>
       <div className="h-full"></div>
     </main>
   );

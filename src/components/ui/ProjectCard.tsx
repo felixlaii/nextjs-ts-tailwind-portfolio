@@ -54,13 +54,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       className={`flex flex-col justify-center items-center cursor-pointer ${
         isLargeScreen
           ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:mx-8 pt-4 md:pt-0"
-          : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"
+          : "lg:w-64 md:px-3 lg:px-8 md:pt-0"
       } h-70 rounded-sm md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
         isHovered ? "shadow-xl bg-brand-lightest scale-105" : ""
       } ${
         isLargeScreen
           ? "flex md:flex lg:flex xl:flex"
-          : "align-middle items-center w-[25rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2 "
+          : "items-center w-[25rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2 "
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -69,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {isLargeScreen ? (
         isHovered ? (
           // Content for lg and xl screens when hovered
-          <div className="flex flex-col items-center justify-center text-white font-light mb-2">
+          <div className="flex flex-col items-center text-white font-light mb-2">
             <div className="flex items-center space-x-2 mt-10">
               {technology.map((iconUrl, index) => (
                 <Image
