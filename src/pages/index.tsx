@@ -20,6 +20,34 @@ const Home: React.FC = () => {
       duration: 1500,
       once: false,
     });
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Adjust the parallax effect based on your needs
+      const parallaxValue = scrollY * 0.1;
+
+      // Apply the parallax effect to specific elements
+      document.getElementById(
+        "about"
+      )!.style.transform = `translateY(-${parallaxValue}px)`;
+
+      document.getElementById(
+        "expertise"
+      )!.style.transform = `translateY(-${parallaxValue}px)`;
+
+      document.getElementById(
+        "experience"
+      )!.style.transform = `translateY(-${parallaxValue}px)`;
+
+      // document.getElementById(
+      //   "contact"
+      // )!.style.transform = `translateY(-${parallaxValue}px)`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
