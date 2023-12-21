@@ -79,7 +79,7 @@ const Home: React.FC = () => {
         </div>
         {/* </SimpleParallax> */}
         {/* <SimpleParallax> */}
-        <div id="contact" data-aos="fade-up">
+        <div className="relative" id="contact" data-aos="fade-up">
           <section>
             <Contact isDarkMode={isDarkMode} />
           </section>

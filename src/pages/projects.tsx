@@ -47,13 +47,13 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
 
   return (
     <main
-      className={`flex flex-col items-center font-custom ${
+      className={`relative flex flex-col items-center font-custom ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
       } `}
     >
-      <div>
+      <div className="">
         <h2
-          className={`text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest mt-9 ${
+          className={`absolute top-30 left-1/2 transform -translate-x-1/2 translate-y-10 text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest mt-9 ${
             isDarkMode ? "text-brand-light" : "text-brand-base"
           }`}
         >
