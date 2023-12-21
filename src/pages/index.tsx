@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Skills from "./expertise";
+import React, { useState, useEffect, useRef } from "react";
+import Expertise from "./expertise";
 import Projects from "./projects";
 import Hero from "@/components/Hero";
 import Contact from "./contact";
@@ -7,9 +7,11 @@ import About from "./about";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import SimpleParallax from "@/components/ui/ParallaxEffect";
+export const toPixels = (n: number) => `${Math.floor(n)}px`;
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
@@ -20,34 +22,26 @@ const Home: React.FC = () => {
       duration: 1500,
       once: false,
     });
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      // Adjust the parallax effect based on your needs
-      const parallaxValue = scrollY * 0.1;
+    if (ref.current) {
+      const { top } = ref.current?.getBoundingClientRect();
+      const height = ref.current?.clientHeight;
 
-      // Apply the parallax effect to specific elements
-      document.getElementById(
-        "about"
-      )!.style.transform = `translateY(-${parallaxValue}px)`;
+      addEventListener("scroll", (ev) => {
+        if (ref.current) {
+          const calculatedTop = top + height * 0.3;
+          let bottom = calculatedTop - window.scrollY;
 
-      document.getElementById(
-        "expertise"
-      )!.style.transform = `translateY(-${parallaxValue}px)`;
-
-      document.getElementById(
-        "experience"
-      )!.style.transform = `translateY(-${parallaxValue}px)`;
-
-      // document.getElementById(
-      //   "contact"
-      // )!.style.transform = `translateY(-${parallaxValue}px)`;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+          if (
+            window.scrollY > calculatedTop &&
+            window.scrollY < calculatedTop + height
+          ) {
+            ref.current.style.bottom = toPixels(bottom);
+          } else if (window.scrollY < calculatedTop) {
+            ref.current.style.bottom = "0";
+          }
+        }
+      });
+    }
   }, []);
 
   return (
@@ -63,26 +57,34 @@ const Home: React.FC = () => {
         <div data-aos="fade-down">
           <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
-        <div data-aos="fade-left">
-          <section id="about">
+        {/* <SimpleParallax> */}
+        <div id="about" data-aos="fade-left">
+          <section>
             <About isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div data-aos="fade-right">
-          <section id="expertise">
-            <Skills isDarkMode={isDarkMode} />
+        {/* </SimpleParallax> */}
+        {/* <SimpleParallax> */}
+        <div id="expertise" data-aos="fade-right">
+          <section>
+            <Expertise isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div data-aos="fade-down">
-          <section id="experience">
+        {/* </SimpleParallax> */}
+        {/* <SimpleParallax> */}
+        <div id="projects" data-aos="fade-down">
+          <section>
             <Projects isDarkMode={isDarkMode} />
           </section>
         </div>
-        <div data-aos="fade-up">
-          <section className="mb-[10rem]" id="contact">
+        {/* </SimpleParallax> */}
+        {/* <SimpleParallax> */}
+        <div id="contact" data-aos="fade-up">
+          <section>
             <Contact isDarkMode={isDarkMode} />
           </section>
         </div>
+        {/* </SimpleParallax> */}
       </div>
     </DarkModeProvider>
   );
