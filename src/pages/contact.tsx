@@ -7,7 +7,7 @@ interface ContactDarkProps {
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   return (
     <div
-      className={`flex flex-col items-center font-custom mt-10 ${
+      className={`flex flex-col items-center font-custom mt-10 mb-15 ${
         isDarkMode
           ? "bg-brand-light text-black"
           : "bg-brand-base text-brand-light"
