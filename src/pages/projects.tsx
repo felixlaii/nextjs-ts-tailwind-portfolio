@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectCard from "@/components/ui/ProjectCard";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+} from "framer-motion";
 
 interface ProjectsProps {
   isDarkMode: boolean;
 }
 
+function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
+
 const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
-
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   const router = useRouter();
 
   const filteredProjects =
@@ -46,14 +64,17 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <main
+    <div
+      ref={ref}
       className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen pb-16 ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
       } `}
     >
+      <motion.div className="progress" style={{ scaleX }} />
+
       <div>
         <h2
-          className={`text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9 ${
+          className={`text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${
             isDarkMode ? "text-brand-light" : "text-brand-base"
           }`}
         >
@@ -94,7 +115,6 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           </button>
         </div>
       </div>
-
       <div className="flex flex-wrap justify-center gap-8">
         {filteredProjects.map((project, index) => (
           <div
@@ -119,7 +139,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           </div>
         ))}
       </div>
-    </main>
+    </div>
   );
 };
 

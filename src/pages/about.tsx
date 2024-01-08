@@ -35,7 +35,10 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
       }`}
     >
       <div className="flex justify-center flex-col items-center font-custom">
-        <div data-aos="fade-down" className="justify-center">
+        <div
+          data-aos="fade-down"
+          className=" transform -translate-x-1/2 -translate-y-1/2 justify-center"
+        >
           <h1
             className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
               isDarkMode ? "text-brand-light" : "text-brand-base"

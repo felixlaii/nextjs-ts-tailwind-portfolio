@@ -14,7 +14,6 @@ import ScrollToTopButton from "../ui/ScrollToTop";
 
 export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
   const location = useRouter();
 
   const toggleDarkMode = () => {

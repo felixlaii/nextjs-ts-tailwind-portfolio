@@ -3,15 +3,15 @@ import Image from "next/image";
 import { Transition } from "@headlessui/react";
 
 const Logo = () => {
-    const [isFadeIn, setIsFadeIn] = useState(false);
+  const [isFadeIn, setIsFadeIn] = useState(false);
 
-    useEffect(() => {
-        setIsFadeIn(true);
-      }, []);
+  useEffect(() => {
+    setIsFadeIn(true);
+  }, []);
 
-    return (
-        <div>
-     {isFadeIn ? (
+  return (
+    <div>
+      {isFadeIn ? (
         <Transition
           show={isFadeIn}
           enter="transition transform duration-1000"
@@ -26,8 +26,8 @@ const Logo = () => {
           />
         </Transition>
       ) : null}
-        </div>
-    )
-}
+    </div>
+  );
+};
 
 export default Logo;
