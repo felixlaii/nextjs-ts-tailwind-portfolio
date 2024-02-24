@@ -41,6 +41,13 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
     }
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: false,
+    });
+  }, []);
+
   return (
     <div
       className={`flex flex-col justify-center items-center cursor-pointer ${
