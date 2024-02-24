@@ -24,14 +24,16 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={`flex flex-col justify-center shadow-2xl h-full pt-8 pb-8 pl-10 pr-10 ${
-        isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-lightish bg-cover"
-      } box-border`}
+      className={`flex flex-col justify-center shadow-2xl h-full pt-8 pb-8 pl-10 pr-10 cursor-pointer ${
+        isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-base bg-cover"
+      } box-border rounded-sm`}
       data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
       whileHover={{ scale: 1.05 }} // Framer Motion whileHover animation
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ backgroundColor: isHovered ? "#1d2d35" : "" }} // Replace #yourHoverColor with the desired hover color
+      style={{
+        backgroundColor: isHovered ? (isDarkMode ? "#84a0b0" : "#84a0b0") : "",
+      }}
     >
       <div className="flex flex-row">
         <div className="flex flex-col ">
@@ -58,7 +60,17 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           </div>
         </div>
         <div className="flex items-center ml-20 w-1/2">
-          <p className="text-sm lg:text-md text-white font-extralight">
+          <p
+            className={`text-sm lg:text-lg font-extralight ${
+              isDarkMode
+                ? isHovered
+                  ? "text-brand-darkest"
+                  : "text-zinc-300"
+                : isHovered
+                ? "text-zinc-800"
+                : "text-brand-dark"
+            }`}
+          >
             {description}
           </p>
         </div>
