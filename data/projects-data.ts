@@ -66,6 +66,30 @@ export const ProjectsData: {
     ],
   },
   {
+    id: "solace",
+    image:
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
+    name: "Solace Ink Tattoo",
+    description: "Tattoo Shop with contact form and an online payment system.",
+    category: "professional",
+    technology: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    ],
+    deployedUrl: "https://www.solaceinktattoo.com/",
+    longDescription:
+      "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art!",
+    carousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161302/Screenshot_2023-12-09_at_5.34.16_PM_eye2nb.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.24_PM_apk2gs.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.32_PM_w0btuk.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.41_PM_hsslku.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.50_PM_b26noe.png",
+    ],
+  },
+  {
     id: "blushnletters",
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1700947081/Screenshot_2023-11-25_at_4.17.29_PM_z9qhlk.png",
