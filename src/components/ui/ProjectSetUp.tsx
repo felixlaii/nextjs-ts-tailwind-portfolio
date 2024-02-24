@@ -14,6 +14,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   isDarkMode,
   index,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -26,7 +27,11 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       className={`flex flex-col justify-center shadow-2xl h-full pt-8 pb-8 pl-10 pr-10 ${
         isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-lightish bg-cover"
       } box-border`}
-      data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+      data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
+      whileHover={{ scale: 1.05 }} // Framer Motion whileHover animation
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ backgroundColor: isHovered ? "#1d2d35" : "" }} // Replace #yourHoverColor with the desired hover color
     >
       <div className="flex flex-row">
         <div className="flex flex-col ">
