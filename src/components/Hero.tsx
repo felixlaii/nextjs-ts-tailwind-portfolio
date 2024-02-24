@@ -17,8 +17,8 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   }, []);
   const getImagePath = () => {
     return isDarkMode
-      ? "/images/felixlaii-logo-lightest.svg"
-      : "/images/felixlaii-logo-light.svg";
+      ? "/images/felixlaii-splash.svg"
+      : "/images/felixlaii-splash.svg";
   };
 
   return (
@@ -27,8 +27,8 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
         isDarkMode ? "bg-brand-light text-black" : "bg-brand-base text-white"
       }`}
     >
-      <div className="flex-column justify-around align-middle items-center">
-        <div data-aos="fade-left" className="mr-4">
+      <div className="flex-column align-middle items-center">
+        <div data-aos="fade-left">
           <Image
             width={90}
             height={90}
