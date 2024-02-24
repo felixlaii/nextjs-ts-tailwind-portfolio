@@ -68,7 +68,7 @@ export const ProjectsData: {
   {
     id: "solace",
     image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738446/solace-ink-logo_psepx0.png",
     name: "Solace Ink Tattoo",
     description: "Tattoo Shop with contact form and an online payment system.",
     category: "professional",
