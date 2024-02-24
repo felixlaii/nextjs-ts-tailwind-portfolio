@@ -49,38 +49,36 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   }, []);
 
   return (
-    <div
-      className={`flex flex-col justify-center items-center cursor-pointer ${
-        isLargeScreen
-          ? "md:w-[45rem] lg:h-[25rem] lg:w-[25rem] md:px-2 lg:mx-8 pt-4 md:pt-0"
-          : "lg:w-64 md:px-3 lg:px-8 pt-4 md:pt-0"
-      } h-70 rounded-sm md:justify-evenly lg:justify-start text-center lg:mx-auto md:gap-y-4 transition duration-300 shadow-xl transform ${
-        isHovered ? "shadow-xl bg-brand-lightest scale-105" : ""
-      } ${
-        isLargeScreen
-          ? "flex md:flex lg:flex xl:flex"
-          : "align-middle items-center w-[25rem] md:w-[35rem] lg:items-center lg:justify-center md:flex-row md:justify-between justify-between h-1/2 "
-      }`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      style={{ minHeight: "280px" }}
-    >
-      <div className="flex flex-col items-center justify-center">
-        <div>
-          {technology.map((iconUrl, index) => (
+    <div>
+      <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-col">
+          <div className="flex flex-row">
+            {technology.map((iconUrl, index) => (
+              <Image
+                height={60}
+                width={60}
+                key={index}
+                src={iconUrl}
+                alt={`tech-icon-${index}`}
+                className="w-5 h-5"
+              />
+            ))}
+          </div>
+          <div className="w-150 h-90">
             <Image
-              height={60}
-              width={60}
-              key={index}
-              src={iconUrl}
-              alt={`tech-icon-${index}`}
-              className="w-5 h-5"
+              className="rounded-lg object-center"
+              width={270}
+              height={170}
+              src={image}
+              alt="project logo"
             />
-          ))}
+          </div>
         </div>
-        <p className="text-sm lg:text-md text-white font-extralight mt-10 mb-5">
-          {description}
-        </p>
+        <div>
+          <p className="text-sm lg:text-md text-white font-extralight mt-10 mb-5">
+            {description}
+          </p>
+        </div>
       </div>
     </div>
   );
