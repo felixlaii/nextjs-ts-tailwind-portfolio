@@ -12,10 +12,8 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   image,
   technology,
   isDarkMode,
+  index,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
   useEffect(() => {
     AOS.init({
       duration: 1500,
@@ -24,7 +22,10 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   }, []);
 
   return (
-    <div className="flex flex-col ">
+    <motion.div
+      className="flex flex-col"
+      data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+    >
       <div className="flex flex-row">
         <div className="flex flex-col ">
           <div className="flex flex-row justify-between">
@@ -55,7 +56,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default ProjectSetUp;

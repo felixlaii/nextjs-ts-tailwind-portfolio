@@ -103,6 +103,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectCard
+                index={project.index}
                 name={project.name}
                 githubUrl={project.githubUrl}
                 deployedUrl={project.deployedUrl}

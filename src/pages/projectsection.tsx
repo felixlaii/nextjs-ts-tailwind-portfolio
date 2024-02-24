@@ -103,6 +103,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectSetUp
+                index={project.index}
                 name={project.name}
                 githubUrl={project.githubUrl}
                 deployedUrl={project.deployedUrl}

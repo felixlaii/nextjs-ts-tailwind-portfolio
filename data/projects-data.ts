@@ -9,9 +9,11 @@ export const ProjectsData: {
   id: string;
   longDescription: string;
   carousel?: string[];
+  index: number;
 }[] = [
   {
     id: "richmond-west-dental",
+    index: 1,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "Richmond West Dental",
@@ -42,6 +44,7 @@ export const ProjectsData: {
   },
   {
     id: "mix6ix",
+    index: 2,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
     name: "MIX6IX Bartending Co",
@@ -67,6 +70,7 @@ export const ProjectsData: {
   },
   {
     id: "solace",
+    index: 3,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738446/solace-ink-logo_psepx0.png",
     name: "Solace Ink Tattoo",
@@ -91,6 +95,7 @@ export const ProjectsData: {
   },
   {
     id: "blushnletters",
+    index: 4,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1700947081/Screenshot_2023-11-25_at_4.17.29_PM_z9qhlk.png",
     name: "Blush & Letters Co",
@@ -116,6 +121,7 @@ export const ProjectsData: {
   },
   {
     id: "st-patrick",
+    index: 5,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
     name: "St Patrick S.S",
@@ -134,6 +140,7 @@ export const ProjectsData: {
   },
   {
     id: "pawfinder",
+    index: 6,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
     name: "PawFinder",
@@ -156,6 +163,7 @@ export const ProjectsData: {
   },
   {
     id: "instock",
+    index: 7,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
     name: "inStock",
@@ -176,6 +184,7 @@ export const ProjectsData: {
   },
   {
     id: "weather-app",
+    index: 8,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698531550/weather-static_mjvjn6.png",
     name: "Weather App",
@@ -201,6 +210,7 @@ export const ProjectsData: {
   },
   {
     id: "pokemon-search",
+    index: 9,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532305/pokemon-static_agigqy.png",
     name: "Pokemon Search",
