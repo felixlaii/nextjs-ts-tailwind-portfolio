@@ -40,12 +40,12 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           <div className="flex flex-row justify-around">
             {technology.map((iconUrl, index) => (
               <Image
-                height={60}
-                width={60}
+                height={80}
+                width={80}
                 key={index}
                 src={iconUrl}
                 alt={`tech-icon-${index}`}
-                className="w-5 h-5 mb-10"
+                className="w-10 h-10 mb-10 px-2"
               />
             ))}
           </div>
