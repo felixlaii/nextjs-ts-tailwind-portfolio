@@ -47,7 +47,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
 
   return (
     <main
-      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen pb-16 ${
+      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-16 ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
       } `}
     >
@@ -99,7 +99,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-3 pt-4"
+            className="lg:h-[25rem] lg:w-[50rem] hover:border-none last:border-none mx-3 pt-4"
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectSetUp

@@ -24,9 +24,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col ">
       <div className="flex flex-row">
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <div className="flex flex-row justify-between">
             {technology.map((iconUrl, index) => (
               <Image
@@ -35,7 +35,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 key={index}
                 src={iconUrl}
                 alt={`tech-icon-${index}`}
-                className="w-5 h-5"
+                className="w-5 h-5 mb-10"
               />
             ))}
           </div>
@@ -49,11 +49,8 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             />
           </div>
         </div>
-        <div className="ml-4">
-          {" "}
-          {/* Adding margin to create space */}
-          <p className="text-sm lg:text-md text-white font-extralight mt-8 mb-5">
-            {/* Adjusting margin-top (mt-8) */}
+        <div className="flex items-center ml-20">
+          <p className="text-sm lg:text-md text-white font-extralight">
             {description}
           </p>
         </div>
