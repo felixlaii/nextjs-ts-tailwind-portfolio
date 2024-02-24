@@ -24,11 +24,11 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={`flex flex-col justify-center shadow-2xl h-full pt-8 pb-8 pl-10 pr-10 cursor-pointer ${
+      className={`flex flex-col justify-center shadow-2xl pt-8 pb-6 pl-10 pr-10 cursor-pointer ${
         isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-base bg-cover"
-      } box-border rounded-sm`}
+      } box-border rounded-sm  sm:h-[20rem] sm:w-[35rem] md:w-[40rem] md:h[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem]`}
       data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
-      whileHover={{ scale: 1.05 }} // Framer Motion whileHover animation
+      whileHover={{ scale: 1.05 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
