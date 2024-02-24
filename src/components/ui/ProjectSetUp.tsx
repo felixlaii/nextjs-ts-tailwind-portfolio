@@ -17,31 +17,6 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
-    const updateWindowSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024);
-    };
-
-    window.addEventListener("resize", updateWindowSize);
-
-    updateWindowSize();
-
-    return () => {
-      window.removeEventListener("resize", updateWindowSize);
-    };
-  }, []);
-  const handleMouseEnter = () => {
-    if (isLargeScreen) {
-      setIsHovered(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (isLargeScreen) {
-      setIsHovered(false);
-    }
-  };
-
-  useEffect(() => {
     AOS.init({
       duration: 1500,
       once: false,
@@ -49,10 +24,10 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   }, []);
 
   return (
-    <div>
-      <div className="flex flex-row items-center justify-between">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-row">
         <div className="flex flex-col">
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-between">
             {technology.map((iconUrl, index) => (
               <Image
                 height={60}
@@ -74,8 +49,11 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             />
           </div>
         </div>
-        <div>
-          <p className="text-sm lg:text-md text-white font-extralight mt-10 mb-5">
+        <div className="ml-4">
+          {" "}
+          {/* Adding margin to create space */}
+          <p className="text-sm lg:text-md text-white font-extralight mt-8 mb-5">
+            {/* Adjusting margin-top (mt-8) */}
             {description}
           </p>
         </div>

@@ -95,7 +95,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="">
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
