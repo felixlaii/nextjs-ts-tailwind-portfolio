@@ -16,19 +16,21 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 2000,
       once: false,
     });
   }, []);
 
   return (
     <motion.div
-      className="flex flex-col"
+      className={`flex flex-col justify-center shadow-2xl h-full pt-8 pb-8 pl-10 pr-10 ${
+        isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-lightish bg-cover"
+      } box-border`}
       data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
     >
       <div className="flex flex-row">
         <div className="flex flex-col ">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-around">
             {technology.map((iconUrl, index) => (
               <Image
                 height={60}
@@ -40,17 +42,17 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               />
             ))}
           </div>
-          <div className="w-150 h-90">
+          <div className="">
             <Image
               className="rounded-lg object-center"
-              width={270}
-              height={170}
+              width={200}
+              height={200}
               src={image}
               alt="project logo"
             />
           </div>
         </div>
-        <div className="flex items-center ml-20">
+        <div className="flex items-center ml-20 w-1/2">
           <p className="text-sm lg:text-md text-white font-extralight">
             {description}
           </p>

@@ -99,7 +99,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="lg:h-[25rem] lg:w-[50rem] hover:border-none last:border-none mx-3 pt-4"
+            className="mt-10 lg:h-[20rem] lg:w-[40rem] hover:border-none last:border-none"
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectSetUp
