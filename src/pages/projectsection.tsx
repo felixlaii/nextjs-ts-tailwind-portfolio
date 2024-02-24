@@ -94,6 +94,31 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
           </button>
         </div>
       </div>
+
+      <div className="flex flex-wrap justify-center gap-8">
+        {filteredProjects.map((project, index) => (
+          <div
+            key={project.id}
+            className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-3 pt-4"
+          >
+            <span onClick={() => handleProjectClick(project.id)}>
+              <ProjectSetUp
+                name={project.name}
+                githubUrl={project.githubUrl}
+                deployedUrl={project.deployedUrl}
+                description={project.description}
+                longDescription={project.longDescription}
+                image={project.image}
+                technology={project.technology}
+                id={project.id}
+                isDarkMode={isDarkMode}
+                onClick={() => handleProjectClick(project.id)}
+                carousel={project.carousel}
+              />
+            </span>
+          </div>
+        ))}
+      </div>
     </main>
   );
 };
