@@ -17,8 +17,8 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   }, []);
   const getImagePath = () => {
     return isDarkMode
-      ? "/images/felixlaii-splash.svg"
-      : "/images/felixlaii-splash.svg";
+      ? "/images/felixlaii-logo-lightest.svg"
+      : "/images/felixlaii-logo-light.svg";
   };
 
   return (
