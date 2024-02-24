@@ -82,11 +82,11 @@ export const ProjectsData: {
     longDescription:
       "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art!",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161302/Screenshot_2023-12-09_at_5.34.16_PM_eye2nb.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.24_PM_apk2gs.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.32_PM_w0btuk.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.41_PM_hsslku.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.50_PM_b26noe.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.00_PM_jsmq14.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.12_PM_l6xva0.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.21_PM_ixrklm.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738566/Screenshot_2024-02-23_at_8.35.40_PM_hapafi.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738638/Screenshot_2024-02-23_at_8.37.14_PM_vc5gez.png",
     ],
   },
   {
