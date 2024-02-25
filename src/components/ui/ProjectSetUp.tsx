@@ -15,6 +15,8 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   index,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -54,7 +56,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           </div>
           <div className="">
             <Image
-              className="rounded-lg object-center"
+              className={`rounded-lg object-center fade-in-image ${
+                isImageLoaded ? "loaded" : ""
+              }`}
               width={150}
               height={150}
               src={image}
