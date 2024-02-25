@@ -37,7 +37,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
             className="h-[15rem] w-[17rem] md:w-[23rem] md:h-[18rem] lg:h-[15rem] lg:w-[30rem]"
           />
         </div>
-        <div data-aos="fade-right" className="flex items-center">
+        <div data-aos="fade-right" className="flex items-center ml-4">
           <label className="flex items-center cursor-pointer">
             <div className="relative flex items-center">
               <input
@@ -64,7 +64,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
           </label>
         </div>
 
-        <div data-aos="fade-up" className="font-custom">
+        <div data-aos="fade-up" className="flex-column font-custom ml-4">
           <p
             className={`text-[2.3rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1 ${
               isDarkMode ? "text-brand-lightest" : "text-brand-light"
