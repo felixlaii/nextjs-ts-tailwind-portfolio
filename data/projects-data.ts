@@ -147,7 +147,6 @@ export const ProjectsData: {
       "An application that compiles all adoption agency information into one convenient location. Ability to sign up and save adoption preferences such as breed and age.",
     category: "school",
     technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
