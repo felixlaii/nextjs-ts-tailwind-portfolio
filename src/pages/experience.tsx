@@ -55,7 +55,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
               />
             </div>
             <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-              <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
                 {longDescription}
               </p>
             </div>
