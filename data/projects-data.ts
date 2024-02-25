@@ -18,7 +18,7 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174707/logo_qh1koz.svg",
     name: "Richmond West Dental",
     description:
-      "Downtown Toronto dental office. Application deployed on Digital Ocean and built with Nextjs, TypeScript and TailwindCSS.",
+      "Downtown Toronto dental office. Their staff are so nice and professional, and they are there to listen and help with whatever oral questions you have, book for your next appointment!",
     longDescription:
       "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid.",
     category: "professional",
@@ -48,7 +48,7 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365211/pink_purple_zkqi27.png",
     name: "MIX6IX Bartending Co",
     description:
-      "Bartending service for private events. Custom code injections through Square Space.",
+      "Bartending service for private events. If you want to elevate your event, these bartenders are professional and can definitely create an unbelievable experience for your guests!",
     category: "professional",
     technology: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
@@ -73,7 +73,8 @@ export const ProjectsData: {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738446/solace-ink-logo_psepx0.png",
     name: "Solace Ink Tattoo",
-    description: "Tattoo Shop with contact form and an online payment system.",
+    description:
+      "Tattoo Shop with contact form and an online payment system. Book with your favourite artist and/or explore their Instagram!",
     category: "professional",
     technology: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
@@ -124,7 +125,7 @@ export const ProjectsData: {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
     name: "St Patrick S.S",
-    description: "Secondary School based in Vancouver.",
+    description: "Secondary School based in Vancouver. Currently in progress!",
     category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
@@ -186,7 +187,8 @@ export const ProjectsData: {
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698531550/weather-static_mjvjn6.png",
     name: "Weather App",
-    description: "Weather application with search. Data pulled from API.",
+    description:
+      "A Weather search application. All Data pulled from Open Weather API. It has information on all cities and countries around the world!",
     category: "school",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -213,7 +215,7 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532305/pokemon-static_agigqy.png",
     name: "Pokemon Search",
     description:
-      "Are you feeling nostalgic? Search through the list of pokemon and get their images, attacks and stats. Search up to 1000 different Pokemon. All information compiled through PokeAPI!",
+      "Search through the list of pokemon and get their images, attacks and stats. Search up to 1000 different Pokemon!",
     category: "school",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -233,95 +235,4 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
     ],
   },
-  // {
-  //   id: "connect-four",
-  //   image:
-  //     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532351/connect-four-static_xiozcc.png",
-  //   name: "Connect Four",
-  //   description:
-  //     "Play connect four with a friend when you need a quick break! A great way to re-energize with a strategy game. ",
-  //   category: "school",
-  //   technology: [
-  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
-  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
-  //   ],
-  //   githubUrl: "https://github.com/felixlaii/connect-four.github.io",
-  //   deployedUrl: "https://felixlaii.github.io/connect-four.github.io/",
-  //   longDescription: "Connect Four game created with React, and TypeScript. I created this application while I was trying to learn TypeScript, and its a great way to re-energize yourself with strategy game."
-  // },
 ];
-
-// export const PROJECTS_PAGE = [
-//   { name: "Richmond West Dental", href: "/experience/richmond-west-dental" },
-//   { name: "MIX6IX Bartending Co.", href: "/experience#mix6ix" },
-//   { name: "Blush N Letters", href: "/experience#blush-n-letters" },
-//   { name: "Saint Patrick Secondary School", href: "/experience#st-patrick" },
-//   { name: "PawFinder", href: "/experience#pawfinder" },
-//   { name: "inStock", href: "/experience#instock" },
-//   { name: "Weather App", href: "/experience#weather-app" },
-//   { name: "Pokemon Search", href: "/experience#pokemon-search" },
-//   { name: "Connect Four", href: "/experience#connect-four" },
-// ];
-
-// {
-//   image:
-//     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362108/BrainFlix-logo_bhkddt.svg",
-//   name: "BrainFlix",
-//   url: "https://github.com/felixlaii/felix-lai-brainflix",
-//   description: "A Youtube/Netflix Clone. Ability to upload using back-end.",
-//   category: "school",
-//   technology: [
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-//   ],
-// },
-// {
-//   image:
-//     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365085/Screenshot_2023-10-26_at_8.04.40_PM_k1owj4.png",
-//   name: "Bandsite",
-//   url: "https://github.com/felixlaii/bandsite",
-//   description:
-//     "A website for Bees Knees with functioning comments with backend.",
-//   category: "school",
-//   technology: [
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-//   ],
-// },
-// {
-//   image:
-//     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698365068/Screenshot_2023-10-26_at_8.04.22_PM_tcwjjy.png",
-//   name: "Travelsite",
-//   url: "https://github.com/felixlaii/travelsite",
-//   description:
-//     "A static webpage. One of the first projects ever done in BrainStation",
-//   category: "school",
-//   technology: [
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-//   ],
-// },
-// {
-//   image:
-//     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362235/pokemon-logo-black-transparent_xdmglm.png",
-//   name: "Memory Game",
-//   url: "https://github.com/felixlaii/pokemon-memory-game",
-//   description:
-//     "A memory game created during our first Hackathon with 2 other software engineers using the Pokemon API.",
-//   category: "school",
-//   technology: [
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-//     "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-//     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-//   ],
-// },
