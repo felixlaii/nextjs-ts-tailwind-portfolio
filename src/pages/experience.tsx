@@ -94,7 +94,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
             <div className="flex flex-row mb-9">
               {githubUrl && (
                 <a
-                  className="border border-brand-lightish px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-lightish bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                  className="border border-brand-lightish px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -104,7 +104,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
               )}
               {deployedUrl && (
                 <a
-                  className="border border-brand-lightish px-10 mx-4 font-custom tracking-wide rounded-sm hover:text-brand-lightish bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                  className="border border-brand-lightish px-10 mx-4 font-custom tracking-wide rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                   href={deployedUrl}
                   target="_blank"
                   rel="noopener noreferrer"
