@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ProjectCardProps } from "@/types/component-types";
-import { useRouter } from "next/router";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ProjectSetUp: React.FC<ProjectCardProps> = ({
-  name,
   description,
   image,
   technology,
@@ -15,7 +13,6 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   index,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -54,11 +51,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               />
             ))}
           </div>
-          <div className="">
+          <div data-aos="zoom-in">
             <Image
-              className={`rounded-lg object-center fade-in-image ${
-                isImageLoaded ? "loaded" : ""
-              }`}
+              className="rounded-lg object-center"
               width={150}
               height={150}
               src={image}
