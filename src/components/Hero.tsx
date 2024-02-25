@@ -34,7 +34,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
             height={90}
             src={getImagePath()}
             alt="Hero Image"
-            className="h-[15rem] w-[17rem] md:w-[23rem] md:h-[18rem] lg:h-[15rem] lg:w-[30rem]"
+            className="ml-4 h-[15rem] w-[17rem] md:w-[23rem] md:h-[18rem] lg:h-[15rem] lg:w-[30rem]"
           />
         </div>
         <div data-aos="fade-right" className="flex items-center ml-4">
