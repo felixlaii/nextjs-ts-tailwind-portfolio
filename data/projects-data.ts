@@ -20,7 +20,7 @@ export const ProjectsData: {
     description:
       "Downtown Toronto dental office. Their staff are so nice and professional, and they are there to listen and help with whatever oral questions you have, book for your next appointment!",
     longDescription:
-      "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid.",
+      "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid. There are animation effects to wow any online client! ",
     category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
@@ -58,7 +58,7 @@ export const ProjectsData: {
     ],
     deployedUrl: "https://mix6ixtoronto.com",
     longDescription:
-      "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service.",
+      "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service. They have always hosted their website on SquareSpace but wanted a more elevated online presence. I injected custom JavaScript, HTML5 and CSS3 to update their website and the client was more than happy with the outcome!",
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161302/Screenshot_2023-12-09_at_5.34.16_PM_eye2nb.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.24_PM_apk2gs.png",
@@ -84,7 +84,7 @@ export const ProjectsData: {
     ],
     deployedUrl: "https://www.solaceinktattoo.com/",
     longDescription:
-      "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art!",
+      "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art! They wanted to create an online presence for their clients to view and book their artists and wanted a minimal vibe. This website is also hosted on SquareSpace but I definitely injected custom code (JavaScript, HTML5 and CSS3) to elevate their website.",
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.00_PM_jsmq14.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.12_PM_l6xva0.png",
@@ -110,7 +110,7 @@ export const ProjectsData: {
     ],
     deployedUrl: "https://blushnletters.com/",
     longDescription:
-      "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide.",
+      "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide. The client wanted to give their website a small revamp and I simply injected code into their existing application to elevate the experience!",
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.12_PM_kiydck.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.26_PM_wgjpzj.png",
@@ -131,7 +131,8 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
-    longDescription: "",
+    longDescription:
+      "When the client reached out to me and expressed concern over their website that hasn't been updated for 20 years, we got to work immediately thinking of ways to refresh and attract potential parents. This website is still under progress and cannot wait for the final results! Stay tuned!",
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png",
@@ -158,7 +159,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
     longDescription:
-      "An application that retrieves information from Pet Finder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation.",
+      "An application that retrieves information from Pet Finder API. I've always wanted to adopt a dog but I found the process to be very lengthy and tedious with so many adoption agencies. This application compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation. This application has a front-end (React) and a back-end (NodeJs) that communicates back and forth to ensure client user information is stored securely and to retrieve accurate information based on your pet preferences.",
   },
   {
     id: "instock",
@@ -179,7 +180,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/instock",
     longDescription:
-      "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime.",
+      "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime. This was a huge learning experience as fellow engineers have their own way of coding, and this helped us all learn how to communicate with each other. This application also has a front-end (React) and a back-end (Nodejs).",
   },
   {
     id: "weather-app",
@@ -201,7 +202,7 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
     longDescription:
-      "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information.",
+      "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information. This has weather information for all cities and countries around the world!",
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
@@ -229,7 +230,7 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
     longDescription:
-      "A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon.",
+      "Are you feeling nostalgic? A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon. This application was created with React and uses MaterialUI for the components and it was definitely a great experience learning this package!",
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
