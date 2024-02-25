@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectSetUp from "@/components/ui/ProjectSetUp";
 
-interface ProjectsProps {
+interface ProjectSetUpProps {
   isDarkMode: boolean;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
+const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const router = useRouter();
@@ -47,7 +47,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
 
   return (
     <main
-      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen pb-16 ${
+      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-16 ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
       } `}
     >
@@ -95,14 +95,14 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="">
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="lg:h-[25rem] lg:w-[23rem] hover:border-none last:border-none mx-3 pt-4"
+            className="mt-10 sm:h-full lg:h-[20rem] lg:w-[40rem] hover:border-none last:border-none"
           >
             <span onClick={() => handleProjectClick(project.id)}>
-              <ProjectCard
+              <ProjectSetUp
                 index={project.index}
                 name={project.name}
                 githubUrl={project.githubUrl}
@@ -123,5 +123,4 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
     </main>
   );
 };
-
-export default Projects;
+export default ProjectSection;

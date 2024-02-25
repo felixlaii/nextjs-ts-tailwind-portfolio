@@ -48,6 +48,7 @@ export interface ProjectCardProps {
   isDarkMode: boolean;
   carousel?: string[];
   onClick: () => void;
+  index: number;
 }
 
 export interface DarkModeContextProps {

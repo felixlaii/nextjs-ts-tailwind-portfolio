@@ -26,7 +26,8 @@ module.exports = {
                     dark: "#1F2933",
                     darkest: "#1d2d35",
                     lightish: "#84a0b0",
-                    bgdark: "#1F2933",
+                    darkMode: "#6A98B0",
+                    bgdark: "#81BBDA",
                     textDark: "#F3F4F6"
                 },
                 ui: {

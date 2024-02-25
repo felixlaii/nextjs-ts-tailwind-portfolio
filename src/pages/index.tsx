@@ -7,6 +7,7 @@ import About from "./about";
 import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ProjectSection from "./projectsection";
 
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -47,7 +48,7 @@ const Home: React.FC = () => {
         </div>
         <div data-aos="fade-down">
           <section id="experience">
-            <Projects isDarkMode={isDarkMode} />
+            <ProjectSection isDarkMode={isDarkMode} />
           </section>
         </div>
         <div data-aos="fade-up">
