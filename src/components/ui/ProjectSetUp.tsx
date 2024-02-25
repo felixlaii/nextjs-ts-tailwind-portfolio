@@ -23,18 +23,18 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={`flex flex-col justify-center shadow-2xl pt-8 pb-6 pl-10 pr-10 cursor-pointer ${
+      className={`flex flex-col justify-center shadow-3xl pt-8 pb-6 pl-10 pr-10 cursor-pointer ${
         isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-base bg-cover"
       } box-border rounded-sm h-[13rem] w-[23.7rem] md:w-[40rem] md:h-[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
       data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
       whileHover={{
-        scale: [0, 1.1], // Initial scale 1 for small screens, 1.1 for md, lg, and xl screens
+        scale: isHovered ? 1.1 : 1, // Use 1.1 scale only when hovered
         transition: { type: "spring", stiffness: 500 },
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        backgroundColor: isHovered ? (isDarkMode ? "#84a0b0" : "#84a0b0") : "",
+        backgroundColor: isHovered ? (isDarkMode ? "#6A98B0" : "#6A98B0") : "",
       }}
     >
       <div className="flex flex-row">
