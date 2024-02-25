@@ -26,9 +26,12 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
     <motion.div
       className={`flex flex-col justify-center shadow-2xl pt-8 pb-6 pl-10 pr-10 cursor-pointer ${
         isDarkMode ? "bg-brand-light bg-cover" : "bg-brand-base bg-cover"
-      } box-border rounded-sm  sm:h-[20rem] sm:w-[35rem] md:w-[40rem] md:h[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem]`}
+      } box-border rounded-sm h-[14rem] w-[25rem] md:w-[40rem] md:h-[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
       data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{
+        scale: [0, 1.1], // Initial scale 1 for small screens, 1.1 for md, lg, and xl screens
+        transition: { type: "spring", stiffness: 500 },
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -45,7 +48,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 key={index}
                 src={iconUrl}
                 alt={`tech-icon-${index}`}
-                className="w-10 h-10 mb-10 px-2"
+                className="w-8 h-8 mb-4 px-1"
               />
             ))}
           </div>
