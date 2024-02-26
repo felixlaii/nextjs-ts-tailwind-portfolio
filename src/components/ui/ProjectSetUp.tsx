@@ -67,11 +67,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           <p
             className={`text-xs lg:text-lg font-extralight ${
               isDarkMode
-                ? "text-brand-darkest"
-                : "text-brand-lightish"
                 ? isHovered
                   ? "text-brand-darkest"
-                  : "text-zinc-300"
+                  : "text-brand-lightish"
                 : isHovered
                 ? "text-zinc-800"
                 : "text-brand-dark"
