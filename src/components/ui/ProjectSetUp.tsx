@@ -18,6 +18,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
     AOS.init({
       duration: 2000,
       once: false,
+      mirror: true,
     });
   }, []);
 
