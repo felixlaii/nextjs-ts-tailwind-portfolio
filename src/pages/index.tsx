@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Skills from "./expertise";
-import Projects from "./projects";
 import Hero from "@/components/Hero";
 import Contact from "./contact";
 import About from "./about";
