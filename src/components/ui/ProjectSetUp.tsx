@@ -32,7 +32,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
       whileHover={{
         scale: isHovered ? 1.1 : 1,
-        transition: { type: "spring", stiffness: 500 },
+        transition: { type: "spring", stiffness: 200 },
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
