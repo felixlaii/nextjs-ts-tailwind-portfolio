@@ -38,7 +38,7 @@ const ScrollToTopButton: React.FC<ArrowDarkProps> = ({ isDarkMode }) => {
     <div
       onClick={scrollToTop}
       className={`${
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible ? "opacity-100" : "opacity-100"
       } fixed float-right bottom-1/2 right-4 transform -translate-y-6 transition-opacity duration-300 ease-in-out cursor-pointer bg-brand-dark p-2 rounded-full`}
     >
       <FaArrowUp
