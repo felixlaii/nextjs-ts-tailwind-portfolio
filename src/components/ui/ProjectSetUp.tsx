@@ -32,7 +32,6 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
-      data-aos-easing="ease-in-sine"
       whileHover={{
         scale: isHovered ? 1.1 : 1,
         transition: { type: "spring", stiffness: 200 },
