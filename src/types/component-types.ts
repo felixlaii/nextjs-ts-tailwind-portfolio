@@ -57,4 +57,22 @@ export interface CarouselProps {
   items: React.ReactNode[];
 }
 
+export interface DarkModeProps {
+  isDarkMode: boolean;
+}
+
+export interface AboutDarkProps extends DarkModeProps {}
+
+export interface ContactDarkProps extends DarkModeProps {}
+
+export interface SkillsProps extends DarkModeProps {}
+
+export interface ProjectSetUpProps extends DarkModeProps {}
+
+export interface ArrowDarkProps extends DarkModeProps {}
+
+export interface HeroDarkProps extends DarkModeProps {
+  toggleDarkMode: () => void;
+}
+
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;

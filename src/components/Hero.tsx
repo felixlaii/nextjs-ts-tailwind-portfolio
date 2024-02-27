@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface HeroDarkProps {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}
+import { HeroDarkProps } from "@/types/component-types";
 
 const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   useEffect(() => {

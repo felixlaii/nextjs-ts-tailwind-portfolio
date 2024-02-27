@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-
-interface ArrowDarkProps {
-  isDarkMode: boolean;
-}
+import { ArrowDarkProps } from "@/types/component-types";
 
 const ScrollToTopButton: React.FC<ArrowDarkProps> = ({ isDarkMode }) => {
   const [isVisible, setIsVisible] = useState(false);

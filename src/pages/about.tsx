@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import { IoMdDownload } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface AboutDarkProps {
-  isDarkMode: boolean;
-}
+import { AboutDarkProps } from "@/types/component-types";
 
 const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
   const onButtonClick = () => {

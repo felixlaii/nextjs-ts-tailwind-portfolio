@@ -3,10 +3,7 @@ import Image from "next/image";
 import { SkillsData } from "../../data/skills-data";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface SkillsProps {
-  isDarkMode: boolean;
-}
+import { SkillsProps } from "@/types/component-types";
 
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const topRowSkills = SkillsData.slice(0, 8);

@@ -1,8 +1,5 @@
 import React from "react";
-
-interface ContactDarkProps {
-  isDarkMode: boolean;
-}
+import { ContactDarkProps } from "@/types/component-types";
 
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
   return (
