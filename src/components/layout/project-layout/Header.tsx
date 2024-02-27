@@ -171,8 +171,6 @@ const Header: React.FC<HeaderProps> = ({
   logo,
   logoClassName,
   alt,
-  isDarkMode,
-  toggleDarkMode,
 }) => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);

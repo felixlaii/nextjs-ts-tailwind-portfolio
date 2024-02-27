@@ -16,7 +16,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 2500,
       once: false,
       mirror: true,
     });
@@ -33,7 +33,6 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
       data-aos-easing="ease-in-sine"
-      data-aos-offset="0"
       whileHover={{
         scale: isHovered ? 1.1 : 1,
         transition: { type: "spring", stiffness: 200 },

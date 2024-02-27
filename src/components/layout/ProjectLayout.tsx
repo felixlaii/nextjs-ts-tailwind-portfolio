@@ -38,8 +38,6 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <motion.div>
           <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
             <Header
-              isDarkMode={isDarkMode}
-              toggleDarkMode={toggleDarkMode}
               logo={logo.src}
               navigationLinks={navigationLinks}
               currentActiveLocation={location.pathname}

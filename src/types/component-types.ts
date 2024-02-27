@@ -25,8 +25,6 @@ export interface HeaderProps {
   logoClassName?: string;
   alt?: string;
   onLinkClick?: () => void;
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
 }
 
 export interface ButtonProps {
