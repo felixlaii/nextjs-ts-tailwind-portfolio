@@ -3,12 +3,6 @@ import React, { ReactNode } from "react";
 export interface NavigationLink {
   name: string;
   href: string;
-  dropdown?: DropdownLink[];
-}
-
-export interface DropdownLink {
-  name: string;
-  href: string;
 }
 
 export interface HeaderProps {
@@ -17,7 +11,6 @@ export interface HeaderProps {
   hoverClassName: string;
   activeLinkClassName: string;
   currentActiveLocation?: string;
-  dropdownBorderColor?: string;
   textClassName?: string;
   companyName?: string;
   companyNameClassName?: string;
