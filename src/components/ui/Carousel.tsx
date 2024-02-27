@@ -226,7 +226,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                   key={`${img} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative shrink-0 select-none transition-opacity duration-300",
+                    "group relative shrink-0 select-none transition-opacity duration-300 mx-1",
                     !active && "opacity-30"
                   )}
                   transition={{
@@ -242,7 +242,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     height={500}
                     src={img}
                     className={cn(
-                      "object-contain w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
+                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />
@@ -264,11 +264,11 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Previous Guide</span>
-            <MoveLeft className="h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <MoveLeft className="h-10 w-10 text-brand-dark stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
           <button
             type="button"
-            className="group absolute right-[24%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute right-[18%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
@@ -280,7 +280,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Next Guide</span>
-            <MoveRight className="h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <MoveRight className="text-brand-dark h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
         </div>
       </div>
