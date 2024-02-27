@@ -50,8 +50,15 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
             Toronto for a Bachelor of Arts Honours program. <br />
             I have over 10 years of luxury retail management experience from
             Links of London to Burberry to Gucci. <br />
-            Transitioned into tech and absolutely love it! <br />I have included
-            a downloadable resume below if you want to connect
+            I decided to do the Software Engineering boot camp at BrainStation
+            and I have absolutely fallen in love with coding.
+            <br />
+            The thing I love most about coding is the constant learning
+            involved. Post boot camp, I have learned Nextjs, TailwindCSS and
+            TypeScript and many more.
+            <br />
+            <br />I have included a downloadable resume below if you want to
+            connect
           </p>
         </div>
         <button
