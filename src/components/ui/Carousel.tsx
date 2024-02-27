@@ -160,7 +160,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
   return (
     <div
       className={cn(
-        "flex flex-col justify-center items-center w-[calc(10% - 10px)] mx-5 lg:mx-auto pb-8"
+        "flex flex-col justify-center items-center w-[calc(10% - 10px)]  lg:mx-auto pb-8"
       )}
     >
       <div
@@ -226,7 +226,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                   key={`${img} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative shrink-0 select-none px-3 transition-opacity duration-300",
+                    "group relative shrink-0 select-none transition-opacity duration-300",
                     !active && "opacity-30"
                   )}
                   transition={{
