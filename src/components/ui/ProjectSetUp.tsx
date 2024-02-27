@@ -16,7 +16,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       once: false,
       mirror: true,
     });
@@ -28,8 +28,12 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
         isDarkMode
           ? "bg-brand-light bg-cover border-double border-4 border-brand-lightish"
           : "bg-brand-darkMode bg-cover border-double border-4 border-brand-dark"
-      }  border-double border-4 border-brand-dark hover:border-brand-light rounded-md h-[13rem] w-[23.7rem] md:w-[40rem] md:h-[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
-      data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
+      }  border-double border-4 border-brand-dark rounded-md h-[13rem] w-[23.7rem] md:w-[40rem] md:h-[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
+      data-aos={
+        isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
+      }
+      data-aos-easing="ease-in-sine"
+      data-aos-offset="0"
       whileHover={{
         scale: isHovered ? 1.1 : 1,
         transition: { type: "spring", stiffness: 200 },
