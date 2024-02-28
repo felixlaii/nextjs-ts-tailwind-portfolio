@@ -21,6 +21,7 @@ module.exports = {
                 brand: {
                     evenLighter: "#FFFFFF",
                     lightest: "#83a6d3",
+                    lighter: "#6D8FBA",
                     light: "#395c6b",
                     base: "#88aebf",
                     dark: "#1F2933",
