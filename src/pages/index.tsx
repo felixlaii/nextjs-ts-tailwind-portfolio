@@ -51,7 +51,7 @@ const Home: React.FC = () => {
           </section>
         </div>
         <div data-aos="fade-up">
-          <section className="mb-[10rem]" id="contact">
+          <section id="contact">
             <Contact isDarkMode={isDarkMode} />
           </section>
         </div>

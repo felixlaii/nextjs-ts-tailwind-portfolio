@@ -11,12 +11,13 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   technology,
   isDarkMode,
   index,
+  name,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 2500,
       once: false,
       mirror: true,
     });
@@ -26,10 +27,12 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
     <motion.div
       className={`flex flex-col justify-center shadow-3xl pt-8 pb-6 pl-10 pr-10 cursor-pointer ${
         isDarkMode
-          ? "bg-brand-light bg-cover border-double border-4 border-brand-lightish"
-          : "bg-brand-darkMode bg-cover border-double border-4 border-brand-dark"
-      }  border-double border-4 border-brand-dark hover:border-brand-light rounded-md h-[13rem] w-[23.7rem] md:w-[40rem] md:h-[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
-      data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
+          ? "bg-brand-light bg-cover border-double border-4 border-brand-lightish hover:border-brand-dark"
+          : "bg-brand-darkMode bg-cover border-double border-4 border-brand-dark hover:border-brand-light"
+      }  border-double border-4 border-brand-dark rounded-md h-[12rem] w-[23.3rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
+      data-aos={
+        isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
+      }
       whileHover={{
         scale: isHovered ? 1.1 : 1,
         transition: { type: "spring", stiffness: 200 },
@@ -50,7 +53,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 key={index}
                 src={iconUrl}
                 alt={`tech-icon-${index}`}
-                className="w-7 h-7 mb-4 px-1"
+                className="w-6 h-6 md:w-8 md:h-8 mb-4 px-1"
               />
             ))}
           </div>
@@ -64,20 +67,40 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             />
           </div>
         </div>
-        <div className="flex items-center ml-20 w-1/2">
-          <p
-            className={`text-[0.6rem] lg:text-lg font-extralight ${
-              isDarkMode
-                ? isHovered
-                  ? "text-brand-darkest"
-                  : "text-brand-lightish"
-                : isHovered
-                ? "text-zinc-800"
-                : "text-brand-dark"
-            }`}
-          >
-            {description}
-          </p>
+        <div className="flex flex-column  items-center ml-20 w-3/4">
+          <div className=" grid grid-cols-1 gap-5 content-around text-center ">
+            <div>
+              <p
+                className={`text-[0.9rem] md:text-[1.7rem] lg:text-[1.5rem] font-extralight ${
+                  isDarkMode
+                    ? isHovered
+                      ? "text-brand-light"
+                      : "text-brand-lightish"
+                    : isHovered
+                    ? "text-brand-light"
+                    : "text-brand-dark"
+                }`}
+              >
+                {name}
+              </p>
+            </div>
+
+            <div>
+              <p
+                className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
+                  isDarkMode
+                    ? isHovered
+                      ? "text-brand-light"
+                      : "text-brand-lightish"
+                    : isHovered
+                    ? "text-brand-light"
+                    : "text-brand-dark"
+                }`}
+              >
+                {description}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>

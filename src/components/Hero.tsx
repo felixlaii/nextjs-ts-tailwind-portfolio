@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface HeroDarkProps {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}
+import { HeroDarkProps } from "@/types/component-types";
 
 const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   useEffect(() => {
@@ -17,7 +13,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   }, []);
   const getImagePath = () => {
     return isDarkMode
-      ? "/images/felixlaii-logo-lightest.svg"
+      ? "/images/felixlaii-logo-lighter.svg"
       : "/images/felixlaii-logo-light.svg";
   };
 
@@ -55,7 +51,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
               </div>
               <p
                 className={`font-custom tracking-widest ml-2 ${
-                  isDarkMode ? "text-brand-lightest" : "text-brand-light"
+                  isDarkMode ? "text-brand-lighter" : "text-brand-light"
                 }`}
               >
                 dark mode
@@ -67,14 +63,14 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
         <div data-aos="fade-up" className="flex-column font-custom ml-4">
           <p
             className={`text-[2.3rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1 ${
-              isDarkMode ? "text-brand-lightest" : "text-brand-light"
+              isDarkMode ? "text-brand-lighter" : "text-brand-light"
             }`}
           >
             front-end software developer
           </p>
           <p
             className={`text-[1.5rem] md:text-[2.5rem] lg:text-[3rem] tracking-widest mb-2 ${
-              isDarkMode ? "text-brand-lightest" : "text-brand-light"
+              isDarkMode ? "text-brand-lighter" : "text-brand-light"
             }`}
           >
             & dog lover

@@ -3,12 +3,6 @@ import React, { ReactNode } from "react";
 export interface NavigationLink {
   name: string;
   href: string;
-  dropdown?: DropdownLink[];
-}
-
-export interface DropdownLink {
-  name: string;
-  href: string;
 }
 
 export interface HeaderProps {
@@ -17,7 +11,6 @@ export interface HeaderProps {
   hoverClassName: string;
   activeLinkClassName: string;
   currentActiveLocation?: string;
-  dropdownBorderColor?: string;
   textClassName?: string;
   companyName?: string;
   companyNameClassName?: string;
@@ -25,8 +18,6 @@ export interface HeaderProps {
   logoClassName?: string;
   alt?: string;
   onLinkClick?: () => void;
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
 }
 
 export interface ButtonProps {
@@ -59,23 +50,29 @@ export interface ContentProps {
   children: ReactNode;
   className?: string;
 }
-export interface CarouselIndicatorProps {
-  activeIndex: number;
-  length: number;
-  maxIndicatorVisible?: number;
-  onSetActiveIndex: (index: number) => void;
-}
-
-export interface CarouselCardProps {
-  index: number;
-  activeIndex: number;
-  children?: React.ReactNode;
-}
 
 export interface CarouselProps {
   width?: number;
   height?: number;
   items: React.ReactNode[];
+}
+
+export interface DarkModeProps {
+  isDarkMode: boolean;
+}
+
+export interface AboutDarkProps extends DarkModeProps {}
+
+export interface ContactDarkProps extends DarkModeProps {}
+
+export interface SkillsProps extends DarkModeProps {}
+
+export interface ProjectSetUpProps extends DarkModeProps {}
+
+export interface ArrowDarkProps extends DarkModeProps {}
+
+export interface HeroDarkProps extends DarkModeProps {
+  toggleDarkMode: () => void;
 }
 
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;

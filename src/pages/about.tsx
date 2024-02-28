@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import { IoMdDownload } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface AboutDarkProps {
-  isDarkMode: boolean;
-}
+import { AboutDarkProps } from "@/types/component-types";
 
 const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
   const onButtonClick = () => {
@@ -50,15 +47,22 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
             Toronto for a Bachelor of Arts Honours program. <br />
             I have over 10 years of luxury retail management experience from
             Links of London to Burberry to Gucci. <br />
-            Transitioned into tech and absolutely love it! <br />I have included
-            a downloadable resume below if you want to connect
+            I decided to do the Software Engineering boot camp at BrainStation
+            and I have absolutely fallen in love with coding.
+            <br />
+            The thing I love most about coding is the constant learning
+            involved. Post boot camp, I have learned Nextjs, TailwindCSS and
+            TypeScript and many more.
+            <br />
+            <br />I have included a downloadable resume below if you want to
+            connect
           </p>
         </div>
         <button
           data-aos="fade-up"
           className={`flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${
             isDarkMode
-              ? "text-brand-lightest border-brand-dark"
+              ? "text-brand-lightest border-brand-light"
               : "text-brand-dark border-brand-base"
           }`}
           onClick={onButtonClick}

@@ -3,10 +3,7 @@ import Image from "next/image";
 import { SkillsData } from "../../data/skills-data";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-interface SkillsProps {
-  isDarkMode: boolean;
-}
+import { SkillsProps } from "@/types/component-types";
 
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const topRowSkills = SkillsData.slice(0, 8);
@@ -42,7 +39,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
         {/* Top Row */}
         <div
           data-aos="fade-up-right"
-          className={`flex flex-col mb-14 border-4 border-brand-light mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem] ${
+          className={`flex flex-col mb-14 border-4 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem] ${
             isDarkMode ? "border-brand-base" : "border-brand-dark"
           }`}
         >
