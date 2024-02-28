@@ -11,6 +11,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   technology,
   isDarkMode,
   index,
+  name,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -66,20 +67,40 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             />
           </div>
         </div>
-        <div className="flex items-center ml-20 w-3/4">
-          <p
-            className={`text-[0.7rem] md:text-[1rem] lg:text-lg font-extralight ${
-              isDarkMode
-                ? isHovered
-                  ? "text-brand-light"
-                  : "text-brand-lightish"
-                : isHovered
-                ? "text-brand-light"
-                : "text-brand-dark"
-            }`}
-          >
-            {description}
-          </p>
+        <div className="flex flex-column  items-center ml-20 w-3/4">
+          <div className=" grid grid-cols-1 gap-5 content-around text-center ">
+            <div>
+              <p
+                className={`text-[0.9rem] md:text-[1.7rem] lg:text-[1.5rem] font-extralight ${
+                  isDarkMode
+                    ? isHovered
+                      ? "text-brand-light"
+                      : "text-brand-lightish"
+                    : isHovered
+                    ? "text-brand-light"
+                    : "text-brand-dark"
+                }`}
+              >
+                {name}
+              </p>
+            </div>
+
+            <div>
+              <p
+                className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
+                  isDarkMode
+                    ? isHovered
+                      ? "text-brand-light"
+                      : "text-brand-lightish"
+                    : isHovered
+                    ? "text-brand-light"
+                    : "text-brand-dark"
+                }`}
+              >
+                {description}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>
