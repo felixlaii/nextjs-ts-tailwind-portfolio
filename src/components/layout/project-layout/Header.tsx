@@ -214,7 +214,7 @@ const Header: React.FC<HeaderProps> = ({
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-full -translate-x-1/2 transform px-0 sm:px-0 lg:max-w-3xl bg-white border-y-[2px] shadow-xl">
+                <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-full -translate-x-1/2 transform px-0 sm:px-0 lg:max-w-3xl bg-zinc-200 border-y-[2px] shadow-xl">
                   {({ close }) => (
                     <div>
                       <MenuLinks
