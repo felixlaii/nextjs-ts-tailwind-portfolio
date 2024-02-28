@@ -44,7 +44,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
 
   return (
     <main
-      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-16 ${
+      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8 ${
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
       } `}
     >

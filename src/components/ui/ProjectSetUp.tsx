@@ -26,9 +26,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
     <motion.div
       className={`flex flex-col justify-center shadow-3xl pt-8 pb-6 pl-10 pr-10 cursor-pointer ${
         isDarkMode
-          ? "bg-brand-light bg-cover border-double border-4 border-brand-lightish"
-          : "bg-brand-darkMode bg-cover border-double border-4 border-brand-dark"
-      }  border-double border-4 border-brand-dark rounded-md h-[13rem] w-[23.7rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
+          ? "bg-brand-light bg-cover border-double border-4 border-brand-lightish hover:border-brand-dark"
+          : "bg-brand-darkMode bg-cover border-double border-4 border-brand-dark hover:border-brand-light"
+      }  border-double border-4 border-brand-dark rounded-md h-[12rem] w-[23.3rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
@@ -52,7 +52,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 key={index}
                 src={iconUrl}
                 alt={`tech-icon-${index}`}
-                className="w-7 h-7 mb-4 px-1"
+                className="w-6 h-6 md:w-8 md:h-8 mb-4 px-1"
               />
             ))}
           </div>
@@ -66,15 +66,15 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             />
           </div>
         </div>
-        <div className="flex items-center ml-20 w-1/2">
+        <div className="flex items-center ml-20 w-3/4">
           <p
-            className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
+            className={`text-[0.7rem] md:text-[1rem] lg:text-lg font-extralight ${
               isDarkMode
                 ? isHovered
-                  ? "text-brand-darkest"
+                  ? "text-brand-light"
                   : "text-brand-lightish"
                 : isHovered
-                ? "text-zinc-800"
+                ? "text-brand-light"
                 : "text-brand-dark"
             }`}
           >

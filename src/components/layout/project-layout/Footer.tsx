@@ -12,7 +12,7 @@ const LogoFooter = () => {
     <div>
       <div className="relative">
         <Image
-          className="sm:w-[8rem] sm:h-[2.5rem] md:w-[8rem] md:h-[2.5rem] lg:w-[11.5rem] lg:h-[2.5rem] pt-4 pb-2"
+          className="w-[8.3rem] h-[2.7rem] md:w-[8rem] md:h-[2.5rem] lg:w-[11.5rem] lg:h-[2.5rem] pt-4 pb-2"
           width={100}
           height={40}
           src="/images/felixlaii-logo-white.svg"
@@ -100,7 +100,7 @@ const PortfolioContact = () => {
 const Footer: React.FC<FooterDarkProps> = ({ isDarkMode }) => {
   return (
     <footer
-      className={`fixed bottom-0 w-full font-custom ${
+      className={` w-full font-custom ${
         isDarkMode ? "bg-light text-white" : "bg-dark text-black"
       }`}
     >
