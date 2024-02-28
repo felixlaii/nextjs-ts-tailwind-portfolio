@@ -28,7 +28,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
         isDarkMode
           ? "bg-brand-light bg-cover border-double border-4 border-brand-lightish"
           : "bg-brand-darkMode bg-cover border-double border-4 border-brand-dark"
-      }  border-double border-4 border-brand-dark rounded-md h-[13rem] w-[23.7rem] md:w-[40rem] md:h-[25rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
+      }  border-double border-4 border-brand-dark rounded-md h-[13rem] w-[23.7rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110`}
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
@@ -68,7 +68,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
         </div>
         <div className="flex items-center ml-20 w-1/2">
           <p
-            className={`text-[0.6rem] lg:text-lg font-extralight ${
+            className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
               isDarkMode
                 ? isHovered
                   ? "text-brand-darkest"
