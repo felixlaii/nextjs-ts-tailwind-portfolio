@@ -8,7 +8,7 @@ const Hero: React.FC<HeroDarkProps> = ({ isDarkMode, toggleDarkMode }) => {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      once: false,
+      once: true,
     });
   }, []);
   const getImagePath = () => {

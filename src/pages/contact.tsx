@@ -18,13 +18,16 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           : "bg-brand-base text-brand-light"
       } `}
     >
-      <h2
-        className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${
-          isDarkMode ? "text-brand-lightest" : "text-brand-light"
-        }`}
-      >
-        Lets Talk ...
-      </h2>
+      <div data-aos="zoom-in-up">
+        <h2
+          className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${
+            isDarkMode ? "text-brand-lightest" : "text-brand-light"
+          }`}
+        >
+          Lets Talk ...
+        </h2>
+      </div>
+
       <form
         name="contact"
         action="/success"
