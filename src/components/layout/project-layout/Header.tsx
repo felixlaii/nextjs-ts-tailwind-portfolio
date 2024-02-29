@@ -185,7 +185,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <div className={`${darkMode && "dark"}`}>
-      <header className="bg-dark dark:bg-brand-light flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
+      <header className="bg-brand-light dark:bg-brand-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
         <div className="flex items-center ">
           <div className="m-1">
             {logo ? (
