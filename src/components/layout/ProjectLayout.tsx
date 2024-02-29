@@ -36,7 +36,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
     >
       <AnimatePresence mode="wait">
         <motion.div>
-          <Wrapper isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+          <Wrapper>
             <Header
               logo={logo.src}
               navigationLinks={navigationLinks}
