@@ -11,6 +11,7 @@ const ThemeToggle = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
   }, [darkMode]);
 
