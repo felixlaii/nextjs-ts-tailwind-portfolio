@@ -4,6 +4,12 @@ import "aos/dist/aos.css";
 import { ContactDarkProps } from "@/types/component-types";
 
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
+  }, []);
   return (
     <div
       className={`flex flex-col items-center font-custom mt-10 ${
