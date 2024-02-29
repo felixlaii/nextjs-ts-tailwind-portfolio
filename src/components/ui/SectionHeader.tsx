@@ -5,7 +5,9 @@ export interface SectionHeaderProps {
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
   return (
     <>
-      <h2 className="mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest"></h2>
+      <h2 className="mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+        {title}
+      </h2>
     </>
   );
 };
