@@ -1,5 +1,5 @@
 const customPreset = require("./tailwind-preset");
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 
@@ -14,14 +14,14 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        dark: "#1F2933", // Dark mode background color
+        dark: "#1F2933",
       },
       textColor: {
-        dark: "#F3F4F6", // Dark mode text color
+        dark: "#F3F4F6",
       },
       fontFamily: {
-        custom: ["bebas", 'sans-serif']
-      }
+        custom: ["bebas", "sans-serif"],
+      },
     },
   },
   variants: {},
