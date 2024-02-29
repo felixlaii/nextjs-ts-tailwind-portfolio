@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectSetUp from "@/components/ui/ProjectSetUp";
 import { ProjectSetUpProps } from "@/types/component-types";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
+  }, []);
 
   const router = useRouter();
 
@@ -48,7 +57,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
         isDarkMode ? "bg-dark text-white " : "bg-light text-black"
       } `}
     >
-      <div>
+      <div data-aos="zoom-in-up">
         <h2
           className={`text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9 ${
             isDarkMode ? "text-brand-light" : "text-brand-base"

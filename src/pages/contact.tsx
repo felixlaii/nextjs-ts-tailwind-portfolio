@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ContactDarkProps } from "@/types/component-types";
 
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
+  }, []);
   return (
     <div
       className={`flex flex-col items-center font-custom mt-10 ${
@@ -10,13 +18,16 @@ const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
           : "bg-brand-base text-brand-light"
       } `}
     >
-      <h2
-        className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${
-          isDarkMode ? "text-brand-lightest" : "text-brand-light"
-        }`}
-      >
-        Lets Talk ...
-      </h2>
+      <div data-aos="zoom-in-up">
+        <h2
+          className={`text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 ${
+            isDarkMode ? "text-brand-lightest" : "text-brand-light"
+          }`}
+        >
+          Lets Talk ...
+        </h2>
+      </div>
+
       <form
         name="contact"
         action="/success"

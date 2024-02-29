@@ -12,7 +12,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      once: false,
+      once: true,
     });
   }, []);
 
@@ -26,7 +26,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
     >
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
-          <div data-aos="fade-right">
+          <div data-aos="zoom-in">
             <h2
               className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
                 isDarkMode ? "text-brand-lightest" : "text-brand-light"
@@ -38,7 +38,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
         </div>
         {/* Top Row */}
         <div
-          data-aos="fade-up-right"
+          data-aos="fade-down"
           className={`flex flex-col mb-14 border-4 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem] ${
             isDarkMode ? "border-brand-base" : "border-brand-dark"
           }`}
