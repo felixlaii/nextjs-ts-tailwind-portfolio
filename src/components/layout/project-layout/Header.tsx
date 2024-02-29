@@ -184,71 +184,98 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="bg-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
-      <div className="flex items-center ">
-        <div className="m-1">
-          {logo ? (
-            <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
-          ) : (
-            <Link href="/">
-              <div className={clsx(companyNameClassName, "")}>
-                {companyName}
+    <div className={`${darkMode && "dark"}`}>
+      <header className="bg-dark dark:bg-brand-light flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
+        <div className="flex items-center ">
+          <div className="m-1">
+            {logo ? (
+              <LogoLink logo={logo} alt={alt} logoClassName={logoClassName} />
+            ) : (
+              <Link href="/">
+                <div className={clsx(companyNameClassName, "")}>
+                  {companyName}
+                </div>
+              </Link>
+            )}
+          </div>
+          <div data-aos="fade-right" className="flex items-center ml-4">
+            <label className="flex items-center cursor-pointer">
+              <div className="relative flex items-center">
+                <input
+                  type="checkbox"
+                  className="hidden"
+                  onClick={toggleDarkMode}
+                />
+                <div className="toggle-track w-8 h-4 bg-gray-400 rounded-full shadow-inner relative">
+                  <div
+                    className={`toggle-thumb absolute w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
+                      darkMode ? "translate-x-full" : "translate-x-0"
+                    }`}
+                  ></div>
+                </div>
+                <p
+                  className={`font-custom tracking-widest ml-2 ${
+                    darkMode ? "text-brand-lighter" : "text-brand-light"
+                  }`}
+                >
+                  {darkMode ? "LHT" : "DRK"}
+                </p>
               </div>
-            </Link>
-          )}
+            </label>
+          </div>
         </div>
-      </div>
-      <div className="flex items-center ">
-        <Popover className=" lg:hidden">
-          {({ open, close }) => (
-            <>
-              <Popover.Button
-                className={clsx(
-                  "flex px-6 mt-2",
-                  "focus:outline-none focus:ring-1 focus-ring-inset focus:ring-black-100"
-                )}
-              >
-                <HamburgerIcon />
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-full -translate-x-1/2 transform px-0 sm:px-0 lg:max-w-3xl bg-zinc-200 border-y-[2px] shadow-xl">
-                  {({ close }) => (
-                    <div>
-                      <MenuLinks
-                        navigationLinks={navigationLinks}
-                        linkClassName={linkClassName}
-                        hoverClassName={hoverClassName}
-                        activeLinkClassName={activeLinkClassName}
-                        currentActiveLocation={currentActiveLocation}
-                        onLinkClick={() => close()}
-                      />
-                    </div>
+        <div className="flex items-center ">
+          <Popover className=" lg:hidden">
+            {({ open, close }) => (
+              <>
+                <Popover.Button
+                  className={clsx(
+                    "flex px-6 mt-2",
+                    "focus:outline-none focus:ring-1 focus-ring-inset focus:ring-black-100"
                   )}
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
-      </div>
-      <div className="hidden lg:inline-flex mt-3 justify-center">
-        <DesktopNavBar
-          navigationLinks={navigationLinks}
-          textClassName={textClassName}
-          linkClassName={linkClassName}
-          hoverClassName={hoverClassName}
-          activeLinkClassName={activeLinkClassName}
-          currentActiveLocation={currentActiveLocation}
-        />
-      </div>
-    </header>
+                >
+                  <HamburgerIcon />
+                </Popover.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute left-1/2 z-50 mt-10 w-full -translate-x-1/2 transform px-0 sm:px-0 lg:max-w-3xl bg-zinc-200 border-y-[2px] shadow-xl">
+                    {({ close }) => (
+                      <div>
+                        <MenuLinks
+                          navigationLinks={navigationLinks}
+                          linkClassName={linkClassName}
+                          hoverClassName={hoverClassName}
+                          activeLinkClassName={activeLinkClassName}
+                          currentActiveLocation={currentActiveLocation}
+                          onLinkClick={() => close()}
+                        />
+                      </div>
+                    )}
+                  </Popover.Panel>
+                </Transition>
+              </>
+            )}
+          </Popover>
+        </div>
+        <div className="hidden lg:inline-flex mt-3 justify-center">
+          <DesktopNavBar
+            navigationLinks={navigationLinks}
+            textClassName={textClassName}
+            linkClassName={linkClassName}
+            hoverClassName={hoverClassName}
+            activeLinkClassName={activeLinkClassName}
+            currentActiveLocation={currentActiveLocation}
+          />
+        </div>
+      </header>
+    </div>
   );
 };
 
