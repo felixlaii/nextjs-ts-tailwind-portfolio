@@ -17,13 +17,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <section
-      className={`flex flex-col font-custom ${
-        isDarkMode
-          ? "bg-brand-light text-black"
-          : "bg-brand-base text-brand-light"
-      }`}
-    >
+    <section className="dark:bg-brand-light dark:text-brand-light bg-brand-base text-black flex flex-col font-custom">
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
           <div data-aos="zoom-in">
