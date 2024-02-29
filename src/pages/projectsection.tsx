@@ -52,17 +52,9 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <main
-      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8 ${
-        isDarkMode ? "bg-dark text-white " : "bg-light text-black"
-      } `}
-    >
+    <main className="dark:bg-dark dark:text-black bg-light text-white flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8">
       <div data-aos="zoom-in-up">
-        <h2
-          className={`text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9 ${
-            isDarkMode ? "text-brand-light" : "text-brand-base"
-          }`}
-        >
+        <h2 className="dark:text-brand-light text-brand-base text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9">
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
