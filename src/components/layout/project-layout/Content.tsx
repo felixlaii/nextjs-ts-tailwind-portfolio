@@ -6,7 +6,6 @@ import clsx from "clsx";
 export interface ContentProps {
   containerPaddingStyle?: string;
   extraClassName?: string;
-  isDarkMode: boolean;
 }
 
 /**
@@ -16,13 +15,12 @@ export interface ContentProps {
 export const Content: React.FC<PropsWithChildren<ContentProps>> = ({
   extraClassName,
   children,
-  isDarkMode,
 }) => {
   return (
     <main
       className={clsx(
         "flex-1 min-h-full mx-auto",
-        isDarkMode ? "bg-brand-light text-white" : "bg-brand-base text-black",
+
         extraClassName
       )}
     >
