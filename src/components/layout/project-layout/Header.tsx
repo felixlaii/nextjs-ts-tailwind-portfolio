@@ -172,11 +172,16 @@ const Header: React.FC<HeaderProps> = ({
   logoClassName,
   alt,
 }) => {
+  const [darkMode, setDarkMode] = useState(false);
   const [isClick, setIsClick] = useState<boolean>(false);
   const ref = useRef(null);
   useOnClickOutside(ref, () => {
     setIsClick(false);
   });
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
     <header className="bg-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
