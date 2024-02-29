@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { IoMdDownload } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { AboutDarkProps } from "@/types/component-types";
 
-const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
+const About: React.FC = () => {
   const onButtonClick = () => {
     fetch("/felix-lai-resume.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -26,18 +25,10 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <div
-      className={`flex flex-col font-custom ${
-        isDarkMode ? "bg-dark text-brand-base" : "bg-light text-zinc-200"
-      }`}
-    >
+    <div className="bg-light text-zinc-300 dark:bg-dark dark:text-brand-base">
       <div className="flex justify-center flex-col items-center font-custom">
         <div data-aos="zoom-in-down" className="justify-center">
-          <h1
-            className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
-              isDarkMode ? "text-brand-light" : "text-brand-base"
-            }`}
-          >
+          <h1 className="dark:text-brand-light text-brand-base mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
             What About Me
           </h1>
         </div>
@@ -60,11 +51,7 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
         </div>
         <button
           data-aos="fade-up"
-          className={`flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${
-            isDarkMode
-              ? "text-brand-lightest border-brand-light"
-              : "text-brand-dark border-brand-base"
-          }`}
+          className="dark:text-brand-lightest dark:border-brand-light text-brand-dark border-brand-base flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
           onClick={onButtonClick}
         >
           Download Resume <IoMdDownload />

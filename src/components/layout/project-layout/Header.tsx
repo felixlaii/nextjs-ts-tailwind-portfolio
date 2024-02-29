@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Popover, Transition } from "@headlessui/react";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Logo from "../../Logo";
-
+import ThemeToggle from "@/components/ui/ThemeToggle";
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -198,31 +198,7 @@ const Header: React.FC<HeaderProps> = ({
               </Link>
             )}
           </div>
-          <div data-aos="fade-right" className="flex items-center ml-4">
-            <label className="flex items-center cursor-pointer">
-              <div className="relative flex items-center">
-                <input
-                  type="checkbox"
-                  className="hidden"
-                  onClick={toggleDarkMode}
-                />
-                <div className="toggle-track w-8 h-4 bg-gray-400 rounded-full shadow-inner relative">
-                  <div
-                    className={`toggle-thumb absolute w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-                      darkMode ? "translate-x-full" : "translate-x-0"
-                    }`}
-                  ></div>
-                </div>
-                <p
-                  className={`font-custom tracking-widest ml-2 ${
-                    darkMode ? "text-brand-lighter" : "text-brand-light"
-                  }`}
-                >
-                  {darkMode ? "LHT" : "DRK"}
-                </p>
-              </div>
-            </label>
-          </div>
+          <ThemeToggle />
         </div>
         <div className="flex items-center ">
           <Popover className=" lg:hidden">
