@@ -3,6 +3,7 @@ import { IoMdDownload } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { AboutDarkProps } from "@/types/component-types";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
   const onButtonClick = () => {
