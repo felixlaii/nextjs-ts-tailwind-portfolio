@@ -12,7 +12,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      once: false,
+      once: true,
     });
   }, []);
 

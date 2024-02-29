@@ -21,7 +21,7 @@ const About: React.FC<AboutDarkProps> = ({ isDarkMode }) => {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      once: false,
+      once: true,
     });
   }, []);
 
