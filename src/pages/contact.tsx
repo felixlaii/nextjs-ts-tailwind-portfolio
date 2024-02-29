@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ContactDarkProps } from "@/types/component-types";
 
 const Contact: React.FC<ContactDarkProps> = ({ isDarkMode }) => {
