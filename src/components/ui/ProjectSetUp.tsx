@@ -70,13 +70,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             <div>
               <p
                 className={`text-[0.9rem] md:text-[1.7rem] lg:text-[1.5rem] font-extralight ${
-                  isDarkMode
-                    ? isHovered
-                      ? "text-brand-light"
-                      : "text-brand-lightish"
-                    : isHovered
-                    ? "text-brand-light"
-                    : "text-brand-dark"
+                  isHovered
+                    ? "text-brand-dark"
+                    : "text-brand-light dark:text-brand-light dark:text-brand-dark"
                 }`}
               >
                 {name}
@@ -86,13 +82,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             <div>
               <p
                 className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
-                  isDarkMode
-                    ? isHovered
-                      ? "text-brand-light"
-                      : "text-brand-lightish"
-                    : isHovered
-                    ? "text-brand-light"
-                    : "text-brand-dark"
+                  isHovered
+                    ? "text-brand-dark"
+                    : "text-brand-light dark:text-brand-light dark:text-brand-dark"
                 }`}
               >
                 {description}
