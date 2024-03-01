@@ -19,7 +19,7 @@ module.exports = {
             colors: {
                 current: "currentColor",
                 brand: {
-                    evenLighter: "#FFFFFF",
+                    evenDarker: "#1F2933",
                     lightest: "#83a6d3",
                     lighter: "#6D8FBA",
                     light: "#395c6b",

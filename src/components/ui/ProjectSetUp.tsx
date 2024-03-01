@@ -28,7 +28,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       
  ${
    isHovered ? "" : ""
- } bg-brand-base hover:bg-brand-darkMode dark:bg-brand-lightish dark:hover:bg-brand-base`}
+ } bg-brand-lightish hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-lightish`}
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
