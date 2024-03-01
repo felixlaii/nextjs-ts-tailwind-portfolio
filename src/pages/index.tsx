@@ -10,10 +10,6 @@ import ProjectSection from "./projectsection";
 const Home: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
-
   useEffect(() => {
     AOS.init({
       duration: 1500,
