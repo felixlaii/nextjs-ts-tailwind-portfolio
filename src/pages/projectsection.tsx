@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectSetUp from "@/components/ui/ProjectSetUp";
-import { ProjectSetUpProps } from "@/types/component-types";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
+const ProjectSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   useEffect(() => {
@@ -110,7 +109,6 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
                 image={project.image}
                 technology={project.technology}
                 id={project.id}
-                isDarkMode={isDarkMode}
                 onClick={() => handleProjectClick(project.id)}
                 carousel={project.carousel}
               />

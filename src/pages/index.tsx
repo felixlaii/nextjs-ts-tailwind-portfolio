@@ -3,7 +3,6 @@ import Skills from "./expertise";
 import Hero from "@/components/Hero";
 import Contact from "./contact";
 import About from "./about";
-import { DarkModeProvider } from "@/contexts/DarkModeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ProjectSection from "./projectsection";
@@ -23,40 +22,35 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <DarkModeProvider
-      initialIsDarkMode={isDarkMode}
-      toggleDarkMode={toggleDarkMode}
-    >
-      <div
-        className={` w-full z-1 
+    <div
+      className={` w-full z-1 
           ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
           `}
-      >
-        <div data-aos="fade-down">
-          <Hero isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
-        <div data-aos="fade-left">
-          <section id="about">
-            <About isDarkMode={isDarkMode} />
-          </section>
-        </div>
-        <div data-aos="fade-right">
-          <section id="expertise">
-            <Skills isDarkMode={isDarkMode} />
-          </section>
-        </div>
-        <div data-aos="fade-down">
-          <section id="experience">
-            <ProjectSection isDarkMode={isDarkMode} />
-          </section>
-        </div>
-        <div data-aos="fade-up">
-          <section id="contact">
-            <Contact isDarkMode={isDarkMode} />
-          </section>
-        </div>
+    >
+      <div data-aos="fade-down">
+        <Hero />
       </div>
-    </DarkModeProvider>
+      <div data-aos="fade-left">
+        <section id="about">
+          <About />
+        </section>
+      </div>
+      <div data-aos="fade-right">
+        <section id="expertise">
+          <Skills />
+        </section>
+      </div>
+      <div data-aos="fade-down">
+        <section id="experience">
+          <ProjectSection />
+        </section>
+      </div>
+      <div data-aos="fade-up">
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
+    </div>
   );
 };
 

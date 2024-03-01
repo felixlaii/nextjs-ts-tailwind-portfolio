@@ -9,7 +9,6 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   description,
   image,
   technology,
-  isDarkMode,
   index,
   name,
 }) => {
@@ -25,9 +24,11 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={`bg-brand-darkMode bg-cover border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 pb-6 pl-10 pr-10 cursor-pointer dark:bg-brand-light dark:bg-cover dark:border-double dark:border-4 dark:border-brand-lightish dark:hover:border-brand-dark rounded-md h-[12rem] w-[23.3rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
+      className={` border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 pb-6 pl-10 pr-10 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[23.3rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
       
- `}
+ ${
+   isHovered ? "" : ""
+ } bg-brand-base hover:bg-brand-darkMode dark:bg-brand-lightish dark:hover:bg-brand-base`}
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
@@ -37,9 +38,6 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
-        backgroundColor: isHovered ? (isDarkMode ? "#6A98B0" : "#81BBDA") : "",
-      }}
     >
       <div className="flex flex-row">
         <div className="flex flex-col ">

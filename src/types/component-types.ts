@@ -36,7 +36,7 @@ export interface ProjectCardProps {
   deployedUrl?: string;
   id: string;
   longDescription: string;
-  isDarkMode: boolean;
+
   carousel?: string[];
   onClick: () => void;
   index: number;
@@ -55,24 +55,6 @@ export interface CarouselProps {
   width?: number;
   height?: number;
   items: React.ReactNode[];
-}
-
-export interface DarkModeProps {
-  isDarkMode: boolean;
-}
-
-export interface AboutDarkProps extends DarkModeProps {}
-
-export interface ContactDarkProps extends DarkModeProps {}
-
-export interface SkillsProps extends DarkModeProps {}
-
-export interface ProjectSetUpProps extends DarkModeProps {}
-
-export interface ArrowDarkProps extends DarkModeProps {}
-
-export interface HeroDarkProps extends DarkModeProps {
-  toggleDarkMode: () => void;
 }
 
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;
