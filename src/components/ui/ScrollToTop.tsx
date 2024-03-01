@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { ArrowDarkProps } from "@/types/component-types";
 
-const ScrollToTopButton: React.FC<ArrowDarkProps> = ({ isDarkMode }) => {
+const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -35,14 +34,10 @@ const ScrollToTopButton: React.FC<ArrowDarkProps> = ({ isDarkMode }) => {
     <div
       onClick={scrollToTop}
       className={`${
-        isVisible ? "opacity-100" : "opacity-100"
+        isVisible ? "opacity-100" : "opacity-50"
       } fixed float-right bottom-1/2 right-4 transform -translate-y-6 transition-opacity duration-300 ease-in-out cursor-pointer bg-brand-dark p-2 rounded-full`}
     >
-      <FaArrowUp
-        className={` w-6 h-6 ${
-          isDarkMode ? "text-brand-dark" : "text-brand-lightest"
-        }`}
-      />
+      <FaArrowUp className="text-brand-light dark:text-brand-lightest w-6 h-6" />
     </div>
   );
 };

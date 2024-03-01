@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { ProjectsData } from "../../data/projects-data";
 import ProjectSetUp from "@/components/ui/ProjectSetUp";
-import { ProjectSetUpProps } from "@/types/component-types";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
+const ProjectSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   useEffect(() => {
@@ -52,17 +51,9 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <main
-      className={`flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8 ${
-        isDarkMode ? "bg-dark text-white " : "bg-light text-black"
-      } `}
-    >
+    <main className="dark:bg-dark dark:text-black bg-light text-white flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8">
       <div data-aos="zoom-in-up">
-        <h2
-          className={`text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9 ${
-            isDarkMode ? "text-brand-light" : "text-brand-base"
-          }`}
-        >
+        <h2 className="dark:text-brand-light text-brand-base text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9">
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
@@ -105,7 +96,7 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="mt-10 sm:h-full lg:h-[20rem] lg:w-[40rem] hover:border-none last:border-none"
+            className="mt-10 mb-10 sm:h-full lg:h-[20rem] lg:w-[40rem] hover:border-none last:border-none"
           >
             <span onClick={() => handleProjectClick(project.id)}>
               <ProjectSetUp
@@ -118,7 +109,6 @@ const ProjectSection: React.FC<ProjectSetUpProps> = ({ isDarkMode }) => {
                 image={project.image}
                 technology={project.technology}
                 id={project.id}
-                isDarkMode={isDarkMode}
                 onClick={() => handleProjectClick(project.id)}
                 carousel={project.carousel}
               />

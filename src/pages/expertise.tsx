@@ -3,9 +3,8 @@ import Image from "next/image";
 import { SkillsData } from "../../data/skills-data";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { SkillsProps } from "@/types/component-types";
 
-const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
+const Skills: React.FC = () => {
   const topRowSkills = SkillsData.slice(0, 8);
   const bottomRowSkills = SkillsData.slice(8, 16);
 
@@ -17,21 +16,11 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <section
-      className={`flex flex-col font-custom ${
-        isDarkMode
-          ? "bg-brand-light text-black"
-          : "bg-brand-base text-brand-light"
-      }`}
-    >
+    <section className="dark:bg-brand-light dark:text-brand-light bg-brand-base text-black flex flex-col font-custom">
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
           <div data-aos="zoom-in">
-            <h2
-              className={`mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest ${
-                isDarkMode ? "text-brand-lightest" : "text-brand-light"
-              }`}
-            >
+            <h2 className="text-brand-light dark:text-brand-lightest mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
               My Expertise
             </h2>
           </div>
@@ -39,9 +28,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
         {/* Top Row */}
         <div
           data-aos="fade-down"
-          className={`flex flex-col mb-14 border-4 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem] ${
-            isDarkMode ? "border-brand-base" : "border-brand-dark"
-          }`}
+          className="dark:border-brand-base border-brand-light flex flex-col mb-14 border-4 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem]"
         >
           <div>
             <ul className="flex justify-between items-center mx-4 sm:mx-auto">
