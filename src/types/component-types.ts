@@ -36,7 +36,6 @@ export interface ProjectCardProps {
   deployedUrl?: string;
   id: string;
   longDescription: string;
-
   carousel?: string[];
   onClick: () => void;
   index: number;
