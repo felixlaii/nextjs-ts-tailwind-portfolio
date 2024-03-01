@@ -69,7 +69,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               <p
                 className={`text-[0.9rem] md:text-[1.7rem] lg:text-[1.5rem] font-extralight ${
                   isHovered
-                    ? "text-brand-light"
+                    ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
                 }`}
               >
@@ -81,7 +81,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               <p
                 className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
                   isHovered
-                    ? "text-brand-light"
+                    ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
                 }`}
               >
