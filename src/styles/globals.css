@@ -16,5 +16,5 @@ body {
 }
 
 * {
-  @apply duration-200 transition-colors;
+  @apply duration-100 transition-colors;
 }
