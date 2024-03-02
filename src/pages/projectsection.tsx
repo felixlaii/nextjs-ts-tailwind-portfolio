@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ProjectSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("professional");
 
   useEffect(() => {
     AOS.init({
@@ -18,7 +18,7 @@ const ProjectSection: React.FC = () => {
   const router = useRouter();
 
   const filteredProjects =
-    selectedCategory === "all"
+    selectedCategory === "professional"
       ? ProjectsData
       : ProjectsData.filter((project) => project.category === selectedCategory);
 
@@ -61,7 +61,7 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "all"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                ? "font-bold text-brand-dark text-[1rem] tracking-widest"
                 : ""
             }`}
             onClick={() => setSelectedCategory("all")}
@@ -71,7 +71,7 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "professional"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                ? "font-bold text-brand-dark text-[1rem] tracking-widest"
                 : ""
             }`}
             onClick={() => setSelectedCategory("professional")}
@@ -82,7 +82,7 @@ const ProjectSection: React.FC = () => {
           <button
             className={`${
               selectedCategory === "school"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
+                ? "font-bold text-brand-dark text-[1rem] tracking-widest"
                 : ""
             }`}
             onClick={() => setSelectedCategory("school")}
