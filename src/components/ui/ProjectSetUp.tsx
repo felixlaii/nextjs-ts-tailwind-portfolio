@@ -28,7 +28,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       
  ${
    isHovered ? "" : ""
- } bg-brand-lightish hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-lightish`}
+ } bg-brand-cardbg hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-cardbg`}
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
@@ -43,8 +43,8 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
         <div data-aos="zoom-in">
           <Image
             className="rounded-lg object-center"
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             src={image}
             alt="project logo"
           />

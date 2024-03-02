@@ -29,7 +29,8 @@ module.exports = {
                     lightish: "#84a0b0",
                     darkMode: "#6A98B0",
                     bgdark: "#81BBDA",
-                    textDark: "#F3F4F6"
+                    textDark: "#F3F4F6",
+                    cardbg: "#668998"
                 },
                 ui: {
                     error: red[700],
