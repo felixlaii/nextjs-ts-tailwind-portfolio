@@ -54,6 +54,17 @@ module.exports = {
             90: "90",
             100: "100",
         }
-    }
+    },
+    plugins: [
+        plugin(function ({ addUtilities}) {
+            const utilities = {
+                ".text-3d-shadow-transform": {
+                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+                    transform: "perspective(100px) rotateX(20deg)"
+                  },
+            };
+            addUtilities(utilities)
+        })
+    ]
     
 }
