@@ -63,8 +63,8 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "all"
-                ? "font-bold text-brand-base text-[1.2rem] tracking-widest"
-                : "font-bold text-brand-dark text-[1rem] tracking-widest"
+                ? "font-bold text-brand-base text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("all")}
           >
@@ -73,8 +73,8 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "professional"
-                ? "font-bold text-brand-base text-[1.2rem] tracking-widest"
-                : "font-bold text-brand-dark text-[1rem] tracking-widest"
+                ? "font-bold text-brand-base text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("professional")}
           >
@@ -84,8 +84,8 @@ const ProjectSection: React.FC = () => {
           <button
             className={`${
               selectedCategory === "school"
-                ? "font-bold text-brand-base text-[1.2rem] tracking-widest"
-                : "font-bold text-brand-dark text-[1rem] tracking-widest"
+                ? "font-bold text-brand-base text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("school")}
           >
