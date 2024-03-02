@@ -6,6 +6,40 @@ import { Popover, Transition } from "@headlessui/react";
 import HamburgerIcon from "@/components/ui/icons/HamburgerIcon";
 import Logo from "../../Logo";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+
+type ScrollDirection = "up" | "down" | null;
+
+export function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = useState<ScrollDirection>(null);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.scrollY;
+      const direction: ScrollDirection = scrollY > lastScrollY ? "down" : "up";
+
+      // Checking if the direction changed and the scroll difference is significant
+      if (
+        direction !== scrollDirection &&
+        Math.abs(scrollY - lastScrollY) > 10
+      ) {
+        setScrollDirection(direction);
+      }
+
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+
+    window.addEventListener("scroll", updateScrollDirection);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection);
+    };
+  }, [scrollDirection]);
+
+  return scrollDirection;
+}
+
 export function useOnClickOutside<T extends HTMLDivElement>(
   ref: React.RefObject<T>,
   handler: (e: any) => void
@@ -174,6 +208,8 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const [darkMode, setDarkMode] = useState(false);
   const [isClick, setIsClick] = useState<boolean>(false);
+  const scrollDirection = useScrollDirection();
+
   const ref = useRef(null);
   useOnClickOutside(ref, () => {
     setIsClick(false);
@@ -184,8 +220,13 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <div className={`${darkMode && "dark"}`}>
-      <header className="bg-brand-light dark:bg-brand-dark flex font-custom font-primary font-extralight justify-between w-full items-center z-40 pb-2">
+    <div className={`  ${darkMode && "dark"}`}>
+      <header
+        className={`fixed ${
+          scrollDirection === "down" ? "-top-24" : "top-0"
+        } transition-all duration-400 bg-brand-light dark:bg-brand-dark flex font-custom font-primary font-extralight justify-between w-full items-center pb-2`}
+      >
+        {" "}
         <div className="flex items-center ">
           <div className="m-1">
             {logo ? (

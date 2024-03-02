@@ -63,6 +63,10 @@ module.exports = {
                     textShadow: "4px 4px 4px rgba(0, 0, 0, 0.3)",
                     transform: "perspective(100px)"
                   },
+                  ".header-transition": {
+                    transition: "top 2s ease",
+                    top: "5%"
+                  }
             };
             addUtilities(utilities)
         })
