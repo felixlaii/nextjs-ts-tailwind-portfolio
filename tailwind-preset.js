@@ -57,6 +57,7 @@ module.exports = {
         }
     },
     plugins: [
+        require("@tailwindcss/forms"),
         plugin(function ({ addUtilities}) {
             const utilities = {
                 ".text-3d": {

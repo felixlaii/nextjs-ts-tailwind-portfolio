@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
     });
   }, []);
   return (
-    <div className="bg-brand-base text-brand-light dark:bg-brand-light dark:text-white flex flex-col items-center font-custom mt-10">
+    <section className="bg-brand-base text-brand-light dark:bg-brand-light dark:text-white flex flex-col items-center font-custom mt-10">
       <div data-aos="zoom-in-up">
         <h2 className="text-3d text-brand-light dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
           Lets Talk ...
@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
         action="/success"
         method="POST"
         data-netlify="true"
-        className="flex flex-col w-1/2"
+        className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md"
       >
         <input type="hidden" name="form-name" value="contact" />
         <label>Name:</label>
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
           Submit
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 
