@@ -29,7 +29,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
             logo={logo.src}
             navigationLinks={navigationLinks}
             currentActiveLocation={location.pathname}
-            textClassName="group text-md transition-all duration-300 ease-in-out text-black font-light mx-8 text-zinc-400"
+            textClassName="group text-md transition-all duration-300 ease-in-out text-black font-light mx-8 text-brand-lightish dark:text-brand-base"
             linkClassName="flex bg-left-bottom lg:text-md"
             logoClassName="w-full sm:w-3/5 md:w-3/4 ml-2 mt-2 mr-1"
             hoverClassName={clsx(
