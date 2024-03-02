@@ -18,7 +18,7 @@ const ProjectSection: React.FC = () => {
   const router = useRouter();
 
   const filteredProjects =
-    selectedCategory === "professional"
+    selectedCategory === "all"
       ? ProjectsData
       : ProjectsData.filter((project) => project.category === selectedCategory);
 
@@ -57,12 +57,14 @@ const ProjectSection: React.FC = () => {
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
-          <p className="font-custom pr-4">Filter:</p>
+          <p className="font-custom text-brand-dark text-[1.1rem] tracking-wider pr-4">
+            Filter:
+          </p>
           <button
             className={`mr-4 ${
               selectedCategory === "all"
-                ? "font-bold text-brand-dark text-[1rem] tracking-widest"
-                : ""
+                ? "font-bold text-brand-base text-[1.2rem] tracking-widest"
+                : "font-bold text-brand-dark text-[1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("all")}
           >
@@ -71,19 +73,19 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "professional"
-                ? "font-bold text-brand-dark text-[1rem] tracking-widest"
-                : ""
+                ? "font-bold text-brand-base text-[1.2rem] tracking-widest"
+                : "font-bold text-brand-dark text-[1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("professional")}
           >
-            Professional
+            My Work
           </button>
 
           <button
             className={`${
               selectedCategory === "school"
-                ? "font-bold text-brand-dark text-[1rem] tracking-widest"
-                : ""
+                ? "font-bold text-brand-base text-[1.2rem] tracking-widest"
+                : "font-bold text-brand-dark text-[1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("school")}
           >
