@@ -20,7 +20,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   return (
-    <div className="h-auto flex flex-col items-center justify-center mb-[10rem] pt-[5rem]">
+    <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[4rem]">
       <div className="flex flex-row items-center mx-auto">
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />

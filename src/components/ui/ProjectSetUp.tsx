@@ -39,29 +39,15 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex flex-row">
-        <div className="flex flex-col ">
-          <div className="flex flex-row justify-around">
-            {technology.map((iconUrl, index) => (
-              <Image
-                height={80}
-                width={80}
-                key={index}
-                src={iconUrl}
-                alt={`tech-icon-${index}`}
-                className="w-6 h-6 md:w-8 md:h-8 mb-4 px-1"
-              />
-            ))}
-          </div>
-          <div data-aos="zoom-in">
-            <Image
-              className="rounded-lg object-center"
-              width={150}
-              height={150}
-              src={image}
-              alt="project logo"
-            />
-          </div>
+      <div className="flex items-center align-middle">
+        <div data-aos="zoom-in">
+          <Image
+            className="rounded-lg object-center"
+            width={200}
+            height={200}
+            src={image}
+            alt="project logo"
+          />
         </div>
         <div className="flex flex-column  items-center ml-20 w-3/4">
           <div className=" grid grid-cols-1 gap-5 content-around text-center ">
@@ -75,6 +61,18 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               >
                 {name}
               </p>
+            </div>
+            <div className="flex flex-row justify-around">
+              {technology.map((iconUrl, index) => (
+                <Image
+                  height={80}
+                  width={80}
+                  key={index}
+                  src={iconUrl}
+                  alt={`tech-icon-${index}`}
+                  className="w-6 h-6 md:w-8 md:h-8 mb-4 px-1"
+                />
+              ))}
             </div>
 
             <div>
