@@ -40,7 +40,7 @@ module.exports = {
         textShadow: {
             sm: "0 1px 10px var(--tw-shadow-color)",
             DEFAULT: "0 2px 10px var(--tw-shadow-color)",
-            lg: "0 8px 16px var(--tw-shadow-color)",
+            lg: "0 8px 25px var(--tw-shadow-color)",
         },
         zIndex: {
             0: "0",
