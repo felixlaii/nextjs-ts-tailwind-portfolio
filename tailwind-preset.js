@@ -29,7 +29,8 @@ module.exports = {
                     lightish: "#84a0b0",
                     darkMode: "#6A98B0",
                     bgdark: "#81BBDA",
-                    textDark: "#F3F4F6"
+                    textDark: "#F3F4F6",
+                    cardbg: "#668998"
                 },
                 ui: {
                     error: red[700],
@@ -54,6 +55,21 @@ module.exports = {
             90: "90",
             100: "100",
         }
-    }
+    },
+    plugins: [
+        plugin(function ({ addUtilities}) {
+            const utilities = {
+                ".text-3d": {
+                    textShadow: "4px 4px 4px rgba(0, 0, 0, 0.3)",
+                    transform: "perspective(100px)"
+                  },
+                  ".header-transition": {
+                    transition: "top 2s ease",
+                    top: "5%"
+                  }
+            };
+            addUtilities(utilities)
+        })
+    ]
     
 }

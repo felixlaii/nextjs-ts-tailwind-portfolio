@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ProjectSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("professional");
 
   useEffect(() => {
     AOS.init({
@@ -53,16 +53,18 @@ const ProjectSection: React.FC = () => {
   return (
     <main className="dark:bg-dark dark:text-black bg-light text-white flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8">
       <div data-aos="zoom-in-up">
-        <h2 className="dark:text-brand-light text-brand-base text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9">
+        <h2 className="text-3d dark:text-brand-light text-brand-base text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9">
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
-          <p className="font-custom pr-4">Filter:</p>
+          <p className="font-custom text-brand-dark dark:text-brand-base text-[1.1rem] tracking-wider pr-4">
+            Filter:
+          </p>
           <button
             className={`mr-4 ${
               selectedCategory === "all"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
-                : ""
+                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("all")}
           >
@@ -71,19 +73,19 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "professional"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
-                : ""
+                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("professional")}
           >
-            Professional
+            My Work
           </button>
 
           <button
             className={`${
               selectedCategory === "school"
-                ? "font-bold text-brand-lightest text-[1rem] tracking-widest"
-                : ""
+                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("school")}
           >

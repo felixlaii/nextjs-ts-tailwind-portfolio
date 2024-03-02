@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
           <div data-aos="zoom-in">
-            <h2 className="text-brand-light dark:text-brand-lightest mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+            <h2 className="text-3d text-brand-light dark:text-brand-lightest mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
               My Expertise
             </h2>
           </div>

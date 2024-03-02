@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
   return (
     <div className="bg-brand-base text-brand-light dark:bg-brand-light dark:text-white flex flex-col items-center font-custom mt-10">
       <div data-aos="zoom-in-up">
-        <h2 className="text-brand-light dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
+        <h2 className="text-3d text-brand-light dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
           Lets Talk ...
         </h2>
       </div>

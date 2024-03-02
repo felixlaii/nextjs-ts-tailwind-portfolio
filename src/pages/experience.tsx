@@ -20,7 +20,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   return (
-    <div className="h-auto flex flex-col items-center justify-center mb-[10rem] pt-[5rem]">
+    <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
       <div className="flex flex-row items-center mx-auto">
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />
@@ -85,16 +85,16 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
 
-      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-9">
+      <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-9">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col items-center text-center mx-auto">
-            <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mb-5 text-brand-lightish tracking-widest">
+            <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
               View My Work
             </h3>
             <div className="flex flex-row mb-9">
               {githubUrl && (
                 <a
-                  className="border-double border-4 border-brand-lightish hover:border-brand-dark hover:text-brand-lightish px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                  className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -104,7 +104,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
               )}
               {deployedUrl && (
                 <a
-                  className="border-double border-4 border-brand-lightish hover:border-brand-dark px-10 hover:text-brand-lightish mx-4 font-custom tracking-wide rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                  className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                   href={deployedUrl}
                   target="_blank"
                   rel="noopener noreferrer"
