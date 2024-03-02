@@ -62,7 +62,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 {name}
               </p>
             </div>
-            <div className="flex flex-row justify-around">
+            <div className="flex flex-row justify-evenly">
               {technology.map((iconUrl, index) => (
                 <Image
                   height={80}
