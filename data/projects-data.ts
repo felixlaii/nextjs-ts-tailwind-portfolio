@@ -23,7 +23,8 @@ export const ProjectsData: {
       "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid. There are animation effects to wow any online client! ",
     category: "professional",
     technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
@@ -155,7 +156,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
     longDescription:
@@ -192,8 +193,8 @@ export const ProjectsData: {
       "A Weather search application. All Data pulled from Open Weather API. It has information on all cities and countries around the world!",
     category: "school",
     technology: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
