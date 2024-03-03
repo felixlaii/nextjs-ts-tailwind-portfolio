@@ -70,7 +70,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                   key={index}
                   src={iconUrl}
                   alt={`tech-icon-${index}`}
-                  className="lg:w-6 lg:h-6 w-5 h-5 md:w-8 md:h-8 mb-4 px-1"
+                  className="lg:w-6 lg:h-6 w-5 h-4 md:w-8 md:h-8 lg:mb-4 mb-1 px-1"
                 />
               ))}
             </div>
