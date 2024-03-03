@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
         <label className="dark:text-brand-base block mb-1 ml-1">Email:</label>
         <input
           className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
-          placeholder="email@email.com"
+          placeholder="john/jane@email.com"
           type="email"
           name="email"
           required
