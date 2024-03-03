@@ -42,14 +42,14 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       <div className="flex items-center align-middle">
         <div data-aos="zoom-in">
           <Image
-            className="rounded-sm object-center"
-            width={270}
-            height={270}
+            className="rounded-sm object-center w-100"
+            width={400}
+            height={400}
             src={image}
             alt="project logo"
           />
         </div>
-        <div className="flex flex-column items-center ml-14 w-86">
+        <div className="flex flex-column items-center ml-14 w-86 lg:w-3/4">
           <div className="grid grid-cols-1 gap-1 lg:gap-5 content-around text-center ">
             <div>
               <p
