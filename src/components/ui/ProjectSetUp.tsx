@@ -42,7 +42,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       <div className="flex items-center align-middle">
         <div data-aos="zoom-in">
           <Image
-            className="rounded-sm object-center sm:w-56 w-100"
+            className="rounded-sm object-center sm:w-[25rem] w-100"
             width={300}
             height={300}
             src={image}
@@ -53,7 +53,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           <div className="grid grid-cols-1 gap-1 lg:gap-5 content-around text-center ">
             <div>
               <p
-                className={`font-bold text-[0.7rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-wide lg:tracking-widest ${
+                className={`font-bold text-[0.7rem] sm:text-[1rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-wide lg:tracking-widest ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
@@ -77,7 +77,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
             <div className="">
               <p
-                className={`text-[0.5rem] md:text-[1rem] lg:text-lg font-extralight ${
+                className={`text-[0.5rem] sm:text-[0.7rem] md:text-[1rem] lg:text-lg font-extralight ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
