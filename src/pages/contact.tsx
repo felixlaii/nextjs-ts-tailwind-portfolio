@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
         <input type="hidden" name="form-name" value="contact" />
         <label className="dark:text-brand-dark block ml-1">Name:</label>
         <input
-          className="placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
+          className="placeholder-brand-lightish block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
           type="text"
           name="name"
           placeholder="John/Jane Doe"
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
         />
         <label className="dark:text-brand-dark block mb-1 ml-1">Email:</label>
         <input
-          className="placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
+          className="placeholder-brand-lightish block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
           placeholder="email@email.com"
           type="email"
           name="email"
@@ -42,13 +42,13 @@ const Contact: React.FC = () => {
         />
         <label className="dark:text-brand-dark block mb-1 ml-1">Message:</label>
         <textarea
-          className="placeholder-brand-light block w-full p-2 rounded  focus:outline-none focus:ring focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 focus:ri dark:bg-brand-cardbg"
+          className="placeholder-brand-lightish block w-full p-2 rounded  focus:outline-none focus:ring focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 focus:ri dark:bg-brand-cardbg"
           placeholder="what should we do?"
           name="message"
           required
         ></textarea>
         <button
-          className="w-full bg-brand-light text-brand-base px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring  focus:ri dark:bg-brand-lightish focus:ri hover:ri dark:text-brand-darkest"
+          className="w-full bg-brand-light text-brand-base px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring  focus:ri dark:bg-brand-lightish focus:ri hover:ri dark:text-brand-darkest tracking-widest"
           type="submit"
         >
           Submit
