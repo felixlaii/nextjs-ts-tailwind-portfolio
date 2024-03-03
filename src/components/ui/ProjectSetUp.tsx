@@ -42,9 +42,9 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       <div className="flex items-center align-middle">
         <div data-aos="zoom-in">
           <Image
-            className="rounded-lg object-center"
-            width={250}
-            height={250}
+            className="rounded-sm object-center"
+            width={270}
+            height={270}
             src={image}
             alt="project logo"
           />
