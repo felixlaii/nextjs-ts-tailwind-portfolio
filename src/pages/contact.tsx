@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
     });
   }, []);
   return (
-    <section className="pt-[2.5rem] lg:pt-[6rem] pb-[6rem] bg-brand-base text-brand-light dark:bg-brand-light dark:text-white flex flex-col items-center font-custom mt-10">
+    <section className="pt-[2.5rem] lg:pt-[6rem] lg:pb-[6rem] pb-[5rem] bg-brand-base text-brand-light dark:bg-brand-light dark:text-white flex flex-col items-center font-custom mt-10">
       <form
         name="contact"
         action="/success"
@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
         className="container w-full max-w-sm lg:max-w-xl p-8 mx-auto space-y-4 rounded-md shadow-2xl"
       >
         <div data-aos="zoom-in-up">
-          <h2 className="text-center text-3d text-brand-light dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5">
+          <h2 className="text-center text-3d text-brand-light dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-2 lg:pb-5">
             Lets Talk ...
           </h2>
         </div>
