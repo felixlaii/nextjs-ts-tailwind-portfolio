@@ -53,7 +53,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           <div className="grid grid-cols-1 gap-1 lg:gap-5 content-around text-center ">
             <div>
               <p
-                className={`font-bold text-[0.8rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-widest ${
+                className={`font-bold text-[0.8rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-wide lg:tracking-widest ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
