@@ -24,7 +24,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={` border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 lg:pb-6 pb-8 lg:pl-10 lg:pr-10 pl-7 pr-7 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[23.3rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
+      className={` border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 lg:pb-6 pb-8 lg:pl-10 lg:pr-10 pl-7 pr-7 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[20rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
       
  ${
    isHovered ? "" : ""
@@ -49,11 +49,11 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             alt="project logo"
           />
         </div>
-        <div className="flex flex-column  items-center ml-20 w-3/4">
+        <div className="flex flex-column items-center ml-14 w-86">
           <div className="grid grid-cols-1 gap-1 lg:gap-5 content-around text-center ">
             <div>
               <p
-                className={`font-bold text-[0.8rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-wide lg:tracking-widest ${
+                className={`font-bold text-[0.7rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-wide lg:tracking-widest ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
@@ -77,7 +77,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
             <div className="">
               <p
-                className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
+                className={`text-[0.5rem] md:text-[1rem] lg:text-lg font-extralight ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
