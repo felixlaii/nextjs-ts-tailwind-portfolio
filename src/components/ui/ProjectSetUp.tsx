@@ -24,7 +24,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={` border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 pb-6 pl-10 pr-10 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[23.3rem] md:w-[37rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
+      className={` border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 lg:pb-6 pb-8 lg:pl-10 lg:pr-10 pl-7 pr-7 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[20rem] sm:w-[25rem] md:w-[47rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
       
  ${
    isHovered ? "" : ""
@@ -42,18 +42,18 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       <div className="flex items-center align-middle">
         <div data-aos="zoom-in">
           <Image
-            className="rounded-lg object-center"
-            width={250}
-            height={250}
+            className="rounded-sm object-center sm:w-[25rem] w-100"
+            width={300}
+            height={300}
             src={image}
             alt="project logo"
           />
         </div>
-        <div className="flex flex-column  items-center ml-20 w-3/4">
-          <div className=" grid grid-cols-1 gap-5 content-around text-center ">
+        <div className="flex flex-column items-center ml-14 w-86 lg:w-3/4">
+          <div className="grid grid-cols-1 gap-1 lg:gap-5 content-around text-center ">
             <div>
               <p
-                className={`font-bold text-[0.9rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-widest ${
+                className={`font-bold text-[0.7rem] sm:text-[1rem] md:text-[1.7rem] lg:text-[1.5rem] tracking-wide lg:tracking-widest ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"
@@ -70,14 +70,14 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                   key={index}
                   src={iconUrl}
                   alt={`tech-icon-${index}`}
-                  className="w-6 h-6 md:w-8 md:h-8 mb-4 px-1"
+                  className="lg:w-6 lg:h-6 w-5 h-4 md:w-8 md:h-8 lg:mb-4 mb-1 px-1"
                 />
               ))}
             </div>
 
-            <div>
+            <div className="">
               <p
-                className={`text-[0.6rem] md:text-[1rem] lg:text-lg font-extralight ${
+                className={`text-[0.5rem] sm:text-[0.7rem] md:text-[1rem] lg:text-lg font-extralight ${
                   isHovered
                     ? "text-brand-light dark:text-brand-darkest"
                     : "text-brand-dark dark:text-brand-light dark:text-brand-dark"

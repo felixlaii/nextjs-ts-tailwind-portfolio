@@ -33,9 +33,9 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
             linkClassName="flex bg-left-bottom lg:text-md"
             logoClassName="w-full sm:w-3/5 md:w-3/4 ml-2 mt-2 mr-1"
             hoverClassName={clsx(
-              "flex bg-left-bottom hover:text-brand-lightest bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+              "flex bg-left-bottom hover:text-brand-base bg-gradient-to-r from-brand-darkest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
             )}
-            activeLinkClassName="text-brand-lightest font-normal lg:text-lg font-light"
+            activeLinkClassName="text-brand-cardbg font-normal lg:text-lg font-light"
           />
           <Content>{children}</Content>
           <ScrollToTopButton />
