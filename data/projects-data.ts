@@ -141,8 +141,30 @@ export const ProjectsData: {
     ],
   },
   {
-    id: "pawfinder",
+    id: "ChatGPT",
     index: 6,
+    image:
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
+    name: "ChatGPT Clone",
+    description:
+      "This is a simple chat application built with Next.js and integrated with the OpenAI API for generating responses. It allows users to interact with an AI assistant and view the conversation history.",
+    category: "school",
+    technology: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1710642500/openai_jituka.svg",
+    ],
+    githubUrl: "https://github.com/felixlaii/nextjs-openai",
+    longDescription:
+      "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
+  },
+  {
+    id: "pawfinder",
+    index: 7,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
     name: "PawFinder",
@@ -164,7 +186,7 @@ export const ProjectsData: {
   },
   {
     id: "instock",
-    index: 7,
+    index: 8,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698362163/InStock-Logo_ewqhfc.svg",
     name: "inStock",
@@ -185,7 +207,7 @@ export const ProjectsData: {
   },
   {
     id: "weather-app",
-    index: 8,
+    index: 9,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698531550/weather-static_mjvjn6.png",
     name: "Weather App",
@@ -212,7 +234,7 @@ export const ProjectsData: {
   },
   {
     id: "pokemon-search",
-    index: 9,
+    index: 10,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698532305/pokemon-static_agigqy.png",
     name: "Pokemon Search",
