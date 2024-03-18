@@ -43,6 +43,7 @@ const ProjectSection: React.FC = () => {
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
             carousel: selectedProject.carousel,
+            videoUrl: selectedProject.videoUrl,
           },
         },
         `/experience#${selectedProject.id}`
