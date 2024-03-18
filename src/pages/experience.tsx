@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
+import { cn } from "@/lib/utils";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
@@ -14,6 +15,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
+  const videoUrl = router.query.videoUrl as string;
 
   const goBack = () => {
     router.back();
@@ -37,6 +39,26 @@ const Experience: React.FC<ProjectCardProps> = () => {
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] lg:text-[1.5rem] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
+      ) : videoUrl ? (
+        // Render the video
+        <div className="flex flex-col items-center bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            <video
+              className={cn(
+                "object-cover  h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
+              )}
+              controls
+            >
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
