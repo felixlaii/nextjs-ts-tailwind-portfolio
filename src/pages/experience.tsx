@@ -13,7 +13,10 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const githubUrl = router.query.githubUrl as string;
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
-  const carousel = router.query.carousel as string[];
+  const carousel = router.query.carousel as Array<{
+    imageUrl?: string;
+    videoUrl?: string;
+  }>;
 
   const goBack = () => {
     router.back();
@@ -33,7 +36,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
       {carousel && carousel.length > 0 ? (
         <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
           <div className="mt-4 mx-auto">
-            <Carousel carousel={carousel} />
+            <Carousel carousel={carousel} items={[]} />
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] lg:text-[1.5rem] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">

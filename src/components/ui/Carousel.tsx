@@ -3,10 +3,11 @@ import { MouseEvent as ReactMouseEvent, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CarouselProps } from "@/types/component-types";
 
-interface CarouselProps {
-  carousel: string[];
-}
+// interface CarouselProps {
+//   carousel: Array<{ imageUrl?: string; videoUrl?: string }>;
+// }
 
 const START_INDEX = 1;
 const DRAG_THRESHOLD = 150;
@@ -218,12 +219,12 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             }}
             onDragEnd={handleDragSnap}
           >
-            {carousel.map((img, i) => {
+            {carousel.map((item, i) => {
               const active = i === activeSlide;
 
               return (
                 <motion.li
-                  key={`${img} - ${i}`}
+                  key={`${item.imageUrl ?? item.videoUrl} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
                     "group relative shrink-0 select-none transition-opacity duration-300 mx-1",
@@ -237,15 +238,28 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     flexBasis: active ? "40%" : "30%",
                   }}
                 >
-                  <Image
-                    width={500}
-                    height={500}
-                    src={img}
-                    className={cn(
-                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
-                    )}
-                    alt={`project-carousel-${i}`}
-                  />
+                  {item.videoUrl ? (
+                    <video
+                      className={cn(
+                        "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
+                      )}
+                      controls
+                    >
+                      <source src={item.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    // Otherwise, render image
+                    <Image
+                      width={500}
+                      height={500}
+                      src={item.imageUrl ?? ""}
+                      className={cn(
+                        "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
+                      )}
+                      alt={`project-carousel-${i}`}
+                    />
+                  )}
                 </motion.li>
               );
             })}

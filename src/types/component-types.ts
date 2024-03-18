@@ -53,6 +53,10 @@ export interface ContentProps {
 export interface CarouselProps {
   width?: number;
   height?: number;
+  imageUrl?: string;
+  videoUrl?: string;
+  carousel: Array<{ imageUrl?: string; videoUrl?: string }>;
+
   items: React.ReactNode[];
 }
 

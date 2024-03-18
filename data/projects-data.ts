@@ -1,3 +1,8 @@
+interface CarouselItem {
+  imageUrl?: string;
+  videoUrl?: string;
+}
+
 export const ProjectsData: {
   image: string;
   name: string;
@@ -8,7 +13,7 @@ export const ProjectsData: {
   deployedUrl?: string;
   id: string;
   longDescription: string;
-  carousel?: string[];
+  carousel?: Array<{ imageUrl?: string; videoUrl?: string }>;
   index: number;
 }[] = [
   {
@@ -34,12 +39,30 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/richmond-dental-nextjs",
     deployedUrl: "https://richmondwestdental.com",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.08_PM_vluz4h.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.27.20_PM_bohl41.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.29_PM_bpy7k7.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160917/Screenshot_2023-12-09_at_5.27.37_PM_twgcfx.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.44_PM_bjapxg.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.28.03_PM_cbeguq.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.08_PM_vluz4h.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.27.20_PM_bohl41.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.29_PM_bpy7k7.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160917/Screenshot_2023-12-09_at_5.27.37_PM_twgcfx.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.44_PM_bjapxg.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.28.03_PM_cbeguq.png",
+      },
     ],
   },
   {
@@ -61,11 +84,26 @@ export const ProjectsData: {
     longDescription:
       "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service. They have always hosted their website on SquareSpace but wanted a more elevated online presence. I injected custom JavaScript, HTML5 and CSS3 to update their website and the client was more than happy with the outcome!",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161302/Screenshot_2023-12-09_at_5.34.16_PM_eye2nb.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.24_PM_apk2gs.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.32_PM_w0btuk.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.41_PM_hsslku.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.50_PM_b26noe.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161302/Screenshot_2023-12-09_at_5.34.16_PM_eye2nb.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.24_PM_apk2gs.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.32_PM_w0btuk.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.41_PM_hsslku.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.50_PM_b26noe.png",
+      },
     ],
   },
   {
@@ -87,11 +125,26 @@ export const ProjectsData: {
     longDescription:
       "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art! They wanted to create an online presence for their clients to view and book their artists and wanted a minimal vibe. This website is also hosted on SquareSpace but I definitely injected custom code (JavaScript, HTML5 and CSS3) to elevate their website.",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.00_PM_jsmq14.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.12_PM_l6xva0.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.21_PM_ixrklm.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738566/Screenshot_2024-02-23_at_8.35.40_PM_hapafi.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738638/Screenshot_2024-02-23_at_8.37.14_PM_vc5gez.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.00_PM_jsmq14.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.12_PM_l6xva0.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.21_PM_ixrklm.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738566/Screenshot_2024-02-23_at_8.35.40_PM_hapafi.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738638/Screenshot_2024-02-23_at_8.37.14_PM_vc5gez.png",
+      },
     ],
   },
   {
@@ -113,11 +166,26 @@ export const ProjectsData: {
     longDescription:
       "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide. The client wanted to give their website a small revamp and I simply injected code into their existing application to elevate the experience!",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.12_PM_kiydck.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.26_PM_wgjpzj.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.19_PM_zehoqr.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.32_PM_gxhi8y.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.37_PM_gi9mxz.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.12_PM_kiydck.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.26_PM_wgjpzj.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.19_PM_zehoqr.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.32_PM_gxhi8y.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.37_PM_gi9mxz.png",
+      },
     ],
   },
   {
@@ -135,16 +203,25 @@ export const ProjectsData: {
     longDescription:
       "When the client reached out to me and expressed concern over their website that hasn't been updated for 20 years, we got to work immediately thinking of ways to refresh and attract potential parents. This website is still under progress and cannot wait for the final results! Stay tuned!",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png",
+      },
     ],
   },
   {
     id: "ChatGPT",
     index: 6,
     image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174362/pawfinder-static_pvnjkw.png",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1710642871/Screenshot_2024-03-16_at_10.32.52_PM_mjzbf8.png",
     name: "ChatGPT Clone",
     description:
       "This is a simple chat application built with Next.js and integrated with the OpenAI API for generating responses. It allows users to interact with an AI assistant and view the conversation history.",
@@ -161,6 +238,12 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/nextjs-openai",
     longDescription:
       "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
+    carousel: [
+      {
+        videoUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1710642802/Screen_Recording_2024-03-16_at_10.07.15_PM_v6rdwe.mov",
+      },
+    ],
   },
   {
     id: "pawfinder",
@@ -227,9 +310,18 @@ export const ProjectsData: {
     longDescription:
       "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information. This has weather information for all cities and countries around the world!",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
+      },
     ],
   },
   {
@@ -255,8 +347,14 @@ export const ProjectsData: {
     longDescription:
       "Are you feeling nostalgic? A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon. This application was created with React and uses MaterialUI for the components and it was definitely a great experience learning this package!",
     carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
+      },
+      {
+        imageUrl:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
+      },
     ],
   },
 ];
