@@ -114,6 +114,7 @@ const ProjectSection: React.FC = () => {
                 id={project.id}
                 onClick={() => handleProjectClick(project.id)}
                 carousel={project.carousel}
+                videoUrl={project.videoUrl}
               />
             </span>
           </div>
