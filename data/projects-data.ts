@@ -9,7 +9,7 @@ export const ProjectsData: {
   id: string;
   longDescription: string;
   carousel?: string[];
-  videoUrl?: string;
+  videoUrl?: string[];
   index: number;
 }[] = [
   {
@@ -41,6 +41,9 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160917/Screenshot_2023-12-09_at_5.27.37_PM_twgcfx.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.44_PM_bjapxg.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.28.03_PM_cbeguq.png",
+    ],
+    videoUrl: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
     ],
   },
   {
@@ -162,8 +165,9 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/nextjs-openai",
     longDescription:
       "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
-    videoUrl:
+    videoUrl: [
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1710642802/Screen_Recording_2024-03-16_at_10.07.15_PM_v6rdwe.mov",
+    ],
   },
   {
     id: "pawfinder",
