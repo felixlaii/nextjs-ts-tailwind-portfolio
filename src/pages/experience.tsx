@@ -17,7 +17,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
-  const videoUrl = router.query.videoUrl as string[] | undefined;
+  const videoUrl = router.query.videoUrl as string;
 
   const goBack = () => {
     router.back();
@@ -58,19 +58,19 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
 
-      {carousel && carousel.length > 0 ? (
-        <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
-          <div className="mt-4 mx-auto">
+      {selectedCategory === "image" && (
+        <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
             <Carousel carousel={carousel} />
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] lg:text-[1.5rem] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
         </div>
-      ) : videoUrl ? (
-        // Render the video
+      )}
+      {selectedCategory === "video" && (
         <div className="flex flex-col items-center bg-brand-light w-full pt-9">
           <div className="mt-4 pb-9">
             <video
@@ -89,26 +89,25 @@ const Experience: React.FC<ProjectCardProps> = () => {
             </p>
           </div>
         </div>
-      ) : (
-        // Render the single image
-        image && (
-          <div className="bg-brand-light w-full pt-9">
-            <div className="mt-4 pb-9">
-              <Image
-                className="object-fit mx-auto rounded-md"
-                src={image}
-                height={400}
-                width={400}
-                alt="project-image"
-              />
-            </div>
-            <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-              <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-                {longDescription}
-              </p>
-            </div>
+      )}
+
+      {image && (
+        <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            <Image
+              className="object-fit mx-auto rounded-md"
+              src={image}
+              height={400}
+              width={400}
+              alt="project-image"
+            />
           </div>
-        )
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
       )}
 
       <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-7 pb-7">
