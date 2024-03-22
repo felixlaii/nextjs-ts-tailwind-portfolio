@@ -23,6 +23,8 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     damping: 20,
     stiffness: 150,
   });
+
+  const [isDragging, setIsDragging] = useState(false);
   return <div></div>;
 };
 
