@@ -4,10 +4,12 @@ import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
 import { cn } from "@/lib/utils";
-
+import { useState } from "react";
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
-
+  const [selectedCategory, setSelectedCategory] = useState<"image" | "video">(
+    "image"
+  );
   const name = router.query.name as string;
   const image = router.query.image as string;
   const technology = router.query.technology as string[] | undefined;
@@ -15,12 +17,12 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
-  const videoUrl = router.query.videoUrl as string;
+  const videoUrl = router.query.videoUrl as string[] | undefined;
 
   const goBack = () => {
     router.back();
   };
-
+  const isVideoAvailable = videoUrl !== undefined;
   return (
     <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
       <div className="flex flex-row items-center mx-auto">
@@ -30,6 +32,30 @@ const Experience: React.FC<ProjectCardProps> = () => {
         <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-dark">
           {name}
         </h2>
+      </div>
+      <div className="flex justify-center mt-4">
+        <button
+          className={`mr-4 ${
+            selectedCategory === "image"
+              ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
+              : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
+          }`}
+          onClick={() => setSelectedCategory("image")}
+        >
+          Images
+        </button>
+        {isVideoAvailable && (
+          <button
+            className={`mr-4 ${
+              selectedCategory === "video"
+                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
+            }`}
+            onClick={() => setSelectedCategory("video")}
+          >
+            Videos
+          </button>
+        )}
       </div>
 
       {carousel && carousel.length > 0 ? (
