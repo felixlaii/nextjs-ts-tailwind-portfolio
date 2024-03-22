@@ -29,7 +29,12 @@ const ProjectSection: React.FC = () => {
       (project) => project.id === projectId
     );
 
-    if (selectedProject) {
+    if (selectedProject && selectedProject.carousel) {
+      const carouselData = selectedProject.carousel.map((item) => ({
+        imageUrl: item.imageUrl,
+        videoUrl: item.videoUrl,
+      }));
+
       router.push(
         {
           pathname: "/experience",
@@ -42,8 +47,7 @@ const ProjectSection: React.FC = () => {
             longDescription: selectedProject.longDescription,
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
-            carousel: selectedProject.carousel,
-            videoUrl: selectedProject.videoUrl,
+            carousel: JSON.stringify(carouselData),
           },
         },
         `/experience#${selectedProject.id}`
@@ -113,8 +117,12 @@ const ProjectSection: React.FC = () => {
                 technology={project.technology}
                 id={project.id}
                 onClick={() => handleProjectClick(project.id)}
-                carousel={project.carousel}
-                videoUrl={project.videoUrl}
+                carousel={
+                  project.carousel?.map((item) => ({
+                    type: item.imageUrl && !item.videoUrl ? "image" : "video",
+                    url: item.imageUrl || item.videoUrl || "", // Set the URL based on imageUrl or videoUrl
+                  })) ?? []
+                }
               />
             </span>
           </div>

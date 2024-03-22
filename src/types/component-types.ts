@@ -37,7 +37,7 @@ export interface ProjectCardProps {
   videoUrl?: string;
   id: string;
   longDescription: string;
-  carousel?: string[];
+  carousel?: Array<{ type: "image" | "video"; url: string | undefined }>;
   onClick: () => void;
   index: number;
 }

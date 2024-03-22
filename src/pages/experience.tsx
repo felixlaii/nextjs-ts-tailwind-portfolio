@@ -14,12 +14,20 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const githubUrl = router.query.githubUrl as string;
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
-  const carousel = router.query.carousel as string[];
+  const carousel = router.query.carousel as string[] | undefined;
+
   const videoUrl = router.query.videoUrl as string;
 
   const goBack = () => {
     router.back();
   };
+
+  const carouselData = Array.isArray(carousel)
+    ? carousel.map((url) => ({
+        imageUrl: url.endsWith(".mp4") ? undefined : url,
+        videoUrl: url.endsWith(".mp4") ? url : undefined,
+      }))
+    : [];
 
   return (
     <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
@@ -32,10 +40,10 @@ const Experience: React.FC<ProjectCardProps> = () => {
         </h2>
       </div>
 
-      {carousel && carousel.length > 0 ? (
+      {carouselData.length > 0 && (
         <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
           <div className="mt-4 mx-auto">
-            <Carousel carousel={carousel} />
+            <Carousel carousel={carouselData} />
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] lg:text-[1.5rem] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
@@ -43,7 +51,9 @@ const Experience: React.FC<ProjectCardProps> = () => {
             </p>
           </div>
         </div>
-      ) : videoUrl ? (
+      )}
+
+      {videoUrl && (
         // Render the video
         <div className="flex flex-col items-center bg-brand-light w-full pt-9">
           <div className="mt-4 pb-9">
@@ -63,26 +73,26 @@ const Experience: React.FC<ProjectCardProps> = () => {
             </p>
           </div>
         </div>
-      ) : (
+      )}
+
+      {!carouselData.length && (
         // Render the single image
-        image && (
-          <div className="bg-brand-light w-full pt-9">
-            <div className="mt-4 pb-9">
-              <Image
-                className="object-fit mx-auto rounded-md"
-                src={image}
-                height={400}
-                width={400}
-                alt="project-image"
-              />
-            </div>
-            <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-              <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-                {longDescription}
-              </p>
-            </div>
+        <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            <Image
+              className="object-fit mx-auto rounded-md"
+              src={image}
+              height={400}
+              width={400}
+              alt="project-image"
+            />
           </div>
-        )
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
       )}
 
       <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-7 pb-7">
