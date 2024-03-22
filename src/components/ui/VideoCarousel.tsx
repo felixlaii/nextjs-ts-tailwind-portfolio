@@ -33,6 +33,8 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     setIsDragging(false);
     containerRef.current?.removeAttribute("data-dragging");
     animatedX.stop();
+
+    const currentOffset = offsetX.get();
   }
 
   return <div></div>;
