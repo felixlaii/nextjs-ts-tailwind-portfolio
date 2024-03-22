@@ -16,4 +16,14 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
   videoCarousel = [],
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const [activeSlide, setActiveSlide] = useState(START_INDEX);
+  const offsetX = useMotionValue(0);
+  const animatedX = useSpring(offsetX, {
+    damping: 20,
+    stiffness: 150,
+  });
+  return <div></div>;
 };
+
+export default VideoCarousel;
