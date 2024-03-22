@@ -25,6 +25,16 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
   });
 
   const [isDragging, setIsDragging] = useState(false);
+
+  function handleDragSnap(
+    _: MouseEvent,
+    { offset: { x: dragOffset } }: PanInfo
+  ) {
+    setIsDragging(false);
+    containerRef.current?.removeAttribute("data-dragging");
+    animatedX.stop();
+  }
+
   return <div></div>;
 };
 
