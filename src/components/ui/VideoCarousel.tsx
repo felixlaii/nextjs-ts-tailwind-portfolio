@@ -11,3 +11,9 @@ const START_INDEX = 1;
 const DRAG_THRESHOLD = 150;
 
 const CURSOR_SIZE = 80;
+
+const VideoCarousel: React.FC<VideoCarouselProps> = ({
+  videoCarousel = [],
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+};
