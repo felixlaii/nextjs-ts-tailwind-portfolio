@@ -8,6 +8,41 @@ import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+interface VideoPlayerProps {
+  videoUrl: string;
+  onClose: () => void;
+}
+
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  videoUrl,
+  onClose,
+}) => {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
+      <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
+      <button
+        className="absolute top-0 right-0 m-4 text-white"
+        onClick={onClose}
+      >
+        Close
+      </button>
+    </div>
+  );
+};
+
 interface VideoCarouselProps {
   videoCarousel: string[];
 }
@@ -57,22 +92,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
   });
 
   const [isDragging, setIsDragging] = useState(false);
-  //   const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
-  //     null
-  //   );
 
-  //   const mouseX = useMotionValue(0);
-  //   const mouseY = useMotionValue(0);
-  //   const animatedHoverX = useSpring(mouseX, {
-  //     damping: 20,
-  //     stiffness: 400,
-  //     mass: 0.1,
-  //   });
-  //   const animatedHoverY = useSpring(mouseY, {
-  //     damping: 20,
-  //     stiffness: 400,
-  //     mass: 0.1,
-  //   });
   function handleDragSnap(
     _: MouseEvent,
     { offset: { x: dragOffset } }: PanInfo
@@ -259,7 +279,6 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
             onDragEnd={handleDragSnap}
           >
             {videoCarousel.map((video, i) => {
-              // const active = i === activeSlide;
               const active = video === activeVideo;
               return (
                 <motion.li
@@ -277,9 +296,8 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 >
                   <video
                     className={cn(
-                      "object-cover w-100 h-64 md:h-96 xl:h-[29rem] rounded-lg shadow-lg "
+                      "object-cover w-100 h-64 md:h-96 xl:h-[29rem] rounded-lg shadow-lg"
                     )}
-                    // alt={`project-carousel-${i}`}
                     controls
                   >
                     <source src={video} type="video/mp4" />
@@ -288,9 +306,12 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
               );
             })}
           </motion.ul>
+          {activeVideo && (
+            <VideoPlayer videoUrl={activeVideo} onClose={handleVideoClose} />
+          )}
           <button
             type="button"
-            className="group absolute left-[24%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute left-[1%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
@@ -306,7 +327,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
           </button>
           <button
             type="button"
-            className="group absolute right-[18%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute right-[1%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
