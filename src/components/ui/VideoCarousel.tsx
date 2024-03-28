@@ -1,4 +1,9 @@
-import { MouseEvent as ReactMouseEvent, useRef, useState } from "react";
+import {
+  MouseEvent as ReactMouseEvent,
+  useRef,
+  useState,
+  useEffect,
+} from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -16,10 +21,30 @@ const CURSOR_SIZE = 80;
 const VideoCarousel: React.FC<VideoCarouselProps> = ({
   videoCarousel = [],
 }) => {
-  console.log("videoCarousel:", videoCarousel);
-  console.log("videoCarousel length:", videoCarousel.length);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
+  const handleVideoClick = (video: string) => {
+    setActiveVideo(video);
+  };
+
+  const handleVideoClose = () => {
+    setActiveVideo(null);
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      handleVideoClose();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   const [activeSlide, setActiveSlide] = useState(START_INDEX);
   const canScrollPrev = activeSlide > 0;
