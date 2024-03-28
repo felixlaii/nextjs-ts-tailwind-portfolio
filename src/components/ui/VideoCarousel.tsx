@@ -49,7 +49,7 @@ interface VideoCarouselProps {
 
 const START_INDEX = 1;
 const DRAG_THRESHOLD = 150;
-const FALLBACK_WIDTH = 509;
+const FALLBACK_WIDTH = 809;
 
 const CURSOR_SIZE = 80;
 
@@ -236,7 +236,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -296,7 +296,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                   key={`${video} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative shrink-0 select-none transition-opacity duration-300 mx-1"
+                    "group relative  shrink-0 select-none transition-opacity duration-300 mx-1"
                   )}
                   onClick={() => handleVideoClick(video)}
                   transition={{
@@ -306,7 +306,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 >
                   <video
                     className={cn(
-                      "object-cover h-64 md:h-96 xl:h-[29rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
+                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
                       !active && "opacity-30",
                       active && "opacity-100"
                     )}

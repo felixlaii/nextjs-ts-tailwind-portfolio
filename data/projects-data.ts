@@ -44,8 +44,10 @@ export const ProjectsData: {
     ],
     videoCarousel: [
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711666503/Screen_Recording_2024-03-28_at_6.50.38_PM_lcnp10.mov",
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
-      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711666502/Screen_Recording_2024-03-28_at_6.53.28_PM_jmjkhh.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711666528/Screen_Recording_2024-03-28_at_6.55.00_PM_wz1ut3.mov",
     ],
   },
   {
