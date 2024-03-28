@@ -7,8 +7,20 @@ import "aos/dist/aos.css";
 
 const ProjectSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("professional");
-
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const storedCategory = localStorage.getItem("selectedCategory");
+        if (
+          storedCategory &&
+          ["all", "professional", "school"].includes(storedCategory)
+        ) {
+          setSelectedCategory(storedCategory);
+        }
+      } catch (error) {
+        console.error("Error accessing localStorage:", error);
+      }
+    }
     AOS.init({
       duration: 1500,
       once: true,
@@ -16,6 +28,10 @@ const ProjectSection: React.FC = () => {
   }, []);
 
   const router = useRouter();
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    localStorage.setItem("selectedCategory", category);
+  };
 
   const filteredProjects =
     selectedCategory === "all"
