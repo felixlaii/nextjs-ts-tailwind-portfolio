@@ -259,8 +259,8 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
             onDragEnd={handleDragSnap}
           >
             {videoCarousel.map((video, i) => {
-              const active = i === activeSlide;
-
+              // const active = i === activeSlide;
+              const active = video === activeVideo;
               return (
                 <motion.li
                   key={`${video} - ${i}`}
@@ -269,6 +269,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                     "group relative w-1/3 shrink-0 select-none transition-opacity duration-300 mx-1",
                     !active && "opacity-30"
                   )}
+                  onClick={() => handleVideoClick(video)}
                   transition={{
                     ease: "easeInOut",
                     duration: 0.4,
