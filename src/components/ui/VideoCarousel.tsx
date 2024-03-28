@@ -1,4 +1,4 @@
-import {
+import React, {
   MouseEvent as ReactMouseEvent,
   useRef,
   useState,
@@ -58,14 +58,17 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
-  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [activeState, setActiveState] = useState<{
+    slideIndex: number;
+    videoUrl: string | null;
+  }>({ slideIndex: START_INDEX, videoUrl: null });
 
-  const handleVideoClick = (video: string) => {
-    setActiveVideo(video);
+  const handleVideoClick = (videoUrl: string) => {
+    setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
   };
 
   const handleVideoClose = () => {
-    setActiveVideo(null);
+    setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
   };
 
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -81,9 +84,8 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     };
   }, []);
 
-  const [activeSlide, setActiveSlide] = useState(START_INDEX);
-  const canScrollPrev = activeSlide > 0;
-  const canScrollNext = activeSlide < videoCarousel.length - 1;
+  const canScrollPrev = activeState.slideIndex > 0;
+  const canScrollNext = activeState.slideIndex < videoCarousel.length - 1;
 
   const offsetX = useMotionValue(0);
   const animatedX = useSpring(offsetX, {
@@ -115,7 +117,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     let offsetWidth = 0;
 
     for (
-      let i = activeSlide;
+      let i = activeState.slideIndex;
       dragOffset > 0 ? i >= 0 : i < videoCarousel.length;
       dragOffset > 0 ? i-- : i++
     ) {
@@ -142,10 +144,10 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
 
       if (dragOffset > 0) {
         offsetX.set(currentOffset + offsetWidth + prevItemWidth);
-        setActiveSlide(i - 1);
+        setActiveState({ slideIndex: i - 1, videoUrl: activeState.videoUrl });
       } else {
         offsetX.set(currentOffset + offsetWidth - nextItemWidth);
-        setActiveSlide(i + 1);
+        setActiveState({ slideIndex: i + 1, videoUrl: activeState.videoUrl });
       }
       break;
     }
@@ -155,22 +157,30 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     if (!canScrollPrev) return;
 
     const nextWidth =
-      itemsRef.current[activeSlide - 1]?.getBoundingClientRect().width;
+      itemsRef.current[activeState.slideIndex - 1]?.getBoundingClientRect()
+        .width;
     if (nextWidth === undefined) return;
 
     offsetX.set(offsetX.get() + nextWidth);
-    setActiveSlide((prev) => prev - 1);
+    setActiveState({
+      slideIndex: activeState.slideIndex - 1,
+      videoUrl: activeState.videoUrl,
+    });
   }
 
   function scrollNext() {
     if (!canScrollNext) return;
 
     const nextWidth =
-      itemsRef.current[activeSlide + 1]?.getBoundingClientRect().width;
+      itemsRef.current[activeState.slideIndex + 1]?.getBoundingClientRect()
+        .width;
     if (nextWidth === undefined) return;
 
     offsetX.set(offsetX.get() - nextWidth);
-    setActiveSlide((prev) => prev + 1);
+    setActiveState({
+      slideIndex: activeState.slideIndex + 1,
+      videoUrl: activeState.videoUrl,
+    });
   }
 
   const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
@@ -226,7 +236,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -279,14 +289,14 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
             onDragEnd={handleDragSnap}
           >
             {videoCarousel.map((video, i) => {
-              const active = video === activeVideo;
+              const active =
+                video === activeState.videoUrl && i === activeState.slideIndex;
               return (
                 <motion.li
                   key={`${video} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative w-1/3 shrink-0 select-none transition-opacity duration-300 mx-1",
-                    !active && "opacity-30"
+                    "group relative shrink-0 select-none transition-opacity duration-300 mx-1"
                   )}
                   onClick={() => handleVideoClick(video)}
                   transition={{
@@ -296,7 +306,9 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 >
                   <video
                     className={cn(
-                      "object-cover w-100 h-64 md:h-96 xl:h-[29rem] rounded-lg shadow-lg"
+                      "object-cover h-64 md:h-96 xl:h-[29rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
+                      !active && "opacity-30",
+                      active && "opacity-100"
                     )}
                     controls
                   >
@@ -306,8 +318,11 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
               );
             })}
           </motion.ul>
-          {activeVideo && (
-            <VideoPlayer videoUrl={activeVideo} onClose={handleVideoClose} />
+          {activeState.videoUrl && (
+            <VideoPlayer
+              videoUrl={activeState.videoUrl}
+              onClose={handleVideoClose}
+            />
           )}
           <button
             type="button"
