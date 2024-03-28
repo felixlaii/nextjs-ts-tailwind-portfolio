@@ -5,6 +5,8 @@ import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import VideoCarousel from "@/components/ui/VideoCarousel";
+
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<"image" | "video">(
@@ -17,12 +19,12 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
-  const videoUrl = router.query.videoUrl as string;
+  const videoCarousel = router.query.videoCarousel as string[];
 
   const goBack = () => {
     router.back();
   };
-  const isVideoAvailable = videoUrl !== undefined;
+  const isVideoAvailable = videoCarousel !== undefined;
   return (
     <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
       <div className="flex flex-row items-center mx-auto">
@@ -73,15 +75,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
       {selectedCategory === "video" && (
         <div className="flex flex-col items-center bg-brand-light w-full pt-9">
           <div className="mt-4 pb-9">
-            <video
-              className={cn(
-                "object-cover  h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
-              )}
-              controls
-            >
-              <source src={videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <VideoCarousel videoCarousel={videoCarousel} />
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">

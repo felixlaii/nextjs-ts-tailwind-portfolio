@@ -43,7 +43,7 @@ const ProjectSection: React.FC = () => {
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
             carousel: selectedProject.carousel,
-            videoUrl: selectedProject.videoUrl,
+            videoCarousel: selectedProject.videoCarousel,
           },
         },
         `/experience#${selectedProject.id}`
@@ -114,7 +114,7 @@ const ProjectSection: React.FC = () => {
                 id={project.id}
                 onClick={() => handleProjectClick(project.id)}
                 carousel={project.carousel}
-                videoUrl={project.videoUrl}
+                videoCarousel={project.videoCarousel}
               />
             </span>
           </div>

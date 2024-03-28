@@ -34,7 +34,7 @@ export interface ProjectCardProps {
   technology: string[];
   githubUrl?: string;
   deployedUrl?: string;
-  videoUrl?: string[];
+  videoCarousel?: string[];
   id: string;
   longDescription: string;
   carousel?: string[];
