@@ -45,6 +45,7 @@ export const ProjectsData: {
     videoCarousel: [
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
     ],
   },
   {

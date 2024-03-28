@@ -76,6 +76,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     ) {
       const item = itemsRef.current[i];
       if (item === null) continue;
+
       const itemOffset = item.offsetWidth;
       const prevItemWidth =
         itemsRef.current[i - 1]?.offsetWidth ?? FALLBACK_WIDTH;
@@ -174,7 +175,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
   return (
     <div
       className={cn(
-        "flex flex-col justify-center items-center w-[calc(10% - 10px)]  lg:mx-auto pb-8"
+        "flex flex-col justify-center items-center lg:mx-auto pb-8"
       )}
     >
       <div
@@ -240,7 +241,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                   key={`${video} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative shrink-0 select-none transition-opacity duration-300 mx-1",
+                    "group relative w-1/3 shrink-0 select-none transition-opacity duration-300 mx-1",
                     !active && "opacity-30"
                   )}
                   transition={{
@@ -250,7 +251,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 >
                   <video
                     className={cn(
-                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-cover w-100 h-64 md:h-96 xl:h-[29rem] rounded-lg shadow-lg "
                     )}
                     // alt={`project-carousel-${i}`}
                     controls
