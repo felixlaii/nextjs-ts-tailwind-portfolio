@@ -164,7 +164,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         </div>
       )}
 
-      <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-7 pb-7">
+      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-7 pb-7">
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col items-center text-center mx-auto">
             <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
@@ -178,7 +178,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
                   alt={`tech-icon-${index}`}
                   height={100}
                   width={100}
-                  className="w-10 h-10 mx-2 flex-row"
+                  className="w-10 h-10 mx-2 flex-row mx-5"
                 />
               ))}
             </div>
@@ -186,7 +186,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
 
-      <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-9">
+      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-9">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col items-center text-center mx-auto">
             <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">

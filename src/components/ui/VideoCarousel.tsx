@@ -3,6 +3,7 @@ import React, {
   useRef,
   useState,
   useEffect,
+  useCallback,
 } from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import { MoveLeft, MoveRight } from "lucide-react";
@@ -17,19 +18,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videoUrl,
   onClose,
 }) => {
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      onClose();
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
       <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
@@ -67,22 +55,22 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
   };
 
-  const handleVideoClose = () => {
+  const handleVideoClose = useCallback(() => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
-  };
-
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      handleVideoClose();
-    }
-  };
+  }, [activeState.slideIndex]);
 
   useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleVideoClose();
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [handleVideoClose]);
 
   const canScrollPrev = activeState.slideIndex > 0;
   const canScrollNext = activeState.slideIndex < videoCarousel.length - 1;
@@ -218,13 +206,6 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
 
     mouseX.set(left - parentLeft + offsetFromCenterX / 4);
     mouseY.set(top - parentTop + offsetFromCenterY / 4);
-  }
-
-  function disableDragClick(e: ReactMouseEvent<HTMLAnchorElement>) {
-    if (isDragging) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
   }
 
   return (
