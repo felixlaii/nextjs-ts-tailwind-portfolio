@@ -75,6 +75,12 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.41_PM_hsslku.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.50_PM_b26noe.png",
     ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678360/Screen_Recording_2024-03-28_at_10.11.13_PM_pkirqv.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678450/Screen_Recording_2024-03-28_at_10.12.36_PM_neu8l8.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678592/Screen_Recording_2024-03-28_at_10.15.28_PM_lbp2uu.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678605/Screen_Recording_2024-03-28_at_10.14.49_PM_htzyz5.mov",
+    ],
   },
   {
     id: "solace",
