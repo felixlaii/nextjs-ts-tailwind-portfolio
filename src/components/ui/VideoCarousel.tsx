@@ -307,7 +307,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                   <video
                     className={cn(
                       "object-cover w-full h-64 md:h-96 xl:h-[29rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
-                      !active && "opacity-30",
+                      !active && "opacity-100",
                       active && "opacity-100"
                     )}
                     controls

@@ -27,6 +27,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   const isVideoAvailable = videoCarousel !== undefined;
+  const isImageAvailable = carousel !== undefined;
+
   return (
     <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
       <div className="flex flex-row items-center mx-auto">
@@ -37,47 +39,99 @@ const Experience: React.FC<ProjectCardProps> = () => {
           {name}
         </h2>
       </div>
-      <div className="flex justify-center mt-4">
-        <button
-          className={`mr-4 ${
-            selectedCategory === "image"
-              ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
-              : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
-          }`}
-          onClick={() => setSelectedCategory("image")}
-        >
-          Images
-        </button>
-        {isVideoAvailable && (
-          <button
-            className={`mr-4 ${
-              selectedCategory === "video"
-                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
-                : "font-bold text-brand-dark dark:text-brand-base text-[1.1rem] tracking-widest"
-            }`}
-            onClick={() => setSelectedCategory("video")}
-          >
-            Videos
-          </button>
+      {/* {isVideoAvailable || isImageAvailable ? (
+        <div className="flex justify-center mt-4">
+          {isImageAvailable && (
+            <button
+              className={`mr-4 ${
+                selectedCategory === "image"
+                  ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
+                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+              }`}
+              onClick={() => setSelectedCategory("image")}
+            >
+              Images
+            </button>
+          )}
+          {isVideoAvailable && (
+            <button
+              className={`${
+                selectedCategory === "video"
+                  ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
+                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+              }`}
+              onClick={() => setSelectedCategory("video")}
+            >
+              Videos
+            </button>
+          )}
+        </div>
+      ) : null}
+      {selectedCategory === "image" && (
+        <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            {carousel && carousel.length > 0 ? (
+              <Carousel carousel={carousel} />
+            ) : videoCarousel && videoCarousel.length > 0 ? (
+              <VideoCarousel videoCarousel={videoCarousel} />
+            ) : (
+              <Image
+                className="object-fit mx-auto rounded-md"
+                src={image}
+                height={400}
+                width={400}
+                alt="project-image"
+              />
+            )}
+          </div>
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
+      )} */}
+      {videoCarousel !== undefined &&
+        carousel !== undefined &&
+        carousel.length > 1 && (
+          <div className="flex justify-center mt-4">
+            <button
+              className={`mr-4 ${
+                selectedCategory === "image"
+                  ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
+                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+              }`}
+              onClick={() => setSelectedCategory("image")}
+            >
+              Images
+            </button>
+            <button
+              className={`${
+                selectedCategory === "video"
+                  ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
+                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+              }`}
+              onClick={() => setSelectedCategory("video")}
+            >
+              Videos
+            </button>
+          </div>
         )}
-      </div>
 
       {selectedCategory === "image" && (
         <div className="bg-brand-light w-full pt-9">
           <div className="mt-4 pb-9">
-            <Carousel carousel={carousel} />
-          </div>
-          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-              {longDescription}
-            </p>
-          </div>
-        </div>
-      )}
-      {selectedCategory === "video" && (
-        <div className="flex flex-col items-center bg-brand-light w-full pt-9">
-          <div className="mt-4 pb-9">
-            <VideoCarousel videoCarousel={videoCarousel} />
+            {carousel && carousel.length > 0 ? (
+              <Carousel carousel={carousel} />
+            ) : (
+              <Image
+                className="object-fit mx-auto rounded-md"
+                src={image}
+                height={400}
+                width={400}
+                alt="project-image"
+              />
+            )}
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
@@ -87,16 +141,20 @@ const Experience: React.FC<ProjectCardProps> = () => {
         </div>
       )}
 
-      {image && (
+      {selectedCategory === "video" && (
         <div className="bg-brand-light w-full pt-9">
           <div className="mt-4 pb-9">
-            <Image
-              className="object-fit mx-auto rounded-md"
-              src={image}
-              height={400}
-              width={400}
-              alt="project-image"
-            />
+            {videoCarousel && videoCarousel.length > 0 ? (
+              <VideoCarousel videoCarousel={videoCarousel} />
+            ) : (
+              <Image
+                className="object-fit mx-auto rounded-md"
+                src={image}
+                height={400}
+                width={400}
+                alt="project-image"
+              />
+            )}
           </div>
           <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
