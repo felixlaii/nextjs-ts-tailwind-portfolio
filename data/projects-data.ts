@@ -9,7 +9,7 @@ export const ProjectsData: {
   id: string;
   longDescription: string;
   carousel?: string[];
-  videoUrl?: string;
+  videoCarousel?: string[];
   index: number;
 }[] = [
   {
@@ -42,6 +42,13 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160916/Screenshot_2023-12-09_at_5.27.44_PM_bjapxg.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702160915/Screenshot_2023-12-09_at_5.28.03_PM_cbeguq.png",
     ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711666503/Screen_Recording_2024-03-28_at_6.50.38_PM_lcnp10.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711145519/Screen_Recording_2024-03-22_at_6.11.04_PM_bqn7zc.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711666502/Screen_Recording_2024-03-28_at_6.53.28_PM_jmjkhh.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711666528/Screen_Recording_2024-03-28_at_6.55.00_PM_wz1ut3.mov",
+    ],
   },
   {
     id: "mix6ix",
@@ -67,6 +74,12 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.32_PM_w0btuk.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.41_PM_hsslku.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.50_PM_b26noe.png",
+    ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678360/Screen_Recording_2024-03-28_at_10.11.13_PM_pkirqv.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678450/Screen_Recording_2024-03-28_at_10.12.36_PM_neu8l8.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678592/Screen_Recording_2024-03-28_at_10.15.28_PM_lbp2uu.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711678605/Screen_Recording_2024-03-28_at_10.14.49_PM_htzyz5.mov",
     ],
   },
   {
@@ -162,8 +175,9 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/nextjs-openai",
     longDescription:
       "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
-    videoUrl:
+    videoCarousel: [
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1710642802/Screen_Recording_2024-03-16_at_10.07.15_PM_v6rdwe.mov",
+    ],
   },
   {
     id: "pawfinder",

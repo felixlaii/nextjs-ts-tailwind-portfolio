@@ -3,10 +3,14 @@ import Image from "next/image";
 import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
-import { cn } from "@/lib/utils";
+import { useState } from "react";
+import VideoCarousel from "@/components/ui/VideoCarousel";
 
 const Experience: React.FC<ProjectCardProps> = () => {
   const router = useRouter();
+  const [selectedCategory, setSelectedCategory] = useState<"image" | "video">(
+    "image"
+  );
 
   const name = router.query.name as string;
   const image = router.query.image as string;
@@ -15,7 +19,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
-  const videoUrl = router.query.videoUrl as string;
+  const videoCarousel = router.query.videoCarousel as string[];
 
   const goBack = () => {
     router.back();
@@ -31,43 +35,39 @@ const Experience: React.FC<ProjectCardProps> = () => {
           {name}
         </h2>
       </div>
-
-      {carousel && carousel.length > 0 ? (
-        <div className="flex flex-col items-center bg-brand-light w-full text-center mt-4">
-          <div className="mt-4 mx-auto">
-            <Carousel carousel={carousel} />
-          </div>
-          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] lg:text-[1.5rem] text-4 sm:text-[1.5rem] md:text-[2rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-              {longDescription}
-            </p>
-          </div>
-        </div>
-      ) : videoUrl ? (
-        // Render the video
-        <div className="flex flex-col items-center bg-brand-light w-full pt-9">
-          <div className="mt-4 pb-9">
-            <video
-              className={cn(
-                "object-cover  h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg"
-              )}
-              controls
+      {videoCarousel !== undefined &&
+        carousel !== undefined &&
+        carousel.length > 1 && (
+          <div className="flex justify-center mt-4">
+            <button
+              className={`mr-4 ${
+                selectedCategory === "image"
+                  ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
+                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+              }`}
+              onClick={() => setSelectedCategory("image")}
             >
-              <source src={videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              Images
+            </button>
+            <button
+              className={`${
+                selectedCategory === "video"
+                  ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
+                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+              }`}
+              onClick={() => setSelectedCategory("video")}
+            >
+              Videos
+            </button>
           </div>
-          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-              {longDescription}
-            </p>
-          </div>
-        </div>
-      ) : (
-        // Render the single image
-        image && (
-          <div className="bg-brand-light w-full pt-9">
-            <div className="mt-4 pb-9">
+        )}
+
+      {selectedCategory === "image" && (
+        <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            {carousel && carousel.length > 0 ? (
+              <Carousel carousel={carousel} />
+            ) : (
               <Image
                 className="object-fit mx-auto rounded-md"
                 src={image}
@@ -75,17 +75,40 @@ const Experience: React.FC<ProjectCardProps> = () => {
                 width={400}
                 alt="project-image"
               />
-            </div>
-            <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-              <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-                {longDescription}
-              </p>
-            </div>
+            )}
           </div>
-        )
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
       )}
 
-      <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-7 pb-7">
+      {selectedCategory === "video" && (
+        <div className="bg-brand-light w-full pt-9">
+          <div className="mt-4 pb-9">
+            {videoCarousel && videoCarousel.length > 0 ? (
+              <VideoCarousel videoCarousel={videoCarousel} />
+            ) : (
+              <Image
+                className="object-fit mx-auto rounded-md"
+                src={image}
+                height={400}
+                width={400}
+                alt="project-image"
+              />
+            )}
+          </div>
+          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+              {longDescription}
+            </p>
+          </div>
+        </div>
+      )}
+
+      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-7 pb-7">
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col items-center text-center mx-auto">
             <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
@@ -99,7 +122,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
                   alt={`tech-icon-${index}`}
                   height={100}
                   width={100}
-                  className="w-10 h-10 mx-2 flex-row"
+                  className="w-10 h-10 mx-2 flex-row mx-5"
                 />
               ))}
             </div>
@@ -107,7 +130,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
 
-      <div className="flex flex-col items-center bg-brand-base w-full mx-auto pt-9">
+      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-9">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col items-center text-center mx-auto">
             <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">

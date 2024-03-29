@@ -1,27 +1,80 @@
-import Image from "next/image";
-import { MouseEvent as ReactMouseEvent, useRef, useState } from "react";
+import React, {
+  MouseEvent as ReactMouseEvent,
+  useRef,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface CarouselProps {
-  carousel: string[];
+interface VideoPlayerProps {
+  videoUrl: string;
+  onClose: () => void;
+}
+
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  videoUrl,
+  onClose,
+}) => {
+  return (
+    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
+      <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
+      <button
+        className="absolute top-0 right-0 m-4 text-white"
+        onClick={onClose}
+      >
+        Close
+      </button>
+    </div>
+  );
+};
+
+interface VideoCarouselProps {
+  videoCarousel: string[];
 }
 
 const START_INDEX = 1;
 const DRAG_THRESHOLD = 150;
-const FALLBACK_WIDTH = 509;
+const FALLBACK_WIDTH = 809;
 
 const CURSOR_SIZE = 80;
 
-const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
+const VideoCarousel: React.FC<VideoCarouselProps> = ({
+  videoCarousel = [],
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const [activeState, setActiveState] = useState<{
+    slideIndex: number;
+    videoUrl: string | null;
+  }>({ slideIndex: START_INDEX, videoUrl: null });
 
-  const [activeSlide, setActiveSlide] = useState(START_INDEX);
+  const handleVideoClick = (videoUrl: string) => {
+    setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
+  };
 
-  const canScrollPrev = activeSlide > 0;
-  const canScrollNext = activeSlide < carousel.length - 1;
+  const handleVideoClose = useCallback(() => {
+    setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
+  }, [activeState.slideIndex]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleVideoClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleVideoClose]);
+
+  const canScrollPrev = activeState.slideIndex > 0;
+  const canScrollNext = activeState.slideIndex < videoCarousel.length - 1;
+
   const offsetX = useMotionValue(0);
   const animatedX = useSpring(offsetX, {
     damping: 20,
@@ -52,12 +105,11 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
     let offsetWidth = 0;
 
     for (
-      let i = activeSlide;
-      dragOffset > 0 ? i >= 0 : i < itemsRef.current.length;
+      let i = activeState.slideIndex;
+      dragOffset > 0 ? i >= 0 : i < videoCarousel.length;
       dragOffset > 0 ? i-- : i++
     ) {
       const item = itemsRef.current[i];
-
       if (item === null) continue;
 
       const itemOffset = item.offsetWidth;
@@ -70,7 +122,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
         (dragOffset > 0 && dragOffset > offsetWidth + itemOffset && i > 1) ||
         (dragOffset < 0 &&
           dragOffset < offsetWidth + -itemOffset &&
-          i < itemsRef.current.length - 2)
+          i < videoCarousel.length - 2)
       ) {
         dragOffset > 0
           ? (offsetWidth += prevItemWidth)
@@ -79,13 +131,11 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
       }
 
       if (dragOffset > 0) {
-        //prev
         offsetX.set(currentOffset + offsetWidth + prevItemWidth);
-        setActiveSlide(i - 1);
+        setActiveState({ slideIndex: i - 1, videoUrl: activeState.videoUrl });
       } else {
-        //next
         offsetX.set(currentOffset + offsetWidth - nextItemWidth);
-        setActiveSlide(i + 1);
+        setActiveState({ slideIndex: i + 1, videoUrl: activeState.videoUrl });
       }
       break;
     }
@@ -95,22 +145,30 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
     if (!canScrollPrev) return;
 
     const nextWidth =
-      itemsRef.current[activeSlide - 1]?.getBoundingClientRect().width;
+      itemsRef.current[activeState.slideIndex - 1]?.getBoundingClientRect()
+        .width;
     if (nextWidth === undefined) return;
 
     offsetX.set(offsetX.get() + nextWidth);
-    setActiveSlide((prev) => prev - 1);
+    setActiveState({
+      slideIndex: activeState.slideIndex - 1,
+      videoUrl: activeState.videoUrl,
+    });
   }
 
   function scrollNext() {
     if (!canScrollNext) return;
 
     const nextWidth =
-      itemsRef.current[activeSlide + 1]?.getBoundingClientRect().width;
+      itemsRef.current[activeState.slideIndex + 1]?.getBoundingClientRect()
+        .width;
     if (nextWidth === undefined) return;
 
     offsetX.set(offsetX.get() - nextWidth);
-    setActiveSlide((prev) => prev + 1);
+    setActiveState({
+      slideIndex: activeState.slideIndex + 1,
+      videoUrl: activeState.videoUrl,
+    });
   }
 
   const [hoverType, setHoverType] = useState<"prev" | "next" | "click" | null>(
@@ -148,13 +206,6 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
 
     mouseX.set(left - parentLeft + offsetFromCenterX / 4);
     mouseY.set(top - parentTop + offsetFromCenterY / 4);
-  }
-
-  function disableDragClick(e: ReactMouseEvent<HTMLAnchorElement>) {
-    if (isDragging) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
   }
 
   return (
@@ -209,7 +260,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             }}
             drag="x"
             dragConstraints={{
-              left: -(FALLBACK_WIDTH * (carousel.length - 1)),
+              left: -(FALLBACK_WIDTH * (videoCarousel.length - 1)),
               right: 0,
             }}
             onDragStart={() => {
@@ -218,41 +269,48 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             }}
             onDragEnd={handleDragSnap}
           >
-            {carousel.map((img, i) => {
-              const active = i === activeSlide;
-
+            {videoCarousel.map((video, i) => {
+              const active =
+                video === activeState.videoUrl && i === activeState.slideIndex;
               return (
                 <motion.li
-                  key={`${img} - ${i}`}
+                  key={`${video} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative shrink-0 select-none transition-opacity duration-300 mx-1",
-                    !active && "opacity-30"
+                    "group relative  shrink-0 select-none transition-opacity duration-300 mx-1"
                   )}
+                  onClick={() => handleVideoClick(video)}
                   transition={{
                     ease: "easeInOut",
                     duration: 0.4,
                   }}
                   style={{
-                    flexBasis: active ? "40%" : "30%",
+                    flexBasis: active ? "30%" : "40%",
                   }}
                 >
-                  <Image
-                    width={500}
-                    height={500}
-                    src={img}
+                  <video
                     className={cn(
-                      "object-scale w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
+                      !active && "opacity-100",
+                      active && "opacity-100"
                     )}
-                    alt={`project-carousel-${i}`}
-                  />
+                    controls
+                  >
+                    <source src={video} type="video/mp4" />
+                  </video>
                 </motion.li>
               );
             })}
           </motion.ul>
+          {activeState.videoUrl && (
+            <VideoPlayer
+              videoUrl={activeState.videoUrl}
+              onClose={handleVideoClose}
+            />
+          )}
           <button
             type="button"
-            className="group absolute left-[24%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute left-[1%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
@@ -268,7 +326,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
           </button>
           <button
             type="button"
-            className="group absolute right-[18%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
+            className="group absolute right-[1%] top-1/3 z-20 grid aspect-square place-content-center rounded-full transition-colors"
             style={{
               width: CURSOR_SIZE,
               height: CURSOR_SIZE,
@@ -281,11 +339,11 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
           >
             <span className="sr-only">Next Guide</span>
             <MoveRight className="text-brand-dark h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
-          </button>
+          </button>{" "}
         </div>
       </div>
     </div>
   );
 };
 
-export default Carousel;
+export default VideoCarousel;

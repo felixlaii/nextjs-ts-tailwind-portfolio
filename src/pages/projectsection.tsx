@@ -7,15 +7,16 @@ import "aos/dist/aos.css";
 
 const ProjectSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("professional");
-
+  const router = useRouter();
   useEffect(() => {
+    // Initialize AOS library
     AOS.init({
       duration: 1500,
       once: true,
     });
-  }, []);
 
-  const router = useRouter();
+    // Retrieve selected category from local storage on component mount
+  }, []);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -43,7 +44,7 @@ const ProjectSection: React.FC = () => {
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
             carousel: selectedProject.carousel,
-            videoUrl: selectedProject.videoUrl,
+            videoCarousel: selectedProject.videoCarousel,
           },
         },
         `/experience#${selectedProject.id}`
@@ -114,7 +115,7 @@ const ProjectSection: React.FC = () => {
                 id={project.id}
                 onClick={() => handleProjectClick(project.id)}
                 carousel={project.carousel}
-                videoUrl={project.videoUrl}
+                videoCarousel={project.videoCarousel}
               />
             </span>
           </div>
