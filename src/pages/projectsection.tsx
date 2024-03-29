@@ -7,15 +7,16 @@ import "aos/dist/aos.css";
 
 const ProjectSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("professional");
-
+  const router = useRouter();
   useEffect(() => {
+    // Initialize AOS library
     AOS.init({
       duration: 1500,
       once: true,
     });
-  }, []);
 
-  const router = useRouter();
+    // Retrieve selected category from local storage on component mount
+  }, []);
 
   const filteredProjects =
     selectedCategory === "all"
