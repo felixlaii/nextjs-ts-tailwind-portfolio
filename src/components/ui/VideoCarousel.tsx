@@ -284,6 +284,9 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                     ease: "easeInOut",
                     duration: 0.4,
                   }}
+                  style={{
+                    flexBasis: active ? "30%" : "40%",
+                  }}
                 >
                   <video
                     className={cn(

@@ -160,13 +160,13 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
   return (
     <div
       className={cn(
-        "flex flex-col justify-center items-center w-[calc(10% - 10px)]  lg:mx-auto pb-8"
+        "flex flex-col justify-center items-center lg:mx-auto pb-8"
       )}
     >
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -210,7 +210,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             drag="x"
             dragConstraints={{
               left: -(FALLBACK_WIDTH * (carousel.length - 1)),
-              right: 0, // Updated right constraint
+              right: 0,
             }}
             onDragStart={() => {
               containerRef.current?.setAttribute("data-dragging", "true");
@@ -242,7 +242,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     height={500}
                     src={img}
                     className={cn(
-                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-scale w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />
