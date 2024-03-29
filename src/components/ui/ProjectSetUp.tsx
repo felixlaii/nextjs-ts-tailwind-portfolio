@@ -15,6 +15,17 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedHoverState = localStorage.getItem(`hoverState_${index}`);
+      setIsHovered(storedHoverState === "true");
+    }
+  }, [index]);
+
+  useEffect(() => {
+    localStorage.setItem(`hoverState_${index}`, isHovered.toString());
+  }, [isHovered, index]);
+
+  useEffect(() => {
     AOS.init({
       duration: 2000,
       once: false,

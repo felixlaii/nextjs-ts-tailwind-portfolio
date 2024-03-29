@@ -12,6 +12,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const [selectedCategory, setSelectedCategory] = useState<"image" | "video">(
     "image"
   );
+
   const name = router.query.name as string;
   const image = router.query.image as string;
   const technology = router.query.technology as string[] | undefined;
@@ -24,6 +25,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const goBack = () => {
     router.back();
   };
+
   const isVideoAvailable = videoCarousel !== undefined;
   return (
     <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
