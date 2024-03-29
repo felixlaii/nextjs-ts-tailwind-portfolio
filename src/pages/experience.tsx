@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
-import { cn } from "@/lib/utils";
 import { useState } from "react";
 import VideoCarousel from "@/components/ui/VideoCarousel";
 
@@ -26,9 +25,6 @@ const Experience: React.FC<ProjectCardProps> = () => {
     router.back();
   };
 
-  const isVideoAvailable = videoCarousel !== undefined;
-  const isImageAvailable = carousel !== undefined;
-
   return (
     <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
       <div className="flex flex-row items-center mx-auto">
@@ -39,58 +35,6 @@ const Experience: React.FC<ProjectCardProps> = () => {
           {name}
         </h2>
       </div>
-      {/* {isVideoAvailable || isImageAvailable ? (
-        <div className="flex justify-center mt-4">
-          {isImageAvailable && (
-            <button
-              className={`mr-4 ${
-                selectedCategory === "image"
-                  ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
-                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
-              }`}
-              onClick={() => setSelectedCategory("image")}
-            >
-              Images
-            </button>
-          )}
-          {isVideoAvailable && (
-            <button
-              className={`${
-                selectedCategory === "video"
-                  ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
-                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
-              }`}
-              onClick={() => setSelectedCategory("video")}
-            >
-              Videos
-            </button>
-          )}
-        </div>
-      ) : null}
-      {selectedCategory === "image" && (
-        <div className="bg-brand-light w-full pt-9">
-          <div className="mt-4 pb-9">
-            {carousel && carousel.length > 0 ? (
-              <Carousel carousel={carousel} />
-            ) : videoCarousel && videoCarousel.length > 0 ? (
-              <VideoCarousel videoCarousel={videoCarousel} />
-            ) : (
-              <Image
-                className="object-fit mx-auto rounded-md"
-                src={image}
-                height={400}
-                width={400}
-                alt="project-image"
-              />
-            )}
-          </div>
-          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
-              {longDescription}
-            </p>
-          </div>
-        </div>
-      )} */}
       {videoCarousel !== undefined &&
         carousel !== undefined &&
         carousel.length > 1 && (
