@@ -35,8 +35,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={` border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 lg:pb-6 pb-8 lg:pl-10 lg:pr-10 pl-7 pr-7 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[20rem] sm:w-[25rem] md:w-[47rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
-      
+      className={`border-double border-4 border-brand-dark hover:border-brand-light flex flex-col justify-center shadow-3xl pt-8 lg:pb-6 pb-8 lg:pl-10 lg:pr-10 pl-7 pr-7 cursor-pointer dark:border-double dark:border-4 dark:border-brand-light dark:hover:border-brand-dark rounded-md h-[12rem] w-[20rem] sm:w-[25rem] md:w-[47rem] md:h-[18rem] lg:w-[43rem] lg:h-[20rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
  ${
    isHovered ? "" : ""
  } bg-brand-cardbg hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-cardbg`}
