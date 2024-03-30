@@ -43,8 +43,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`mr-4 ${
                   selectedCategory === "image"
-                    ? "font-bold font-custom text-brand-base dark:text-brand-dark text-[1rem] tracking-widest"
-                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-lightish dark:text-brand-dark text-[1.1rem] tracking-widest"
+                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1.1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("image")}
               >
@@ -53,8 +53,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`${
                   selectedCategory === "video"
-                    ? "font-bold font-custom text-brand-light dark:text-brand-dark text-[1rem] tracking-widest"
-                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-lightish dark:text-brand-dark text-[1.1rem] tracking-widest"
+                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1.1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("video")}
               >
@@ -87,7 +87,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
       )}
 
       {selectedCategory === "video" && (
-        <div className="bg-brand-light w-full pt-9">
+        <div className="bg-brand-light dark:bg-brand-base w-full pt-9">
           <div className="mt-4 pb-9">
             {videoCarousel && videoCarousel.length > 0 ? (
               <VideoCarousel videoCarousel={videoCarousel} />
