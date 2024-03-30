@@ -59,14 +59,14 @@ const ProjectSection: React.FC = () => {
           Explore My Work ...
         </h2>
         <div className="flex justify-center items-center align-middle mb-4">
-          <p className="font-custom text-brand-darkMode dark:text-brand-base text-[1.1rem] tracking-wider pr-4">
+          <p className="font-custom text-brand-lightMode dark:text-brand-base text-[1.1rem] tracking-wider pr-4">
             Filter:
           </p>
           <button
             className={`mr-4 ${
               selectedCategory === "all"
-                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
-                : "font-bold text-brand-darkMode dark:text-brand-base text-[1.1rem] tracking-widest"
+                ? "font-bold text-brand-altDarkMode dark:text-brand-darkMode text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-lightMode dark:text-brand-lightMode text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("all")}
           >
@@ -75,8 +75,8 @@ const ProjectSection: React.FC = () => {
           <button
             className={`mr-4 ${
               selectedCategory === "professional"
-                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
-                : "font-bold text-brand-darkMode dark:text-brand-base text-[1.1rem] tracking-widest"
+                ? "font-bold text-brand-altDarkMode dark:text-brand-darkMode text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-lightMode dark:text-brand-lightMode text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("professional")}
           >
@@ -86,8 +86,8 @@ const ProjectSection: React.FC = () => {
           <button
             className={`${
               selectedCategory === "school"
-                ? "font-bold text-brand-base dark:text-brand-cardbg text-[1.3rem] tracking-widest"
-                : "font-bold text-brand-darkMode dark:text-brand-base text-[1.1rem] tracking-widest"
+                ? "font-bold text-brand-altDarkMode dark:text-brand-darkMode text-[1.3rem] tracking-widest"
+                : "font-bold text-brand-lightMode dark:text-brand-lightMode text-[1.1rem] tracking-widest"
             }`}
             onClick={() => setSelectedCategory("school")}
           >

@@ -38,7 +38,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
       className={`border-double border-4 border-brand-darkMode hover:border-brand-darkMode flex flex-col justify-center shadow-3xl pt-8 pl-4 pr-4 pb-8 lg:pb-6 lg:pl-10 lg:pr-10 cursor-pointer dark:border-double dark:border-4 dark:border-brand-darkMode dark:hover:border-brand-darkMode rounded-md h-[8.5rem] w-[calc(100%-1rem)] sm:w-[calc(90%-1rem)] md:w-[calc(100%)] md:h-[18rem] lg:w-[calc(70%-1rem)] lg:h-[16rem] xl:w-[44rem] xl:h-[21rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
  ${
    isHovered ? "" : ""
- } bg-brand-cardbg hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-cardbg`}
+ } bg-brand-lightMode hover:bg-brand-altDarkMode dark:bg-brand-base dark:hover:bg-brand-cardbg`}
       data-aos={
         isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
       }
