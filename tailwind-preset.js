@@ -34,6 +34,7 @@ module.exports = {
                     headerbg: "#304A64",
                     lightMode: "#8EABB8",
                     darkMode: "#395c6b",
+                    altDarkMode: "#1F2933"
                 },
                 ui: {
                     error: red[700],

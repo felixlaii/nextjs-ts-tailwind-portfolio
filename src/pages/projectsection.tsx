@@ -53,7 +53,7 @@ const ProjectSection: React.FC = () => {
   };
 
   return (
-    <main className="dark:bg-dark dark:text-black bg-light text-white flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8">
+    <main className="dark:bg-brand-altDarkMode dark:text-black bg-light text-white flex flex-col overflow-x-hidden items-center font-custom min-h-screen w-full pb-8">
       <div data-aos="zoom-in-up">
         <h2 className="text-3d dark:text-brand-light text-brand-base text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-5 mt-9">
           Explore My Work ...
