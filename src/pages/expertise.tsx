@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
   }, []);
 
   return (
-    <section className="dark:bg-brand-light dark:text-brand-light bg-brand-base text-black flex flex-col font-custom">
+    <section className="dark:bg-brand-light dark:text-brand-light bg-brand-lightMode text-black flex flex-col font-custom">
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
           <div data-aos="zoom-in">
