@@ -44,7 +44,7 @@ const Skills: React.FC = () => {
                     alt="skills"
                     className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[3rem] lg:h-[3rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] mx-4"
                   />
-                  <p className="text-[0.6rem] font-extralight mt-2 text-center">
+                  <p className="text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center">
                     {skill.description}
                   </p>
                 </li>
@@ -67,7 +67,7 @@ const Skills: React.FC = () => {
                     alt="skills"
                     className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[3rem] lg:h-[3rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] mx-4"
                   />
-                  <p className="text-[0.6rem] font-extralight mt-2 text-center xl:mb-[2rem]">
+                  <p className="text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center">
                     {skill.description}
                   </p>
                 </li>
