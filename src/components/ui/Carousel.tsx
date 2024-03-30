@@ -242,11 +242,11 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                   }}
                 >
                   <Image
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={600}
                     src={img}
                     className={cn(
-                      "object-fill w-[25rem] h-64 md:h-96 xl:h-[24rem] rounded-lg shadow-lg "
+                      "object-fill xl:w-[70rem] h-64 md:h-96 xl:h-[24rem] rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />

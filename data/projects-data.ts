@@ -255,11 +255,9 @@ export const ProjectsData: {
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
     longDescription:
       "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information. This has weather information for all cities and countries around the world!",
-    carousel: [
+    carousel:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
-    ],
+
     videoCarousel:
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836508/Screen_Recording_2024-03-30_at_6.07.49_PM_coyti8.mov",
   },
