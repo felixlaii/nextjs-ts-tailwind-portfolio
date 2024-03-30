@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
     });
   }, []);
   return (
-    <section className="pt-[2.5rem] lg:pt-[6rem] lg:pb-[6rem] pb-[5rem] bg-brand-lightMode text-brand-light dark:bg-brand-light dark:text-white flex flex-col items-center font-custom mt-10">
+    <section className="pt-[2.5rem] lg:pt-[6rem] lg:pb-[6rem] pb-[5rem] bg-brand-lightMode text-brand-light dark:bg-brand-darkMode dark:text-white flex flex-col items-center font-custom">
       <form
         name="contact"
         action="/success"

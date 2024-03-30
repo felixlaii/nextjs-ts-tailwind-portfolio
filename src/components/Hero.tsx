@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-brand-lightMode text-black dark:bg-brand-light dark:text-white flex justify-center max-h-full pt-[3rem] pb-[5rem] md:pt-[1rem] lg:pt-[4rem]">
+    <div className="bg-brand-lightMode dark:bg-brand-darkMode text-black dark:text-white flex justify-center max-h-full pt-[3rem] pb-[5rem] md:pt-[1rem] lg:pt-[4rem]">
       <div className="flex-column align-middle items-center">
         <div data-aos="fade-left">
           <Image

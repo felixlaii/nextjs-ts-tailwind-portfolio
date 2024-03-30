@@ -27,12 +27,13 @@ module.exports = {
                     dark: "#1F2933",
                     darkest: "#1d2d35",
                     lightish: "#84a0b0",
-                    darkMode: "#6A98B0",
+                    
                     bgdark: "#81BBDA",
                     textDark: "#F3F4F6",
                     cardbg: "#668998",
                     headerbg: "#304A64",
-                    lightMode: "#8EABB8"
+                    lightMode: "#8EABB8",
+                    darkMode: "#395c6b",
                 },
                 ui: {
                     error: red[700],
