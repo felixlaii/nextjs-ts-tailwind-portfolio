@@ -234,7 +234,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
           <motion.div
             layout
             className={cn(
-              "grid h-full place-items-center rounded-full bg-lime-300",
+              "grid h-full place-items-center rounded-full",
               hoverType === "click" && "absolute inset-7 h-auto"
             )}
           >

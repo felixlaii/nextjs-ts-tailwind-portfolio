@@ -183,7 +183,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
           <motion.div
             layout
             className={cn(
-              "grid h-full place-items-center rounded-full bg-lime-300",
+              "grid h-full place-items-center rounded-full",
               hoverType === "click" && "absolute inset-7 h-auto"
             )}
           >
@@ -242,7 +242,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     height={500}
                     src={img}
                     className={cn(
-                      "object-scale w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />
