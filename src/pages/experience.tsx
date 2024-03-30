@@ -35,33 +35,34 @@ const Experience: React.FC<ProjectCardProps> = () => {
           {name}
         </h2>
       </div>
-      {videoCarousel !== undefined &&
-        carousel !== undefined &&
-        carousel.length > 1 && (
-          <div className="flex justify-center mt-4">
-            <button
-              className={`mr-4 ${
-                selectedCategory === "image"
-                  ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
-                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
-              }`}
-              onClick={() => setSelectedCategory("image")}
-            >
-              Images
-            </button>
-            <button
-              className={`${
-                selectedCategory === "video"
-                  ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
-                  : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
-              }`}
-              onClick={() => setSelectedCategory("video")}
-            >
-              Videos
-            </button>
-          </div>
-        )}
-
+      <div className="bg-brand-light w-full">
+        {videoCarousel !== undefined &&
+          carousel !== undefined &&
+          carousel.length > 1 && (
+            <div className="flex justify-center mt-4 ">
+              <button
+                className={`mr-4 ${
+                  selectedCategory === "image"
+                    ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
+                    : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+                }`}
+                onClick={() => setSelectedCategory("image")}
+              >
+                Images
+              </button>
+              <button
+                className={`${
+                  selectedCategory === "video"
+                    ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
+                    : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+                }`}
+                onClick={() => setSelectedCategory("video")}
+              >
+                Videos
+              </button>
+            </div>
+          )}
+      </div>
       {selectedCategory === "image" && (
         <div className="bg-brand-light w-full pt-9">
           <div className="mt-4 pb-9">
