@@ -31,7 +31,8 @@ module.exports = {
                     bgdark: "#81BBDA",
                     textDark: "#F3F4F6",
                     cardbg: "#668998",
-                    headerbg: "#304A64"
+                    headerbg: "#304A64",
+                    lightMode: "#8EABB8"
                 },
                 ui: {
                     error: red[700],
