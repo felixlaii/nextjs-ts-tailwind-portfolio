@@ -204,7 +204,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
         </motion.div>
         <div className="relative overflow-hidden">
           <motion.ul
-            className="flex cursor-none items-start"
+            className="flex cursor-none justify-center"
             style={{
               x: animatedX,
             }}
@@ -228,7 +228,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
                     "group relative shrink-0 select-none transition-opacity duration-300 mx-1",
-                    !active && "opacity-30"
+                    !active && "opacity-100"
                   )}
                   transition={{
                     ease: "easeInOut",
