@@ -107,6 +107,11 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738566/Screenshot_2024-02-23_at_8.35.40_PM_hapafi.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738638/Screenshot_2024-02-23_at_8.37.14_PM_vc5gez.png",
     ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836065/Screen_Recording_2024-03-30_at_5.58.28_PM_km8dpy.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836079/Screen_Recording_2024-03-30_at_6.00.08_PM_drqbgs.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836027/Screen_Recording_2024-03-30_at_5.59.18_PM_atlju0.mov",
+    ],
   },
   {
     id: "blushnletters",
@@ -132,6 +137,11 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.19_PM_zehoqr.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.32_PM_gxhi8y.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.37_PM_gi9mxz.png",
+    ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836278/Screen_Recording_2024-03-30_at_6.03.17_PM_qrebpr.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836293/Screen_Recording_2024-03-30_at_6.03.46_PM_szjccm.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836423/Screen_Recording_2024-03-30_at_6.06.14_PM_c5i7ek.mov",
     ],
   },
   {
