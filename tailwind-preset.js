@@ -33,6 +33,7 @@ module.exports = {
                     cardbg: "#668998",
                     headerbg: "#304A64",
                     lightMode: "#8EABB8",
+                    
                     darkMode: "#395c6b",
                     altDarkMode: "#1F2933"
                 },

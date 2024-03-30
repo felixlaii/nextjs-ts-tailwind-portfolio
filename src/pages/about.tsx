@@ -25,7 +25,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-light text-zinc-300 dark:bg-brand-altDarkMode dark:text-brand-base">
+    <div className="bg-brand-darkMode text-zinc-300 dark:bg-brand-altDarkMode dark:text-brand-base">
       <div className="flex justify-center flex-col items-center font-custom">
         <div data-aos="zoom-in-down" className="justify-center">
           <h1 className="text-3d dark:text-brand-light text-brand-base mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
