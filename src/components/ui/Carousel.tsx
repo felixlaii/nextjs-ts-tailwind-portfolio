@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { MouseEvent as ReactMouseEvent, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
-import { MoveLeft, MoveRight } from "lucide-react";
+import {
+  FaRegArrowAltCircleRight,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 interface CarouselProps {
@@ -167,7 +170,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-4xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96  max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -243,7 +246,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     height={500}
                     src={img}
                     className={cn(
-                      "object-cover w-[25rem] h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-fill w-[25rem] h-64 md:h-96 xl:h-[24rem] rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />
@@ -265,7 +268,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Previous Guide</span>
-            <MoveLeft className="h-10 w-10 text-brand-darkMode stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <FaRegArrowAltCircleLeft className="h-10 w-10 text-brand-altDarkMode stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
           <button
             type="button"
@@ -281,7 +284,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Next Guide</span>
-            <MoveRight className="text-brand-dark h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <FaRegArrowAltCircleRight className="text-brand-altDarkMode h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
         </div>
       </div>
