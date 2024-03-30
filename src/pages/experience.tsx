@@ -31,7 +31,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />
         </div>
-        <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-dark">
+        <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-darkMode">
           {name}
         </h2>
       </div>
@@ -44,7 +44,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
                 className={`mr-4 ${
                   selectedCategory === "image"
                     ? "font-bold font-custom text-brand-lightish dark:text-brand-dark text-[1.1rem] tracking-widest"
-                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1.1rem] tracking-widest"
+                    : "font-bold font-custom text-brand-darkMode dark:text-brand-cardbg text-[1.1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("image")}
               >
@@ -53,8 +53,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`${
                   selectedCategory === "video"
-                    ? "font-bold font-custom text-brand-lightish dark:text-brand-dark text-[1.1rem] tracking-widest"
-                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1.1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-lightish dark:text-brand-darkMode text-[1.1rem] tracking-widest"
+                    : "font-bold font-custom text-brand-darkMode dark:text-brand-cardbg text-[1.1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("video")}
               >
@@ -102,7 +102,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
             )}
           </div>
           <div className="bg-brand-base dark:bg-brand-light w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-darkMode tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
@@ -134,13 +134,13 @@ const Experience: React.FC<ProjectCardProps> = () => {
         <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-9">
           {(githubUrl || deployedUrl) && (
             <div className="flex flex-col items-center text-center mx-auto">
-              <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
+              <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-darkMode tracking-widest">
                 View My Work
               </h3>
               <div className="flex flex-row mb-9">
                 {githubUrl && (
                   <a
-                    className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                    className="border-double border-4 border-brand-darkMode hover:border-brand-darkMode px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                     href={githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -150,7 +150,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
                 )}
                 {deployedUrl && (
                   <a
-                    className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                    className="border-double border-4 border-brand-darkMode hover:border-brand-darkMode px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
                     href={deployedUrl}
                     target="_blank"
                     rel="noopener noreferrer"

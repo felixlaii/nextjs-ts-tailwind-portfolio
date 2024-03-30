@@ -264,7 +264,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Previous Guide</span>
-            <MoveLeft className="h-10 w-10 text-brand-dark stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <MoveLeft className="h-10 w-10 text-brand-darkMode stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
           <button
             type="button"

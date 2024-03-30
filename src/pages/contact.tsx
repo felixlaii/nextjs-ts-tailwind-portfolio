@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
         <input type="hidden" name="form-name" value="contact" />
         <label className="dark:text-brand-base block ml-1">Name:</label>
         <input
-          className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
+          className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-darkMode dark:focus:border-brand-darkMode focus:ring-1 dark:bg-brand-cardbg"
           type="text"
           name="name"
           placeholder="John/Jane Doe"
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
         />
         <label className="dark:text-brand-base block mb-1 ml-1">Email:</label>
         <input
-          className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 dark:bg-brand-cardbg"
+          className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded focus:outline-none focus:ring focus:ri focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-darkMode dark:focus:border-brand-darkMode focus:ring-1 dark:bg-brand-cardbg"
           placeholder="john/jane@email.com"
           type="email"
           name="email"
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
         />
         <label className="dark:text-brand-base block mb-1 ml-1">Message:</label>
         <textarea
-          className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded  focus:outline-none focus:ring focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-dark dark:focus:border-brand-dark focus:ring-1 focus:ri dark:bg-brand-cardbg"
+          className="placeholder-brand-lightish dark:placeholder-brand-light block w-full p-2 rounded  focus:outline-none focus:ring focus:ri focus:ring-brand-light focus:border-brand-light dark:focus:ring-brand-darkMode dark:focus:border-brand-darkMode focus:ring-1 focus:ri dark:bg-brand-cardbg"
           placeholder="what should we do?"
           name="message"
           required
