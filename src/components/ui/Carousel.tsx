@@ -5,7 +5,7 @@ import { MoveLeft, MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface CarouselProps {
-  carousel: string[];
+  carousel: string | string[];
 }
 
 const START_INDEX = 1;
@@ -15,6 +15,7 @@ const FALLBACK_WIDTH = 509;
 const CURSOR_SIZE = 80;
 
 const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
+  const carouselArray = typeof carousel === "string" ? [carousel] : carousel;
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
 
@@ -218,7 +219,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             }}
             onDragEnd={handleDragSnap}
           >
-            {carousel.map((img, i) => {
+            {carouselArray.map((img, i) => {
               const active = i === activeSlide;
 
               return (
@@ -242,7 +243,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                     height={500}
                     src={img}
                     className={cn(
-                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-cover w-[25rem] h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />

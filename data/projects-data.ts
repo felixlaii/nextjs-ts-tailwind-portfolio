@@ -8,8 +8,8 @@ export const ProjectsData: {
   deployedUrl?: string;
   id: string;
   longDescription: string;
-  carousel?: string[];
-  videoCarousel?: string[];
+  carousel?: string | string[];
+  videoCarousel?: string | string[];
   index: number;
 }[] = [
   {
@@ -185,9 +185,11 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/nextjs-openai",
     longDescription:
       "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
-    videoCarousel: [
+    carousel:
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1711836914/Screenshot_2024-03-30_at_6.15.04_PM_gaveum.png",
+
+    videoCarousel:
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1710642802/Screen_Recording_2024-03-16_at_10.07.15_PM_v6rdwe.mov",
-    ],
   },
   {
     id: "pawfinder",
@@ -258,9 +260,8 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
     ],
-    // videoCarousel: [
-    //   "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836508/Screen_Recording_2024-03-30_at_6.07.49_PM_coyti8.mov",
-    // ],
+    videoCarousel:
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836508/Screen_Recording_2024-03-30_at_6.07.49_PM_coyti8.mov",
   },
   {
     id: "pokemon-search",
@@ -288,8 +289,7 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
     ],
-    // videoCarousel: [
-    //   "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836580/Screen_Recording_2024-03-30_at_6.08.56_PM_s3vp86.mov",
-    // ],
+    videoCarousel:
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836580/Screen_Recording_2024-03-30_at_6.08.56_PM_s3vp86.mov",
   },
 ];
