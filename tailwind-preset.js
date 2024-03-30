@@ -21,7 +21,6 @@ module.exports = {
                 brand: {
                     lightest: "#83a6d3",
                     lighter: "#6D8FBA",
-                    light: "#395c6b",
                     base: "#88aebf",
                     darkest: "#1d2d35",
                     lightish: "#84a0b0",
@@ -30,7 +29,6 @@ module.exports = {
                     cardbg: "#668998",
                     headerbg: "#304A64",
                     lightMode: "#8EABB8",
-                    
                     darkMode: "#395c6b",
                     altDarkMode: "#1F2933"
                 },

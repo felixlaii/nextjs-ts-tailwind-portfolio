@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
       <div className="mx-auto">
         <div className="flex justify-center flex-col items-center font-custom">
           <div data-aos="zoom-in">
-            <h2 className="text-3d text-brand-light dark:text-brand-lightest mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+            <h2 className="text-3d text-brand-darkMode dark:text-brand-lightest mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
               My Expertise
             </h2>
           </div>
@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
         {/* Top Row */}
         <div
           data-aos="fade-down"
-          className="dark:border-brand-base border-brand-light flex flex-col mb-14 border-4 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem]"
+          className="dark:border-brand-base border-brand-darkMode flex flex-col mb-14 border-4 mt-10 mx-9 pt-7 pb-7 lg:w-[50rem] xl:w-[65rem]"
         >
           <div>
             <ul className="flex justify-between items-center mx-4 sm:mx-auto">

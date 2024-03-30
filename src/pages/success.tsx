@@ -21,7 +21,7 @@ export default function Success() {
         </h1>
       </div>
       <div>
-        <p className="text-[3rem] text-center text-brand-light font-custom tracking-widest">
+        <p className="text-[3rem] text-center text-brand-darkMode font-custom tracking-widest">
           Your submission has been successful! Thank you for connecting, I will
           reach out as soon as possible!
         </p>
