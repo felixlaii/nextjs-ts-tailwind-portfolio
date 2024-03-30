@@ -258,9 +258,9 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
     ],
-    videoCarousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836508/Screen_Recording_2024-03-30_at_6.07.49_PM_coyti8.mov",
-    ],
+    // videoCarousel: [
+    //   "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836508/Screen_Recording_2024-03-30_at_6.07.49_PM_coyti8.mov",
+    // ],
   },
   {
     id: "pokemon-search",
@@ -288,8 +288,8 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
     ],
-    videoCarousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836580/Screen_Recording_2024-03-30_at_6.08.56_PM_s3vp86.mov",
-    ],
+    // videoCarousel: [
+    //   "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836580/Screen_Recording_2024-03-30_at_6.08.56_PM_s3vp86.mov",
+    // ],
   },
 ];
