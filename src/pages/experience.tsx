@@ -108,59 +108,60 @@ const Experience: React.FC<ProjectCardProps> = () => {
           </div>
         </div>
       )}
-
-      <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-7 pb-7">
-        {technology && Array.isArray(technology) && (
-          <div className="flex flex-col items-center text-center mx-auto">
-            <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
-              Technology used
-            </h3>
-            <div className="flex flex-row">
-              {technology.map((iconUrl: string, index: number) => (
-                <Image
-                  key={index}
-                  src={iconUrl}
-                  alt={`tech-icon-${index}`}
-                  height={100}
-                  width={100}
-                  className="w-10 h-10 mx-2 flex-row mx-5"
-                />
-              ))}
+      <div className="flex flex-row w-full">
+        <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-7 pb-7">
+          {technology && Array.isArray(technology) && (
+            <div className="flex flex-col items-center text-center mx-auto">
+              <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
+                Technology used
+              </h3>
+              <div className="flex flex-row">
+                {technology.map((iconUrl: string, index: number) => (
+                  <Image
+                    key={index}
+                    src={iconUrl}
+                    alt={`tech-icon-${index}`}
+                    height={100}
+                    width={100}
+                    className="w-10 h-10 mx-2 flex-row mx-5"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
 
-      <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-9">
-        {(githubUrl || deployedUrl) && (
-          <div className="flex flex-col items-center text-center mx-auto">
-            <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
-              View My Work
-            </h3>
-            <div className="flex flex-row mb-9">
-              {githubUrl && (
-                <a
-                  className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              )}
-              {deployedUrl && (
-                <a
-                  className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                  href={deployedUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Deployed
-                </a>
-              )}
+        <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-9">
+          {(githubUrl || deployedUrl) && (
+            <div className="flex flex-col items-center text-center mx-auto">
+              <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
+                View My Work
+              </h3>
+              <div className="flex flex-row mb-9">
+                {githubUrl && (
+                  <a
+                    className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                )}
+                {deployedUrl && (
+                  <a
+                    className="border-double border-4 border-brand-dark hover:border-brand-dark px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-light bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                    href={deployedUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Deployed
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
