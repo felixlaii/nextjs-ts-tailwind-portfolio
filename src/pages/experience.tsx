@@ -26,8 +26,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
   };
 
   return (
-    <div className="bg-brand-base flex flex-col items-center justify-center min-h-screen pt-[10rem]">
-      <div className="flex flex-row items-center mx-auto">
+    <div className="bg-brand-base dark:bg-brand-light flex flex-col items-center justify-center min-h-screen pt-[10rem]">
+      <div className="flex flex-row  items-center mx-auto">
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />
         </div>
@@ -35,7 +35,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
           {name}
         </h2>
       </div>
-      <div className="bg-brand-light w-full">
+      <div className="bg-brand-light dark:bg-brand-base w-full">
         {videoCarousel !== undefined &&
           carousel !== undefined &&
           carousel.length > 1 && (
@@ -43,8 +43,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`mr-4 ${
                   selectedCategory === "image"
-                    ? "font-bold text-brand-base dark:text-brand-light text-[1rem] tracking-widest"
-                    : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-base dark:text-brand-dark text-[1rem] tracking-widest"
+                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("image")}
               >
@@ -53,8 +53,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`${
                   selectedCategory === "video"
-                    ? "font-bold text-brand-light dark:text-brand-light text-[1rem] tracking-widest"
-                    : "font-bold text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-light dark:text-brand-dark text-[1rem] tracking-widest"
+                    : "font-bold font-custom text-brand-dark dark:text-brand-cardbg text-[1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("video")}
               >
@@ -64,7 +64,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
           )}
       </div>
       {selectedCategory === "image" && (
-        <div className="bg-brand-light w-full pt-9">
+        <div className="bg-brand-light dark:bg-brand-base w-full pt-9">
           <div className="mt-4 pb-9">
             {carousel && carousel.length > 0 ? (
               <Carousel carousel={carousel} />
@@ -78,7 +78,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
               />
             )}
           </div>
-          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+          <div className="bg-brand-base dark:bg-brand-light w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
@@ -101,7 +101,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
               />
             )}
           </div>
-          <div className="bg-brand-base w-full mx-auto pt-7 pb-7 px-9">
+          <div className="bg-brand-base dark:bg-brand-light w-full mx-auto pt-7 pb-7 px-9">
             <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.5rem] text-brand-dark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
@@ -109,7 +109,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         </div>
       )}
 
-      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-7 pb-7">
+      <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-7 pb-7">
         {technology && Array.isArray(technology) && (
           <div className="flex flex-col items-center text-center mx-auto">
             <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
@@ -131,7 +131,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         )}
       </div>
 
-      <div className="flex flex-col items-center bg-brand-light w-full mx-auto pt-9">
+      <div className="flex flex-col items-center bg-brand-light dark:bg-brand-base w-full mx-auto pt-9">
         {(githubUrl || deployedUrl) && (
           <div className="flex flex-col items-center text-center mx-auto">
             <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
