@@ -31,7 +31,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />
         </div>
-        <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-darkMode">
+        <h2 className="text-[2rem] sm:text-[3rem] md:text-[3.5rem] ml-4 tracking-widest font-custom text-brand-darkMode dark:text-brand-lightMode">
           {name}
         </h2>
       </div>
@@ -43,8 +43,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`mr-4 ${
                   selectedCategory === "image"
-                    ? "font-bold font-custom text-brand-lightish dark:text-brand-dark text-[1.1rem] tracking-widest"
-                    : "font-bold font-custom text-brand-darkMode dark:text-brand-cardbg text-[1.1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-lightish dark:text-brand-darkMode text-[1.2rem] tracking-[0.2rem]"
+                    : "font-bold font-custom text-brand-darkMode dark:text-brand-cardbg text-[1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("image")}
               >
@@ -53,8 +53,8 @@ const Experience: React.FC<ProjectCardProps> = () => {
               <button
                 className={`${
                   selectedCategory === "video"
-                    ? "font-bold font-custom text-brand-lightish dark:text-brand-darkMode text-[1.1rem] tracking-widest"
-                    : "font-bold font-custom text-brand-darkMode dark:text-brand-cardbg text-[1.1rem] tracking-widest"
+                    ? "font-bold font-custom text-brand-lightish dark:text-brand-darkMode text-[1.2rem] tracking-[0.2rem]"
+                    : "font-bold font-custom text-brand-darkMode dark:text-brand-cardbg text-[1rem] tracking-widest"
                 }`}
                 onClick={() => setSelectedCategory("video")}
               >
