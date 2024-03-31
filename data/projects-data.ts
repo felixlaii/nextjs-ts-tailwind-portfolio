@@ -3,7 +3,8 @@ export const ProjectsData: {
   name: string;
   description: string;
   category: "school" | "professional";
-  technology: string[];
+  technology: { techIcon: string[]; techDesc: string[] };
+  // techDesc: string[];
   githubUrl?: string;
   deployedUrl?: string;
   id: string;
@@ -20,18 +21,36 @@ export const ProjectsData: {
     name: "Richmond West Dental",
     description:
       "Downtown Toronto dental office. Their staff are so nice and professional, and they are there to listen and help with whatever oral questions you have, book for your next appointment!",
-    longDescription:
-      "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid. There are animation effects to wow any online client! ",
+    longDescription: `
+      The application was built completely from scratch with Next.js, TypeScript, and TailwindCSS and deployed on DigitalOcean.\n
+      The client wanted a complete redesign and overhaul of their website, and me and another fellow engineer were happy to complete this task!
+      The application features 3 forms, and information is sent via email and creates a PDF with appropriate information.
+      All forms have conditional formatting, including a drawn signature pad (patient and parent), and parent signature only appears if the patient is under 18 years old!
+      Emails are handled through 3rd party SendGrid.
+      The entire project took around 3 months to complete, but it was so satisfying when the client finally saw the final website.\n
+      In addition, this was my first time using Next.js, TypeScript, and Tailwind CSS; it was a challenge, and I wanted to apply what I have learned to this application, and I am pleased with the results and the technology I have learned on the way.`,
     category: "professional",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original-wordmark.svg",
+      ],
+      techDesc: [
+        "Next.js",
+        "React",
+        "HTML5",
+        "JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
+        "Digital Ocean",
+      ],
+    },
+
     githubUrl: "https://github.com/felixlaii/richmond-dental-nextjs",
     deployedUrl: "https://richmondwestdental.com",
     carousel: [
@@ -59,12 +78,15 @@ export const ProjectsData: {
     description:
       "Bartending service for private events. If you want to elevate your event, these bartenders are professional and can definitely create an unbelievable experience for your guests!",
     category: "professional",
-    technology: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      ],
+      techDesc: ["SquareSpace", "HTML5", "CSS3", "JavaScript"],
+    },
     deployedUrl: "https://mix6ixtoronto.com",
     longDescription:
       "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service. They have always hosted their website on SquareSpace but wanted a more elevated online presence. I injected custom JavaScript, HTML5 and CSS3 to update their website and the client was more than happy with the outcome!",
@@ -91,12 +113,15 @@ export const ProjectsData: {
     description:
       "Tattoo Shop with contact form and an online payment system. Book with your favourite artist and/or explore their Instagram!",
     category: "professional",
-    technology: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      ],
+      techDesc: ["SquareSpace", "HTML5", "CSS3", "JavaScript"],
+    },
     deployedUrl: "https://www.solaceinktattoo.com/",
     longDescription:
       "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art! They wanted to create an online presence for their clients to view and book their artists and wanted a minimal vibe. This website is also hosted on SquareSpace but I definitely injected custom code (JavaScript, HTML5 and CSS3) to elevate their website.",
@@ -122,12 +147,15 @@ export const ProjectsData: {
     description:
       "Modern Calligraphy and design. A website done through Square Space with custom code injections to bring client's vision to life.",
     category: "professional",
-    technology: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      ],
+      techDesc: ["SquareSpace", "HTML5", "CSS3", "JavaScript"],
+    },
     deployedUrl: "https://blushnletters.com/",
     longDescription:
       "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide. The client wanted to give their website a small revamp and I simply injected code into their existing application to elevate the experience!",
@@ -152,10 +180,15 @@ export const ProjectsData: {
     name: "St Patrick S.S",
     description: "Secondary School based in Vancouver. Currently in progress!",
     category: "professional",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      ],
+      techDesc: ["WordPress", "HTML5", "CSS3", "JavaScript"],
+    },
     longDescription:
       "When the client reached out to me and expressed concern over their website that hasn't been updated for 20 years, we got to work immediately thinking of ways to refresh and attract potential parents. This website is still under progress and cannot wait for the final results! Stay tuned!",
     carousel: [
@@ -173,15 +206,26 @@ export const ProjectsData: {
     description:
       "This is a simple chat application built with Next.js and integrated with the OpenAI API for generating responses. It allows users to interact with an AI assistant and view the conversation history.",
     category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1710642500/openai_jituka.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1710642500/openai_jituka.svg",
+      ],
+      techDesc: [
+        "Nextjs",
+        "React",
+        "HTML5",
+        "JavaScript",
+        "TypeScript",
+        "Tailwindcss",
+        "OpenAI",
+      ],
+    },
     githubUrl: "https://github.com/felixlaii/nextjs-openai",
     longDescription:
       "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
@@ -200,15 +244,26 @@ export const ProjectsData: {
     description:
       "An application that compiles all adoption agency information into one convenient location. Ability to sign up and save adoption preferences such as breed and age.",
     category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+      ],
+      techDesc: [
+        "JavaScript",
+        "HTML5",
+        "REST API",
+        "SASS",
+        "Nodejs",
+        "Express",
+        "MySQL",
+      ],
+    },
     githubUrl: "https://github.com/felixlaii/pawfinder",
     longDescription:
       "An application that retrieves information from Pet Finder API. I've always wanted to adopt a dog but I found the process to be very lengthy and tedious with so many adoption agencies. This application compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation. This application has a front-end (React) and a back-end (NodeJs) that communicates back and forth to ensure client user information is stored securely and to retrieve accurate information based on your pet preferences.",
@@ -222,14 +277,17 @@ export const ProjectsData: {
     description:
       "A stock inventory management website. A group project by BrainStation. 5 Software Engineers working together to deliver final product.",
     category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      ],
+      techDesc: ["React", "HTML5", "SASS", "JavaScript", "Nodejs", "Express"],
+    },
     githubUrl: "https://github.com/felixlaii/instock",
     longDescription:
       "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime. This was a huge learning experience as fellow engineers have their own way of coding, and this helped us all learn how to communicate with each other. This application also has a front-end (React) and a back-end (Nodejs).",
@@ -243,14 +301,26 @@ export const ProjectsData: {
     description:
       "A Weather search application. All Data pulled from Open Weather API. It has information on all cities and countries around the world!",
     category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+      ],
+      techDesc: [
+        "Nextjs",
+        "React",
+        "HTML5",
+        "JavaScript",
+        "TypeScript",
+        "Tailwindcss",
+        "Vercel",
+      ],
+    },
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
     longDescription:
@@ -270,15 +340,26 @@ export const ProjectsData: {
     description:
       "Search through the list of pokemon and get their images, attacks and stats. Search up to 1000 different Pokemon!",
     category: "school",
-    technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
-    ],
+    technology: {
+      techIcon: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
+      ],
+      techDesc: [
+        "React",
+        "JavaScript",
+        "Redux",
+        "HTML5",
+        "CSS3",
+        "REST API",
+        "Material UI",
+      ],
+    },
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
     longDescription:

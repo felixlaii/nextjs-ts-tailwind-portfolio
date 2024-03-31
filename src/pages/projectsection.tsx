@@ -9,13 +9,10 @@ const ProjectSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("professional");
   const router = useRouter();
   useEffect(() => {
-    // Initialize AOS library
     AOS.init({
       duration: 1500,
       once: true,
     });
-
-    // Retrieve selected category from local storage on component mount
   }, []);
 
   const filteredProjects =
@@ -39,12 +36,13 @@ const ProjectSection: React.FC = () => {
             name: selectedProject.name,
             description: selectedProject.description,
             image: selectedProject.image,
-            technology: selectedProject.technology,
+            technologyIcon: selectedProject.technology.techIcon,
             longDescription: selectedProject.longDescription,
             deployedUrl: selectedProject.deployedUrl,
             githubUrl: selectedProject.githubUrl,
             carousel: selectedProject.carousel,
             videoCarousel: selectedProject.videoCarousel,
+            technologyDesc: selectedProject.technology.techDesc,
           },
         },
         `/experience#${selectedProject.id}`

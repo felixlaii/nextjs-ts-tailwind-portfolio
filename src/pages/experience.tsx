@@ -20,6 +20,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
   const videoCarousel = router.query.videoCarousel as string[];
+  const techDesc = router.query.techDesc as string[];
 
   const goBack = () => {
     router.back();
@@ -105,7 +106,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-darkMode dark:text-brand-lightMode tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-darkMode dark:text-brand-lightMode tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
@@ -173,7 +174,7 @@ const Experience: React.FC<ProjectCardProps> = () => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <p className="mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-darkMode dark:text-brand-lightMode tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-darkMode dark:text-brand-lightMode tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
@@ -197,6 +198,9 @@ const Experience: React.FC<ProjectCardProps> = () => {
               </div>
             </div>
           )}
+          <p className="text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] text-black md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center">
+            {techDesc}
+          </p>
         </div>
       )}
     </div>
