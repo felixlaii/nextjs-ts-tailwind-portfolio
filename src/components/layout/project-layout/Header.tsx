@@ -223,7 +223,7 @@ const Header: React.FC<HeaderProps> = ({
       <header
         className={`fixed ${
           scrollDirection === "down" ? "-top-24" : "top-0"
-        } transition-all duration-200 bg-brand-light dark:bg-brand-dark flex font-custom font-primary font-extralight justify-between w-full items-center pb-2`}
+        } transition-all duration-100 bg-brand-headerbg dark:bg-brand-altDarkMode flex font-custom font-primary font-extralight justify-between w-full items-center pb-2`}
       >
         {" "}
         <div className="flex items-center ">

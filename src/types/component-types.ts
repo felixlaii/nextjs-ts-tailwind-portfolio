@@ -34,10 +34,10 @@ export interface ProjectCardProps {
   technology: string[];
   githubUrl?: string;
   deployedUrl?: string;
-  videoCarousel?: string[];
+  videoCarouselArray?: string | string[];
   id: string;
   longDescription: string;
-  carousel?: string[];
+  carouselArray?: string | string[];
   onClick: () => void;
   index: number;
 }

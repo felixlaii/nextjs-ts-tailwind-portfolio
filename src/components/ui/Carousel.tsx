@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { MouseEvent as ReactMouseEvent, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
-import { MoveLeft, MoveRight } from "lucide-react";
+import {
+  FaRegArrowAltCircleRight,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 interface CarouselProps {
-  carousel: string[];
+  carousel: string | string[];
 }
 
 const START_INDEX = 1;
@@ -15,6 +18,7 @@ const FALLBACK_WIDTH = 509;
 const CURSOR_SIZE = 80;
 
 const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
+  const carouselArray = typeof carousel === "string" ? [carousel] : carousel;
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
 
@@ -166,7 +170,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-4xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96  max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -183,7 +187,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
           <motion.div
             layout
             className={cn(
-              "grid h-full place-items-center rounded-full bg-lime-300",
+              "grid h-full place-items-center rounded-full",
               hoverType === "click" && "absolute inset-7 h-auto"
             )}
           >
@@ -203,7 +207,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
         </motion.div>
         <div className="relative overflow-hidden">
           <motion.ul
-            className="flex cursor-none items-start"
+            className="flex cursor-none justify-center"
             style={{
               x: animatedX,
             }}
@@ -218,7 +222,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             }}
             onDragEnd={handleDragSnap}
           >
-            {carousel.map((img, i) => {
+            {carouselArray.map((img, i) => {
               const active = i === activeSlide;
 
               return (
@@ -227,7 +231,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
                     "group relative shrink-0 select-none transition-opacity duration-300 mx-1",
-                    !active && "opacity-30"
+                    !active && "opacity-100"
                   )}
                   transition={{
                     ease: "easeInOut",
@@ -238,11 +242,11 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
                   }}
                 >
                   <Image
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={600}
                     src={img}
                     className={cn(
-                      "object-scale w-full h-64 md:h-96 xl:h-[29rem] max-w-2xl rounded-lg shadow-lg "
+                      "object-fill xl:w-[70rem] h-64 md:h-96 xl:h-[24rem] rounded-lg shadow-lg "
                     )}
                     alt={`project-carousel-${i}`}
                   />
@@ -264,7 +268,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Previous Guide</span>
-            <MoveLeft className="h-10 w-10 text-brand-dark stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <FaRegArrowAltCircleLeft className="h-10 w-10 text-brand-altDarkMode stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
           <button
             type="button"
@@ -280,7 +284,7 @@ const Carousel: React.FC<CarouselProps> = ({ carousel = [] }) => {
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Next Guide</span>
-            <MoveRight className="text-brand-dark h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <FaRegArrowAltCircleRight className="text-brand-altDarkMode h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
         </div>
       </div>

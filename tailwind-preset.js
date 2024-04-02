@@ -19,18 +19,18 @@ module.exports = {
             colors: {
                 current: "currentColor",
                 brand: {
-                    evenDarker: "#1F2933",
                     lightest: "#83a6d3",
                     lighter: "#6D8FBA",
-                    light: "#395c6b",
                     base: "#88aebf",
-                    dark: "#1F2933",
                     darkest: "#1d2d35",
                     lightish: "#84a0b0",
-                    darkMode: "#6A98B0",
                     bgdark: "#81BBDA",
                     textDark: "#F3F4F6",
-                    cardbg: "#668998"
+                    cardbg: "#668998",
+                    headerbg: "#304A64",
+                    lightMode: "#8EABB8",
+                    darkMode: "#395c6b",
+                    altDarkMode: "#1F2933"
                 },
                 ui: {
                     error: red[700],

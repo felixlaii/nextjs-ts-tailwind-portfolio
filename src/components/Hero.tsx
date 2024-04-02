@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-brand-base text-black dark:bg-brand-light dark:text-white flex justify-center max-h-full pt-[3rem] pb-[5rem] md:pt-[1rem] lg:pt-[4rem]">
+    <div className="bg-brand-lightMode dark:bg-brand-darkMode text-black dark:text-white flex justify-center max-h-full pt-[3rem] pb-[5rem] md:pt-[1rem] lg:pt-[4rem]">
       <div className="flex-column align-middle items-center">
         <div data-aos="fade-left">
           <Image
@@ -32,10 +32,10 @@ const Hero: React.FC = () => {
         </div>
 
         <div data-aos="fade-up" className="flex-column font-custom ml-4">
-          <p className="text-brand-light dark:text-brand-lighter text-[2rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1">
+          <p className="text-brand-darkMode dark:text-brand-lighter text-[2rem] md:text-[3rem] lg:text-[4rem] tracking-wide mb-1">
             front-end software developer
           </p>
-          <p className="text-brand-light dark:text-brand-lighter text-[1.5rem] md:text-[2.5rem] lg:text-[3rem] tracking-widest mb-2">
+          <p className="text-brand-darkMode dark:text-brand-lighter text-[1.5rem] md:text-[2.5rem] lg:text-[3rem] tracking-widest mb-2">
             & dog lover
           </p>
         </div>

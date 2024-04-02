@@ -8,8 +8,8 @@ export const ProjectsData: {
   deployedUrl?: string;
   id: string;
   longDescription: string;
-  carousel?: string[];
-  videoCarousel?: string[];
+  carousel?: string | string[];
+  videoCarousel?: string | string[];
   index: number;
 }[] = [
   {
@@ -20,8 +20,14 @@ export const ProjectsData: {
     name: "Richmond West Dental",
     description:
       "Downtown Toronto dental office. Their staff are so nice and professional, and they are there to listen and help with whatever oral questions you have, book for your next appointment!",
-    longDescription:
-      "A dental office located Downtown Toronto. The application was built completely from scratch with Nextjs, TypeScript and TailwindCSS and deployed on DigitalOcean. The application features 3 forms, and information is sent via email and creates a PDF with appropriate information. Emails are handled through 3rd party SendGrid. There are animation effects to wow any online client! ",
+    longDescription: `
+      The application was built completely from scratch with Next.js, TypeScript, and TailwindCSS and deployed on DigitalOcean.\n
+      The client wanted a complete redesign and overhaul of their website, and me and another fellow engineer were happy to complete this task!
+      The application features 3 forms, and information is sent via email and creates a PDF with appropriate information.
+      All forms have conditional formatting, including a drawn signature pad (patient and parent), and parent signature only appears if the patient is under 18 years old!
+      Emails are handled through 3rd party SendGrid.
+      The entire project took around 3 months to complete, but it was so satisfying when the client finally saw the final website.\n
+      In addition, this was my first time using Next.js, TypeScript, and Tailwind CSS; it was a challenge, and I wanted to apply what I have learned to this application, and I am pleased with the results and the technology I have learned on the way.`,
     category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
@@ -107,6 +113,11 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738566/Screenshot_2024-02-23_at_8.35.40_PM_hapafi.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738638/Screenshot_2024-02-23_at_8.37.14_PM_vc5gez.png",
     ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836065/Screen_Recording_2024-03-30_at_5.58.28_PM_km8dpy.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836079/Screen_Recording_2024-03-30_at_6.00.08_PM_drqbgs.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836027/Screen_Recording_2024-03-30_at_5.59.18_PM_atlju0.mov",
+    ],
   },
   {
     id: "blushnletters",
@@ -132,6 +143,11 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.19_PM_zehoqr.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.32_PM_gxhi8y.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.37_PM_gi9mxz.png",
+    ],
+    videoCarousel: [
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836278/Screen_Recording_2024-03-30_at_6.03.17_PM_qrebpr.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836293/Screen_Recording_2024-03-30_at_6.03.46_PM_szjccm.mov",
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836423/Screen_Recording_2024-03-30_at_6.06.14_PM_c5i7ek.mov",
     ],
   },
   {
@@ -175,9 +191,11 @@ export const ProjectsData: {
     githubUrl: "https://github.com/felixlaii/nextjs-openai",
     longDescription:
       "I decided to take a stab at AI by creating a ChatBot (ChatGPT clone) by using the OpenAI API. It was definitely a challenge and I have learned a lot in the process. My API documentation reading skills needed to be dusted off and I finally was able to get responses from the API and I was over the moon. After watching many YouTube videos and googling answers, I couldn't be more proud of the outcome!",
-    videoCarousel: [
+    carousel:
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1711836914/Screenshot_2024-03-30_at_6.15.04_PM_gaveum.png",
+
+    videoCarousel:
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1710642802/Screen_Recording_2024-03-16_at_10.07.15_PM_v6rdwe.mov",
-    ],
   },
   {
     id: "pawfinder",
@@ -243,11 +261,11 @@ export const ProjectsData: {
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
     longDescription:
       "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information. This has weather information for all cities and countries around the world!",
-    carousel: [
+    carousel:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.15_PM_des1ty.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.21_PM_q5awdd.png",
-    ],
+
+    videoCarousel:
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836508/Screen_Recording_2024-03-30_at_6.07.49_PM_coyti8.mov",
   },
   {
     id: "pokemon-search",
@@ -275,5 +293,7 @@ export const ProjectsData: {
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
     ],
+    videoCarousel:
+      "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836580/Screen_Recording_2024-03-30_at_6.08.56_PM_s3vp86.mov",
   },
 ];

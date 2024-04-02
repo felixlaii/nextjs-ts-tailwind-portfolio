@@ -25,10 +25,10 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-light text-zinc-300 dark:bg-dark dark:text-brand-base">
+    <div className="bg-brand-darkMode text-zinc-300 dark:bg-brand-altDarkMode dark:text-brand-base">
       <div className="flex justify-center flex-col items-center font-custom">
         <div data-aos="zoom-in-down" className="justify-center">
-          <h1 className="text-3d dark:text-brand-light text-brand-base mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
+          <h1 className="text-3d dark:text-brand-darkMode text-brand-base mt-9 text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
             What About Me
           </h1>
         </div>
@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </div>
         <button
           data-aos="fade-up"
-          className="dark:text-brand-lightest dark:border-brand-light text-brand-dark border-brand-base flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-light/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+          className="dark:text-brand-lightest dark:border-brand-darkMode text-brand-darkMode border-brand-base flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-darkMode/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
           onClick={onButtonClick}
         >
           Download Resume <IoMdDownload />

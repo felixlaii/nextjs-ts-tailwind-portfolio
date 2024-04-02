@@ -29,7 +29,7 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
             logo={logo.src}
             navigationLinks={navigationLinks}
             currentActiveLocation={location.pathname}
-            textClassName="group text-md transition-all duration-300 ease-in-out font-light mx-8 text-brand-lightish dark:text-brand-base"
+            textClassName="group text-md transition-all duration-100 ease-in-out font-light mx-8 text-brand-lightish dark:text-brand-base"
             linkClassName="flex bg-left-bottom lg:text-md"
             logoClassName="w-full sm:w-3/5 md:w-3/4 ml-2 mt-2 mr-1"
             hoverClassName={clsx(
@@ -41,14 +41,14 @@ export const ProjectLayout: React.FC<PropsWithChildren> = ({ children }) => {
           <ScrollToTopButton />
           <Footer />
           <motion.div
-            className="absolute top-0 left-0 w-full h-screen transform bg-brand-dark origin-bottom"
+            className="absolute top-0 left-0 w-full h-screen transform bg-brand-darkMode origin-bottom"
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 1 }}
             transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
           ></motion.div>
           <motion.div
-            className="absolute top-0 left-0 w-full h-screen transform bg-brand-dark origin-top"
+            className="absolute top-0 left-0 w-full h-screen transform bg-brand-darkMode origin-top"
             initial={{ scaleY: 1 }}
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 0 }}

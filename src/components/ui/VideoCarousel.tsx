@@ -6,7 +6,10 @@ import React, {
   useCallback,
 } from "react";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
-import { MoveLeft, MoveRight } from "lucide-react";
+import {
+  FaRegArrowAltCircleRight,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 interface VideoPlayerProps {
@@ -32,7 +35,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 };
 
 interface VideoCarouselProps {
-  videoCarousel: string[];
+  videoCarousel: string | string[];
 }
 
 const START_INDEX = 1;
@@ -44,6 +47,8 @@ const CURSOR_SIZE = 80;
 const VideoCarousel: React.FC<VideoCarouselProps> = ({
   videoCarousel = [],
 }) => {
+  const videoCarouselArray =
+    typeof videoCarousel === "string" ? [videoCarousel] : videoCarousel;
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
   const [activeState, setActiveState] = useState<{
@@ -217,7 +222,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-4xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96  max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -234,7 +239,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
           <motion.div
             layout
             className={cn(
-              "grid h-full place-items-center rounded-full bg-lime-300",
+              "grid h-full place-items-center rounded-full",
               hoverType === "click" && "absolute inset-7 h-auto"
             )}
           >
@@ -254,7 +259,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
         </motion.div>
         <div className="relative overflow-hidden">
           <motion.ul
-            className="flex cursor-none items-start"
+            className="flex cursor-none justify-center"
             style={{
               x: animatedX,
             }}
@@ -269,7 +274,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
             }}
             onDragEnd={handleDragSnap}
           >
-            {videoCarousel.map((video, i) => {
+            {videoCarouselArray.map((video, i) => {
               const active =
                 video === activeState.videoUrl && i === activeState.slideIndex;
               return (
@@ -277,7 +282,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                   key={`${video} - ${i}`}
                   ref={(el) => (itemsRef.current[i] = el)}
                   className={cn(
-                    "group relative  shrink-0 select-none transition-opacity duration-300 mx-1"
+                    "group relative shrink-0 select-none transition-opacity duration-300 mx-1"
                   )}
                   onClick={() => handleVideoClick(video)}
                   transition={{
@@ -290,7 +295,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 >
                   <video
                     className={cn(
-                      "object-cover w-full h-64 md:h-96 xl:h-[29rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
+                      "object-fill w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
                       !active && "opacity-100",
                       active && "opacity-100"
                     )}
@@ -322,7 +327,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Previous Guide</span>
-            <MoveLeft className="h-10 w-10 text-brand-dark stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <FaRegArrowAltCircleLeft className="h-10 w-10 text-brand-altDarkMode stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>
           <button
             type="button"
@@ -338,7 +343,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
             onMouseLeave={() => setHoverType(null)}
           >
             <span className="sr-only">Next Guide</span>
-            <MoveRight className="text-brand-dark h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
+            <FaRegArrowAltCircleRight className="text-brand-altDarkMode h-10 w-10 stroke-[1.5] transition-colors group-enabled:group-hover:text-gray-900 group-disabled:opacity-50" />
           </button>{" "}
         </div>
       </div>

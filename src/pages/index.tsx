@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   return (
     <div
       className={` w-full z-1 
-          ${isDarkMode ? "bg-dark text-white" : "bg-brand-light text-black"}
+          ${isDarkMode ? "bg-dark text-white" : "bg-brand-darkMode text-black"}
           `}
     >
       <div data-aos="fade-down">

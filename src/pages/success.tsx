@@ -16,12 +16,12 @@ export default function Success() {
             onClick={goBack}
           />
         </div>
-        <h1 className="text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest font-custom text-brand-dark">
+        <h1 className="text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest font-custom text-brand-darkMode">
           Lets Talk...
         </h1>
       </div>
       <div>
-        <p className="text-[3rem] text-center text-brand-light font-custom tracking-widest">
+        <p className="text-[3rem] text-center text-brand-darkMode font-custom tracking-widest">
           Your submission has been successful! Thank you for connecting, I will
           reach out as soon as possible!
         </p>
