@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </div>
         <button
           data-aos="fade-up"
-          className="dark:text-brand-lightest dark:border-brand-darkMode text-brand-darkMode border-brand-base flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-darkMode/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+          className="dark:text-brand-lightest dark:border-brand-darkMode text-brand-lightMode border-brand-base flex flex-row border-double border-4 border-brand-base items-center px-5 py-2.5 text-center me-2 mb-9 mt-4 font-custom tracking-wider rounded-md hover:text-brand-lightest bg-gradient-to-r from-brand-darkMode/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
           onClick={onButtonClick}
         >
           Download Resume <IoMdDownload />

@@ -28,7 +28,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
   console.log(technology);
 
   return (
-    <div className="bg-brand-base dark:bg-brand-darkMode flex flex-col items-center justify-center min-h-screen pt-[10rem]">
+    <div className="bg-brand-base dark:bg-brand-darkMode flex flex-col items-center justify-center min-h-screen pt-[8rem]">
       <div className="flex flex-row  items-center mx-auto">
         <div className="align-middle">
           <FaArrowLeft className="h-10 w-5 cursor-pointer" onClick={goBack} />
@@ -72,7 +72,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
               <Carousel carousel={carousel} />
             ) : (
               <Image
-                className="object-fit mx-auto rounded-md"
+                className="object-fit mx-auto mt-8 rounded-md"
                 src={image}
                 height={400}
                 width={400}
