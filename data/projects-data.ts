@@ -141,8 +141,11 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://blushnletters.com/",
-    longDescription:
-      "Their goal is to help add the fine details to your life events and memories through custom calligraphy and design. | Based in Toronto, Canada. Available worldwide. The client wanted to give their website a small revamp and I simply injected code into their existing application to elevate the experience!",
+    longDescription: `Blush Letters & Co, led by founder Vivian, sought to elevate their online presence with essential features like booking forms, contact forms, and a blog.
+
+      Understanding their needs, we crafted a bespoke solution that integrated these elements seamlessly into their website. Leveraging custom JavaScript, HTML, and CSS3, we developed user-friendly forms for clients to book appointments and get in touch, while also implementing a dynamic blog section to showcase their expertise and offerings.
+      
+      The result? A polished website that not only reflects Blush Letters & Co's aesthetic but also empowers Vivian to engage with her audience effectively and efficiently.`,
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161414/Screenshot_2023-12-09_at_5.36.12_PM_kiydck.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161413/Screenshot_2023-12-09_at_5.36.26_PM_wgjpzj.png",
