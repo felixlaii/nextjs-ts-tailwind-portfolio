@@ -104,33 +104,30 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                   </a>
                 )}
               </div>
+              <div className="flex flex-row justify-evenly">
+                {technology && Array.isArray(technology) && (
+                  <div className="flex flex-col items-center text-center mx-auto">
+                    <div className="flex flex-row">
+                      {technology.map((iconUrl: string, index: number) => (
+                        <Image
+                          key={index}
+                          src={iconUrl}
+                          alt={`tech-icon-${index}`}
+                          height={100}
+                          width={100}
+                          className="w-10 h-10 mx-2 flex-row mx-5"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
             <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-darkMode dark:text-brand-lightMode tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
-          </div>
-          <div className="flex flex-row justify-evenly">
-            {technology && Array.isArray(technology) && (
-              <div className="flex flex-col items-center text-center mx-auto">
-                <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
-                  Technology used
-                </h3>
-                <div className="flex flex-row">
-                  {technology.map((iconUrl: string, index: number) => (
-                    <Image
-                      key={index}
-                      src={iconUrl}
-                      alt={`tech-icon-${index}`}
-                      height={100}
-                      width={100}
-                      className="w-10 h-10 mx-2 flex-row mx-5"
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       )}
@@ -174,33 +171,30 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                   </a>
                 )}
               </div>
+              <div className="flex flex-row justify-evenly">
+                {technology && Array.isArray(technology) && (
+                  <div className="flex flex-col items-center text-center mx-auto">
+                    <div className="flex flex-row">
+                      {technology.map((iconUrl: string, index: number) => (
+                        <Image
+                          key={index}
+                          src={iconUrl}
+                          alt={`tech-icon-${index}`}
+                          height={100}
+                          width={100}
+                          className="w-10 h-10 mx-2 flex-row mx-5"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
             <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-darkMode dark:text-brand-lightMode tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
-          </div>
-          <div className="flex flex-row justify-evenly">
-            {technology && Array.isArray(technology) && (
-              <div className="flex flex-col items-center text-center mx-auto">
-                <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
-                  Technology used
-                </h3>
-                <div className="flex flex-row">
-                  {technology.map((iconUrl: string, index: number) => (
-                    <Image
-                      key={index}
-                      src={iconUrl}
-                      alt={`tech-icon-${index}`}
-                      height={100}
-                      width={100}
-                      className="w-10 h-10 mx-2 flex-row mx-5"
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       )}
