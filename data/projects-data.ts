@@ -221,12 +221,15 @@ export const ProjectsData: {
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1712101206/rest-api-icon_euhh23.png",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1712101145/icons8-json-web-token-48_v5f1xh.png",
     ],
+    deployedUrl:
+      "https://www.loom.com/share/758b305574b8414eaf8a1b09ac707a0f?sid=6f26adf1-3bff-46ce-ad6c-305caa851d6d",
     githubUrl: "https://github.com/felixlaii/pawfinder",
     longDescription: `An application I created as my CapStone for BrainStation Software Engineering bootcamp.\n 
       This website retrieves information from the PetFinder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. \n
@@ -270,6 +273,7 @@ export const ProjectsData: {
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1712101206/rest-api-icon_euhh23.png",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
@@ -303,7 +307,7 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1712101206/rest-api-icon_euhh23.png",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
