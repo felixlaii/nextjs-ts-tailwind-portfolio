@@ -228,8 +228,9 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
-    longDescription:
-      "An application that retrieves information from Pet Finder API. I've always wanted to adopt a dog but I found the process to be very lengthy and tedious with so many adoption agencies. This application compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. User Information is saved using MySQL and JWT for user authentication. This was my final project at BrainStation. This application has a front-end (React) and a back-end (NodeJs) that communicates back and forth to ensure client user information is stored securely and to retrieve accurate information based on your pet preferences.",
+    longDescription: `An application I created as my CapStone for BrainStation Software Engineering bootcamp.\n 
+      This website retrieves information from the PetFinder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. 
+      User information is saved using mysql and jwt for user authentication. This application has a front-end (react) and a back-end (nodejs) that communicated back and forth to ensure client user information is stored securely and to retrieve accurate information based on your pet preferences.`,
   },
   {
     id: "instock",
