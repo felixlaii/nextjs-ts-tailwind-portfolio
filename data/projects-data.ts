@@ -250,8 +250,13 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     ],
     githubUrl: "https://github.com/felixlaii/instock",
-    longDescription:
-      "This was a group project at BrainStation, working with 4 other software engineers. It manages stock and updates stock availability in realtime. This was a huge learning experience as fellow engineers have their own way of coding, and this helped us all learn how to communicate with each other. This application also has a front-end (React) and a back-end (Nodejs).",
+    longDescription: `At BrainStation, I had the privilege of collaborating on a group project with four other talented software engineers. Together, we embarked on a mission to develop a sophisticated stock management system designed to update stock availability in real-time.
+
+      This endeavor proved to be an invaluable learning experience as we navigated the complexities of teamwork and communication. Working alongside fellow engineers who brought diverse coding styles and perspectives to the table, we were challenged to adapt and grow in our ability to collaborate effectively.
+      
+      The project encompassed both front-end and back-end development, leveraging the power of React for the user interface and Node.js for the server-side logic. This multifaceted approach allowed us to build a robust and dynamic application capable of meeting the demands of modern stock management.
+      
+      Through this collaborative effort, we not only achieved our goal of delivering a functional stock management system but also gained invaluable insights into the importance of teamwork, communication, and adaptability in software engineering`,
   },
   {
     id: "weather-app",
