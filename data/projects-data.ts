@@ -277,8 +277,11 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/nextjs-weather",
     deployedUrl: "https://nextjs-weather-sandy.vercel.app/",
-    longDescription:
-      "A weather search application where information is retrieved from Open Weather API. It breaks down weekly forecast with expandable sections with more detailed information. This has weather information for all cities and countries around the world!",
+    longDescription: `Introducing our innovative weather search application, powered by data sourced from the Open Weather API. This dynamic platform provides users with comprehensive weather forecasts, effortlessly breaking down weekly projections into easily accessible expandable sections for detailed insights.
+
+      With coverage spanning across cities and countries worldwide, our application ensures that users can access weather information for any location with just a few clicks. Whether you're planning a trip abroad or simply staying informed about local weather conditions, our app has you covered.
+      
+      Stay ahead of the forecast and make informed decisions with our intuitive weather search application. Explore weather trends, anticipate changes, and plan your activities with confidence, all from the convenience of your device.`,
     carousel:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827917/Screenshot_2023-12-05_at_8.58.03_PM_viu9vu.png",
 
