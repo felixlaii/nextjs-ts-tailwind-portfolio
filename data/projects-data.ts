@@ -229,7 +229,7 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pawfinder",
     longDescription: `An application I created as my CapStone for BrainStation Software Engineering bootcamp.\n 
-      This website retrieves information from the PetFinder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. 
+      This website retrieves information from the PetFinder API. It compiles adoption agency information into one convenient location. You have the ability to sign up and save adoption preferences such as breed and age. \n
       User information is saved using mysql and jwt for user authentication. This application has a front-end (react) and a back-end (nodejs) that communicated back and forth to ensure client user information is stored securely and to retrieve accurate information based on your pet preferences.`,
   },
   {
