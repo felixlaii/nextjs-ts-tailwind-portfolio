@@ -92,7 +92,7 @@ export const ProjectsData: {
     ],
   },
   {
-    id: "solace",
+    id: "solace-ink-tattoo",
     index: 3,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738446/solace-ink-logo_psepx0.png",
@@ -107,8 +107,11 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://www.solaceinktattoo.com/",
-    longDescription:
-      "Solace Ink Tattoo has exceptional tattoo artists that creates various different styles of tattoos. They bring your vision to life and transforms your body into a work of art! They wanted to create an online presence for their clients to view and book their artists and wanted a minimal vibe. This website is also hosted on SquareSpace but I definitely injected custom code (JavaScript, HTML5 and CSS3) to elevate their website.",
+    longDescription: `Solace Ink Tattoo, a leading GTA tattoo shop with top-notch artists, sought to establish an online presence without the hassle of managing a complex website. Understanding their needs, we opted for SquareSpace for its user-friendly management.\n
+
+      To enhance the site, I applied custom JavaScript, HTML, and CSS3 for dynamic features and personalized design. This included creating a seamless checkout system for their online shop.
+      
+      The result? A visually captivating website that reflects Solace Ink Tattoo's style while offering easy navigation and a smooth shopping experience. With their online presence sorted, Johnny can focus on delivering exceptional tattoo artistry.`,
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.00_PM_jsmq14.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1708738565/Screenshot_2024-02-23_at_8.35.12_PM_l6xva0.png",
