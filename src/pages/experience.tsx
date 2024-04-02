@@ -182,7 +182,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                           alt={`tech-icon-${index}`}
                           height={100}
                           width={100}
-                          className="w-10 h-10 mx-2 flex-row mx-5"
+                          className="w-8 h-8 flex-row mx-5 mb-6"
                         />
                       ))}
                     </div>
