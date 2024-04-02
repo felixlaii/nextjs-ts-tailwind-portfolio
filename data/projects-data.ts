@@ -72,8 +72,11 @@ export const ProjectsData: {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     ],
     deployedUrl: "https://mix6ixtoronto.com",
-    longDescription:
-      "MIX6IX Bartending & Co was established in 2017. Their team is composed of enthusiastic, dynamic, and skilled hospitality experts who are dedicated to crafting unforgettable cocktail experiences for their patrons. bartending company based in the Greater Toronto Area, and is committed to providing personalized and exceptional service. They have always hosted their website on SquareSpace but wanted a more elevated online presence. I injected custom JavaScript, HTML5 and CSS3 to update their website and the client was more than happy with the outcome!",
+    longDescription: `MIX6IX Bartending & Co was established in 2017. In 2020, the founder, Sharon, reached out to me seeking a rebrand of their website. Eager to collaborate and bring their vision to life, I gladly accepted the opportunity. Despite their preference for the SquareSpace platform, I was determined to infuse their site with a fresh, contemporary feel. \n
+
+      To achieve the desired cool and dark aesthetic, I embarked on a creative brainstorming process. Implementing custom JavaScript, CSS3, and HTML code, I enhanced various aspects of their website. Leveraging JavaScript, I crafted interactive elements to engage visitors and improve user experience. Through meticulous CSS3 styling, I curated a visually striking design that perfectly encapsulated MIX6IX's brand identity. Additionally, I optimized the HTML structure to ensure seamless functionality and accessibility.
+      
+      The result was a revamped website that not only met Sharon's expectations but exceeded them. The fusion of custom code and creative design elements elevated MIX6IX's online presence, leaving a lasting impression on visitors.`,
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161302/Screenshot_2023-12-09_at_5.34.16_PM_eye2nb.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1702161303/Screenshot_2023-12-09_at_5.34.24_PM_apk2gs.png",
