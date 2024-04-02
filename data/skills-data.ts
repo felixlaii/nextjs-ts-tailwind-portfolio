@@ -71,7 +71,7 @@ export const SkillsData: { image: string; description: string }[] = [
 
   {
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1712101206/rest-api-icon_euhh23.png",
     description: "RESTful API's",
   },
 
