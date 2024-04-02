@@ -76,15 +76,18 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               </p>
             </div>
             <div className="flex flex-row justify-evenly">
-              {technology.map((iconUrl, index) => (
-                <Image
-                  height={80}
-                  width={80}
-                  key={index}
-                  src={iconUrl}
-                  alt={`tech-icon-${index}`}
-                  className="lg:w-4 lg:h-5 w-2 h-1 md:w-5 md:h-4 lg:mb-2"
-                />
+              {technology.map((tech, index) => (
+                <div key={index} className="flex ">
+                  <div key={index}>
+                    <Image
+                      height={80}
+                      width={80}
+                      src={tech}
+                      alt={`tech-icon-${index}`}
+                      className="mx-1 lg:w-4 lg:h-5 w-2 h-1 md:w-5 md:h-4 lg:mb-2"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
 

@@ -6,7 +6,7 @@ import Carousel from "@/components/ui/Carousel";
 import { useState } from "react";
 import VideoCarousel from "@/components/ui/VideoCarousel";
 
-const Experience: React.FC<ProjectCardProps> = () => {
+const Experience: React.FC<ProjectCardProps> = ({}) => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<"image" | "video">(
     "image"
@@ -14,17 +14,18 @@ const Experience: React.FC<ProjectCardProps> = () => {
 
   const name = router.query.name as string;
   const image = router.query.image as string;
-  const technology = router.query.technology as string[] | undefined;
   const githubUrl = router.query.githubUrl as string;
   const deployedUrl = router.query.deployedUrl as string;
   const longDescription = router.query.longDescription as string;
   const carousel = router.query.carousel as string[];
   const videoCarousel = router.query.videoCarousel as string[];
-  const techDesc = router.query.techDesc as string[];
+  const technology = router.query.technology as string[] | undefined;
 
   const goBack = () => {
     router.back();
   };
+
+  console.log(technology);
 
   return (
     <div className="bg-brand-base dark:bg-brand-darkMode flex flex-col items-center justify-center min-h-screen pt-[10rem]">
@@ -110,25 +111,27 @@ const Experience: React.FC<ProjectCardProps> = () => {
               {longDescription}
             </p>
           </div>
-          {technology && Array.isArray(technology) && (
-            <div className="bg-brand-base dark:bg-brand-darkMode flex flex-col items-center text-center mx-auto">
-              <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mb-5 text-brand-darkMode dark:text-brand-base tracking-widest">
-                Technology used
-              </h3>
-              <div className="flex flex-row">
-                {technology.map((iconUrl: string, index: number) => (
-                  <Image
-                    key={index}
-                    src={iconUrl}
-                    alt={`tech-icon-${index}`}
-                    height={100}
-                    width={100}
-                    className="w-7 h-7 mx-5 flex-row mb-10"
-                  />
-                ))}
+          <div className="flex flex-row justify-evenly">
+            {technology && Array.isArray(technology) && (
+              <div className="flex flex-col items-center text-center mx-auto">
+                <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
+                  Technology used
+                </h3>
+                <div className="flex flex-row">
+                  {technology.map((iconUrl: string, index: number) => (
+                    <Image
+                      key={index}
+                      src={iconUrl}
+                      alt={`tech-icon-${index}`}
+                      height={100}
+                      width={100}
+                      className="w-10 h-10 mx-2 flex-row mx-5"
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
 
@@ -178,29 +181,27 @@ const Experience: React.FC<ProjectCardProps> = () => {
               {longDescription}
             </p>
           </div>
-
-          {technology && Array.isArray(technology) && (
-            <div className="bg-brand-base dark:bg-brand-darkMode flex flex-col items-center text-center mx-auto">
-              <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mb-5 text-brand-darkMode dark:text-brand-base tracking-widest">
-                Technology used
-              </h3>
-              <div className="flex flex-row">
-                {technology.map((iconUrl: string, index: number) => (
-                  <Image
-                    key={index}
-                    src={iconUrl}
-                    alt={`tech-icon-${index}`}
-                    height={100}
-                    width={100}
-                    className="w-7 h-7 mx-5 flex-row mb-10"
-                  />
-                ))}
+          <div className="flex flex-row justify-evenly">
+            {technology && Array.isArray(technology) && (
+              <div className="flex flex-col items-center text-center mx-auto">
+                <h3 className="font-custom text-[1.5rem] sm:text-[1.8rem] md:text-[2.3rem] lg:text-[2.3rem] mt-4 mb-5 text-brand-dark tracking-widest">
+                  Technology used
+                </h3>
+                <div className="flex flex-row">
+                  {technology.map((iconUrl: string, index: number) => (
+                    <Image
+                      key={index}
+                      src={iconUrl}
+                      alt={`tech-icon-${index}`}
+                      height={100}
+                      width={100}
+                      className="w-10 h-10 mx-2 flex-row mx-5"
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-          <p className="text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] text-black md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center">
-            {techDesc}
-          </p>
+            )}
+          </div>
         </div>
       )}
     </div>
