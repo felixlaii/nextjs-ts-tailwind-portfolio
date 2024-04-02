@@ -308,8 +308,11 @@ export const ProjectsData: {
     ],
     githubUrl: "https://github.com/felixlaii/pokemon-search-app.github.io",
     deployedUrl: "https://felixlaii.github.io/pokemon-search-app.github.io/",
-    longDescription:
-      "Are you feeling nostalgic? A Pokemon search application where information is retrieved from Poke API. It provides detailed information about selected Pokemon, it provides the normal version and shiny version of the Pokemon. This application was created with React and uses MaterialUI for the components and it was definitely a great experience learning this package!",
+    longDescription: `Embark on a nostalgic journey with our Pokémon search application, powered by data sourced from the Poke API. Delve into the world of Pokémon like never before, as our application provides comprehensive details about your favorite creatures.
+
+      Discover everything you need to know about each Pokémon, from its basic stats to its unique abilities. With our app, you can even explore both the normal and shiny versions of each Pokémon, adding an extra layer of excitement to your search.
+      
+      Built with React and leveraging the power of MaterialUI for its sleek and user-friendly components, our Pokémon search application offers an immersive experience that Pokémon fans of all ages will love. Whether you're reliving your childhood memories or discovering new favorites, our app is your ultimate companion in the Pokémon universe. Catch 'em all with ease and style!`,
     carousel: [
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.34_PM_wdzbyx.png",
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701827996/Screenshot_2023-12-05_at_8.59.45_PM_tjr6qn.png",
