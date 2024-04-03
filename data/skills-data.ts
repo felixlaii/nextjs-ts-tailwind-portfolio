@@ -3,7 +3,7 @@ export const SkillsData: {
   technologies: { image: string; description: string }[];
 }[] = [
   {
-    category: "Frontend Frameworks/Libraries",
+    category: "Front-End & Programming Languages",
     technologies: [
       {
         image:
@@ -15,11 +15,21 @@ export const SkillsData: {
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
         description: "Next.js",
       },
-    ],
-  },
-  {
-    category: "Styling",
-    technologies: [
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+        description: "JavaScript",
+      },
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        description: "TypeScript",
+      },
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        description: "HTML5",
+      },
       {
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
@@ -40,10 +50,15 @@ export const SkillsData: {
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
         description: "Material UI",
       },
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+        description: "Bootstrap",
+      },
     ],
   },
   {
-    category: "Backend Frameworks/Libraries",
+    category: "Back-End & Database",
     technologies: [
       {
         image:
@@ -54,26 +69,6 @@ export const SkillsData: {
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
         description: "Express",
-      },
-    ],
-  },
-  {
-    category: "Database",
-    technologies: [
-      {
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-        description: "MySQL",
-      },
-    ],
-  },
-  {
-    category: "API/Backend Tools",
-    technologies: [
-      {
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-        description: "TypeScript",
       },
       {
         image:
@@ -103,8 +98,23 @@ export const SkillsData: {
     ],
   },
   {
-    category: "CMS (Content Management System)",
+    category: "Deployment & CMS",
     technologies: [
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+        description: "Netlify",
+      },
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+        description: "Vercel",
+      },
+      {
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg",
+        description: "Digital Ocean",
+      },
       {
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
@@ -114,21 +124,6 @@ export const SkillsData: {
         image:
           "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698363684/squarespace_logo_icon_181252_o3zs5v.png",
         description: "SquareSpace",
-      },
-    ],
-  },
-  {
-    category: "Other Language Tools",
-    technologies: [
-      {
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-        description: "JavaScript",
-      },
-      {
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        description: "HTML5",
       },
     ],
   },
