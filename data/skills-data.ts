@@ -3,7 +3,7 @@ export const SkillsData: {
   technologies: { image: string; description: string }[];
 }[] = [
   {
-    category: "Front-End & Programming Languages",
+    category: "FrontEnd & Languages",
     technologies: [
       {
         image:
@@ -58,7 +58,7 @@ export const SkillsData: {
     ],
   },
   {
-    category: "Back-End & Database",
+    category: "BackEnd & Database",
     technologies: [
       {
         image:

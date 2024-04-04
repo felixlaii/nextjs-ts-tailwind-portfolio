@@ -6,7 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Skills: React.FC = () => {
-  const frontEndSkills = SkillsData.slice(0, 9);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const handleCategoryClick = (category: string) => {
