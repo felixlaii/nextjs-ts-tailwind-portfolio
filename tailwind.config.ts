@@ -23,13 +23,20 @@ module.exports = {
         custom: ["bebas", "sans-serif"],
       },
       animation: {
-        fade: "fadeIn 1.5s ease-in-out",
+        fade: "fadeIn 1.2s ease-in-out",
+        spin: "spin 1s linear",
       },
 
       keyframes: {
         fadeIn: {
           from: { opacity: 0 },
           to: { opacity: 1 },
+        },
+        spinIn: {
+          from: {
+            transform: { rotate: 0 },
+          },
+          to: { transform: { rotate: 360 } },
         },
       },
     },

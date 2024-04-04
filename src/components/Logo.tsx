@@ -10,7 +10,7 @@ const Logo = () => {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
       {isFadeIn ? (
         <Transition
           show={isFadeIn}
@@ -18,12 +18,14 @@ const Logo = () => {
           enterFrom="opacity-0 translate-x-[-50%]"
           enterTo="opacity-100 translate-x-0"
         >
-          <Image
-            src="/images/fl-trans-white.png"
-            alt="logo"
-            width={50}
-            height={50}
-          />
+          <div className="inline-block animate-spin">
+            <Image
+              src="/images/fl-trans-white.png"
+              alt="logo"
+              width={50}
+              height={50}
+            />
+          </div>
         </Transition>
       ) : null}
     </div>
