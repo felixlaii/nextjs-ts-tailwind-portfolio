@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Skills: React.FC = () => {
+  const frontEndSkills = SkillsData.slice(0, 9);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const handleCategoryClick = (category: string) => {
@@ -42,10 +43,10 @@ const Skills: React.FC = () => {
                 selectedCategory === category.category ? "h-auto" : "h-0"
               }`}
             >
-              <ul className="flex justify-center items-center mx-4 sm:mx-auto">
+              <ul className="flex flex-wrap justify-center items-center mx-4 sm:mx-auto">
                 {category.technologies.map((skill, index) => (
                   <li
-                    className="flex flex-col items-center text-white"
+                    className="flex flex-col items-center text-white "
                     key={index}
                   >
                     <Image
@@ -53,9 +54,9 @@ const Skills: React.FC = () => {
                       height={50}
                       src={skill.image}
                       alt="skills"
-                      className="w-8 h-8 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] mx-8"
+                      className="w-5 h-5 mx-4 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] lg:mx-8"
                     />
-                    <p className="text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4">
+                    <p className="text-brand-darkMode dark:text-brand-lightest text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4">
                       {skill.description}
                     </p>
                   </li>
