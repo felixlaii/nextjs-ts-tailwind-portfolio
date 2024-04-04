@@ -20,13 +20,13 @@ const Skills: React.FC = () => {
   }, []);
 
   return (
-    <section className="dark:bg-brand-darkMode dark:text-brand-lightMode bg-brand-lightMode text-brand-darkMode flex flex-col font-custom py-5">
+    <section className="flex flex-col items-center font-custom py-5 dark:bg-brand-darkMode dark:text-brand-lightMode bg-brand-lightMode text-brand-darkMode">
       <div data-aos="zoom-in-up">
         <h2 className="text-center text-3d text-brand-darkMode dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest">
           Expertise
         </h2>
       </div>
-      <div className="px-4 flex flex-col text-center grid grid-cols-1 divide-y divide-brand-cardbg w-full lg:w-3/5 pb-4">
+      <div className="px-4 flex flex-col text-center grid grid-cols-1 divide-y divide-brand-cardbg w-full lg:w-4/5 pb-4">
         {SkillsData.map((category, index) => (
           <div key={index} className="w-auto">
             <button
@@ -53,7 +53,7 @@ const Skills: React.FC = () => {
                       height={50}
                       src={skill.image}
                       alt="skills"
-                      className="w-5 h-5 mx-[1.6rem] sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] lg:mx-8"
+                      className="w-5 h-5 mx-[1.6rem] sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] lg:mx-14"
                     />
                     <p className="text-brand-darkMode dark:text-brand-lightest text-[0.7rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4 tracking-wider">
                       {skill.description}
