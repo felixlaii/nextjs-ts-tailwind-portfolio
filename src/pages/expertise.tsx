@@ -26,7 +26,7 @@ const Skills: React.FC = () => {
           Expertise
         </h2>
       </div>
-      <div className="mx-auto flex flex-col text-center grid grid-cols-1 divide-y divide-brand-cardbg w-3/4 lg:w-3/5 pb-4">
+      <div className="px-4 flex flex-col text-center grid grid-cols-1 divide-y divide-brand-cardbg w-full lg:w-3/5 pb-4">
         {SkillsData.map((category, index) => (
           <div key={index} className="w-auto">
             <button
@@ -45,7 +45,7 @@ const Skills: React.FC = () => {
               <ul className="flex flex-wrap justify-center items-center mx-4 sm:mx-auto">
                 {category.technologies.map((skill, index) => (
                   <li
-                    className="flex flex-col items-center text-white "
+                    className="flex flex-col items-center text-white w-100"
                     key={index}
                   >
                     <Image
@@ -53,9 +53,9 @@ const Skills: React.FC = () => {
                       height={50}
                       src={skill.image}
                       alt="skills"
-                      className="w-5 h-5 mx-4 sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] lg:mx-8"
+                      className="w-5 h-5 mx-[1.6rem] sm:w-10 sm:h-10 md:w-18 md:h-18 lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] lg:mx-8"
                     />
-                    <p className="text-brand-darkMode dark:text-brand-lightest text-[0.6rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4">
+                    <p className="text-brand-darkMode dark:text-brand-lightest text-[0.7rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.7rem] sm:text-[0.7rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4 tracking-wider">
                       {skill.description}
                     </p>
                   </li>
