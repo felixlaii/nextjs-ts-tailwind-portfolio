@@ -26,15 +26,15 @@ const Skills: React.FC = () => {
           Expertise
         </h2>
       </div>
-      <div className="mx-auto flex flex-col text-center grid grid-cols-1 divide-y divide-brand-cardbg w-3/5 pb-4">
+      <div className="mx-auto flex flex-col text-center grid grid-cols-1 divide-y divide-brand-cardbg w-3/4 lg:w-3/5 pb-4">
         {SkillsData.map((category, index) => (
           <div key={index} className="w-auto">
             <button
-              className="flex flex-row items-center justify-between mx-auto mt-4 px-4 py-2 focus:outline-none lg:text-[1.2rem] w-full text-brand-headerbg transition-all duration-300 ease-in-out hover:tracking-widest"
+              className="flex flex-row items-center justify-between mx-auto mt-4 px-4 py-2 focus:outline-none lg:text-[1.2rem] w-full dark:text-brand-lightMode text-brand-headerbg transition-all duration-300 ease-in-out hover:tracking-widest"
               onClick={() => handleCategoryClick(category.category)}
             >
               {category.category}
-              <CiSaveDown1 className="ml-2 text-[1.7rem] text-brand-headerbg transition duration-3000 animate-bounce" />
+              <CiSaveDown1 className="ml-2 text-[1.7rem] dark:text-brand-lightMode text-brand-headerbg transition duration-3000 animate-bounce" />
             </button>
 
             <div
