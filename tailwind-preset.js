@@ -65,11 +65,11 @@ module.exports = {
               to: { transform: "rotate(360deg)" },
             },
             bounce: {
-                '20%, 30%, 60%, 80%, 100%': {
+                '60%, 65%, 70%, 80%, 100%': {
                     transform: 'translateY(-0)',
                 },
                 '80%': {
-                    transform: 'translateY(-20px)',
+                    transform: 'translateY(-10px)',
                 },
                 '90%': {
                     transform: 'translateY(-5px)',
