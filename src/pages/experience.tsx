@@ -66,7 +66,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
           )}
       </div>
       {selectedCategory === "image" && (
-        <div className="bg-brand-darkMode dark:bg-brand-base w-full">
+        <div className="bg-brand-darkMode dark:bg-brand-base w-full ">
           <div className=" pb-4">
             {carousel && carousel.length > 0 ? (
               <Carousel carousel={carousel} />
@@ -125,7 +125,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[1.5rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
@@ -192,7 +192,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[1.2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>

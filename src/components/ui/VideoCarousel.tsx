@@ -222,7 +222,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96  max-w-4xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96 md:mx-6 max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
