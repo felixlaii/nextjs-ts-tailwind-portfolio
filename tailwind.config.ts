@@ -24,7 +24,7 @@ module.exports = {
       },
       animation: {
         fade: "fadeIn 1.2s ease-in-out",
-        spin: "spin 1s linear",
+        spinIn: "spin-once 1s linear",
       },
 
       keyframes: {
@@ -32,11 +32,9 @@ module.exports = {
           from: { opacity: 0 },
           to: { opacity: 1 },
         },
-        spinIn: {
-          from: {
-            transform: { rotate: 0 },
-          },
-          to: { transform: { rotate: 360 } },
+        spinOnce: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
         },
       },
     },
