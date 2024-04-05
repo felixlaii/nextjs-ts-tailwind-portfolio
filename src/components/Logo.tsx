@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Transition } from "@headlessui/react";
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
 const spinOnce = keyframes`
   from {
-    opacity: 0;
     transform: rotate(0deg)
   }
   to {
-    opacity: 1;
     transform: rotate(360deg)
   }
 `;
 
 const SpinLogo = styled(Image)`
-  animation: ${spinOnce} 1s spin;
+  animation-name: ${spinOnce};
+  animation-duration: 1s;
+  animation-timing-function: linear;
 `;
 
 const Logo = () => {
