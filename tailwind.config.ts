@@ -9,7 +9,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  presets: [customPreset],
+  presets: [require("./tailwind-preset")],
   darkMode: "class",
   theme: {
     extend: {
@@ -22,21 +22,21 @@ module.exports = {
       fontFamily: {
         custom: ["bebas", "sans-serif"],
       },
-      animation: {
-        fade: "fadeIn 1.2s ease-in-out",
-        spinIn: "spin-once 1s linear",
-      },
+      // animation: {
+      //   fade: "fadeIn 1.2s ease-in-out",
+      //   spinIn: "spin-once 1s linear",
+      // },
 
-      keyframes: {
-        fadeIn: {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
-        },
-        spinOnce: {
-          from: { transform: "rotate(0deg)" },
-          to: { transform: "rotate(360deg)" },
-        },
-      },
+      // keyframes: {
+      //   fadeIn: {
+      //     from: { opacity: 0 },
+      //     to: { opacity: 1 },
+      //   },
+      //   spinOnce: {
+      //     from: { transform: "rotate(0deg)" },
+      //     to: { transform: "rotate(360deg)" },
+      //   },
+      // },
     },
   },
   variants: {},

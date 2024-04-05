@@ -64,6 +64,17 @@ module.exports = {
               from: { transform: "rotate(0deg)" },
               to: { transform: "rotate(360deg)" },
             },
+            bounce: {
+                '20%, 30%, 60%, 80%, 100%': {
+                    transform: 'translateY(-0)',
+                },
+                '80%': {
+                    transform: 'translateY(-20px)',
+                },
+                '90%': {
+                    transform: 'translateY(-5px)',
+                },
+            },
           },
     },
     plugins: [
