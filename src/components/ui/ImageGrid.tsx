@@ -24,7 +24,7 @@ const ImageGrid: React.FC<ProjectCardProps> = ({
                 id={i.toString()}
                 src={img}
                 alt=""
-                className="rounded-full object-cover opacity-80 z-10 h-12 w-12 md:h-16 md:w-16 lg:h-24 lg:w-24"
+                className="cara-thumbnail object-cover opacity-80 mx-4 z-10 h-[3rem] w-[3.5rem] sm:h-[3rem] sm:w-[3.5rem] md:h-[4rem] md:w-[4.6rem] lg:h-[4.2rem] lg:w-[4.8rem]"
               />
             </a>
           </div>

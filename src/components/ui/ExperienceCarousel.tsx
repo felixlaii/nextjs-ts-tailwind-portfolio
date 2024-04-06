@@ -58,7 +58,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
       type="button"
       onClick={isLeftButton ? previousImage : nextImage}
       className={`    absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
-      ${isLeftButton ? "left-2" : "right-2"}`}
+      ${isLeftButton ? "left-30" : "right-1"}`}
       style={{ top: "45%" }}
     >
       <span
@@ -78,7 +78,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
     >
       <div
         className={clsx(
-          "relative mt-12 h-64 md:h-96 lg:w-auto xl:h-[29rem] rounded-lg"
+          "relative mt-12 h-72 md:h-96 lg:w-auto xl:h-[29rem] rounded-lg"
         )}
       >
         <div
@@ -100,7 +100,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
                 height={300}
                 src={img}
                 className={clsx(
-                  "object-cover items-center w-full h-full h-64 lg:h-50 lg:w-[20rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
+                  "object-cover items-center w-3/4 lg:h-[20rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
                 )}
                 alt="Our Practice"
               />
