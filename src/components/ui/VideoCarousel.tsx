@@ -222,7 +222,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
       <div
         ref={containerRef}
         className={cn(
-          "relative mt-12 h-64 md:h-96 md:mx-6 max-w-4xl rounded-lg shadow-lg overflow-hidden"
+          "relative mt-12 h-64 md:h-96 sm:mx-6 md:mx-6 max-w-4xl rounded-lg shadow-lg overflow-hidden"
         )}
       >
         <motion.div
@@ -295,7 +295,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({
                 >
                   <video
                     className={cn(
-                      "object-fill w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
+                      "object-contain w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg",
                       !active && "opacity-100",
                       active && "opacity-100"
                     )}
