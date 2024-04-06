@@ -57,7 +57,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
     <button
       type="button"
       onClick={isLeftButton ? previousImage : nextImage}
-      className={`    absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
+      className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
       ${isLeftButton ? "left-30" : "right-1"}`}
       style={{ top: "45%" }}
     >
@@ -83,13 +83,13 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
       >
         <div
           className={clsx(
-            "flex items-center overflow-x-hidden snap-mandatory snap-x h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
+            "flex items-center overflow-x-hidden snap-mandatory snap-x h-64 lg:h-[30rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
           )}
         >
           {sliderControl(true)}
           {initialCarouselArray.map((img, i) => (
             <div
-              className="flex justify-center w-full flex-shrink-0"
+              className="flex justify-center lg:h-[40rem] w-full flex-shrink-0"
               key={`${img} - ${i}`}
               ref={refs[i]}
               id={i.toString()}
@@ -100,7 +100,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
                 height={300}
                 src={img}
                 className={clsx(
-                  "object-cover items-center w-3/4 lg:h-[20rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
+                  "object-scale-down items-center w-3/4 lg:h-[35rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
                 )}
                 alt="Our Practice"
               />

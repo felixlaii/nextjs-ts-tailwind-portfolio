@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
-import Carousel from "@/components/ui/Carousel";
 import { useState } from "react";
 import VideoCarousel from "@/components/ui/VideoCarousel";
 import ExperienceCarousel from "@/components/ui/ExperienceCarousel";
