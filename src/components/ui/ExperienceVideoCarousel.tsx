@@ -13,6 +13,19 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
 }) => {
   const [currentVideo, setCurrentVideo] = useState<number>(0);
 
+  const initialVideoCarouselArray =
+    typeof videoCarouselArray === "string"
+      ? [videoCarouselArray]
+      : videoCarouselArray || [];
+
+  const refs = initialVideoCarouselArray.reduce(
+    (acc: any, val: any, i: any) => {
+      acc[i] = createRef();
+      return acc;
+    },
+    {}
+  );
+
   return <div></div>;
 };
 
