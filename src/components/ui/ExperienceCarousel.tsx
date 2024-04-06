@@ -64,7 +64,19 @@ const ExperienceCarousel: React.FC<ProjectCardProps> = ({ carouselArray }) => {
       className={clsx(
         "flex flex-col justify-center items-center w-[calc(10% - 10px)] mx-5 lg:mx-auto pb-8"
       )}
-    ></div>
+    >
+      <div
+        className={clsx(
+          "relative mt-12 h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg"
+        )}
+      >
+        <div
+          className={clsx(
+            "flex overflow-x-hidden snap-mandatory snap-x h-64 md:h-96 xl:h-[29rem] max-w-3xl rounded-lg shadow-lg"
+          )}
+        ></div>
+      </div>
+    </div>
   );
 };
 
