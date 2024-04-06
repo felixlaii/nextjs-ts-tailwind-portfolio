@@ -41,6 +41,21 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
 
   const totalVideos = initialVideoCarouselArray.length;
 
+  const nextVideo = () => {
+    if (currentVideo >= totalVideos - 1) {
+      scrollToVideo(0);
+    } else {
+      scrollToVideo(currentVideo + 1);
+    }
+  };
+
+  const previousVideo = () => {
+    if (currentVideo === 0) {
+      scrollToVideo(totalVideos - 1);
+    } else {
+      scrollToVideo(currentVideo - 1);
+    }
+  };
   return <div></div>;
 };
 
