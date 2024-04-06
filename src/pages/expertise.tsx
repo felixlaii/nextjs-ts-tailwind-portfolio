@@ -55,7 +55,7 @@ const Skills: React.FC = () => {
                       alt="skills"
                       className="transition-all duration-500 ease-out w-5 h-5 hover:w-8 hover:h-8 mx-[1.6rem] sm:w-10 sm:h-10 hover:sm:w-[3rem] hover:sm:h-[3rem] sm:mx-[2.4rem] md:w-10 md:h-10 hover:md:w-12 hover:md:h-12  md:mx-[1.5rem] lg:w-[2.8rem] lg:h-[2.8rem] hover:lg:w-[3rem] hover:lg:h-[3rem] xl:w-[4rem] xl:h-[4rem] hover:xl:w-[4.3rem] hover:xl:h-[4.3rem]  xl:mt-[1rem] lg:mx-14"
                     />
-                    <p className="text-brand-darkMode dark:text-gray-800 text-[0.7rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.8rem] sm:text-[0.9rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4 tracking-wider sm:tracking-wider lg:tracking-widest md:tracking-widest hover:tracking-[0.3rem] transition-all duration-500 ease-out">
+                    <p className="text-brand-darkMode dark:text-gray-800 text-[0.7rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.8rem] sm:text-[0.9rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4 tracking-wider sm:tracking-wider lg:tracking-widest md:tracking-widest hover:tracking-[0.1rem] transition-all duration-500 ease-out">
                       {skill.description}
                     </p>
                   </li>
