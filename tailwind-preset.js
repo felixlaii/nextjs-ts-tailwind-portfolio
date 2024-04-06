@@ -54,7 +54,28 @@ module.exports = {
             80: "80",
             90: "90",
             100: "100",
-        }
+        },
+        keyframes: {
+            fadeIn: {
+              from: { opacity: 0 },
+              to: { opacity: 1 },
+            },
+            spinOnce: {
+              from: { transform: "rotate(0deg)" },
+              to: { transform: "rotate(360deg)" },
+            },
+            bounce: {
+                '60%, 65%, 70%, 80%, 100%': {
+                    transform: 'translateY(-0)',
+                },
+                '80%': {
+                    transform: 'translateY(-10px)',
+                },
+                '90%': {
+                    transform: 'translateY(-5px)',
+                },
+            },
+          },
     },
     plugins: [
         require("@tailwindcss/forms"),

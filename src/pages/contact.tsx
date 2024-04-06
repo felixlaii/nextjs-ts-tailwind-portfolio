@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
         action="/success"
         method="POST"
         data-netlify="true"
-        className="container w-full max-w-sm lg:max-w-xl p-8 mx-auto space-y-4 rounded-md shadow-2xl"
+        className="container w-4/5 lg:max-w-xl sm:w-3/4 md:h-90 md:w-3/4 px-8 py-8 mr-15 ml-15 space-y-4 rounded-md shadow-2xl"
       >
         <div data-aos="zoom-in-up">
           <h2 className="text-center text-3d text-brand-darkMode dark:text-brand-lightest text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] tracking-widest pb-2 lg:pb-5">

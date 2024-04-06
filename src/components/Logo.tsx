@@ -1,30 +1,40 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Transition } from "@headlessui/react";
+import { keyframes } from "@emotion/react";
+import styled from "@emotion/styled";
+
+const spinOnce = keyframes`
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+`;
+
+const SpinLogo = styled(Image)`
+  animation-name: ${spinOnce};
+  animation-duration: 1s;
+  animation-timing-function: linear;
+`;
 
 const Logo = () => {
-  const [isFadeIn, setIsFadeIn] = useState(false);
+  const [isSpinIn, setIsSpinIn] = useState(false);
 
   useEffect(() => {
-    setIsFadeIn(true);
+    setIsSpinIn(true);
   }, []);
 
   return (
     <div>
-      {isFadeIn ? (
-        <Transition
-          show={isFadeIn}
-          enter="transition transform duration-1000"
-          enterFrom="opacity-0 translate-x-[-50%]"
-          enterTo="opacity-100 translate-x-0"
-        >
-          <Image
-            src="/images/fl-trans-white.png"
-            alt="logo"
-            width={50}
-            height={50}
-          />
-        </Transition>
+      {isSpinIn ? (
+        <SpinLogo
+          src="/images/fl-trans-white.png"
+          alt="logo"
+          width={50}
+          height={50}
+          priority={true}
+        />
       ) : null}
     </div>
   );
