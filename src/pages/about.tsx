@@ -33,7 +33,7 @@ const About: React.FC = () => {
           </h1>
         </div>
         <div data-aos="fade-right" className="flex text-center mx-10">
-          <p className="text-sm tracking-widest">
+          <p className="text-xs sm:text-md md:text-[1rem] lg:text-lg xl:text-xl tracking-widest">
             Born in Hong Kong. Raised in the GTA. I attended the University of
             Toronto for a Bachelor of Arts Honours program. <br />
             I have over 10 years of luxury retail management experience from
