@@ -28,6 +28,22 @@ const ExperienceCarousel: React.FC<ProjectCardProps> = ({ carouselArray }) => {
 
   const totalImages = initialCarouselArray.length;
 
+  const nextImage = () => {
+    if (currentImage >= totalImages - 1) {
+      scrollToImage(0);
+    } else {
+      scrollToImage(currentImage + 1);
+    }
+  };
+
+  const previousImage = () => {
+    if (currentImage === 0) {
+      scrollToImage(totalImages - 1);
+    } else {
+      scrollToImage(currentImage - 1);
+    }
+  };
+
   return <div></div>;
 };
 
