@@ -1,5 +1,6 @@
 import { createRef, useState } from "react";
 import { ProjectCardProps } from "@/types/component-types";
+import clsx from "clsx";
 
 const ExperienceCarousel: React.FC<ProjectCardProps> = ({ carouselArray }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
@@ -58,7 +59,13 @@ const ExperienceCarousel: React.FC<ProjectCardProps> = ({ carouselArray }) => {
     </button>
   );
 
-  return <div></div>;
+  return (
+    <div
+      className={clsx(
+        "flex flex-col justify-center items-center w-[calc(10% - 10px)] mx-5 lg:mx-auto pb-8"
+      )}
+    ></div>
+  );
 };
 
 export default ExperienceCarousel;
