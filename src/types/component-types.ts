@@ -28,18 +28,18 @@ export interface ButtonProps {
 }
 
 export interface ProjectCardProps {
-  name: string;
-  description: string;
+  name?: string;
+  description?: string;
   image: string;
-  technology: string[];
+  technology?: string[];
   githubUrl?: string;
   deployedUrl?: string;
   videoCarouselArray?: string | string[];
-  id: string;
-  longDescription: string;
+  id?: string;
+  longDescription?: string;
   carouselArray?: string | string[];
-  onClick: () => void;
-  index: number;
+  onClick?: () => void;
+  index?: number | undefined;
 }
 
 export interface DarkModeContextProps {
@@ -55,6 +55,10 @@ export interface CarouselProps {
   width?: number;
   height?: number;
   items: React.ReactNode[];
+}
+
+export interface ExperienceCarouselProps extends ProjectCardProps {
+  carouselArray: string | string[] | undefined;
 }
 
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;

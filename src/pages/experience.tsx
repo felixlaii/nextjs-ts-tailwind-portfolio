@@ -5,7 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import Carousel from "@/components/ui/Carousel";
 import { useState } from "react";
 import VideoCarousel from "@/components/ui/VideoCarousel";
-
+import ExperienceCarousel from "@/components/ui/ExperienceCarousel";
 const Experience: React.FC<ProjectCardProps> = ({}) => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<"image" | "video">(
@@ -69,7 +69,13 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
         <div className="bg-brand-darkMode dark:bg-brand-base w-full ">
           <div className=" pb-4">
             {carousel && carousel.length > 0 ? (
-              <Carousel carousel={carousel} />
+              <ExperienceCarousel
+                carouselArray={carousel}
+                image={image}
+                technology={technology}
+                name={name}
+                description={longDescription}
+              />
             ) : (
               <Image
                 className="object-fit mx-auto mt-8 rounded-md"

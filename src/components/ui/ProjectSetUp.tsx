@@ -12,18 +12,21 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
   index,
   name,
 }) => {
+  const hoverIndex = index !== undefined ? index : 0;
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedHoverState = localStorage.getItem(`hoverState_${index}`);
+      const storedHoverState = localStorage.getItem(`hoverState_${hoverIndex}`);
       setIsHovered(storedHoverState === "true");
     }
-  }, [index]);
+  }, [hoverIndex]);
+
+  const techList = technology || [];
 
   useEffect(() => {
-    localStorage.setItem(`hoverState_${index}`, isHovered.toString());
-  }, [isHovered, index]);
+    localStorage.setItem(`hoverState_${hoverIndex}`, isHovered.toString());
+  }, [isHovered, hoverIndex]);
 
   useEffect(() => {
     AOS.init({
@@ -40,7 +43,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
    isHovered ? "" : ""
  } bg-brand-lightMode hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-cardbg`}
       data-aos={
-        isHovered ? null : index % 2 === 0 ? "slide-left" : "slide-right"
+        isHovered ? null : hoverIndex % 2 === 0 ? "slide-left" : "slide-right"
       }
       whileHover={{
         scale: isHovered ? 1.1 : 1,
@@ -76,7 +79,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
               </p>
             </div>
             <div className="flex flex-row justify-evenly">
-              {technology.map((tech, index) => (
+              {techList.map((tech, index) => (
                 <div key={index} className="flex ">
                   <div key={index}>
                     <Image
