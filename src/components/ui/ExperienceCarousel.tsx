@@ -44,6 +44,20 @@ const ExperienceCarousel: React.FC<ProjectCardProps> = ({ carouselArray }) => {
     }
   };
 
+  const sliderControl = (isLeftButton?: boolean) => (
+    <button
+      type="button"
+      onClick={isLeftButton ? previousImage : nextImage}
+      className={`    "absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center";
+      ${isLeftButton ? "left-2" : "right-2"}`}
+      style={{ top: "45%" }}
+    >
+      <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
+        {isLeftButton ? "◀" : "▶"}
+      </span>
+    </button>
+  );
+
   return <div></div>;
 };
 
