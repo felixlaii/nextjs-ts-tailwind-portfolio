@@ -176,11 +176,6 @@ export const ProjectsData: {
       Currently a work in progress, our team is diligently crafting a tailored solution to meet St. Patrick's unique needs. From intuitive navigation to dynamic content management, the WordPress framework lays the foundation for a seamless online experience.
       
       Stay tuned as we continue to transform St. Patrick Secondary School's digital footprint, ensuring it reflects their commitment to excellence and innovation in education.`,
-    carousel: [
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820513/Screenshot_2023-12-05_at_6.54.37_PM_acgqzs.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.46_PM_wyhlok.png",
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1701820512/Screenshot_2023-12-05_at_6.54.53_PM_sj3vu1.png",
-    ],
   },
   {
     id: "ChatGPT",
