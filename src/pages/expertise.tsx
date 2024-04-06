@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
         {SkillsData.map((category, index) => (
           <div key={index} className="w-auto">
             <button
-              className="flex flex-row items-center justify-between mx-auto mt-4 px-4 py-2 focus:outline-none lg:text-[1.2rem] w-full dark:text-brand-lightMode text-brand-headerbg hover:tracking-widest"
+              className="flex flex-row items-center justify-between mx-auto mt-4 px-4 py-2 lg:text-[1.2rem] w-full dark:text-brand-lightMode text-brand-headerbg hover:tracking-widest"
               onClick={() => handleCategoryClick(category.category)}
             >
               {category.category}
