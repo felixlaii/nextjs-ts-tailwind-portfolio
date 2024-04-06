@@ -39,6 +39,8 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     });
   };
 
+  const totalVideos = initialVideoCarouselArray.length;
+
   return <div></div>;
 };
 
