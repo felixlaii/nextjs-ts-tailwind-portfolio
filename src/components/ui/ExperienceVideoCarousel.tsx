@@ -1,7 +1,7 @@
 import { createRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
-import ImageGrid from "./ImageGrid";
+import VideoGrid from "./VideoGrid";
 import { ExperienceVideoCarouselProps } from "@/types/component-types";
 
 const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
@@ -73,7 +73,56 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       </span>
     </button>
   );
-  return <div></div>;
+  return (
+    <div
+      className={clsx(
+        "flex flex-col justify-center items-center w-[calc(10% - 10px)] mx-5 lg:mx-auto pb-8"
+      )}
+    >
+      <div
+        className={clsx(
+          "relative mt-12 h-72 md:h-96 lg:w-auto xl:h-[29rem] rounded-lg"
+        )}
+      >
+        <div
+          className={clsx(
+            "flex items-center overflow-x-hidden snap-mandatory snap-x h-64 lg:h-[30rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
+          )}
+        >
+          {sliderControl(true)}
+          {initialVideoCarouselArray.map((videoUrl, i) => (
+            <div
+              className="flex justify-center lg:h-[40rem] w-full flex-shrink-0"
+              key={`${videoUrl} - ${i}`}
+              ref={refs[i]}
+              id={i.toString()}
+            >
+              {" "}
+              <Image
+                width={300}
+                height={300}
+                src={videoUrl}
+                className={clsx(
+                  "object-scale-down items-center w-3/4 lg:h-[35rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
+                )}
+                alt="Our Practice"
+              />
+            </div>
+          ))}
+          {sliderControl()}
+        </div>
+      </div>
+      <div className="mt-8 max-w-3xl">
+        <VideoGrid
+          videoCarouselArray={videoCarouselArray}
+          name={name}
+          description={description}
+          image={image}
+          technology={technology}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default ExperienceVideoCarousel;
