@@ -26,6 +26,19 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     {}
   );
 
+  const scrollToVideo = (i: number) => {
+    // Set the index of the image we want to see next
+    setCurrentVideo(i);
+    refs[i].current.scrollIntoView({
+      // Defines the transition animation.
+      behavior: "smooth",
+      // Defines vertical alignment.
+      block: "nearest",
+      // Defines horizontal alignment.
+      inline: "start",
+    });
+  };
+
   return <div></div>;
 };
 
