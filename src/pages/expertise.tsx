@@ -53,7 +53,7 @@ const Skills: React.FC = () => {
                       height={50}
                       src={skill.image}
                       alt="skills"
-                      className="w-5 h-5 mx-[1.6rem] sm:w-10 sm:h-10 sm:mx-[2.4rem] md:w-10 md:h-10 md:mx-[2rem] lg:w-[2.3rem] lg:h-[2.5rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[2rem] lg:mx-14"
+                      className="w-5 h-5 mx-[1.6rem] sm:w-10 sm:h-10 sm:mx-[2.4rem] md:w-10 md:h-10 md:mx-[2rem] lg:w-[2.8rem] lg:h-[2.8rem] xl:w-[4rem] xl:h-[4rem] xl:mt-[1rem] lg:mx-14"
                     />
                     <p className="text-brand-darkMode dark:text-gray-800 text-[0.7rem] xl:text-[1rem] lg:text-[0.8rem] md:text-[0.8rem] sm:text-[0.9rem] font-extralight mt-2 text-center text-brand-altDarkMode pb-4 tracking-wider sm:tracking-wider lg:tracking-widest md:tracking-widest">
                       {skill.description}
