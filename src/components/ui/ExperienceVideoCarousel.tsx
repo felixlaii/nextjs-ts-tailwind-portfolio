@@ -56,6 +56,23 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       scrollToVideo(currentVideo - 1);
     }
   };
+
+  const sliderControl = (isLeftButton?: boolean) => (
+    <button
+      type="button"
+      onClick={isLeftButton ? previousVideo : nextVideo}
+      className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
+      ${isLeftButton ? "left-30" : "right-1"}`}
+      style={{ top: "45%" }}
+    >
+      <span
+        role="presentation"
+        aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}
+      >
+        {isLeftButton ? "◀" : "▶"}
+      </span>
+    </button>
+  );
   return <div></div>;
 };
 
