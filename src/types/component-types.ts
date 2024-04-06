@@ -62,7 +62,7 @@ export interface ExperienceCarouselProps extends ProjectCardProps {
 }
 
 export interface ExperienceVideoCarouselProps extends ProjectCardProps {
-  carouselArray: string | string[] | undefined;
+  videoCarouselArray: string | string[] | undefined;
 }
 
 export type FooterProps = Pick<HeaderProps, "navigationLinks" | "logo">;

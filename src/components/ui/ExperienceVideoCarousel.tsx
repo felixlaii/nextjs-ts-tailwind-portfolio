@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import VideoGrid from "./VideoGrid";
 import { ExperienceVideoCarouselProps } from "@/types/component-types";
-
+import { cn } from "@/lib/utils";
 const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   videoCarouselArray,
   name,
@@ -98,15 +98,14 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               id={i.toString()}
             >
               {" "}
-              <Image
-                width={300}
-                height={300}
-                src={videoUrl}
-                className={clsx(
-                  "object-scale-down items-center w-3/4 lg:h-[35rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
+              <video
+                className={cn(
+                  "object-contain w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
                 )}
-                alt="Our Practice"
-              />
+                controls
+              >
+                <source src={videoUrl} type="video/mp4" />
+              </video>
             </div>
           ))}
           {sliderControl()}
