@@ -1,4 +1,4 @@
-import { createRef, useState } from "react";
+import { createRef, useState, useCallback, useEffect } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import VideoGrid from "./VideoGrid";
@@ -13,7 +13,15 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
-      <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
+      {/* <video className="w-1/2 h-1/2" controls src={videoUrl}  autoPlay /> */}
+      <video
+        className={cn(
+          "object-contain w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+        )}
+        controls
+      >
+        <source src={videoUrl} type="video/mp4" />
+      </video>
       <button
         className="absolute top-0 right-0 m-4 text-white"
         onClick={onClose}
@@ -24,6 +32,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   );
 };
 
+const START_INDEX = 1;
+const DRAG_THRESHOLD = 150;
+const FALLBACK_WIDTH = 809;
+
 const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   videoCarouselArray,
   name,
@@ -32,6 +44,10 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   technology,
 }) => {
   const [currentVideo, setCurrentVideo] = useState<number>(0);
+  const [activeState, setActiveState] = useState<{
+    slideIndex: number;
+    videoUrl: string | null;
+  }>({ slideIndex: START_INDEX, videoUrl: null });
 
   const initialVideoCarouselArray =
     typeof videoCarouselArray === "string"
@@ -46,15 +62,36 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     {}
   );
 
+  const handleVideoClick = (videoUrl: string) => {
+    setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
+  };
+
+  const handleVideoClose = useCallback(() => {
+    setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
+  }, [activeState.slideIndex]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleVideoClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleVideoClose]);
+
+  useEffect(() => {
+    setCurrentVideo(activeState.slideIndex);
+  }, [activeState.slideIndex]);
+
   const scrollToVideo = (i: number) => {
-    // Set the index of the image we want to see next
-    setCurrentVideo(i);
+    setActiveState({ slideIndex: i, videoUrl: initialVideoCarouselArray[i] });
     refs[i].current.scrollIntoView({
-      // Defines the transition animation.
       behavior: "smooth",
-      // Defines vertical alignment.
       block: "nearest",
-      // Defines horizontal alignment.
       inline: "start",
     });
   };
@@ -93,6 +130,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       </span>
     </button>
   );
+
   return (
     <div
       className={clsx(
@@ -117,15 +155,19 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               ref={refs[i]}
               id={i.toString()}
             >
-              {" "}
-              <video
-                className={cn(
-                  "object-contain w-[50rem] h-[50rem] md:h-96 lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
-                )}
-                controls
-              >
-                <source src={videoUrl} type="video/mp4" />
-              </video>
+              {activeState.videoUrl === videoUrl ? (
+                <VideoPlayer videoUrl={videoUrl} onClose={handleVideoClose} />
+              ) : (
+                <video
+                  className={cn(
+                    "object-contain w-[50rem] h-[50rem] md:h-96 lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+                  )}
+                  controls
+                  onClick={() => handleVideoClick(videoUrl)}
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              )}
             </motion.div>
           ))}
           {sliderControl()}

@@ -26,7 +26,6 @@ const VideoGrid: React.FC<ProjectCardProps> = ({
               <video
                 id={i.toString()}
                 className="cara-thumbnail object-cover opacity-80 mx-4 mt-24 z-10 h-[3rem] w-[3.5rem] sm:h-[3rem] sm:w-[3.5rem] md:h-[4rem] md:w-[4.6rem] lg:h-[4.2rem] lg:w-[4.8rem]"
-                controls
               >
                 <source src={videoUrl} type="video/mp4" />
               </video>
