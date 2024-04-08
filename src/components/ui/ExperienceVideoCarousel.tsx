@@ -13,7 +13,15 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
-      <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
+      {/* <video className="h-1/2" controls src={videoUrl} autoPlay /> */}
+      <video
+        className={cn(
+          "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+        )}
+        controls
+      >
+        <source src={videoUrl} type="video/mp4" />
+      </video>
       <button
         className="absolute top-0 right-0 m-4 text-white"
         onClick={onClose}
@@ -117,10 +125,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       ${isLeftButton ? "left-30" : "right-1"}`}
       style={{ top: "45%" }}
     >
-      <span
-        role="presentation"
-        aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}
-      >
+      <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
         {isLeftButton ? "◀" : "▶"}
       </span>
     </button>
@@ -129,17 +134,17 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   return (
     <div
       className={clsx(
-        "flex flex-col justify-center items-center w-[calc(10% - 10px)] mx-5 lg:mx-auto pb-8"
+        "flex flex-col justify-center items-center w-[calc(10% - 10px)] h-[40rem] mx-5 pb-8"
       )}
     >
       <div
         className={clsx(
-          "relative mt-12 h-72 md:h-96 lg:w-auto xl:h-[29rem] rounded-lg"
+          "relative mt-12 h-72 sm:h-100 md:h-100 lg:w-auto xl:h-[29rem] rounded-lg"
         )}
       >
         <div
           className={clsx(
-            "flex items-center overflow-x-hidden snap-mandatory snap-x h-64 lg:h-[30rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
+            "flex items-center overflow-x-hidden snap-mandatory snap-x h-96 lg:h-[30rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
           )}
         >
           {sliderControl(true)}
@@ -155,7 +160,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               ) : (
                 <video
                   className={cn(
-                    "object-contain w-[50rem] h-[50rem] md:h-96 lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+                    "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
                   )}
                   controls
                   onClick={() => handleVideoClick(videoUrl)}
@@ -168,7 +173,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           {sliderControl()}
         </div>
       </div>
-      <div className="mt-8 max-w-3xl">
+      <div className="mt-[5rem] md:mt-[2rem] lg:mt-0 max-w-3xl">
         <VideoGrid
           videoCarouselArray={videoCarouselArray}
           name={name}
