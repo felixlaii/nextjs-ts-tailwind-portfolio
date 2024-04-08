@@ -34,6 +34,12 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
 const START_INDEX = 1;
 
+interface RefObject<T> {
+  current: T | null;
+}
+
+type RefArray<T> = Array<RefObject<T>>;
+
 const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   videoCarouselArray,
   name,
@@ -59,8 +65,9 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   //   },
   //   {}
   // );
-  const refs = initialVideoCarouselArray.map(() => createRef());
-
+  const refs: RefArray<HTMLDivElement> = initialVideoCarouselArray.map(() =>
+    createRef()
+  );
   const handleVideoClick = (videoUrl: string) => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
   };
@@ -88,7 +95,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
 
   const scrollToVideo = (i: number) => {
     setActiveState({ slideIndex: i, videoUrl: initialVideoCarouselArray[i] });
-    refs[i].current.scrollIntoView({
+    refs[i].current?.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
       inline: "start",
