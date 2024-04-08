@@ -5,6 +5,7 @@ import VideoGrid from "./VideoGrid";
 import { ExperienceVideoCarouselProps } from "@/types/component-types";
 import { cn } from "@/lib/utils";
 import { VideoPlayerProps } from "@/types/component-types";
+import { motion } from "framer-motion";
 
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videoUrl,
@@ -110,7 +111,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
         >
           {sliderControl(true)}
           {initialVideoCarouselArray.map((videoUrl, i) => (
-            <div
+            <motion.div
               className="flex justify-center lg:h-[40rem] w-full flex-shrink-0"
               key={`${videoUrl} - ${i}`}
               ref={refs[i]}
@@ -125,7 +126,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               >
                 <source src={videoUrl} type="video/mp4" />
               </video>
-            </div>
+            </motion.div>
           ))}
           {sliderControl()}
         </div>
