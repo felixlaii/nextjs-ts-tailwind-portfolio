@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ProjectCardProps } from "@/types/component-types";
 import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
-import VideoCarousel from "@/components/ui/VideoCarousel";
 import ExperienceVideoCarousel from "@/components/ui/ExperienceVideoCarousel";
 import ExperienceCarousel from "@/components/ui/ExperienceCarousel";
 const Experience: React.FC<ProjectCardProps> = ({}) => {
