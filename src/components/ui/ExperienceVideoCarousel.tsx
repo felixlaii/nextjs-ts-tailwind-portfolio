@@ -33,8 +33,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 };
 
 const START_INDEX = 1;
-const DRAG_THRESHOLD = 150;
-const FALLBACK_WIDTH = 809;
 
 const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   videoCarouselArray,
@@ -54,13 +52,14 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       ? [videoCarouselArray]
       : videoCarouselArray || [];
 
-  const refs = initialVideoCarouselArray.reduce(
-    (acc: any, val: any, i: any) => {
-      acc[i] = createRef();
-      return acc;
-    },
-    {}
-  );
+  // const refs = initialVideoCarouselArray.reduce(
+  //   (acc: any, val: any, i: any) => {
+  //     acc[i] = createRef();
+  //     return acc;
+  //   },
+  //   {}
+  // );
+  const refs = initialVideoCarouselArray.map(() => createRef());
 
   const handleVideoClick = (videoUrl: string) => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
