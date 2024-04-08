@@ -4,6 +4,25 @@ import Image from "next/image";
 import VideoGrid from "./VideoGrid";
 import { ExperienceVideoCarouselProps } from "@/types/component-types";
 import { cn } from "@/lib/utils";
+import { VideoPlayerProps } from "@/types/component-types";
+
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  videoUrl,
+  onClose,
+}) => {
+  return (
+    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
+      <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
+      <button
+        className="absolute top-0 right-0 m-4 text-white"
+        onClick={onClose}
+      >
+        Close
+      </button>
+    </div>
+  );
+};
+
 const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   videoCarouselArray,
   name,
