@@ -100,7 +100,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               {" "}
               <video
                 className={cn(
-                  "object-contain w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+                  "object-contain w-[50rem] h-[50rem] md:h-96 lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
                 )}
                 controls
               >
