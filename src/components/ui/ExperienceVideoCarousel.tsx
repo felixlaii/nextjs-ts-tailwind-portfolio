@@ -13,15 +13,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
-      {/* <video className="w-1/2 h-1/2" controls src={videoUrl}  autoPlay /> */}
-      <video
-        className={cn(
-          "object-contain w-[50rem] h-[50rem] md:h-96 xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
-        )}
-        controls
-      >
-        <source src={videoUrl} type="video/mp4" />
-      </video>
+      <video className="w-1/2 h-1/2" controls src={videoUrl} autoPlay />
       <button
         className="absolute top-0 right-0 m-4 text-white"
         onClick={onClose}
@@ -33,6 +25,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 };
 
 const START_INDEX = 1;
+const DRAG_THRESHOLD = 150;
+const FALLBACK_WIDTH = 809;
 
 interface RefObject<T> {
   current: T | null;
@@ -58,16 +52,10 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       ? [videoCarouselArray]
       : videoCarouselArray || [];
 
-  // const refs = initialVideoCarouselArray.reduce(
-  //   (acc: any, val: any, i: any) => {
-  //     acc[i] = createRef();
-  //     return acc;
-  //   },
-  //   {}
-  // );
   const refs: RefArray<HTMLDivElement> = initialVideoCarouselArray.map(() =>
     createRef()
   );
+
   const handleVideoClick = (videoUrl: string) => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
   };
@@ -96,6 +84,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   const scrollToVideo = (i: number) => {
     setActiveState({ slideIndex: i, videoUrl: initialVideoCarouselArray[i] });
     refs[i].current?.scrollIntoView({
+      // Use optional chaining to avoid null errors
       behavior: "smooth",
       block: "nearest",
       inline: "start",
