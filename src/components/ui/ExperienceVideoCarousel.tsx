@@ -12,16 +12,16 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   onClose,
 }) => {
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50">
-      {/* <video className="h-1/2" controls src={videoUrl} autoPlay /> */}
-      <video
+    <div className="fixed w-1/2 h-1/2 bg-black bg-opacity-80 flex justify-center items-center z-50">
+      <video className="" controls src={videoUrl} autoPlay />
+      {/* <video
         className={cn(
           "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
         )}
         controls
       >
         <source src={videoUrl} type="video/mp4" />
-      </video>
+      </video> */}
       <button
         className="absolute top-0 right-0 m-4 text-white"
         onClick={onClose}
@@ -32,7 +32,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   );
 };
 
-const START_INDEX = 1;
+const START_INDEX = 0;
 const DRAG_THRESHOLD = 150;
 const FALLBACK_WIDTH = 809;
 
@@ -49,7 +49,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   image,
   technology,
 }) => {
-  const [currentVideo, setCurrentVideo] = useState<number>(0);
+  // const [currentVideo, setCurrentVideo] = useState<number>(0);
   const [activeState, setActiveState] = useState<{
     slideIndex: number;
     videoUrl: string | null;
@@ -85,10 +85,6 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     };
   }, [handleVideoClose]);
 
-  useEffect(() => {
-    setCurrentVideo(activeState.slideIndex);
-  }, [activeState.slideIndex]);
-
   const scrollToVideo = (i: number) => {
     setActiveState({ slideIndex: i, videoUrl: initialVideoCarouselArray[i] });
     refs[i].current?.scrollIntoView({
@@ -102,30 +98,32 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   const totalVideos = initialVideoCarouselArray.length;
 
   const nextVideo = () => {
-    if (currentVideo >= totalVideos - 1) {
-      scrollToVideo(0);
-    } else {
-      scrollToVideo(currentVideo + 1);
-    }
+    const newIndex =
+      activeState.slideIndex >= totalVideos - 1
+        ? 0
+        : activeState.slideIndex + 1;
+    scrollToVideo(newIndex);
   };
 
   const previousVideo = () => {
-    if (currentVideo === 0) {
-      scrollToVideo(totalVideos - 1);
-    } else {
-      scrollToVideo(currentVideo - 1);
-    }
+    const newIndex =
+      activeState.slideIndex === 0
+        ? totalVideos - 1
+        : activeState.slideIndex - 1;
+    scrollToVideo(newIndex);
   };
-
   const sliderControl = (isLeftButton?: boolean) => (
     <button
       type="button"
       onClick={isLeftButton ? previousVideo : nextVideo}
       className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
-      ${isLeftButton ? "left-30" : "right-1"}`}
-      style={{ top: "45%" }}
+      ${isLeftButton ? "left-1" : "right-1"}`}
+      style={{ top: "45%", pointerEvents: "auto" }}
     >
-      <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
+      <span
+        role="presentation"
+        aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}
+      >
         {isLeftButton ? "◀" : "▶"}
       </span>
     </button>
