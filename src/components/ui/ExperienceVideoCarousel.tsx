@@ -1,9 +1,9 @@
 import { createRef, useState, useCallback, useEffect } from "react";
 import clsx from "clsx";
-import VideoGrid from "./VideoGrid";
-import { ExperienceVideoCarouselProps } from "@/types/component-types";
 import ReactPlayer from "react-player";
 import Modal from "react-modal";
+import VideoGrid from "./VideoGrid";
+import { ExperienceVideoCarouselProps } from "@/types/component-types";
 
 const START_INDEX = 0;
 
