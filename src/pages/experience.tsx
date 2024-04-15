@@ -66,7 +66,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
       </div>
       {selectedCategory === "image" && (
         <div className="bg-brand-darkMode dark:bg-brand-base w-full ">
-          <div className=" pb-4">
+          <div className="">
             {carousel && carousel.length > 0 ? (
               <ExperienceCarousel
                 carouselArray={carousel}
@@ -143,7 +143,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
 
       {selectedCategory === "video" && (
         <div className="bg-brand-darkMode dark:bg-brand-base w-full">
-          <div className=" pb-4">
+          <div>
             {videoCarousel && videoCarousel.length > 0 ? (
               <ExperienceVideoCarousel
                 videoCarouselArray={videoCarousel}
