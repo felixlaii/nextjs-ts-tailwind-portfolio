@@ -120,7 +120,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                           alt={`tech-icon-${index}`}
                           height={100}
                           width={100}
-                          className="w-8 h-8 flex-row mx-5 mb-6"
+                          className="w-8 h-8 sm:w-[2rem] flex-row mx-3 sm:mx-6 md:mx-7 lg:mx-9 mb-6 xl:mx-12"
                         />
                       ))}
                     </div>
@@ -197,7 +197,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                           alt={`tech-icon-${index}`}
                           height={100}
                           width={100}
-                          className="w-8 h-8 flex-row mx-3 sm:mx-6 md:mx-7 lg:mx-9 mb-6 xl:mx-12"
+                          className="w-8 h-8 sm:w-[2rem] flex-row mx-3 sm:mx-6 md:mx-7 lg:mx-9 mb-6 xl:mx-12"
                         />
                       ))}
                     </div>

@@ -120,7 +120,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   return (
     <div
       className={clsx(
-        "flex flex-col justify-center items-center w-[calc(10% - 10px)] h-[40rem] mx-5 pb-8"
+        "flex flex-col justify-center items-center w-[calc(10% - 10px)] h-[40rem] mx-5"
       )}
     >
       <div
