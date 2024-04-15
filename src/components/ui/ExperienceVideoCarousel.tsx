@@ -110,7 +110,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       onClick={isLeftButton ? previousVideo : nextVideo}
       className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center slider-control
       ${isLeftButton ? "left-1" : "right-1"}`}
-      style={{ top: "45%" }}
+      style={{ top: "68%" }}
     >
       <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
         {isLeftButton ? "◀" : "▶"}
@@ -149,17 +149,6 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
                   <source src={videoUrl} type="video/mp4" />
                 </video>
               </div>
-              {/* <VideoPlayer videoUrl={videoUrl} onClose={handleVideoClose} /> */}
-
-              {/* <video
-                  className={cn(
-                    "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
-                  )}
-                  controls
-                  onClick={(event) => handleVideoClick(event)}
-                >
-                  <source src={videoUrl} type="video/mp4" />
-                </video> */}
             </div>
           ))}
           {sliderControl()}
@@ -179,7 +168,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
         onRequestClose={handleVideoClose}
         style={{
           overlay: {
-            backgroundColor: "rgba(0,0,0,0.2)",
+            backgroundColor: "rgba(142, 171, 184, 0.2)",
           },
           content: {
             width: "850px",
