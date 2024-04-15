@@ -95,15 +95,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
               id={i.toString()}
             >
               {" "}
-              <Image
-                width={300}
-                height={300}
-                src={img}
-                className={clsx(
-                  "object-scale-down items-center w-3/4 lg:h-[35rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
-                )}
-                alt="Our Practice"
-              />
+              <Image width={400} height={400} src={img} alt="Our Practice" />
             </div>
           ))}
           {sliderControl()}

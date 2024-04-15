@@ -2,13 +2,7 @@ import { ProjectCardProps } from "@/types/component-types";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-const VideoGrid: React.FC<ProjectCardProps> = ({
-  videoCarouselArray,
-  name,
-  description,
-  image,
-  technology,
-}) => {
+const VideoGrid: React.FC<ProjectCardProps> = ({ videoCarouselArray }) => {
   const initialVideoCarouselArray =
     typeof videoCarouselArray === "string"
       ? [videoCarouselArray]
@@ -19,7 +13,7 @@ const VideoGrid: React.FC<ProjectCardProps> = ({
       {initialVideoCarouselArray.map((videoUrl: any, i: any) => (
         <motion.div
           key={`${videoUrl} - grid - ${i}`}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2 }}
         >
           <div className="h-auto max-w-full rounded-lg">
             <a href={`#${i.toString()}`}>
