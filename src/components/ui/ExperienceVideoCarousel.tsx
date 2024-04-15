@@ -13,7 +13,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   return (
     <div className="fixed w-1/2 h-1/2 bg-black bg-opacity-80 flex justify-center items-center z-50">
-      <video className="" controls src={videoUrl} autoPlay />
+      <video className="w-full" controls src={videoUrl} autoPlay />
       {/* <video
         className={cn(
           "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
@@ -88,7 +88,6 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   const scrollToVideo = (i: number) => {
     setActiveState({ slideIndex: i, videoUrl: initialVideoCarouselArray[i] });
     refs[i].current?.scrollIntoView({
-      // Use optional chaining to avoid null errors
       behavior: "smooth",
       block: "nearest",
       inline: "start",
@@ -98,10 +97,19 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   const totalVideos = initialVideoCarouselArray.length;
 
   const nextVideo = () => {
-    const newIndex =
-      activeState.slideIndex >= totalVideos - 1
-        ? 0
-        : activeState.slideIndex + 1;
+    let newIndex = activeState.slideIndex + 1;
+    if (newIndex >= totalVideos) {
+      newIndex = 0;
+    }
+    if (
+      activeState.videoUrl &&
+      newIndex === initialVideoCarouselArray.indexOf(activeState.videoUrl)
+    ) {
+      newIndex = newIndex + 1;
+      if (newIndex >= totalVideos) {
+        newIndex = 0;
+      }
+    }
     scrollToVideo(newIndex);
   };
 
@@ -112,18 +120,16 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
         : activeState.slideIndex - 1;
     scrollToVideo(newIndex);
   };
+
   const sliderControl = (isLeftButton?: boolean) => (
     <button
       type="button"
       onClick={isLeftButton ? previousVideo : nextVideo}
       className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
-      ${isLeftButton ? "left-1" : "right-1"}`}
-      style={{ top: "45%", pointerEvents: "auto" }}
+      ${isLeftButton ? "left-2" : "right-2"}`}
+      style={{ top: "45%" }}
     >
-      <span
-        role="presentation"
-        aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}
-      >
+      <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
         {isLeftButton ? "◀" : "▶"}
       </span>
     </button>
