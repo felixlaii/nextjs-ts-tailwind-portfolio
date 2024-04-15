@@ -4,24 +4,32 @@ import { BsSunFill } from "react-icons/bs";
 
 const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem("theme");
-    return savedMode === "dark";
+    if (typeof window !== "undefined") {
+      const savedMode = localStorage.getItem("theme");
+      return savedMode === "dark";
+    } else {
+      return true;
+    }
   });
 
   useEffect(() => {
-    const savedMode = localStorage.getItem("theme");
-    if (savedMode === "dark") {
-      setDarkMode(true);
+    if (typeof window !== "undefined") {
+      const savedMode = localStorage.getItem("theme");
+      if (savedMode === "dark") {
+        setDarkMode(true);
+      }
     }
   }, []);
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+    if (typeof window !== "undefined") {
+      if (darkMode) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
     }
   }, [darkMode]);
 
