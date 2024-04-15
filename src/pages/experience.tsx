@@ -130,7 +130,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.5rem] md:text-[1.5rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.1rem] md:text-[1.2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
@@ -203,7 +203,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
+            <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.1rem] md:text-[1.2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
           </div>
