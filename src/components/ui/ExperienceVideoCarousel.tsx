@@ -205,9 +205,30 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           technology={technology}
         />
       </div>
-      <Modal isOpen={modalIsOpen} onRequestClose={handleVideoClose}>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={handleVideoClose}
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0,0,0,0.2)",
+          },
+          content: {
+            width: "850px",
+            height: "85vh",
+            margin: "auto",
+            padding: "0px",
+            border: "none",
+            overflow: "hidden",
+          },
+        }}
+      >
         {activeState.videoUrl && (
-          <ReactPlayer url={activeState.videoUrl} controls={true} />
+          <ReactPlayer
+            height="85vh"
+            width="850px"
+            url={activeState.videoUrl}
+            controls={true}
+          />
         )}
       </Modal>
     </div>
