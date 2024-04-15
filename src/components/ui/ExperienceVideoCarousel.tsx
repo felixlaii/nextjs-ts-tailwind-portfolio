@@ -1,39 +1,40 @@
 import { createRef, useState, useCallback, useEffect } from "react";
 import clsx from "clsx";
-import Image from "next/image";
 import VideoGrid from "./VideoGrid";
 import { ExperienceVideoCarouselProps } from "@/types/component-types";
 import { cn } from "@/lib/utils";
 import { VideoPlayerProps } from "@/types/component-types";
-import { motion } from "framer-motion";
+import ReactPlayer from "react-player";
+import Modal from "react-modal";
+import Image from "next/image";
 
-export const VideoPlayer: React.FC<VideoPlayerProps> = ({
-  videoUrl,
-  onClose,
-  onClick,
-}) => {
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
-  return (
-    <div className="fixed w-1/2 h-1/2 bg-black bg-opacity-80 flex justify-center items-center z-50">
-      <video
-        className="w-full"
-        controls
-        src={videoUrl}
-        onClick={(event) => handleClick()}
-      />
-      <button
-        className="absolute top-0 right-0 m-4 text-white"
-        onClick={onClose}
-      >
-        Close
-      </button>
-    </div>
-  );
-};
+// export const VideoPlayer: React.FC<VideoPlayerProps> = ({
+//   videoUrl,
+//   onClose,
+//   onClick,
+// }) => {
+//   const handleClick = () => {
+//     if (onClick) {
+//       onClick();
+//     }
+//   };
+//   return (
+//     <div className="fixed w-1/2 h-1/2 bg-black bg-opacity-80 flex justify-center items-center z-50">
+//       <ReactPlayer
+//         className="w-full"
+//         controls={false}
+//         src={videoUrl}
+//         // onClick={(event) => handleClick()}
+//       />
+//       <button
+//         className="absolute top-0 right-0 m-4 text-white"
+//         onClick={onClose}
+//       >
+//         Close
+//       </button>
+//     </div>
+//   );
+// };
 
 const START_INDEX = 0;
 const DRAG_THRESHOLD = 150;
@@ -56,6 +57,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     slideIndex: number;
     videoUrl: string | null;
   }>({ slideIndex: START_INDEX, videoUrl: null });
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const initialVideoCarouselArray =
     typeof videoCarouselArray === "string"
@@ -66,20 +68,13 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     createRef()
   );
 
-  const handleVideoClick = useCallback(
-    (event: React.MouseEvent<HTMLVideoElement, MouseEvent>) => {
-      const target = event.target as HTMLElement;
-      if (!target.closest(".slider-control")) {
-        if (activeState.videoUrl) {
-          setActiveState((prevState) => ({ ...prevState, videoUrl: null }));
-        }
-      }
-    },
-    [activeState.videoUrl]
-  );
-
+  const handleVideoClick = useCallback((videoUrl: string) => {
+    setActiveState({ slideIndex: 0, videoUrl });
+    setModalIsOpen(true);
+  }, []);
   const handleVideoClose = useCallback(() => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
+    setModalIsOpen(false);
   }, [activeState.slideIndex]);
 
   useEffect(() => {
@@ -178,16 +173,24 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               ref={refs[i]}
               id={i.toString()}
             >
+              <div onClick={() => handleVideoClick(videoUrl)}>
+                {/* <Image width={300} height={300} src={image} alt="thumbnail" /> */}
+                <video>
+                  {" "}
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              </div>
               {/* <VideoPlayer videoUrl={videoUrl} onClose={handleVideoClose} /> */}
-              <video
-                className={cn(
-                  "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
-                )}
-                controls
-                onClick={(event) => handleVideoClick(event)}
-              >
-                <source src={videoUrl} type="video/mp4" />
-              </video>
+
+              {/* <video
+                  className={cn(
+                    "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+                  )}
+                  controls
+                  onClick={(event) => handleVideoClick(event)}
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                </video> */}
             </div>
           ))}
           {sliderControl()}
@@ -202,6 +205,11 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           technology={technology}
         />
       </div>
+      <Modal isOpen={modalIsOpen} onRequestClose={handleVideoClose}>
+        {activeState.videoUrl && (
+          <ReactPlayer url={activeState.videoUrl} controls={true} />
+        )}
+      </Modal>
     </div>
   );
 };

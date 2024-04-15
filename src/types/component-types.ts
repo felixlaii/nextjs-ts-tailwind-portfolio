@@ -63,6 +63,7 @@ export interface ExperienceCarouselProps extends ProjectCardProps {
 
 export interface VideoPlayerProps {
   videoUrl: string;
+  image: string;
   onClose: () => void;
   onClick?: () => void;
 }
