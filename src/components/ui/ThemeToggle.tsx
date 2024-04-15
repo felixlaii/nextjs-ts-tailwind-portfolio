@@ -9,8 +9,10 @@ const ThemeToggle = () => {
   });
 
   useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") setDarkMode(true);
+    const savedMode = localStorage.getItem("theme");
+    if (savedMode === "dark") {
+      setDarkMode(true);
+    }
   }, []);
 
   useEffect(() => {
