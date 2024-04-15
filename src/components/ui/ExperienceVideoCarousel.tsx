@@ -125,7 +125,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     >
       <div
         className={clsx(
-          "relative mt-12 h-72 sm:h-100 md:h-100 lg:w-auto xl:h-[29rem] rounded-lg"
+          "relative  h-72 sm:h-100 md:h-100 lg:w-auto xl:h-[29rem] rounded-lg"
         )}
       >
         <div
@@ -136,7 +136,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           {sliderControl(true)}
           {initialVideoCarouselArray.map((videoUrl, i) => (
             <div
-              className="flex justify-center lg:h-[40rem] w-full flex-shrink-0 cursor-pointer"
+              className="flex justify-center mx-auto lg:h-[40rem] w-full flex-shrink-0 cursor-pointer"
               key={`${videoUrl} - ${i}`}
               ref={refs[i]}
               id={i.toString()}
