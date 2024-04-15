@@ -144,7 +144,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
             >
               <div onClick={() => handleVideoClick(videoUrl)}>
                 {/* <Image width={300} height={300} src={image} alt="thumbnail" /> */}
-                <video>
+                <video controls>
                   {" "}
                   <source src={videoUrl} type="video/mp4" />
                 </video>
