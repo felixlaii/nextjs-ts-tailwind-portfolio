@@ -114,13 +114,21 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   };
 
   const previousVideo = () => {
-    const newIndex =
-      activeState.slideIndex === 0
-        ? totalVideos - 1
-        : activeState.slideIndex - 1;
+    let newIndex = activeState.slideIndex - 1;
+    if (newIndex < 0) {
+      newIndex = totalVideos - 1;
+    }
+    if (
+      activeState.videoUrl &&
+      newIndex === initialVideoCarouselArray.indexOf(activeState.videoUrl)
+    ) {
+      newIndex = newIndex - 1;
+      if (newIndex < 0) {
+        newIndex = totalVideos - 1;
+      }
+    }
     scrollToVideo(newIndex);
   };
-
   const sliderControl = (isLeftButton?: boolean) => (
     <button
       type="button"
