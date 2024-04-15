@@ -10,18 +10,21 @@ import { motion } from "framer-motion";
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videoUrl,
   onClose,
+  onClick,
 }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
   return (
     <div className="fixed w-1/2 h-1/2 bg-black bg-opacity-80 flex justify-center items-center z-50">
-      <video className="w-full" controls src={videoUrl} autoPlay />
-      {/* <video
-        className={cn(
-          "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] lg:h-[40rem] xl:h-[25rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
-        )}
+      <video
+        className="w-full"
         controls
-      >
-        <source src={videoUrl} type="video/mp4" />
-      </video> */}
+        src={videoUrl}
+        onClick={(event) => handleClick()}
+      />
       <button
         className="absolute top-0 right-0 m-4 text-white"
         onClick={onClose}
@@ -49,7 +52,6 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   image,
   technology,
 }) => {
-  // const [currentVideo, setCurrentVideo] = useState<number>(0);
   const [activeState, setActiveState] = useState<{
     slideIndex: number;
     videoUrl: string | null;
@@ -64,13 +66,17 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     createRef()
   );
 
-  const handleVideoClick = (
-    event: React.MouseEvent<HTMLVideoElement, MouseEvent>,
-    videoUrl: string
-  ) => {
-    event.stopPropagation();
-    setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
-  };
+  const handleVideoClick = useCallback(
+    (event: React.MouseEvent<HTMLVideoElement, MouseEvent>) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest(".slider-control")) {
+        if (activeState.videoUrl) {
+          setActiveState((prevState) => ({ ...prevState, videoUrl: null }));
+        }
+      }
+    },
+    [activeState.videoUrl]
+  );
 
   const handleVideoClose = useCallback(() => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
@@ -133,11 +139,12 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     }
     scrollToVideo(newIndex);
   };
+
   const sliderControl = (isLeftButton?: boolean) => (
     <button
       type="button"
       onClick={isLeftButton ? previousVideo : nextVideo}
-      className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center
+      className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center slider-control
       ${isLeftButton ? "left-2" : "right-2"}`}
       style={{ top: "45%" }}
     >
@@ -165,26 +172,23 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
         >
           {sliderControl(true)}
           {initialVideoCarouselArray.map((videoUrl, i) => (
-            <motion.div
+            <div
               className="flex justify-center lg:h-[40rem] w-full flex-shrink-0"
               key={`${videoUrl} - ${i}`}
               ref={refs[i]}
               id={i.toString()}
             >
-              {activeState.videoUrl === videoUrl ? (
-                <VideoPlayer videoUrl={videoUrl} onClose={handleVideoClose} />
-              ) : (
-                <video
-                  className={cn(
-                    "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
-                  )}
-                  controls
-                  onClick={(event) => handleVideoClick(event, videoUrl)}
-                >
-                  <source src={videoUrl} type="video/mp4" />
-                </video>
-              )}
-            </motion.div>
+              {/* <VideoPlayer videoUrl={videoUrl} onClose={handleVideoClose} /> */}
+              <video
+                className={cn(
+                  "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
+                )}
+                controls
+                onClick={(event) => handleVideoClick(event)}
+              >
+                <source src={videoUrl} type="video/mp4" />
+              </video>
+            </div>
           ))}
           {sliderControl()}
         </div>
