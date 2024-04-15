@@ -6,8 +6,6 @@ import ReactPlayer from "react-player";
 import Modal from "react-modal";
 
 const START_INDEX = 0;
-const DRAG_THRESHOLD = 150;
-const FALLBACK_WIDTH = 809;
 
 interface RefObject<T> {
   current: T | null;
@@ -41,6 +39,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     setActiveState({ slideIndex: 0, videoUrl });
     setModalIsOpen(true);
   }, []);
+
   const handleVideoClose = useCallback(() => {
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl: null });
     setModalIsOpen(false);
@@ -143,7 +142,6 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
               id={i.toString()}
             >
               <div onClick={() => handleVideoClick(videoUrl)}>
-                {/* <Image width={300} height={300} src={image} alt="thumbnail" /> */}
                 <video controls>
                   {" "}
                   <source src={videoUrl} type="video/mp4" />
