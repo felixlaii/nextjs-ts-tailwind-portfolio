@@ -125,7 +125,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     >
       <div
         className={clsx(
-          "relative  h-72 sm:h-100 md:h-100 lg:w-auto xl:h-[29rem] rounded-lg"
+          "relative h-72 sm:h-100 md:h-100 lg:w-auto xl:h-[29rem] rounded-lg"
         )}
       >
         <div
