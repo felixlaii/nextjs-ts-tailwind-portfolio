@@ -64,7 +64,11 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
     createRef()
   );
 
-  const handleVideoClick = (videoUrl: string) => {
+  const handleVideoClick = (
+    event: React.MouseEvent<HTMLVideoElement, MouseEvent>,
+    videoUrl: string
+  ) => {
+    event.stopPropagation();
     setActiveState({ slideIndex: activeState.slideIndex, videoUrl });
   };
 
@@ -175,7 +179,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
                     "object-contain w-[50rem] h-[50rem] sm:h-[55rem] md:h-[40rem] md:w-3/4 lg:h-[40rem] xl:h-[35rem] xl:pt-[4rem] select-none transition-opacity duration-300 rounded-lg shadow-lg"
                   )}
                   controls
-                  onClick={() => handleVideoClick(videoUrl)}
+                  onClick={(event) => handleVideoClick(event, videoUrl)}
                 >
                   <source src={videoUrl} type="video/mp4" />
                 </video>
