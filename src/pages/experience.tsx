@@ -129,7 +129,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
               </div>
             </div>
           )}
-          <div className=" bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
+          <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
             <h2 className="text-center text-[1.5rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.3rem] xl:text-[2.7rem] text-brand-darkMode dark:text-brand-lightMode font-custom tracking-widest">
               Project Overview
             </h2>
@@ -197,7 +197,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                           alt={`tech-icon-${index}`}
                           height={100}
                           width={100}
-                          className="w-8 h-8 flex-row mx-5 mb-6"
+                          className="w-8 h-8 flex-row mx-3 sm:mx-6 md:mx-7 lg:mx-9 mb-6 xl:mx-12"
                         />
                       ))}
                     </div>
@@ -207,7 +207,9 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
             </div>
           )}
           <div className="bg-brand-base dark:bg-brand-darkMode w-full mx-auto pt-7 pb-7 px-9">
-            <h2>Project Overview</h2>
+            <h2 className="text-center text-[1.5rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.3rem] xl:text-[2.7rem] text-brand-darkMode dark:text-brand-lightMode font-custom tracking-widest">
+              Project Overview
+            </h2>{" "}
             <p className="whitespace-pre-line mt-4 max-w-[900px] text-4 sm:text-[1.1rem] md:text-[1.2rem] lg:text-[1.3rem] text-brand-altDarkMode dark:text-brand-bgdark tracking-widest mx-auto text-center font-custom pb-4">
               {longDescription}
             </p>
