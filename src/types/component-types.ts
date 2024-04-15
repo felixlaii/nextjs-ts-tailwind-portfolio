@@ -61,13 +61,6 @@ export interface ExperienceCarouselProps extends ProjectCardProps {
   carouselArray: string | string[] | undefined;
 }
 
-export interface VideoPlayerProps {
-  videoUrl: string;
-  image: string;
-  onClose: () => void;
-  onClick?: () => void;
-}
-
 export interface ExperienceVideoCarouselProps extends ProjectCardProps {
   videoCarouselArray: string | string[] | undefined;
 }

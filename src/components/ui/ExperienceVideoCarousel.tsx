@@ -2,39 +2,8 @@ import { createRef, useState, useCallback, useEffect } from "react";
 import clsx from "clsx";
 import VideoGrid from "./VideoGrid";
 import { ExperienceVideoCarouselProps } from "@/types/component-types";
-import { cn } from "@/lib/utils";
-import { VideoPlayerProps } from "@/types/component-types";
 import ReactPlayer from "react-player";
 import Modal from "react-modal";
-import Image from "next/image";
-
-// export const VideoPlayer: React.FC<VideoPlayerProps> = ({
-//   videoUrl,
-//   onClose,
-//   onClick,
-// }) => {
-//   const handleClick = () => {
-//     if (onClick) {
-//       onClick();
-//     }
-//   };
-//   return (
-//     <div className="fixed w-1/2 h-1/2 bg-black bg-opacity-80 flex justify-center items-center z-50">
-//       <ReactPlayer
-//         className="w-full"
-//         controls={false}
-//         src={videoUrl}
-//         // onClick={(event) => handleClick()}
-//       />
-//       <button
-//         className="absolute top-0 right-0 m-4 text-white"
-//         onClick={onClose}
-//       >
-//         Close
-//       </button>
-//     </div>
-//   );
-// };
 
 const START_INDEX = 0;
 const DRAG_THRESHOLD = 150;
@@ -140,7 +109,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       type="button"
       onClick={isLeftButton ? previousVideo : nextVideo}
       className={`absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center slider-control
-      ${isLeftButton ? "left-2" : "right-2"}`}
+      ${isLeftButton ? "left-1" : "right-1"}`}
       style={{ top: "45%" }}
     >
       <span role="img" aria-label={`Arrow ${isLeftButton ? "left" : "right"}`}>
@@ -168,7 +137,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           {sliderControl(true)}
           {initialVideoCarouselArray.map((videoUrl, i) => (
             <div
-              className="flex justify-center lg:h-[40rem] w-full flex-shrink-0"
+              className="flex justify-center lg:h-[40rem] w-full flex-shrink-0 cursor-pointer"
               key={`${videoUrl} - ${i}`}
               ref={refs[i]}
               id={i.toString()}
@@ -214,7 +183,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           },
           content: {
             width: "850px",
-            height: "85vh",
+            height: "80vh",
             margin: "auto",
             padding: "0px",
             border: "none",
@@ -224,7 +193,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
       >
         {activeState.videoUrl && (
           <ReactPlayer
-            height="85vh"
+            height="80vh"
             width="850px"
             url={activeState.videoUrl}
             controls={true}
