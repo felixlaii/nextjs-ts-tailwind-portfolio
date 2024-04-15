@@ -120,7 +120,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
   return (
     <div
       className={clsx(
-        "flex flex-col justify-center items-center w-[calc(10% - 10px)] h-[40rem] mx-5"
+        "flex flex-col items-center w-[calc(10% - 10px)] h-100 mx-10"
       )}
     >
       <div
@@ -152,7 +152,7 @@ const ExperienceVideoCarousel: React.FC<ExperienceVideoCarouselProps> = ({
           {sliderControl()}
         </div>
       </div>
-      <div className="max-w-3xl">
+      <div className="">
         <VideoGrid
           videoCarouselArray={videoCarouselArray}
           name={name}
