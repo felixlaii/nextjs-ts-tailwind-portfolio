@@ -66,10 +66,10 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
           />
         </div>
         <div className="flex flex-column items-center ml-4 w-86 lg:w-3/4">
-          <div className="grid grid-cols-1 gap-4 sm:gap-5 content-around text-center ">
+          <div className="grid grid-cols-1 gap-2 sm:gap-5 content-around text-center ">
             <div>
               <p
-                className={`font-bold text-[0.7rem] sm:text-[0.5rem] sm:tracking-none md:text-[1rem] lg:text-[0.9rem] tracking-wide lg:tracking-widest ${
+                className={`font-bold text-[0.9rem] sm:text-[0.5rem] sm:tracking-none md:text-[1rem] lg:text-[0.9rem] tracking-wide lg:tracking-widest ${
                   isHovered
                     ? "text-brand-darkMode dark:text-brand-darkest"
                     : "text-brand-darkMode dark:text-brand-darkMode dark:text-brand-darkMode"
@@ -78,16 +78,16 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 {name}
               </p>
             </div>
-            <div className="flex flex-row justify-evenly">
+            <div className="flex flex-row justify-around">
               {techList.map((tech, index) => (
-                <div key={index} className="flex ">
+                <div key={index}>
                   <div key={index}>
                     <Image
                       height={200}
                       width={200}
                       src={tech}
                       alt={`tech-icon-${index}`}
-                      className="mx-1 px-1 w-[1.1rem] h-[1.1rem] lg:w-4 lg:h-4 w-1 h-2 md:w-5 md:h-5 lg:mb-2"
+                      className="mx-1 px-1 w-[1.3rem] h-[1.3rem] lg:w-4 lg:h-4 w-1 h-2 md:w-5 md:h-5 lg:mb-2"
                     />
                   </div>
                 </div>
@@ -96,7 +96,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
             <div>
               <p
-                className={`tracking-wide text-[0.5rem] sm:text-[0.4rem] md:text-[0.7rem] lg:text-md font-extralight ${
+                className={`tracking-widest text-[0.6rem] sm:text-[0.4rem] md:text-[0.7rem] lg:text-md font-extralight ${
                   isHovered
                     ? "text-brand-darkMode dark:text-brand-darkest"
                     : "text-brand-darkMode dark:text-brand-darkMode dark:text-brand-darkMode"
