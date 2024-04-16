@@ -89,10 +89,7 @@ module.exports = {
                     transition: "top 2s ease",
                     top: "5%"
                   },
-                  ".cara-thumbnail": {
-                  
-                    clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
-                }}
+              }
             addUtilities(utilities)
         })
     ]

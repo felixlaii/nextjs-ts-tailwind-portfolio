@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
               onClick={() => handleCategoryClick(category.category)}
             >
               {category.category}
-              <CiSaveDown1 className="animate-bounce ml-2 text-[1.7rem] dark:text-brand-lightMode text-brand-headerbg " />
+              <CiSaveDown1 className="animate-bounce ml-2 text-[1.7rem] dark:text-brand-lightMode text-brand-headerbg" />
             </button>
 
             <div

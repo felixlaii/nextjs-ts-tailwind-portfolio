@@ -78,12 +78,12 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
     >
       <div
         className={clsx(
-          "relative mt-12 h-72 md:h-96 lg:w-auto xl:h-[29rem] rounded-lg"
+          "relative mt-12 md:h-96 lg:w-auto xl:h-[29rem] rounded-lg"
         )}
       >
         <div
           className={clsx(
-            "flex items-center overflow-x-hidden snap-mandatory snap-x h-64 lg:h-[30rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg"
+            "flex items-center overflow-x-hidden snap-mandatory snap-x h-64 lg:h-[30rem] md:h-96 xl:h-[29rem] max-w-3xl rounded-lg overflow-hidden"
           )}
         >
           {sliderControl(true)}
@@ -96,12 +96,10 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
             >
               {" "}
               <Image
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 src={img}
-                className={clsx(
-                  "object-scale-down items-center w-3/4 lg:h-[35rem] lg:w-[30rem] sm:h-[16rem] sm:w-[20rem] md:h-[20rem] md:w-[35rem] xl:h-[29rem] max-w-3xl rounded-lg"
-                )}
+                className="object-contain w-1/2"
                 alt="Our Practice"
               />
             </div>
@@ -109,7 +107,7 @@ const ExperienceCarousel: React.FC<ExperienceCarouselProps> = ({
           {sliderControl()}
         </div>
       </div>
-      <div className="mt-8 max-w-3xl">
+      <div className="mt-5">
         <ImageGrid
           carouselArray={carouselArray}
           name={name}
