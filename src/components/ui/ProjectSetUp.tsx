@@ -38,7 +38,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className={`border-double border-4 border-brand-darkMode hover:border-brand-darkMode flex flex-col justify-center shadow-3xl pt-8 pl-4 ml-4 pr-4 pb-8 lg:pb-6 lg:pl-10 lg:pr-10 cursor-pointer dark:border-double dark:border-4 dark:border-brand-darkMode dark:hover:border-brand-darkMode rounded-md h-[8.5rem] w-[calc(95%-1rem)] sm:w-[calc(90%-1rem)] md:w-[calc(90%)] md:h-[15rem] lg:w-[calc(80%-1rem)] lg:h-[16rem] xl:w-[calc(85%-1rem)] xl:h-[17rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
+      className={`border-double border-4 border-brand-darkMode hover:border-brand-darkMode flex flex-col justify-center shadow-3xl pt-8 pl-4 ml-4 pr-4 pb-8 lg:pb-6 lg:pl-10 lg:pr-10 cursor-pointer dark:border-double dark:border-4 dark:border-brand-darkMode dark:hover:border-brand-darkMode rounded-md h-[11rem] w-[calc(95%-1rem)] sm:w-[calc(90%-1rem)] md:w-[calc(90%)] md:h-[15rem] lg:w-[calc(80%-1rem)] lg:h-[16rem] xl:w-[calc(85%-1rem)] xl:h-[17rem] md:hover:scale-110 lg:hover:scale-110 xl:hover:scale-110
  ${
    isHovered ? "" : ""
  } bg-brand-lightMode hover:bg-brand-base dark:bg-brand-base dark:hover:bg-brand-cardbg`}
@@ -96,10 +96,10 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
 
             <div>
               <p
-                className={`tracking-widest text-[0.6rem] sm:text-[0.4rem] md:text-[0.7rem] lg:text-md font-extralight ${
+                className={`tracking-[0.1rem] text-[0.6rem] sm:text-[0.4rem] md:text-[0.7rem] lg:text-md font-extralight ${
                   isHovered
                     ? "text-brand-darkMode dark:text-brand-darkest"
-                    : "text-brand-darkMode dark:text-brand-darkMode dark:text-brand-darkMode"
+                    : "text-brand-altDarkMode dark:text-brand-darkMode dark:text-brand-darkMode"
                 }`}
               >
                 {description}
