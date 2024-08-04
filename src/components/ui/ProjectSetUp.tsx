@@ -65,7 +65,7 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
             alt="project logo"
           />
         </div>
-        <div className="flex flex-column items-center ml-4 w-86 lg:w-3/4">
+        <div className="flex flex-column items-center ml-4 w-80 lg:w-3/4">
           <div className="grid grid-cols-1 gap-2 sm:gap-5 content-around text-center ">
             <div>
               <p
