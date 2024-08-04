@@ -83,11 +83,11 @@ const ProjectSetUp: React.FC<ProjectCardProps> = ({
                 <div key={index}>
                   <div key={index}>
                     <Image
-                      height={200}
-                      width={200}
+                      height={300}
+                      width={300}
                       src={tech}
                       alt={`tech-icon-${index}`}
-                      className="mx-1 px-1 w-[1.3rem] h-[1.3rem] lg:w-4 lg:h-4 w-1 h-2 md:w-5 md:h-5 lg:mb-2"
+                      className="mx-1 px-1 w-[1.2rem] h-[1.2rem] lg:w-7 lg:h-7 w-1 h-2 md:w-6 md:h-6 lg:mb-2"
                     />
                   </div>
                 </div>
