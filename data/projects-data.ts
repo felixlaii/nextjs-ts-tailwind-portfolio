@@ -164,13 +164,17 @@ export const ProjectsData: {
     index: 5,
     image:
       "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
-    name: "St Patrick S.S",
+    name: "St Patrick Regional S.S",
     description: "Secondary School based in Vancouver. Currently in progress!",
     category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     ],
+    deployedUrl: "https://stpats.bc.ca/",
+
     longDescription: `Embarking on a journey to revitalize their online presence, St. Patrick Secondary School in Vancouver entrusted us with their project. With a vision to modernize their website and enhance user experience, WordPress emerged as the platform of choice for its versatility and ease of use.
 
       Currently a work in progress, our team is diligently crafting a tailored solution to meet St. Patrick's unique needs. From intuitive navigation to dynamic content management, the WordPress framework lays the foundation for a seamless online experience.
