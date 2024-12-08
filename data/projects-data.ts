@@ -327,9 +327,9 @@ export const ProjectsData: {
     id: "kira-kids-cafe",
     index: 11,
     image:
-      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1698174855/stpatrick-logo_bd3mth.png",
-    name: "St Patrick Regional S.S",
-    description: "Secondary School based in Vancouver. Currently in progress!",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1733701395/Modern_Cute_Baby_and_Children_s_Equipment_Store_Logo_4_katdon.png",
+    name: "Kira Kids Cafe",
+    description: "Children's play place for birthdays and events!",
     category: "professional",
     technology: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
