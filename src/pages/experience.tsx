@@ -100,7 +100,7 @@ const Experience: React.FC<ProjectCardProps> = ({}) => {
                 )}
                 {deployedUrl && (
                   <a
-                    className="border-double border-4 border-brand-lightMode dark:border-brand-darkMode hover:border-brand-darkest px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-lightish dark:hover:text-brand-cardbg bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+                    className="border-double border-4 border-brand-lightMode dark:border-brand-darkMode hover:border-brand-darkest px-10 mx-4 font-custom tracking-wider rounded-sm hover:text-brand-lightish dark:hover:text-brand-cardbg bg-gradient-to-r from-brand-lightest/40 to-brand-darkest bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out mt-8"
                     href={deployedUrl}
                     target="_blank"
                     rel="noopener noreferrer"

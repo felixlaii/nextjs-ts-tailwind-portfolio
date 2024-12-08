@@ -323,4 +323,23 @@ export const ProjectsData: {
     videoCarousel:
       "https://res.cloudinary.com/dyjj9jfc2/video/upload/v1711836580/Screen_Recording_2024-03-30_at_6.08.56_PM_s3vp86.mov",
   },
+  {
+    id: "kira-kids-cafe",
+    index: 11,
+    image:
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1733701395/Modern_Cute_Baby_and_Children_s_Equipment_Store_Logo_4_katdon.png",
+    name: "Kira Kids Cafe",
+    description: "Children's play place for birthdays and events!",
+    category: "professional",
+    technology: [
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1733701960/icons8-shopify_ztbb09.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
+    ],
+    deployedUrl: "https://kirakidscafe.com/",
+
+    longDescription: `Children's play place for birthdays and events!",
+    category: "professional`,
+  },
 ];
