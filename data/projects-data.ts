@@ -332,17 +332,14 @@ export const ProjectsData: {
     description: "Children's play place for birthdays and events!",
     category: "professional",
     technology: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+      "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1733701960/icons8-shopify_ztbb09.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
     ],
     deployedUrl: "https://kirakidscafe.com/",
 
-    longDescription: `Embarking on a journey to revitalize their online presence, St. Patrick Secondary School in Vancouver entrusted us with their project. With a vision to modernize their website and enhance user experience, WordPress emerged as the platform of choice for its versatility and ease of use.
-
-      Currently a work in progress, our team is diligently crafting a tailored solution to meet St. Patrick's unique needs. From intuitive navigation to dynamic content management, the WordPress framework lays the foundation for a seamless online experience.
-      
-      Stay tuned as we continue to transform St. Patrick Secondary School's digital footprint, ensuring it reflects their commitment to excellence and innovation in education.`,
+    longDescription: `Children's play place for birthdays and events!",
+    category: "professional`,
   },
 ];
