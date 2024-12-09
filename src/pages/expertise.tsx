@@ -26,7 +26,7 @@ const Skills: React.FC = () => {
           Expertise
         </h2>
       </div>
-      <div className="flex flex-col lg:my-[2rem] text-center grid grid-cols-1 divide-y divide-brand-cardbg w-full sm:px-10 md:w-100 lg:w-4/5 pb-4 px-4">
+      <div className="flex flex-col  text-center grid grid-cols-1 divide-y divide-brand-cardbg w-full sm:px-10 md:w-100 lg:w-4/5 pb-4 px-4">
         {SkillsData.map((category, index) => (
           <div key={index} className="w-auto">
             <button
