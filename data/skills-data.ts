@@ -130,6 +130,11 @@ export const SkillsData: {
           "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1733701960/icons8-shopify_ztbb09.svg",
         description: "Shopify",
       },
+      {
+        image:
+          "https://res.cloudinary.com/dyjj9jfc2/image/upload/v1737237047/wix.1024x1024_uzgpfa.png",
+        description: "Wix",
+      },
     ],
   },
 ];
